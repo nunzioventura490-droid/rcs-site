@@ -48,6 +48,97 @@ const FLEETS = {
   ],
 };
 
+// ── COMPONENTI A RISCHIO PER OGNI NAVE ─────────────────────
+const SHIP_COMPONENTS = {
+  "MV Maria Dolores": [
+    { name: "Filtri carburante", category: "Filtrazione", wear: 70, parts: [{ code: "FF5488", desc: "Filtro Carburante Fleetguard", price: 88, stock: "Stock" }] },
+    { name: "Filtri olio", category: "Filtrazione", wear: 70, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Sensore pressione CR", category: "Iniezione", wear: 70, parts: [{ code: "0 281 006 064", desc: "Sensore Pressione CR Bosch", price: 240, stock: "Stock" }] },
+    { name: "Separatore carburante/acqua", category: "Filtrazione", wear: 70, parts: [{ code: "FS1000", desc: "Separatore Carburante/Acqua FG", price: 65, stock: "Stock" }] },
+    { name: "Alternatore marino", category: "Elettrico", wear: 60, parts: [{ code: "0 124 655 025", desc: "Alternatore Bosch 24V 120A", price: 310, stock: "Stock" }] },
+  ],
+  "MV Jean de La Valette": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 56, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Sensore pressione CR", category: "Iniezione", wear: 56, parts: [{ code: "0 281 006 064", desc: "Sensore Pressione CR Bosch", price: 240, stock: "Stock" }] },
+    { name: "Filtri carburante", category: "Filtrazione", wear: 56, parts: [{ code: "FF5488", desc: "Filtro Carburante Fleetguard", price: 88, stock: "Stock" }] },
+  ],
+  "MV Saint John Paul II": [
+    { name: "Sensore pressione CR", category: "Iniezione", wear: 24, parts: [{ code: "0 281 006 064", desc: "Sensore Pressione CR Bosch", price: 240, stock: "Stock" }] },
+    { name: "Filtri carburante", category: "Filtrazione", wear: 24, parts: [{ code: "FF5488", desc: "Filtro Carburante Fleetguard", price: 88, stock: "Stock" }] },
+  ],
+  "HSC Gozo Express": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 54, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Separatore carburante/acqua", category: "Filtrazione", wear: 54, parts: [{ code: "FS1000", desc: "Separatore Carburante/Acqua FG", price: 65, stock: "Stock" }] },
+  ],
+  "San Frangisk": [
+    { name: "Filtri carburante", category: "Filtrazione", wear: 90, parts: [{ code: "FF5488", desc: "Filtro Carburante Fleetguard", price: 88, stock: "Stock" }] },
+    { name: "Filtri olio", category: "Filtrazione", wear: 90, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Alternatore marino", category: "Elettrico", wear: 85, parts: [{ code: "0 124 655 025", desc: "Alternatore Bosch 24V 120A", price: 310, stock: "Stock" }] },
+  ],
+  "San Pawl": [
+    { name: "Filtri carburante", category: "Filtrazione", wear: 88, parts: [{ code: "FF5488", desc: "Filtro Carburante Fleetguard", price: 88, stock: "Stock" }] },
+    { name: "Filtri olio", category: "Filtrazione", wear: 88, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+  ],
+  "Balluta Bay": [
+    { name: "Sistema lubrificazione completo", category: "Manutenzione", wear: 100, parts: [{ code: "—", desc: "Revisione generale consigliata", price: 0, stock: "Urgente" }] },
+  ],
+  "MT Vittoriosa": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 25, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+  ],
+  "MT St. Angelo": [
+    { name: "Filtri carburante", category: "Filtrazione", wear: 29, parts: [{ code: "FF5488", desc: "Filtro Carburante Fleetguard", price: 88, stock: "Stock" }] },
+  ],
+  "MT Senglea": [
+    { name: "Manutenzione ordinaria", category: "Manutenzione", wear: 19, parts: [{ code: "—", desc: "Nave in buone condizioni", price: 0, stock: "—" }] },
+  ],
+  "MT Med Aldebaran": [
+    { name: "Nessun componente critico", category: "Manutenzione", wear: 6, parts: [{ code: "—", desc: "Nave nuova - manutenzione ordinaria", price: 0, stock: "—" }] },
+  ],
+  "MT St. Elmo": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 48, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Sensore pressione", category: "Iniezione", wear: 45, parts: [{ code: "0 281 006 064", desc: "Sensore Pressione CR Bosch", price: 240, stock: "Stock" }] },
+  ],
+  "MT Spinola": [
+    { name: "Filtri carburante", category: "Filtrazione", wear: 34, parts: [{ code: "FF5488", desc: "Filtro Carburante Fleetguard", price: 88, stock: "Stock" }] },
+  ],
+  "MT Wenzina": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 64, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Sensore pressione", category: "Iniezione", wear: 62, parts: [{ code: "0 281 006 064", desc: "Sensore Pressione CR Bosch", price: 240, stock: "Stock" }] },
+  ],
+  "MT Pawlina": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 64, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Alternatore marino", category: "Elettrico", wear: 60, parts: [{ code: "0 124 655 025", desc: "Alternatore Bosch 24V 120A", price: 310, stock: "Stock" }] },
+  ],
+  "MT Sea Salvor": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 90, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Separatore carburante/acqua", category: "Filtrazione", wear: 90, parts: [{ code: "FS1000", desc: "Separatore Carburante/Acqua FG", price: 65, stock: "Stock" }] },
+    { name: "Alternatore marino", category: "Elettrico", wear: 88, parts: [{ code: "0 124 655 025", desc: "Alternatore Bosch 24V 120A", price: 310, stock: "Stock" }] },
+  ],
+  "MT Gozzo": [
+    { name: "Manutenzione ordinaria", category: "Manutenzione", wear: 21, parts: [{ code: "—", desc: "Nave in buone condizioni", price: 0, stock: "—" }] },
+  ],
+  "Spirit of Tasmania I": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 54, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Sensore pressione", category: "Iniezione", wear: 52, parts: [{ code: "0 281 006 064", desc: "Sensore Pressione CR Bosch", price: 240, stock: "Stock" }] },
+  ],
+  "Spirit of Tasmania IV": [
+    { name: "Manutenzione ordinaria LNG", category: "Manutenzione", wear: 14, parts: [{ code: "—", desc: "Sistema LNG Dual-Fuel - controlli specifici", price: 0, stock: "Stock" }] },
+  ],
+  "Iron Pilbara": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 42, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+  ],
+  "Fortescue Pioneer": [
+    { name: "Filtri carburante", category: "Filtrazione", wear: 28, parts: [{ code: "FF5488", desc: "Filtro Carburante Fleetguard", price: 88, stock: "Stock" }] },
+  ],
+  "Svitzer Batavia": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 32, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+  ],
+  "SeaSwift Aliesha": [
+    { name: "Filtri olio", category: "Filtrazione", wear: 44, parts: [{ code: "LF9009", desc: "Filtro Olio Fleetguard QSL", price: 42, stock: "Stock" }] },
+    { name: "Separatore carburante/acqua", category: "Filtrazione", wear: 42, parts: [{ code: "FS1000", desc: "Separatore Carburante/Acqua FG", price: 65, stock: "Stock" }] },
+  ],
+};
+
 function wearClass(pct) {
   if (pct >= 75) return "high";
   if (pct >= 45) return "medium";
@@ -93,6 +184,7 @@ function switchTab(key) {
 function openNaveModal(fleetKey, shipIndex) {
   const ship = FLEETS[fleetKey][shipIndex];
   const modal = document.getElementById("naveModal");
+  const components = SHIP_COMPONENTS[ship.name] || [];
 
   document.getElementById("naveName").textContent = ship.name;
   document.getElementById("naveType").textContent = ship.type;
@@ -106,6 +198,40 @@ function openNaveModal(fleetKey, shipIndex) {
   const wearBar = document.getElementById("naveWearBar");
   wearBar.style.width = ship.wear + "%";
   wearBar.className = "wear-fill " + wearClass(ship.wear);
+
+  // Popolare tabella componenti
+  const tableHtml = `
+    <table style="width:100%; border-collapse:collapse; font-size:12px;">
+      <thead>
+        <tr style="background:rgba(0,87,184,.2); border-bottom:1px solid rgba(0,87,184,.3);">
+          <th style="padding:10px; text-align:left; color:#00d4ff; font-family:var(--F); font-weight:700;">COMPONENTE</th>
+          <th style="padding:10px; text-align:center; color:#00d4ff; font-family:var(--F); font-weight:700;">CATEGORIA</th>
+          <th style="padding:10px; text-align:center; color:#00d4ff; font-family:var(--F); font-weight:700;">USURA</th>
+          <th style="padding:10px; text-align:left; color:#00d4ff; font-family:var(--F); font-weight:700;">CODICE RICAMBIO</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${components.map((comp, idx) => `
+          <tr style="border-bottom:1px solid rgba(0,87,184,.1); ${idx % 2 ? 'background:rgba(0,0,0,.2);' : ''}">
+            <td style="padding:10px; color:#fff;">${comp.name}</td>
+            <td style="padding:10px; text-align:center; color:var(--grigio); font-size:11px;">${comp.category}</td>
+            <td style="padding:10px; text-align:center; color:#ff8c00; font-weight:700;">${comp.wear}%</td>
+            <td style="padding:10px;">
+              ${comp.parts.map(p => `
+                <div style="margin:4px 0; color:${p.stock === 'Stock' ? '#00e676' : '#ffd700'};">
+                  <strong>${p.code}</strong> - ${p.desc}
+                  ${p.price > 0 ? `<br><span style="font-size:11px; color:var(--grigio);">€${p.price}</span>` : ''}
+                  <br><span style="font-size:10px; color:${p.stock === 'Stock' ? '#00e676' : '#ffd700'};">${p.stock}</span>
+                </div>
+              `).join('')}
+            </td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>
+  `;
+
+  document.getElementById("componentsTable").innerHTML = tableHtml;
 
   modal.classList.add("show");
 }
