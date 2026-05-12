@@ -332,33 +332,7 @@ const ECO_CODICI = [
   { cod:'20R-1266',      brand:'Caterpillar', roi:45, price:1150, cost:793 },
 ];
 
-// ROI per codice (horizontal bar)
-const ctxROI = document.getElementById('chartROI')?.getContext('2d');
-if (ctxROI) {
-  new Chart(ctxROI, {
-    type: 'bar',
-    data: {
-      labels: ECO_CODICI.map(c => c.cod),
-      datasets: [{
-        data: ECO_CODICI.map(c => c.roi),
-        backgroundColor: ECO_CODICI.map(c => BRAND_COLOR[c.brand].fill),
-        borderColor:     ECO_CODICI.map(c => BRAND_COLOR[c.brand].border),
-        borderWidth: 1, borderRadius: 3,
-      }]
-    },
-    options: {
-      indexAxis: 'y', responsive: true,
-      plugins: {
-        legend: { display: false },
-        tooltip: { callbacks: { label: ctx => ' ROI: ' + ctx.raw + '%' } }
-      },
-      scales: {
-        x: { grid: { color: GRID }, ticks: { color: TICKS, callback: v => v + '%' }, beginAtZero: true, max: 100 },
-        y: { grid: { color: 'transparent' }, ticks: { color: TICKS, font: { size: 10 } } }
-      }
-    }
-  });
-}
+// ROI per codice (horizontal bar) - DEFINITO PIÙ IN BASSO
 
 // Bubble chart: Costo × Prezzo × Margine
 const ctxBub = document.getElementById('chartBubble')?.getContext('2d');
