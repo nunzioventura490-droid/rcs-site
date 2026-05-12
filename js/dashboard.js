@@ -413,90 +413,107 @@ const ECO_CODICI = [
 ];
 
 // ── ROI PER CODICE (HORIZONTAL BAR) ────────────────────────────
-const ctxROI = document.getElementById('chartROI')?.getContext('2d');
-console.log('chartROI canvas found:', !!ctxROI, 'Canvas element:', document.getElementById('chartROI'));
-if (ctxROI) {
+function initROIChart() {
+  const ctxROI = document.getElementById('chartROI')?.getContext('2d');
+  console.log('🔍 chartROI debug:', { found: !!ctxROI, element: !!document.getElementById('chartROI'), Chart: typeof Chart });
+
+  if (!ctxROI) {
+    console.warn('⚠️ chartROI canvas not found or context unavailable');
+    return;
+  }
+
   try {
     const roiLabels = ECO_CODICI.map(c => c.cod);
     const roiValues = ECO_CODICI.map(c => c.roi);
     const roiColors = ECO_CODICI.map(c => BRAND_COLOR[c.brand].border);
-    console.log('ROI data loaded:', roiLabels.length, 'codes');
+    console.log('✅ ROI data loaded:', roiLabels.length, 'codes');
 
     new Chart(ctxROI, {
-    type: 'bar',
-    data: {
-      labels: roiLabels,
-      datasets: [{
-        label: 'ROI %',
-        data: roiValues,
-        backgroundColor: ECO_CODICI.map(c => BRAND_COLOR[c.brand].fill),
-        borderColor: roiColors,
-        borderWidth: 1.5,
-        borderRadius: 3,
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: ctx => `ROI: ${ctx.raw.toFixed(1)}%`,
-            title: ctx => ctx[0].label
-          },
-          backgroundColor: 'rgba(0,0,0,.8)',
-          padding: 12,
-          titleColor: '#00d4ff',
-          bodyColor: '#fff',
-        }
+      type: 'bar',
+      data: {
+        labels: roiLabels,
+        datasets: [{
+          label: 'ROI %',
+          data: roiValues,
+          backgroundColor: ECO_CODICI.map(c => BRAND_COLOR[c.brand].fill),
+          borderColor: roiColors,
+          borderWidth: 1.5,
+          borderRadius: 3,
+        }]
       },
-      scales: {
-        x: {
-          grid: { color: 'rgba(0,87,184,.1)' },
-          ticks: { color: 'rgba(255,255,255,.6)', callback: v => v + '%' },
-          title: { display: true, text: 'Return on Investment (%)', color: 'rgba(255,255,255,.6)' },
-          max: 90
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `ROI: ${ctx.raw.toFixed(1)}%`,
+              title: ctx => ctx[0].label
+            },
+            backgroundColor: 'rgba(0,0,0,.8)',
+            padding: 12,
+            titleColor: '#00d4ff',
+            bodyColor: '#fff',
+          }
         },
-        y: {
-          grid: { display: false },
-          ticks: { color: 'rgba(255,255,255,.6)', font: { size: 11 } }
+        scales: {
+          x: {
+            grid: { color: 'rgba(0,87,184,.1)' },
+            ticks: { color: 'rgba(255,255,255,.6)', callback: v => v + '%' },
+            title: { display: true, text: 'Return on Investment (%)', color: 'rgba(255,255,255,.6)' },
+            max: 90
+          },
+          y: {
+            grid: { display: false },
+            ticks: { color: 'rgba(255,255,255,.6)', font: { size: 11 } }
+          }
         }
       }
-    }
-  });
-    console.log('ROI chart created successfully');
+    });
+    console.log('✅ ROI chart created successfully');
   } catch(e) {
-    console.error('Error creating ROI chart:', e);
+    console.error('❌ Error creating ROI chart:', e.message, e);
   }
-} else {
-  console.warn('chartROI canvas not found or context unavailable');
 }
 
-// Bubble chart: Costo × Prezzo × Margine
-const ctxBub = document.getElementById('chartBubble')?.getContext('2d');
-if (ctxBub) {
-  const brands = [...new Set(ECO_CODICI.map(c => c.brand))];
-  new Chart(ctxBub, {
-    type: 'bubble',
-    data: {
-      datasets: brands.map(brand => ({
-        label: brand,
-        data: ECO_CODICI.filter(c => c.brand === brand).map(c => ({
-          x: c.cost,
-          y: c.price,
-          r: Math.max(5, c.roi / 9),
-          cod: c.cod,
-        })),
-        backgroundColor: BRAND_COLOR[brand].fill,
-        borderColor: BRAND_COLOR[brand].border,
-        borderWidth: 1,
-      }))
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { labels: { color: 'rgba(255,255,255,.7)', usePointStyle: true, padding: 16 } },
+// Esegui quando DOM è pronto
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initROIChart);
+} else {
+  initROIChart();
+}
+
+// ── BUBBLE CHART: COSTO × PREZZO × MARGINE ────────────────────
+function initBubbleChart() {
+  const ctxBub = document.getElementById('chartBubble')?.getContext('2d');
+  if (!ctxBub) {
+    console.warn('⚠️ chartBubble canvas not found');
+    return;
+  }
+
+  try {
+    const brands = [...new Set(ECO_CODICI.map(c => c.brand))];
+    new Chart(ctxBub, {
+      type: 'bubble',
+      data: {
+        datasets: brands.map(brand => ({
+          label: brand,
+          data: ECO_CODICI.filter(c => c.brand === brand).map(c => ({
+            x: c.cost,
+            y: c.price,
+            r: Math.max(5, c.roi / 9),
+            cod: c.cod,
+          })),
+          backgroundColor: BRAND_COLOR[brand].fill,
+          borderColor: BRAND_COLOR[brand].border,
+          borderWidth: 1,
+        }))
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { labels: { color: 'rgba(255,255,255,.7)', usePointStyle: true, padding: 16 } },
         tooltip: {
           callbacks: {
             label: ctx => {
@@ -511,80 +528,125 @@ if (ctxBub) {
         y: { grid: { color: GRID }, ticks: { color: TICKS, callback: v => '€'+v }, title: { display: true, text: 'Prezzo Vendita (€)', color: TICKS } }
       }
     }
-  });
+    });
+    console.log('✅ Bubble chart created successfully');
+  } catch(e) {
+    console.error('❌ Error creating bubble chart:', e.message);
+  }
+}
+
+// Esegui quando DOM è pronto
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initBubbleChart);
+} else {
+  initBubbleChart();
 }
 
 // ── CMg & RMg ──────────────────────────────────────────────────
 const QTY = Array.from({ length: 21 }, (_, i) => i * 10);
-const ctxCMg = document.getElementById('chartCMg')?.getContext('2d');
-if (ctxCMg) {
-  new Chart(ctxCMg, {
-    type: 'line',
-    data: {
-      labels: QTY,
-      datasets: [
-        {
-          label: 'CMg – Costo Marginale',
-          data: QTY.map(q => +(330 + 0.36 * q).toFixed(1)),
-          borderColor: '#ff4444', backgroundColor: 'transparent',
-          borderWidth: 2, pointRadius: 3, tension: 0.3,
-        },
-        {
-          label: 'RMg – Ricavo Marginale',
-          data: QTY.map(q => +(606 - 0.95 * q).toFixed(1)),
-          borderColor: '#00e676', backgroundColor: 'transparent',
-          borderWidth: 2, pointRadius: 3, tension: 0.3,
-        },
-      ]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { labels: { color: 'rgba(255,255,255,.7)', usePointStyle: true } },
-        annotation: {},
+
+function initCMgChart() {
+  const ctxCMg = document.getElementById('chartCMg')?.getContext('2d');
+  if (!ctxCMg) {
+    console.warn('⚠️ chartCMg canvas not found');
+    return;
+  }
+
+  try {
+    new Chart(ctxCMg, {
+      type: 'line',
+      data: {
+        labels: QTY,
+        datasets: [
+          {
+            label: 'CMg – Costo Marginale',
+            data: QTY.map(q => +(330 + 0.36 * q).toFixed(1)),
+            borderColor: '#ff4444', backgroundColor: 'transparent',
+            borderWidth: 2, pointRadius: 3, tension: 0.3,
+          },
+          {
+            label: 'RMg – Ricavo Marginale',
+            data: QTY.map(q => +(606 - 0.95 * q).toFixed(1)),
+            borderColor: '#00e676', backgroundColor: 'transparent',
+            borderWidth: 2, pointRadius: 3, tension: 0.3,
+          },
+        ]
       },
-      scales: {
-        x: { grid: { color: GRID }, ticks: { color: TICKS }, title: { display: true, text: 'Quantità (unità/anno)', color: TICKS } },
-        y: { grid: { color: GRID }, ticks: { color: TICKS, callback: v => '€'+v }, beginAtZero: false,
-             title: { display: true, text: '€/unità', color: TICKS } }
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { labels: { color: 'rgba(255,255,255,.7)', usePointStyle: true } },
+          annotation: {},
+        },
+        scales: {
+          x: { grid: { color: GRID }, ticks: { color: TICKS }, title: { display: true, text: 'Quantità (unità/anno)', color: TICKS } },
+          y: { grid: { color: GRID }, ticks: { color: TICKS, callback: v => '€'+v }, beginAtZero: false,
+               title: { display: true, text: '€/unità', color: TICKS } }
+        }
       }
-    }
-  });
+    });
+    console.log('✅ CMg/RMg chart created successfully');
+  } catch(e) {
+    console.error('❌ Error creating CMg chart:', e.message);
+  }
 }
 
-const ctxDS = document.getElementById('chartDS')?.getContext('2d');
-if (ctxDS) {
-  new Chart(ctxDS, {
-    type: 'line',
-    data: {
-      labels: QTY,
-      datasets: [
-        {
-          label: 'Curva Domanda (D)',
-          data: QTY.map(q => +(800 - 0.24 * q).toFixed(1)),
-          borderColor: '#00d4ff', backgroundColor: 'transparent',
-          borderWidth: 2, pointRadius: 3, tension: 0.2,
-        },
-        {
-          label: 'Curva Offerta (S)',
-          data: QTY.map(q => +(300 + 0.10 * q).toFixed(1)),
-          borderColor: '#ff8c00', backgroundColor: 'transparent',
-          borderWidth: 2, pointRadius: 3, tension: 0.2,
-        },
-      ]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { labels: { color: 'rgba(255,255,255,.7)', usePointStyle: true } },
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCMgChart);
+} else {
+  initCMgChart();
+}
+
+// ── CURVA DOMANDA & OFFERTA ────────────────────────────────────
+function initDSChart() {
+  const ctxDS = document.getElementById('chartDS')?.getContext('2d');
+  if (!ctxDS) {
+    console.warn('⚠️ chartDS canvas not found');
+    return;
+  }
+
+  try {
+    new Chart(ctxDS, {
+      type: 'line',
+      data: {
+        labels: QTY,
+        datasets: [
+          {
+            label: 'Curva Domanda (D)',
+            data: QTY.map(q => +(800 - 0.24 * q).toFixed(1)),
+            borderColor: '#00d4ff', backgroundColor: 'transparent',
+            borderWidth: 2, pointRadius: 3, tension: 0.2,
+          },
+          {
+            label: 'Curva Offerta (S)',
+            data: QTY.map(q => +(300 + 0.10 * q).toFixed(1)),
+            borderColor: '#ff8c00', backgroundColor: 'transparent',
+            borderWidth: 2, pointRadius: 3, tension: 0.2,
+          },
+        ]
       },
-      scales: {
-        x: { grid: { color: GRID }, ticks: { color: TICKS }, title: { display: true, text: 'Quantità (unità/anno)', color: TICKS } },
-        y: { grid: { color: GRID }, ticks: { color: TICKS, callback: v => '€'+v }, beginAtZero: false,
-             title: { display: true, text: 'Prezzo (€)', color: TICKS } }
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { labels: { color: 'rgba(255,255,255,.7)', usePointStyle: true } },
+        },
+        scales: {
+          x: { grid: { color: GRID }, ticks: { color: TICKS }, title: { display: true, text: 'Quantità (unità/anno)', color: TICKS } },
+          y: { grid: { color: GRID }, ticks: { color: TICKS, callback: v => '€'+v }, beginAtZero: false,
+               title: { display: true, text: 'Prezzo (€)', color: TICKS } }
+        }
       }
-    }
-  });
+    });
+    console.log('✅ D/S chart created successfully');
+  } catch(e) {
+    console.error('❌ Error creating D/S chart:', e.message);
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initDSChart);
+} else {
+  initDSChart();
 }
 
 // ── COMPONENTI ALTO RISCHIO USURA ─────────────────────────────
