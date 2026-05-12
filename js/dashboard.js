@@ -1823,7 +1823,7 @@ function initROIChart() {
   }
 
   try {
-    const roiLabels = ECO_CODICI.map(c => c.cod);
+    const roiLabels = ECO_CODICI.map(c => c.code);
     const roiValues = ECO_CODICI.map(c => c.roi);
     const roiColors = ECO_CODICI.map(c => BRAND_COLOR[c.brand].border);
     console.log('✅ ROI data loaded:', roiLabels.length, 'codes');
