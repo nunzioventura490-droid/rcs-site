@@ -265,59 +265,53 @@
     </div>
   </section>
 
-  <!-- COMPANY GALLERY -->
-  <section class="section" id="gallery">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <p class="section-label">GALLERIA</p>
-        <h2 class="section-title">L'Azienda in Immagini</h2>
-      </div>
+  <!-- PHOTO SCROLL SECTIONS -->
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-top:40px;">
-        <!-- WAREHOUSE -->
-        <div style="background:linear-gradient(135deg, rgba(0,87,184,.15) 0%, rgba(0,212,255,.08) 100%); padding:0; border-radius:8px; overflow:hidden; border:1px solid rgba(0,87,184,.2);">
-          <img src="../assets/img/company/magazzino.png" alt="Magazzino Principale RCS" style="width:100%; height:200px; object-fit:cover;">
-          <div style="padding:16px;">
-            <h4 style="color:#00d4ff; font-size:13px; font-weight:700; margin-bottom:8px;">Magazzino Principale</h4>
-            <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6;">
-              Struttura operativa da 3.800 m² su 3 livelli: uffici, magazzino climatizzato e punto vendita. Accesso 24/7 per clienti SLA.
-            </p>
-          </div>
-        </div>
+  <!-- 1. TEAM — da destra -->
+  <section class="photo-scroll-section" id="gallery-team">
+    <div class="pss-img pss-from-right">
+      <img src="../assets/img/company/team.png" alt="Team RCS Marine">
+    </div>
+    <div class="pss-text">
+      <p class="section-label">IL TEAM</p>
+      <h2 class="pss-title">25 Specialisti al Vostro Servizio</h2>
+      <p class="pss-desc">Tecnici certificati OEM su MTU, Bosch, Caterpillar, Cummins e Delphi. Formazione continua e assistenza 24/7 per ogni esigenza della flotta.</p>
+    </div>
+  </section>
 
-        <!-- COMPANY VAN -->
-        <div style="background:linear-gradient(135deg, rgba(0,212,255,.08) 0%, rgba(0,87,184,.15) 100%); padding:0; border-radius:8px; overflow:hidden; border:1px solid rgba(0,87,184,.2);">
-          <img src="../assets/img/company/furgone.png" alt="Furgone Consegne RCS" style="width:100%; height:200px; object-fit:cover;">
-          <div style="padding:16px;">
-            <h4 style="color:#00d4ff; font-size:13px; font-weight:700; margin-bottom:8px;">Flotta di Distribuzione</h4>
-            <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6;">
-              Veicoli specializzati per consegne rapide nel Mediterraneo. Tracciamento real-time e SLA &lt; 12 ore per componenti critiche.
-            </p>
-          </div>
-        </div>
+  <!-- 2. FURGONE — da sinistra -->
+  <section class="photo-scroll-section pss-reverse" id="gallery-furgone">
+    <div class="pss-img pss-from-left">
+      <img src="../assets/img/company/furgone.png" alt="Furgone RCS Marine">
+    </div>
+    <div class="pss-text">
+      <p class="section-label">CONSEGNE</p>
+      <h2 class="pss-title">Delivery Garantita &lt; 12 Ore</h2>
+      <p class="pss-desc">Flotta di veicoli brandizzati RCS Marine per consegne rapide nel Mediterraneo. Tracciamento real-time e SLA contrattuale con ogni cliente.</p>
+    </div>
+  </section>
 
-        <!-- TEAM PHOTO -->
-        <div style="background:linear-gradient(135deg, rgba(0,87,184,.15) 0%, rgba(0,212,255,.08) 100%); padding:0; border-radius:8px; overflow:hidden; border:1px solid rgba(0,87,184,.2);">
-          <img src="../assets/img/company/team.png" alt="Team Specializzato RCS" style="width:100%; height:200px; object-fit:cover;">
-          <div style="padding:16px;">
-            <h4 style="color:#00d4ff; font-size:13px; font-weight:700; margin-bottom:8px;">Team Tecnico</h4>
-            <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6;">
-              25 dipendenti specializzati con certificazioni OEM. Competenza su MTU, Bosch, Caterpillar, Cummins, Delphi e sistemi legacy.
-            </p>
-          </div>
-        </div>
+  <!-- 3. MAGAZZINO — da destra -->
+  <section class="photo-scroll-section" id="gallery-magazzino">
+    <div class="pss-img pss-from-right">
+      <img src="../assets/img/company/magazzino.png" alt="Magazzino RCS Marine">
+    </div>
+    <div class="pss-text">
+      <p class="section-label">INFRASTRUTTURA</p>
+      <h2 class="pss-title">3.800 m² di Ricambi Pronti</h2>
+      <p class="pss-desc">Magazzino su 3 livelli: uffici, stock climatizzato e punto vendita. Accesso 24/7 per clienti con SLA contrattuale. Oltre 15.000 codici a scaffale.</p>
+    </div>
+  </section>
 
-        <!-- DELIVERY OPERATIONS -->
-        <div style="background:linear-gradient(135deg, rgba(0,212,255,.08) 0%, rgba(0,87,184,.15) 100%); padding:0; border-radius:8px; overflow:hidden; border:1px solid rgba(0,87,184,.2);">
-          <img src="../assets/img/company/operations.png" alt="Operazioni Portuali RCS" style="width:100%; height:200px; object-fit:cover;">
-          <div style="padding:16px;">
-            <h4 style="color:#00d4ff; font-size:13px; font-weight:700; margin-bottom:8px;">Logistica Marina</h4>
-            <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6;">
-              Operazioni presso i principali porti del Mediterraneo. Consegne direttamente a bordo nave e consegne express tramite courier.
-            </p>
-          </div>
-        </div>
-      </div>
+  <!-- 4. NAVI — da sinistra -->
+  <section class="photo-scroll-section pss-reverse" id="gallery-navi">
+    <div class="pss-img pss-from-left">
+      <img src="../assets/img/company/operations.png" alt="Flotte Navali RCS">
+    </div>
+    <div class="pss-text">
+      <p class="section-label">CLIENTI</p>
+      <h2 class="pss-title">23 Navi in 3 Flotte Servite</h2>
+      <p class="pss-desc">Virtu Ferries, Tug Malta e operatori australiani. Ricambi per High Speed Craft, ASD Tug, navi cargo e tanker — consegne direttamente a bordo.</p>
     </div>
   </section>
 
@@ -392,34 +386,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="dash-footer">
-    <div class="footer-inner">
-      <div class="footer-section">
-        <h4>RICAMBI CENTRO SUD S.R.L.</h4>
-        <p>Via Alessandro Volta 17 A/B<br>95122 Catania (CT) · Italia</p>
-        <p><strong>P.IVA:</strong> IT03176280877<br><strong>REA:</strong> 203412</p>
-      </div>
-      <div class="footer-section">
-        <h4>CONTATTI</h4>
-        <p><strong>PEC:</strong> info@pec.ricambicentrosud.com<br>
-        <strong>Sede:</strong> +39 95 (call during office hours)</p>
-      </div>
-      <div class="footer-section">
-        <h4>NAVIGAZIONE</h4>
-        <ul style="list-style:none; padding:0;">
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="chi-siamo.html">Chi Siamo</a></li>
-          <li><a href="analisi-usura.html">Analisi Usura</a></li>
-          <li><a href="strategia-operativa.html">Strategia</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 1995-2026 Ricambi Centro Sud S.r.l. · Tutti i diritti riservati</p>
-    </div>
-  </footer>
-
   <!-- HERO WAVES -->
   <script>
     const canvas = document.getElementById("heroWaves");
@@ -491,6 +457,18 @@
     window.addEventListener("scroll", () => {
       nav.classList.toggle("scrolled", window.scrollY > 40);
     });
+
+    // Animazione scroll per le photo sections
+    const pssObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add("visible");
+          pssObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".pss-img").forEach(el => pssObserver.observe(el));
   </script>
 </body>
 </html>
