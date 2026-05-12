@@ -38,7 +38,7 @@
 
         <div class="field">
           <label>UTENTE</label>
-          <input type="text" id="u" placeholder="nome utente" autocomplete="off">
+          <input type="text" id="u" placeholder="nome utente">
         </div>
         <div class="field">
           <label>PASSWORD</label>
@@ -53,6 +53,17 @@
         </button>
 
         <div class="divider"></div>
+
+        <!-- ACCESSO RAPIDO CON PASTE -->
+        <details style="margin-top: 20px;">
+          <summary style="color: #00d4ff; cursor: pointer; font-weight: 600; font-size: 12px; letter-spacing: 1px;">⚡ ACCESSO RAPIDO (INCOLLA CREDENZIALI)</summary>
+          <div style="margin-top: 12px; background: rgba(0,212,255,.08); padding: 12px; border-radius: 4px; border: 1px solid rgba(0,212,255,.2);">
+            <p style="color: var(--grigio); font-size: 12px; margin-bottom: 10px;">Incolla nel formato: <strong style="color: #00d4ff;">utente:password</strong></p>
+            <input type="text" id="quickPaste" placeholder="utente:password" style="width: 100%; padding: 10px; background: rgba(0,0,0,.3); border: 1px solid rgba(0,87,184,.3); border-radius: 4px; color: #fff; font-family: monospace; font-size: 12px; box-sizing: border-box;" onpaste="handleQuickPaste(event)">
+            <button onclick="parseAndLogin()" style="width: 100%; margin-top: 10px; padding: 10px; background: rgba(0,230,118,.2); border: 1px solid rgba(0,230,118,.4); color: #00e676; cursor: pointer; border-radius: 4px; font-weight: 600; font-size: 12px;">ACCEDI RAPIDO</button>
+          </div>
+        </details>
+
         <a href="pages/clienti.html" class="client-link">Area Clienti →</a>
       </div>
     </div>

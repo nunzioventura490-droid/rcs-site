@@ -52,6 +52,27 @@ function login() {
 // Invio con tasto Enter
 document.addEventListener("keydown", e => { if (e.key === "Enter") login(); });
 
+// ── ACCESSO RAPIDO CON PASTE ──────────────
+function handleQuickPaste(event) {
+  // Permetti il paste esplicitamente
+  event.preventDefault();
+  const clipboard = event.clipboardData.getData('text');
+  const input = document.getElementById("quickPaste");
+  input.value = clipboard;
+}
+
+function parseAndLogin() {
+  const quickPaste = document.getElementById("quickPaste").value.trim();
+  if (!quickPaste.includes(":")) {
+    alert("Formato errato! Usa: utente:password");
+    return;
+  }
+  const [user, pass] = quickPaste.split(":", 2);
+  document.getElementById("u").value = user;
+  document.getElementById("p").value = pass;
+  login();
+}
+
 // ── Protezione pagine interne ─────────────
 // Incolla in dashboard.html e clienti.html:
 // <script>if(!sessionStorage.getItem('rcs_auth'))location.href='../index.html';</script>
