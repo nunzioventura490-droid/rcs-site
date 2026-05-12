@@ -753,35 +753,6 @@ document.getElementById('rischioBody').innerHTML = RISCHIO.map(r => `
   </tr>
 `).join('');
 
-// ── CATALOGO BOSCH ───────────────────────────────────────────
-const BOSCH_CAT = [
-  { cod: '0132801141', desc: 'Sensore', cat: 'Elettronica', app: 'Vari', pnet: 15.4, pven: 33.88, qty: 50, naut: 'Adattabile' },
-  { cod: '0281002500', desc: 'Sensore', cat: 'Elettronica', app: 'Case/New-Holland', pnet: 63.8, pven: 140.36, qty: 200, naut: 'Adattabile' },
-  { cod: '0414191008', desc: 'Pompa', cat: 'Iniezione', app: 'Case/Iveco', pnet: 68.2, pven: 150.04, qty: 30, naut: 'Si' },
-  { cod: '0414401105', desc: 'Pompa', cat: 'Iniezione', app: 'Vari', pnet: 51.7, pven: 113.74, qty: 25, naut: 'Adattabile' },
-  { cod: '0414401106', desc: 'Pompa', cat: 'Iniezione', app: 'Vari', pnet: 66, pven: 145.2, qty: 20, naut: 'Adattabile' },
-  { cod: '0414701070', desc: 'Pompa UIS/PDE', cat: 'Iniezione', app: 'Iveco/Irisbus', pnet: 236.5, pven: 520.3, qty: 12, naut: 'Si' },
-];
-
-document.getElementById('boschBody').innerHTML = BOSCH_CAT.map(b => {
-  const marg = (b.pven - b.pnet).toFixed(2);
-  const margpct = (((b.pven - b.pnet) / b.pnet * 100)).toFixed(0);
-  return `
-    <tr>
-      <td><span class="incr-cod">${b.cod}</span></td>
-      <td>${b.desc}</td>
-      <td><span class="incr-cat">${b.cat}</span></td>
-      <td><span class="incr-cat">${b.app}</span></td>
-      <td style="font-weight:600">€${b.pnet}</td>
-      <td style="font-weight:700;color:var(--cyan)">€${b.pven}</td>
-      <td style="font-weight:700;color:var(--oro)">€${marg}</td>
-      <td style="font-weight:700;color:var(--oro)">${margpct}%</td>
-      <td style="text-align:center;color:var(--cyan)">${b.qty}</td>
-      <td><span style="font-size:10px;color:${b.naut==='Si'?'#00e676':'var(--grigio)'}">${b.naut}</span></td>
-    </tr>
-  `;
-}).join('');
-
 // ── AIS LIVE MAP ──────────────────────────────────────────────
 const AIS_KEY = 'd343fc3bc4218e9d7759faea743dd23b1b3073ed';
 const MMSI_VIRTU = {
