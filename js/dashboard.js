@@ -2140,7 +2140,7 @@ document.getElementById('boschBody').innerHTML = BOSCH_CAT.map(b => {
   const vend = +(b.netto * 2.2).toFixed(2);
   const marg = +(vend - b.netto).toFixed(2);
   return `<tr class="cat-row">
-    <td><span class="cat-code">${b.cod}</span></td>
+    <td><span class="cat-code">${b.code}</span></td>
     <td class="cat-name">${b.desc}</td>
     <td><span class="cat-brand cat-brand-bosch">${b.cat}</span></td>
     <td class="cat-motors">${b.app}</td>
