@@ -391,25 +391,25 @@ const BRAND_COLOR = {
 };
 
 const ECO_CODICI = [
-  { cod:'FS1000',        brand:'Cummins',     roi:83, price:65,   cost:35  },
-  { cod:'WF2073',        brand:'Cummins',     roi:83, price:38,   cost:21  },
-  { cod:'LF9009',        brand:'Cummins',     roi:83, price:42,   cost:23  },
-  { cod:'FF5488',        brand:'Cummins',     roi:83, price:88,   cost:48  },
-  { cod:'3967726',       brand:'Cummins',     roi:65, price:485,  cost:294 },
-  { cod:'0 281 006 064', brand:'Bosch',       roi:55, price:240,  cost:155 },
-  { cod:'0 445 120 356', brand:'Bosch',       roi:65, price:570,  cost:345 },
-  { cod:'0 445 120 455', brand:'Bosch',       roi:65, price:545,  cost:330 },
-  { cod:'0 445 120 236', brand:'Bosch',       roi:65, price:590,  cost:358 },
-  { cod:'0 445 120 217', brand:'Bosch',       roi:65, price:620,  cost:376 },
-  { cod:'0 124 655 025', brand:'Bosch',       roi:50, price:310,  cost:207 },
-  { cod:'0 445 010 537', brand:'Bosch',       roi:65, price:980,  cost:594 },
-  { cod:'5265902',       brand:'Delphi',      roi:65, price:290,  cost:176 },
-  { cod:'28231014',      brand:'Delphi',      roi:60, price:445,  cost:278 },
-  { cod:'BEBE4D24001',   brand:'Delphi',      roi:60, price:720,  cost:450 },
-  { cod:'BEBE4C17001',   brand:'Delphi',      roi:55, price:680,  cost:439 },
-  { cod:'7C-3614',       brand:'Caterpillar', roi:40, price:720,  cost:514 },
-  { cod:'20R-1278',      brand:'Caterpillar', roi:45, price:1080, cost:745 },
-  { cod:'20R-1266',      brand:'Caterpillar', roi:45, price:1150, cost:793 },
+  { code:'FS1000',        brand:'Cummins',     roi:83, price:65,   cost:35  },
+  { code:'WF2073',        brand:'Cummins',     roi:83, price:38,   cost:21  },
+  { code:'LF9009',        brand:'Cummins',     roi:83, price:42,   cost:23  },
+  { code:'FF5488',        brand:'Cummins',     roi:83, price:88,   cost:48  },
+  { code:'3967726',       brand:'Cummins',     roi:65, price:485,  cost:294 },
+  { code:'0 281 006 064', brand:'Bosch',       roi:55, price:240,  cost:155 },
+  { code:'0 445 120 356', brand:'Bosch',       roi:65, price:570,  cost:345 },
+  { code:'0 445 120 455', brand:'Bosch',       roi:65, price:545,  cost:330 },
+  { code:'0 445 120 236', brand:'Bosch',       roi:65, price:590,  cost:358 },
+  { code:'0 445 120 217', brand:'Bosch',       roi:65, price:620,  cost:376 },
+  { code:'0 124 655 025', brand:'Bosch',       roi:50, price:310,  cost:207 },
+  { code:'0 445 010 537', brand:'Bosch',       roi:65, price:980,  cost:594 },
+  { code:'5265902',       brand:'Delphi',      roi:65, price:290,  cost:176 },
+  { code:'28231014',      brand:'Delphi',      roi:60, price:445,  cost:278 },
+  { code:'BEBE4D24001',   brand:'Delphi',      roi:60, price:720,  cost:450 },
+  { code:'BEBE4C17001',   brand:'Delphi',      roi:55, price:680,  cost:439 },
+  { code:'7C-3614',       brand:'Caterpillar', roi:40, price:720,  cost:514 },
+  { code:'20R-1278',      brand:'Caterpillar', roi:45, price:1080, cost:745 },
+  { code:'20R-1266',      brand:'Caterpillar', roi:45, price:1150, cost:793 },
 ];
 
 // ── ROI PER CODICE (HORIZONTAL BAR) ────────────────────────────
@@ -651,21 +651,21 @@ if (document.readyState === 'loading') {
 
 // ── COMPONENTI ALTO RISCHIO USURA ─────────────────────────────
 const RISCHIO_DATA = [
-  { nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Filtri carburante',         cat:'Filtrazione',     status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'6 motori × 20 anni – intervallo cambio ogni 500h superato' },
-  { nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Filtri olio',               cat:'Filtrazione',     status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'6 motori – consumo olio accelerato a questa età' },
-  { nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Sensore pressione CR',      cat:'Iniezione',       status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'Sistema common rail MTU 4000 – sensori serie 0281 critici' },
-  { nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Filtri refrigerante',       cat:'Raffreddamento',  status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'Circuito raffreddamento critico su unità ad alta potenza' },
-  { nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Separatore carburante/acqua',cat:'Filtrazione',    status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'Acque Med – contaminazione acqua frequente in rotta Malta' },
-  { nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Alternatore marino',        cat:'Elettrico',       status:'CRITICO', eta:20, usura:60.0, sigma:8.9,  ic:'43%–77%',  motiv:'20 anni – alternatori tipicamente fine vita a questa età' },
-  { nave:'MV Jean de La Valette',  motore:'MTU 8000 series',     comp:'Filtri olio',               cat:'Filtrazione',     status:'ALTO',    eta:16, usura:56.0, sigma:7.2,  ic:'42%–70%',  motiv:'4 motori × 16 anni – manutenzione intensiva ad alta velocità' },
-  { nave:'MV Jean de La Valette',  motore:'MTU 8000 series',     comp:'Sensore pressione CR',      cat:'Iniezione',       status:'ALTO',    eta:16, usura:56.0, sigma:7.2,  ic:'42%–70%',  motiv:'MTU 8000 CR system – alta sollecitazione a regime' },
-  { nave:'MV Jean de La Valette',  motore:'MTU 8000 series',     comp:'Filtri carburante',         cat:'Filtrazione',     status:'ALTO',    eta:16, usura:56.0, sigma:7.2,  ic:'42%–70%',  motiv:'Intervallo ridotto su regime alta velocità Pozzallo–Malta' },
-  { nave:'MV Saint John Paul II',  motore:'MTU 8000 (9100kW)',   comp:'Sensore pressione CR',      cat:'Iniezione',       status:'MEDIO',   eta:7,  usura:24.5, sigma:4.8,  ic:'15%–34%',  motiv:'7 anni – prima ispezione programmata CR serie 0281' },
-  { nave:'MV Saint John Paul II',  motore:'MTU 8000 (9100kW)',   comp:'Filtri carburante',         cat:'Filtrazione',     status:'MEDIO',   eta:7,  usura:24.5, sigma:4.8,  ic:'15%–34%',  motiv:'Manutenzione ordinaria – ancora in garanzia costruttore' },
-  { nave:'San Frangisk',           motore:'Deutz MWM 620B V1',   comp:'Filtri carburante',         cat:'Filtrazione',     status:'CRITICO', eta:36, usura:90.0, sigma:13.2, ic:'64%–100%', motiv:'36 anni – motori meccanici Deutz MWM, ricambi urgenti' },
-  { nave:'San Frangisk',           motore:'Deutz MWM 620B V1',   comp:'Filtri olio',               cat:'Filtrazione',     status:'CRITICO', eta:36, usura:90.0, sigma:13.2, ic:'64%–100%', motiv:'Usura avanzata su tutto il sistema lubrificazione' },
-  { nave:'San Pawl ⚠️ ex-flotta', motore:'Deutz MWM 604B V1',   comp:'Filtri carburante',         cat:'Filtrazione',     status:'CRITICO', eta:35, usura:87.5, sigma:13.0, ic:'62%–100%', motiv:'35 anni – ceduta 2025; dati storici mantenuti per analisi' },
-  { nave:'San Pawl ⚠️ ex-flotta', motore:'Deutz MWM 604B V1',   comp:'Filtri olio',               cat:'Filtrazione',     status:'CRITICO', eta:35, usura:87.5, sigma:13.0, ic:'62%–100%', motiv:'Filtri olio equivalenti Fleetguard applicabili' },
+  { key:'usura_1', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Filtri carburante',         cat:'Filtrazione',     status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'6 motori × 20 anni – intervallo cambio ogni 500h superato' },
+  { key:'usura_2', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Filtri olio',               cat:'Filtrazione',     status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'6 motori – consumo olio accelerato a questa età' },
+  { key:'usura_3', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Sensore pressione CR',      cat:'Iniezione',       status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'Sistema common rail MTU 4000 – sensori serie 0281 critici' },
+  { key:'usura_4', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Filtri refrigerante',       cat:'Raffreddamento',  status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'Circuito raffreddamento critico su unità ad alta potenza' },
+  { key:'usura_5', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Separatore carburante/acqua',cat:'Filtrazione',    status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'Acque Med – contaminazione acqua frequente in rotta Malta' },
+  { key:'usura_6', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Alternatore marino',        cat:'Elettrico',       status:'CRITICO', eta:20, usura:60.0, sigma:8.9,  ic:'43%–77%',  motiv:'20 anni – alternatori tipicamente fine vita a questa età' },
+  { key:'usura_7', nave:'MV Jean de La Valette',  motore:'MTU 8000 series',     comp:'Filtri olio',               cat:'Filtrazione',     status:'ALTO',    eta:16, usura:56.0, sigma:7.2,  ic:'42%–70%',  motiv:'4 motori × 16 anni – manutenzione intensiva ad alta velocità' },
+  { key:'usura_8', nave:'MV Jean de La Valette',  motore:'MTU 8000 series',     comp:'Sensore pressione CR',      cat:'Iniezione',       status:'ALTO',    eta:16, usura:56.0, sigma:7.2,  ic:'42%–70%',  motiv:'MTU 8000 CR system – alta sollecitazione a regime' },
+  { key:'usura_9', nave:'MV Jean de La Valette',  motore:'MTU 8000 series',     comp:'Filtri carburante',         cat:'Filtrazione',     status:'ALTO',    eta:16, usura:56.0, sigma:7.2,  ic:'42%–70%',  motiv:'Intervallo ridotto su regime alta velocità Pozzallo–Malta' },
+  { key:'usura_10', nave:'MV Saint John Paul II',  motore:'MTU 8000 (9100kW)',   comp:'Sensore pressione CR',      cat:'Iniezione',       status:'MEDIO',   eta:7,  usura:24.5, sigma:4.8,  ic:'15%–34%',  motiv:'7 anni – prima ispezione programmata CR serie 0281' },
+  { key:'usura_11', nave:'MV Saint John Paul II',  motore:'MTU 8000 (9100kW)',   comp:'Filtri carburante',         cat:'Filtrazione',     status:'MEDIO',   eta:7,  usura:24.5, sigma:4.8,  ic:'15%–34%',  motiv:'Manutenzione ordinaria – ancora in garanzia costruttore' },
+  { key:'usura_12', nave:'San Frangisk',           motore:'Deutz MWM 620B V1',   comp:'Filtri carburante',         cat:'Filtrazione',     status:'CRITICO', eta:36, usura:90.0, sigma:13.2, ic:'64%–100%', motiv:'36 anni – motori meccanici Deutz MWM, ricambi urgenti' },
+  { key:'usura_13', nave:'San Frangisk',           motore:'Deutz MWM 620B V1',   comp:'Filtri olio',               cat:'Filtrazione',     status:'CRITICO', eta:36, usura:90.0, sigma:13.2, ic:'64%–100%', motiv:'Usura avanzata su tutto il sistema lubrificazione' },
+  { key:'usura_14', nave:'San Pawl ⚠️ ex-flotta', motore:'Deutz MWM 604B V1',   comp:'Filtri carburante',         cat:'Filtrazione',     status:'CRITICO', eta:35, usura:87.5, sigma:13.0, ic:'62%–100%', motiv:'35 anni – ceduta 2025; dati storici mantenuti per analisi' },
+  { key:'usura_15', nave:'San Pawl ⚠️ ex-flotta', motore:'Deutz MWM 604B V1',   comp:'Filtri olio',               cat:'Filtrazione',     status:'CRITICO', eta:35, usura:87.5, sigma:13.0, ic:'62%–100%', motiv:'Filtri olio equivalenti Fleetguard applicabili' },
 ];
 
 const statusClass = { CRITICO:'status-critico', ALTO:'status-alto', MEDIO:'status-medio' };
@@ -685,19 +685,19 @@ document.getElementById('rischioBody').innerHTML = RISCHIO_DATA.map(r => `
 
 // ── CATALOGO BOSCH REALE ───────────────────────────────────────
 const BOSCH_CAT = [
-  { cod:'0132801141', desc:'Sensore',      cat:'Elettronica', app:'Vari',              netto:15.4,  qty:50,  nav:'🔵 Adattabile' },
-  { cod:'0281002500', desc:'Sensore',      cat:'Elettronica', app:'Case / New-Holland',netto:63.8,  qty:200, nav:'🔵 Adattabile' },
-  { cod:'0414191008', desc:'Pompa',        cat:'Iniezione',   app:'Case / Iveco',       netto:68.2,  qty:30,  nav:'✅ Sì' },
-  { cod:'0414401105', desc:'Pompa',        cat:'Iniezione',   app:'Vari',              netto:51.7,  qty:25,  nav:'🔵 Adattabile' },
-  { cod:'0414401106', desc:'Pompa',        cat:'Iniezione',   app:'Vari',              netto:66.0,  qty:20,  nav:'🔵 Adattabile' },
-  { cod:'0414701070', desc:'Pompa UIS/PDE',cat:'Iniezione',   app:'Iveco / Irisbus',   netto:236.5, qty:12,  nav:'✅ Sì' },
-  { cod:'0414700027', desc:'Pompa UIS/PDE',cat:'Iniezione',   app:'Vari',              netto:187.0, qty:15,  nav:'🔵 Adattabile' },
-  { cod:'0445010537', desc:'Pompa CP4',    cat:'Common Rail', app:'Marine CR Bosch/MAN',netto:490.0, qty:8,  nav:'✅ Sì' },
-  { cod:'0445120217', desc:'Iniettore CR', cat:'Common Rail', app:'MAN B&W G-Type',    netto:310.0, qty:18,  nav:'✅ Sì' },
-  { cod:'0445120236', desc:'Iniettore CR', cat:'Common Rail', app:'Cummins QSL9',      netto:295.0, qty:14,  nav:'✅ Sì' },
-  { cod:'0445120455', desc:'Iniettore CR', cat:'Common Rail', app:'Cummins QSB 6.7',   netto:272.5, qty:16,  nav:'✅ Sì' },
-  { cod:'0281006064', desc:'Sensore CR',   cat:'Common Rail', app:'MTU/MAN/Cummins',   netto:120.0, qty:35,  nav:'✅ Sì' },
-  { cod:'0124655025', desc:'Alternatore',  cat:'Elettronica', app:'MAN / Ausiliari',   netto:155.0, qty:22,  nav:'✅ Sì' },
+  { code:'0132801141', desc:'Sensore',      cat:'Elettronica', app:'Vari',              netto:15.4,  qty:50,  nav:'🔵 Adattabile' },
+  { code:'0281002500', desc:'Sensore',      cat:'Elettronica', app:'Case / New-Holland',netto:63.8,  qty:200, nav:'🔵 Adattabile' },
+  { code:'0414191008', desc:'Pompa',        cat:'Iniezione',   app:'Case / Iveco',       netto:68.2,  qty:30,  nav:'✅ Sì' },
+  { code:'0414401105', desc:'Pompa',        cat:'Iniezione',   app:'Vari',              netto:51.7,  qty:25,  nav:'🔵 Adattabile' },
+  { code:'0414401106', desc:'Pompa',        cat:'Iniezione',   app:'Vari',              netto:66.0,  qty:20,  nav:'🔵 Adattabile' },
+  { code:'0414701070', desc:'Pompa UIS/PDE',cat:'Iniezione',   app:'Iveco / Irisbus',   netto:236.5, qty:12,  nav:'✅ Sì' },
+  { code:'0414700027', desc:'Pompa UIS/PDE',cat:'Iniezione',   app:'Vari',              netto:187.0, qty:15,  nav:'🔵 Adattabile' },
+  { code:'0445010537', desc:'Pompa CP4',    cat:'Common Rail', app:'Marine CR Bosch/MAN',netto:490.0, qty:8,  nav:'✅ Sì' },
+  { code:'0445120217', desc:'Iniettore CR', cat:'Common Rail', app:'MAN B&W G-Type',    netto:310.0, qty:18,  nav:'✅ Sì' },
+  { code:'0445120236', desc:'Iniettore CR', cat:'Common Rail', app:'Cummins QSL9',      netto:295.0, qty:14,  nav:'✅ Sì' },
+  { code:'0445120455', desc:'Iniettore CR', cat:'Common Rail', app:'Cummins QSB 6.7',   netto:272.5, qty:16,  nav:'✅ Sì' },
+  { code:'0281006064', desc:'Sensore CR',   cat:'Common Rail', app:'MTU/MAN/Cummins',   netto:120.0, qty:35,  nav:'✅ Sì' },
+  { code:'0124655025', desc:'Alternatore',  cat:'Elettronica', app:'MAN / Ausiliari',   netto:155.0, qty:22,  nav:'✅ Sì' },
 ];
 
 document.getElementById('boschBody').innerHTML = BOSCH_CAT.map(b => {
@@ -834,24 +834,24 @@ if (ctxTR) {
 
 // ── INCROCIO FLOTTA × CODICI ──────────────────────────────────
 const INCROCIO = [
-  { nave:'MV Maria Dolores',      cod:'0 281 006 064', ric:'Sensore Pressione CR Bosch',        cat:'Iniezione – Sensore',       motiv:'MTU 4000 M73 usa sistema CR con sensori Bosch 0281 serie',               rischio:'ALTO',  rnote:'19 anni, 6 motori CR' },
-  { nave:'MV Jean de La Valette', cod:'0 281 006 064', ric:'Sensore Pressione CR Bosch',        cat:'Iniezione – Sensore',       motiv:'MTU 8000 usa sistema CR con sensori Bosch 0281 serie',                   rischio:'MEDIO', rnote:'15 anni, alta potenza' },
-  { nave:'MV Saint John Paul II', cod:'0 281 006 064', ric:'Sensore Pressione CR Bosch',        cat:'Iniezione – Sensore',       motiv:'MTU 8000 (9100 kW) usa sistema CR con sensori Bosch 0281',               rischio:'BASSO', rnote:'6 anni' },
-  { nave:'MV Maria Dolores',      cod:'FF5488',        ric:'Filtro Carburante Fleetguard Marine',cat:'Filtrazione',               motiv:'MTU 4000 M73 approvato Fleetguard FF5488 come filtro equivalente',       rischio:'ALTO',  rnote:'ricambio periodico 6 motori' },
-  { nave:'MV Jean de La Valette', cod:'FF5488',        ric:'Filtro Carburante Fleetguard Marine',cat:'Filtrazione',               motiv:'MTU 8000 compatibile Fleetguard fuel filter equivalente',                 rischio:'MEDIO', rnote:'4 motori, alta ciclicità' },
-  { nave:'MV Saint John Paul II', cod:'FF5488',        ric:'Filtro Carburante Fleetguard Marine',cat:'Filtrazione',               motiv:'MTU 8000 compatibile Fleetguard fuel filter equivalente',                 rischio:'BASSO', rnote:'nave giovane' },
-  { nave:'MV Maria Dolores',      cod:'LF9009',        ric:'Filtro Olio Fleetguard QSL',        cat:'Filtrazione',               motiv:'MTU 4000 M73 approvato filtri olio Fleetguard equivalenti',              rischio:'ALTO',  rnote:'6 motori, 19 anni' },
-  { nave:'MV Jean de La Valette', cod:'LF9009',        ric:'Filtro Olio Fleetguard QSL',        cat:'Filtrazione',               motiv:'MTU 8000 series approvato filtri olio Fleetguard equivalenti',            rischio:'MEDIO', rnote:'4 motori, 15 anni' },
-  { nave:'MV Maria Dolores',      cod:'3967726',       ric:'Filtro Aria Fleetguard Marine',     cat:'Filtrazione',               motiv:'MTU 4000 M73 filtro aria equivalente Fleetguard certificato',             rischio:'ALTO',  rnote:'6 motori, alta usura' },
-  { nave:'MV Jean de La Valette', cod:'3967726',       ric:'Filtro Aria Fleetguard Marine',     cat:'Filtrazione',               motiv:'MTU 8000 filtro aria Fleetguard equivalente approvato',                   rischio:'MEDIO', rnote:'4 motori, 15 anni' },
-  { nave:'MV Saint John Paul II', cod:'3967726',       ric:'Filtro Aria Fleetguard Marine',     cat:'Filtrazione',               motiv:'MTU 8000 9100kW filtro aria Fleetguard equivalente approvato',            rischio:'BASSO', rnote:'6 anni, bassa usura' },
-  { nave:'MV Maria Dolores',      cod:'FS1000',        ric:'Separatore Acqua Fleetguard',       cat:'Filtrazione',               motiv:'Sistema fuel/water separator marino compatibile MTU 4000',                rischio:'ALTO',  rnote:'19 anni, 6 motori' },
-  { nave:'HSC Gozo Express',      cod:'FS1000',        ric:'Separatore Acqua Fleetguard',       cat:'Filtrazione',               motiv:'MTU 4000 HSC versione nautica compatibile Fleetguard FS1000',             rischio:'MEDIO', rnote:'12 anni, Fast Ferry' },
-  { nave:'MV Maria Dolores',      cod:'WF2073',        ric:'Filtro Acqua Fleetguard',           cat:'Filtrazione',               motiv:'Cooling system water filter compatibile MTU 4000 M73',                    rischio:'ALTO',  rnote:'età critica, 6 motori' },
-  { nave:'HSC Gozo Express',      cod:'WF2073',        ric:'Filtro Acqua Fleetguard',           cat:'Filtrazione',               motiv:'Cooling system water filter MTU 4000 HSC approvato',                      rischio:'MEDIO', rnote:'12 anni' },
-  { nave:'MV Maria Dolores',      cod:'0 124 655 025', ric:'Alternatore Bosch 24V 120A',        cat:'Elettrico – Alternatore',   motiv:'Alternatore ausiliario 24V marino – MTU 4000 serie',                     rischio:'ALTO',  rnote:'età critica' },
-  { nave:'ACC San Frangisk',      cod:'0 124 655 025', ric:'Alternatore Bosch 24V 120A',        cat:'Elettrico – Alternatore',   motiv:'Deutz MWM – alternatore 24V marino compatibile',                         rischio:'ALTO',  rnote:'35 anni' },
-  { nave:'ACC San Pawl',          cod:'0 124 655 025', ric:'Alternatore Bosch 24V 120A',        cat:'Elettrico – Alternatore',   motiv:'Deutz MWM – alternatore 24V marino compatibile',                         rischio:'ALTO',  rnote:'34 anni' },
+  { key:'incr_1', nave:'MV Maria Dolores',      code:'0 281 006 064', comp:'Sensore Pressione CR Bosch',        cat:'Iniezione – Sensore',       motiv:'MTU 4000 M73 usa sistema CR con sensori Bosch 0281 serie',               status:'ALTO',  rnote:'19 anni, 6 motori CR' },
+  { key:'incr_2', nave:'MV Jean de La Valette', code:'0 281 006 064', comp:'Sensore Pressione CR Bosch',        cat:'Iniezione – Sensore',       motiv:'MTU 8000 usa sistema CR con sensori Bosch 0281 serie',                   status:'MEDIO', rnote:'15 anni, alta potenza' },
+  { key:'incr_3', nave:'MV Saint John Paul II', code:'0 281 006 064', comp:'Sensore Pressione CR Bosch',        cat:'Iniezione – Sensore',       motiv:'MTU 8000 (9100 kW) usa sistema CR con sensori Bosch 0281',               status:'BASSO', rnote:'6 anni' },
+  { key:'incr_4', nave:'MV Maria Dolores',      code:'FF5488',        comp:'Filtro Carburante Fleetguard Marine',cat:'Filtrazione',               motiv:'MTU 4000 M73 approvato Fleetguard FF5488 come filtro equivalente',       status:'ALTO',  rnote:'ricambio periodico 6 motori' },
+  { key:'incr_5', nave:'MV Jean de La Valette', code:'FF5488',        comp:'Filtro Carburante Fleetguard Marine',cat:'Filtrazione',               motiv:'MTU 8000 compatibile Fleetguard fuel filter equivalente',                 status:'MEDIO', rnote:'4 motori, alta ciclicità' },
+  { key:'incr_6', nave:'MV Saint John Paul II', code:'FF5488',        comp:'Filtro Carburante Fleetguard Marine',cat:'Filtrazione',               motiv:'MTU 8000 compatibile Fleetguard fuel filter equivalente',                 status:'BASSO', rnote:'nave giovane' },
+  { key:'incr_7', nave:'MV Maria Dolores',      code:'LF9009',        comp:'Filtro Olio Fleetguard QSL',        cat:'Filtrazione',               motiv:'MTU 4000 M73 approvato filtri olio Fleetguard equivalenti',              status:'ALTO',  rnote:'6 motori, 19 anni' },
+  { key:'incr_8', nave:'MV Jean de La Valette', code:'LF9009',        comp:'Filtro Olio Fleetguard QSL',        cat:'Filtrazione',               motiv:'MTU 8000 series approvato filtri olio Fleetguard equivalenti',            status:'MEDIO', rnote:'4 motori, 15 anni' },
+  { key:'incr_9', nave:'MV Maria Dolores',      code:'3967726',       comp:'Filtro Aria Fleetguard Marine',     cat:'Filtrazione',               motiv:'MTU 4000 M73 filtro aria equivalente Fleetguard certificato',             status:'ALTO',  rnote:'6 motori, alta usura' },
+  { key:'incr_10', nave:'MV Jean de La Valette', code:'3967726',       comp:'Filtro Aria Fleetguard Marine',     cat:'Filtrazione',               motiv:'MTU 8000 filtro aria Fleetguard equivalente approvato',                   status:'MEDIO', rnote:'4 motori, 15 anni' },
+  { key:'incr_11', nave:'MV Saint John Paul II', code:'3967726',       comp:'Filtro Aria Fleetguard Marine',     cat:'Filtrazione',               motiv:'MTU 8000 9100kW filtro aria Fleetguard equivalente approvato',            status:'BASSO', rnote:'6 anni, bassa usura' },
+  { key:'incr_12', nave:'MV Maria Dolores',      code:'FS1000',        comp:'Separatore Acqua Fleetguard',       cat:'Filtrazione',               motiv:'Sistema fuel/water separator marino compatibile MTU 4000',                status:'ALTO',  rnote:'19 anni, 6 motori' },
+  { key:'incr_13', nave:'HSC Gozo Express',      code:'FS1000',        comp:'Separatore Acqua Fleetguard',       cat:'Filtrazione',               motiv:'MTU 4000 HSC versione nautica compatibile Fleetguard FS1000',             status:'MEDIO', rnote:'12 anni, Fast Ferry' },
+  { key:'incr_14', nave:'MV Maria Dolores',      code:'WF2073',        comp:'Filtro Acqua Fleetguard',           cat:'Filtrazione',               motiv:'Cooling system water filter compatibile MTU 4000 M73',                    status:'ALTO',  rnote:'età critica, 6 motori' },
+  { key:'incr_15', nave:'HSC Gozo Express',      code:'WF2073',        comp:'Filtro Acqua Fleetguard',           cat:'Filtrazione',               motiv:'Cooling system water filter MTU 4000 HSC approvato',                      status:'MEDIO', rnote:'12 anni' },
+  { key:'incr_16', nave:'MV Maria Dolores',      code:'0 124 655 025', comp:'Alternatore Bosch 24V 120A',        cat:'Elettrico – Alternatore',   motiv:'Alternatore ausiliario 24V marino – MTU 4000 serie',                     status:'ALTO',  rnote:'età critica' },
+  { key:'incr_17', nave:'ACC San Frangisk',      code:'0 124 655 025', comp:'Alternatore Bosch 24V 120A',        cat:'Elettrico – Alternatore',   motiv:'Deutz MWM – alternatore 24V marino compatibile',                         status:'ALTO',  rnote:'35 anni' },
+  { key:'incr_18', nave:'ACC San Pawl',          code:'0 124 655 025', comp:'Alternatore Bosch 24V 120A',        cat:'Elettrico – Alternatore',   motiv:'Deutz MWM – alternatore 24V marino compatibile',                         status:'ALTO',  rnote:'34 anni' },
 ];
 
 function showIncrocio(filter) {
@@ -1154,4 +1154,507 @@ if (ctxT) {
       }
     }
   });
+}
+
+// ══════════════════════════════════════════════════════════════════════════════════════
+// ── POPUP SYSTEM (nunzio-only) ──────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════════════════════════════
+
+// Permission check for popups
+function checkPopupAccess() {
+  const user = sessionStorage.getItem('rcs_user');
+  if (user !== 'nunzio') {
+    showNotification('⛔ Solo nunzio può visualizzare i dettagli');
+    return false;
+  }
+  return true;
+}
+
+// Main popup opener
+function openDetailModal(type, key) {
+  if (!checkPopupAccess()) return;
+
+  const modal = document.getElementById('detailsModal');
+  const content = document.getElementById('modalContent');
+
+  let html = '';
+
+  switch(type) {
+    case 'mercato':
+      html = buildMercatoPopup(key);
+      break;
+    case 'codice':
+      html = buildCodicePopup(key);
+      break;
+    case 'catalogo':
+      html = buildCatalogoPopup(key);
+      break;
+    case 'incrocio':
+      html = buildIncrocioPopup(key);
+      break;
+    case 'usura':
+      html = buildUsuraPopup(key);
+      break;
+    case 'roadmap':
+      html = buildRoadmapPopup(key);
+      break;
+    default:
+      return;
+  }
+
+  content.innerHTML = html;
+  modal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+
+  // ESC key to close
+  document.addEventListener('keydown', handleEscKey);
+}
+
+function closeDetailModal() {
+  const modal = document.getElementById('detailsModal');
+  modal.classList.remove('show');
+  document.body.style.overflow = 'auto';
+  document.removeEventListener('keydown', handleEscKey);
+}
+
+function handleEscKey(e) {
+  if (e.key === 'Escape') closeDetailModal();
+}
+
+// ── MERCATO POPUP ───────────────────────────────────────────────────────────────────
+const MERCATI_DATA = {
+  malta: {
+    nome: 'Malta · Priorità 1',
+    flag: '🇲🇹',
+    tipo: 'Malta-Based & Malta-Flag',
+    priority: 1,
+    score: 99,
+    aziende: ['Tug Malta Ltd.', 'Virtu Ferries', 'MSC', 'Grimaldi Lines', 'V.Ships'],
+    export: '€2,0M',
+    target2027: '€4,0M',
+    markup: '+35%',
+    strategia: 'Penetrazione immediata tramite Virtu Ferries (client privilegiato) e Tug Malta per tug services. Focus su MV Maria Dolores overhaul (Aug-Oct 2026) come proof-of-concept.'
+  },
+  italia: {
+    nome: 'Italia · Transito Malta',
+    flag: '🇮🇹',
+    tipo: 'Compagnie italiane in transito',
+    priority: 2,
+    score: 94,
+    aziende: ['GNV', 'Tirrenia / Moby', 'Caronte & Tourist', 'Liberty Lines', 'SNAV'],
+    rotta: 'Sicilia–Malta',
+    potenziale: '€300K Q3 2025',
+    navi: '15–35 navi per compagnia',
+    strategia: 'Leverage Malta come hub di transito. Target ferry di prossimità (Sicilia-Malta, Tirrenia routes) con manutenzione rapida e delivery <12h.'
+  },
+  australia: {
+    nome: 'Australia · Oceania',
+    flag: '🇦🇺',
+    tipo: 'Fleet AUS-Based & Mining',
+    priority: 3,
+    score: 98,
+    aziende: ['BHP Fleet', 'Rio Tinto Marine', 'FMG', 'Svitzer Australia', 'TT-Line'],
+    markup: '+55%',
+    potenziale: '€400K anno 1',
+    hub: 'Port Hedland',
+    strategia: 'Espansione secondaria (fase 2027-2028). Mining support vessels e bulk carriers con margini elevati. Shipping time non critico.'
+  },
+  internazionale: {
+    nome: 'Internazionale · Hub Malta',
+    flag: '🌍',
+    tipo: 'Transito Malta Freeport',
+    priority: 4,
+    score: 98,
+    aziende: ['Maersk Line', 'CMA CGM', 'Hapag-Lloyd', 'Evergreen', 'ZIM'],
+    modello: 'Hub & Spoke via Malta',
+    markup: '+40-50%',
+    potenziale: 'Infinito (global)',
+    strategia: 'Hub internazionale per container carriers globali. Manutenzione preventiva a Malta con supply chain globale.'
+  }
+};
+
+function buildMercatoPopup(key) {
+  const m = MERCATI_DATA[key];
+  if (!m) return '<h2>Mercato non trovato</h2>';
+
+  return `
+    <h2 style="font-size:22px; color:#00d4ff; margin-bottom:18px; letter-spacing:1px;">
+      ${m.flag} ${m.nome}
+    </h2>
+
+    <div class="nave-details">
+      <div class="detail-group">
+        <span class="detail-label">TIPO MERCATO:</span>
+        <span class="detail-value">${m.tipo}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">PRIORITY SCORE:</span>
+        <span class="detail-value">${m.score}/100</span>
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">AZIENDE PRINCIPALI</h3>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          ${m.aziende.map(a => `<div style="background:rgba(0,87,184,.15); padding:8px; border-radius:4px; font-size:12px;">${a}</div>`).join('')}
+        </div>
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">KPI</h3>
+        ${key === 'malta' ? `
+          <div style="font-size:12px; line-height:1.8; color:rgba(255,255,255,.85);">
+            <div><strong>Export Attuale:</strong> ${m.export}</div>
+            <div><strong>Target 2027:</strong> ${m.target2027}</div>
+            <div><strong>Markup Medio:</strong> ${m.markup}</div>
+          </div>
+        ` : key === 'italia' ? `
+          <div style="font-size:12px; line-height:1.8; color:rgba(255,255,255,.85);">
+            <div><strong>Rotta Principale:</strong> ${m.rotta}</div>
+            <div><strong>Potenziale Q3 2025:</strong> ${m.potenziale}</div>
+            <div><strong>Navi per Compagnia:</strong> ${m.navi}</div>
+          </div>
+        ` : key === 'australia' ? `
+          <div style="font-size:12px; line-height:1.8; color:rgba(255,255,255,.85);">
+            <div><strong>Markup Medio:</strong> ${m.markup}</div>
+            <div><strong>Potenziale Anno 1:</strong> ${m.potenziale}</div>
+            <div><strong>Hub Principale:</strong> ${m.hub}</div>
+          </div>
+        ` : `
+          <div style="font-size:12px; line-height:1.8; color:rgba(255,255,255,.85);">
+            <div><strong>Modello:</strong> ${m.modello}</div>
+            <div><strong>Markup:</strong> ${m.markup}</div>
+            <div><strong>Potenziale:</strong> ${m.potenziale}</div>
+          </div>
+        `}
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">STRATEGIA</h3>
+        <p style="font-size:12px; line-height:1.7; color:rgba(255,255,255,.8);">${m.strategia}</p>
+      </div>
+    </div>
+  `;
+}
+
+// ── CODICE POPUP ────────────────────────────────────────────────────────────────────
+function buildCodicePopup(codiceKey) {
+  const codice = ECO_CODICI.find(c => c.cod === codiceKey);
+  if (!codice) return '<h2>Codice non trovato</h2>';
+
+  const margin = codice.price - codice.cost;
+  const marginPct = ((margin / codice.cost) * 100).toFixed(1);
+
+  return `
+    <h2 style="font-size:22px; color:#00d4ff; margin-bottom:18px; letter-spacing:1px;">
+      🔧 ${codice.cod}
+    </h2>
+
+    <div class="nave-details">
+      <div class="detail-group">
+        <span class="detail-label">BRAND:</span>
+        <span class="detail-value">${codice.brand}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">ROI:</span>
+        <span class="detail-value" style="color:#00e676; font-weight:700;">${codice.roi}%</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">PREZZO VENDITA:</span>
+        <span class="detail-value">€${codice.price}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">COSTO ACQUISTO:</span>
+        <span class="detail-value">€${codice.cost}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">MARGINE UNITARIO:</span>
+        <span class="detail-value" style="color:#ffc107;">€${margin} (${marginPct}%)</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">CATEGORIA:</span>
+        <span class="detail-value">Componente marino</span>
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">ANALISI FINANZIARIA</h3>
+        <table class="modal-table">
+          <tr>
+            <td>Margine Lordo</td>
+            <td style="text-align:right; color:#00e676; font-weight:700;">€${margin}</td>
+          </tr>
+          <tr>
+            <td>Markup %</td>
+            <td style="text-align:right; font-weight:700;">${marginPct}%</td>
+          </tr>
+          <tr>
+            <td>ROS (Margine/Prezzo)</td>
+            <td style="text-align:right;">${((margin / codice.price) * 100).toFixed(1)}%</td>
+          </tr>
+          <tr>
+            <td>ROI (Margine/Costo)</td>
+            <td style="text-align:right; color:#ffc107; font-weight:700;">${codice.roi}%</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+// ── CATALOGO POPUP ──────────────────────────────────────────────────────────────────
+function buildCatalogoPopup(catalogoKey) {
+  const parte = CATALOG.find(c => c.code === catalogoKey);
+  if (!parte) return '<h2>Parte non trovata</h2>';
+
+  return `
+    <h2 style="font-size:22px; color:#00d4ff; margin-bottom:18px; letter-spacing:1px;">
+      📦 ${parte.code}
+    </h2>
+    <p style="font-size:13px; color:rgba(255,255,255,.7); margin-bottom:18px;">${parte.name}</p>
+
+    <div class="nave-details">
+      <div class="detail-group">
+        <span class="detail-label">BRAND:</span>
+        <span class="detail-value">${parte.brand}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">CATEGORIA:</span>
+        <span class="detail-value">${parte.category}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">PREZZO:</span>
+        <span class="detail-value">€${parte.price}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">DISPONIBILITÀ:</span>
+        <span class="detail-value"><span class="badge ${parte.stock === 'Stock' ? 'stock' : 'order'}">${parte.stock}</span></span>
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">MOTORI APPLICABILI</h3>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          ${parte.motors.split(',').map(m => `<div style="background:rgba(0,87,184,.15); padding:8px; border-radius:4px; font-size:11px;">${m.trim()}</div>`).join('')}
+        </div>
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">APPLICABILITÀ FLOTTE</h3>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          ${parte.vf ? '<span class="badge" style="background:rgba(0,212,255,.2); color:#00d4ff; border:1px solid rgba(0,212,255,.3);">VF - Virtu</span>' : ''}
+          ${parte.tm ? '<span class="badge" style="background:rgba(0,212,255,.2); color:#00d4ff; border:1px solid rgba(0,212,255,.3);">TM - Tug Malta</span>' : ''}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// ── INCROCIO POPUP ──────────────────────────────────────────────────────────────────
+function buildIncrocioPopup(incrKey) {
+  const incr = INCROCIO.find(i => i.key === incrKey);
+  if (!incr) return '<h2>Incrocio non trovato</h2>';
+
+  const risichiNave = RISCHIO_DATA.filter(r => r.nave === incr.nave);
+
+  return `
+    <h2 style="font-size:22px; color:#00d4ff; margin-bottom:18px; letter-spacing:1px;">
+      ⚙️ ${incr.nave}
+    </h2>
+
+    <div class="nave-details">
+      <div class="detail-group">
+        <span class="detail-label">COMPONENTE:</span>
+        <span class="detail-value">${incr.comp}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">CODICE:</span>
+        <span class="detail-value">${incr.code}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">CATEGORIA:</span>
+        <span class="detail-value">${incr.cat}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">LIVELLO RISCHIO:</span>
+        <span class="detail-value"><span class="badge ${incr.status === 'ALTO' ? 'high' : 'medium'}">${incr.status}</span></span>
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">REASONING TECNICO</h3>
+        <p style="font-size:12px; line-height:1.7; color:rgba(255,255,255,.8);">${incr.motiv}</p>
+      </div>
+
+      ${risichiNave.length > 0 ? `
+        <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+          <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">COMPONENTI A RISCHIO SU NAVE</h3>
+          <table class="modal-table">
+            <tr>
+              <th>Componente</th>
+              <th>Usura</th>
+              <th>Status</th>
+            </tr>
+            ${risichiNave.map(r => `
+              <tr>
+                <td>${r.comp}</td>
+                <td>${r.usura.toFixed(1)}%</td>
+                <td><span class="badge ${r.status === 'CRITICO' ? 'critical' : r.status === 'ALTO' ? 'high' : 'medium'}">${r.status}</span></td>
+              </tr>
+            `).join('')}
+          </table>
+        </div>
+      ` : ''}
+    </div>
+  `;
+}
+
+// ── USURA POPUP ─────────────────────────────────────────────────────────────────────
+function buildUsuraPopup(usuraKey) {
+  const usura = RISCHIO_DATA.find(u => u.key === usuraKey);
+  if (!usura) return '<h2>Dato usura non trovato</h2>';
+
+  return `
+    <h2 style="font-size:22px; color:#00d4ff; margin-bottom:18px; letter-spacing:1px;">
+      🔴 ${usura.nave} - ${usura.comp}
+    </h2>
+
+    <div class="nave-details">
+      <div class="detail-group">
+        <span class="detail-label">MOTORE:</span>
+        <span class="detail-value">${usura.motore}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">CATEGORIA:</span>
+        <span class="detail-value">${usura.cat}</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">USURA:</span>
+        <span class="detail-value" style="font-size:16px; color:#ff4444; font-weight:700;">${usura.usura.toFixed(1)}%</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">STATUS:</span>
+        <span class="detail-value"><span class="badge ${usura.status === 'CRITICO' ? 'critical' : usura.status === 'ALTO' ? 'high' : 'medium'}">${usura.status}</span></span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">ETÀ NAVE:</span>
+        <span class="detail-value">${usura.eta} anni</span>
+      </div>
+      <div class="detail-group">
+        <span class="detail-label">INTERVALLO FIDUCIA (95%):</span>
+        <span class="detail-value">${usura.ic}</span>
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">MOTIVAZIONE CRITICITÀ</h3>
+        <p style="font-size:12px; line-height:1.7; color:rgba(255,255,255,.8);">${usura.motiv}</p>
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">MODELLO WIENER</h3>
+        <table class="modal-table">
+          <tr>
+            <td>Usura Media (μ)</td>
+            <td style="text-align:right;">${usura.usura.toFixed(1)}%</td>
+          </tr>
+          <tr>
+            <td>Deviazione Std (σ)</td>
+            <td style="text-align:right;">${usura.sigma.toFixed(1)}</td>
+          </tr>
+          <tr>
+            <td>Intervallo Conf.</td>
+            <td style="text-align:right;">${usura.ic}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+// ── ROADMAP POPUP ───────────────────────────────────────────────────────────────────
+function buildRoadmapPopup(period) {
+  const roadmapData = {
+    '2026': {
+      title: '2026 — Penetrazione Mercati Base',
+      target: '€16.2M',
+      goals: [
+        '✓ Virtu Ferries: Inizio contratto manutenzione MV Maria Dolores',
+        '✓ Tug Malta: Emergency service MT Sea Salvor (90% usura)',
+        '✓ Focus: €35-50K su Tug + €150-200K su Virtu',
+        '✓ Proof-of-concept: Delivery <12h per components'
+      ]
+    },
+    '2027': {
+      title: '2027 — Espansione Australia + Germania',
+      target: '€22M',
+      goals: [
+        '✓ Australia: Aprire hub Port Hedland (€400K anno 1)',
+        '✓ Germania: Partner con Damen & MAN',
+        '✓ Growth: +35% su Virtu, +40% su Tug Malta',
+        '✓ Ricambi: Ampliare portfolio a 250+ codici'
+      ]
+    },
+    '2028': {
+      title: '2028 — Hub Internazionale',
+      target: '€28M',
+      goals: [
+        '✓ Malta hub internazionale (Maersk, CMA CGM)',
+        '✓ Supply chain globale integrata',
+        '✓ Export: €28M vs €16.2M baseline',
+        '✓ Team: +8 tecnici specializzati'
+      ]
+    },
+    '2029-2030': {
+      title: '2029-2030 — Marine Intelligence Platform',
+      target: '€35M+',
+      goals: [
+        '✓ Piattaforma predictive analytics per manutenzione',
+        '✓ Real-time fleet monitoring (AIS integration)',
+        '✓ Clienti: 50+ compagnie marittime',
+        '✓ Margine netto: €8-10M annui'
+      ]
+    }
+  };
+
+  const data = roadmapData[period];
+  if (!data) return '<h2>Periodo non trovato</h2>';
+
+  return `
+    <h2 style="font-size:22px; color:#00d4ff; margin-bottom:18px; letter-spacing:1px;">
+      📅 ${data.title}
+    </h2>
+
+    <div class="nave-details">
+      <div class="detail-group">
+        <span class="detail-label">TARGET FATTURATO:</span>
+        <span class="detail-value" style="font-size:18px; color:#00e676; font-weight:700;">${data.target}</span>
+      </div>
+
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(0,87,184,.2);">
+        <h3 style="color:#00d4ff; font-size:13px; margin-bottom:12px; letter-spacing:1px;">MILESTONES STRATEGICI</h3>
+        <ul style="list-style:none; padding:0; margin:0;">
+          ${data.goals.map(g => `
+            <li style="font-size:12px; padding:8px 0; border-bottom:1px solid rgba(0,87,184,.1); color:rgba(255,255,255,.85); line-height:1.6;">
+              ${g}
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    </div>
+  `;
+}
+
+// Notification system
+function showNotification(message) {
+  const notif = document.createElement('div');
+  notif.style.cssText = `
+    position:fixed; top:80px; right:20px; z-index:600;
+    background:rgba(255,100,100,.95); padding:12px 16px; border-radius:6px;
+    color:#fff; font-size:13px; font-weight:600;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+    animation:slideIn .3s ease;
+  `;
+  notif.textContent = message;
+  document.body.appendChild(notif);
+
+  setTimeout(() => {
+    notif.style.animation = 'slideOut .3s ease forwards';
+    setTimeout(() => notif.remove(), 300);
+  }, 2500);
 }

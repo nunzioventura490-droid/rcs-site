@@ -147,6 +147,17 @@
     </div>
   </div>
 
+  <!-- MODAL GENERICO DETTAGLI (Mercati, Codici, Catalogo, etc.) -->
+  <div class="modal" id="detailsModal">
+    <div class="modal-overlay" onclick="closeDetailModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeDetailModal()">✕</button>
+      <div class="modal-body" id="modalContent">
+        <!-- Contenuto dinamico inserito da JavaScript -->
+      </div>
+    </div>
+  </div>
+
     <!-- MERCATI -->
   <section class="section" id="mercati">
     <div class="section-inner">
@@ -156,7 +167,7 @@
       </div>
       <div class="mercati-grid reveal">
 
-        <div class="mercato-card">
+        <div class="mercato-card popup-clickable" onclick="openDetailModal('mercato', 'malta')" data-modal-type="mercato" data-modal-key="malta">
           <div class="mercato-top">
             <span class="mercato-flag">🇲🇹</span>
             <div>
@@ -175,7 +186,7 @@
           </div>
         </div>
 
-        <div class="mercato-card">
+        <div class="mercato-card popup-clickable" onclick="openDetailModal('mercato', 'italia')" data-modal-type="mercato" data-modal-key="italia">
           <div class="mercato-top">
             <span class="mercato-flag">🇮🇹</span>
             <div>
@@ -194,7 +205,7 @@
           </div>
         </div>
 
-        <div class="mercato-card">
+        <div class="mercato-card popup-clickable" onclick="openDetailModal('mercato', 'australia')" data-modal-type="mercato" data-modal-key="australia">
           <div class="mercato-top">
             <span class="mercato-flag">🇦🇺</span>
             <div>
@@ -213,7 +224,7 @@
           </div>
         </div>
 
-        <div class="mercato-card">
+        <div class="mercato-card popup-clickable" onclick="openDetailModal('mercato', 'internazionale')" data-modal-type="mercato" data-modal-key="internazionale">
           <div class="mercato-top">
             <span class="mercato-flag">🌍</span>
             <div>
