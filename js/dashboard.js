@@ -412,7 +412,57 @@ const ECO_CODICI = [
   { cod:'20R-1266',      brand:'Caterpillar', roi:45, price:1150, cost:793 },
 ];
 
-// ROI per codice (horizontal bar) - DEFINITO PIÙ IN BASSO
+// ── ROI PER CODICE (HORIZONTAL BAR) ────────────────────────────
+const ctxROI = document.getElementById('chartROI')?.getContext('2d');
+if (ctxROI) {
+  const roiLabels = ECO_CODICI.map(c => c.cod);
+  const roiValues = ECO_CODICI.map(c => c.roi);
+  const roiColors = ECO_CODICI.map(c => BRAND_COLOR[c.brand].border);
+
+  new Chart(ctxROI, {
+    type: 'bar',
+    data: {
+      labels: roiLabels,
+      datasets: [{
+        label: 'ROI %',
+        data: roiValues,
+        backgroundColor: ECO_CODICI.map(c => BRAND_COLOR[c.brand].fill),
+        borderColor: roiColors,
+        borderWidth: 1.5,
+        borderRadius: 3,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => `ROI: ${ctx.raw.toFixed(1)}%`,
+            title: ctx => ctx[0].label
+          },
+          backgroundColor: 'rgba(0,0,0,.8)',
+          padding: 12,
+          titleColor: '#00d4ff',
+          bodyColor: '#fff',
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(0,87,184,.1)' },
+          ticks: { color: 'rgba(255,255,255,.6)', callback: v => v + '%' },
+          title: { display: true, text: 'Return on Investment (%)', color: 'rgba(255,255,255,.6)' },
+          max: 90
+        },
+        y: {
+          grid: { display: false },
+          ticks: { color: 'rgba(255,255,255,.6)', font: { size: 11 } }
+        }
+      }
+    }
+  });
+}
 
 // Bubble chart: Costo × Prezzo × Margine
 const ctxBub = document.getElementById('chartBubble')?.getContext('2d');
