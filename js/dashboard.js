@@ -414,12 +414,15 @@ const ECO_CODICI = [
 
 // ── ROI PER CODICE (HORIZONTAL BAR) ────────────────────────────
 const ctxROI = document.getElementById('chartROI')?.getContext('2d');
+console.log('chartROI canvas found:', !!ctxROI, 'Canvas element:', document.getElementById('chartROI'));
 if (ctxROI) {
-  const roiLabels = ECO_CODICI.map(c => c.cod);
-  const roiValues = ECO_CODICI.map(c => c.roi);
-  const roiColors = ECO_CODICI.map(c => BRAND_COLOR[c.brand].border);
+  try {
+    const roiLabels = ECO_CODICI.map(c => c.cod);
+    const roiValues = ECO_CODICI.map(c => c.roi);
+    const roiColors = ECO_CODICI.map(c => BRAND_COLOR[c.brand].border);
+    console.log('ROI data loaded:', roiLabels.length, 'codes');
 
-  new Chart(ctxROI, {
+    new Chart(ctxROI, {
     type: 'bar',
     data: {
       labels: roiLabels,
@@ -462,6 +465,12 @@ if (ctxROI) {
       }
     }
   });
+    console.log('ROI chart created successfully');
+  } catch(e) {
+    console.error('Error creating ROI chart:', e);
+  }
+} else {
+  console.warn('chartROI canvas not found or context unavailable');
 }
 
 // Bubble chart: Costo × Prezzo × Margine
