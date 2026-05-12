@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Siamo — RCS Marine Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <script>if(!sessionStorage.getItem('rcs_auth'))location.href='../index.html';</script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="../index.html">
+        <span>⚓</span>
+        <span class="nav-rcs">RCS</span>
+        <span class="nav-sub">MARINE INTELLIGENCE</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html" class="nav-link">Overview</a></li>
+        <li><a href="dashboard.html#flotte" class="nav-link">Flotte</a></li>
+        <li><a href="dashboard.html#mercati" class="nav-link">Mercati</a></li>
+        <li><a href="dashboard.html#strategia" class="nav-link">Strategia</a></li>
+        <li><a href="analisi-usura.html" class="nav-link">Analisi Usura</a></li>
+        <li><a href="analisi-strategica.html" class="nav-link">Analisi Strategica</a></li>
+        <li><a href="strategia-operativa.html" class="nav-link">Operativa</a></li>
+        <li><a href="chi-siamo.html" class="nav-link active">Chi Siamo</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="nav-user" id="navUser">—</span>
+        <button class="nav-logout" onclick="logout()">ESCI</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" style="padding-top:80px; padding-bottom:60px;">
+    <div class="hero-bg" style="background:linear-gradient(135deg, rgba(0,87,184,.1) 0%, rgba(0,212,255,.05) 100%);">
+      <canvas id="heroWaves"></canvas>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label" style="margin-bottom:20px;">PROFILO AZIENDALE</p>
+      <h1 style="font-size:48px; color:#00d4ff; margin-bottom:12px; font-weight:800; letter-spacing:2px;">RICAMBI CENTRO SUD</h1>
+      <p style="font-size:20px; color:rgba(255,255,255,.8); font-weight:300; letter-spacing:1px; max-width:800px;">
+        Distributore Ufficiale di Ricambi Marini · Dal 1995 al vostro servizio
+      </p>
+    </div>
+  </section>
+
+  <!-- CHI SIAMO -->
+  <section class="section" id="chi-siamo">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">STORIA</p>
+        <h2 class="section-title">Chi Siamo</h2>
+      </div>
+
+      <div style="max-width:900px; margin:0 auto; color:rgba(255,255,255,.85); line-height:1.8; font-size:15px;">
+        <p style="margin-bottom:20px;">
+          <strong style="color:#00d4ff;">Ricambi Centro Sud S.r.l.</strong> opera dal <strong>1995</strong> nel settore dei ricambi marini, costituendo un punto di riferimento affidabile per il mercato nautico del Mediterraneo. Nata a Catania con una visione chiara: fornire componenti di qualità e servizi tecnici specializzati per la manutenzione delle flotte marittime.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          Nel corso di tre decenni, l'azienda ha consolidato la propria posizione attraverso:
+        </p>
+
+        <ul style="margin-left:20px; margin-bottom:20px;">
+          <li style="margin-bottom:10px;">✓ <strong>Professionalità e competenza</strong> nel settore della manutenzione navale</li>
+          <li style="margin-bottom:10px;">✓ <strong>Partnership strategiche</strong> con i principali costruttori mondiali (MTU, Bosch, Caterpillar, Delphi, Cummins)</li>
+          <li style="margin-bottom:10px;">✓ <strong>Reti distributive capillari</strong> che raggiungono porti e cantieri in tutto il Mediterraneo</li>
+          <li style="margin-bottom:10px;">✓ <strong>Servizi di assistenza tecnica</strong> 24/7 con personale specializzato</li>
+          <li style="margin-bottom:10px;">✓ <strong>Consegne rapide</strong> con delivery guarantee < 12 ore per componenti critiche</li>
+        </ul>
+
+        <p style="margin-bottom:20px;">
+          Oggi, l'azienda rappresenta una <strong>soluzione integrata</strong> per la manutenzione preventiva e correttiva delle flotte, combinando:
+        </p>
+
+        <ul style="margin-left:20px; margin-bottom:20px;">
+          <li style="margin-bottom:10px;">📊 Analisi predittive dell'usura componenti (Wiener model)</li>
+          <li style="margin-bottom:10px;">🔧 Supply chain ottimizzata per motori marini moderni e legacy</li>
+          <li style="margin-bottom:10px;">🌍 Copertura geografica: Malta hub principale, espansione Australia (2027) e Europa (2028)</li>
+          <li style="margin-bottom:10px;">💡 Piattaforma di intelligence per la gestione flotte (Marine Intelligence Platform)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUTTURA OPERATIVA -->
+  <section class="section" id="struttura">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">INFRASTRUTTURE</p>
+        <h2 class="section-title">Struttura Operativa</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:40px;">
+        <div style="background:linear-gradient(135deg, rgba(0,87,184,.15) 0%, rgba(0,212,255,.08) 100%); padding:30px; border-radius:12px; border:1px solid rgba(0,87,184,.2);">
+          <h3 style="color:#00d4ff; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:16px; font-family:var(--F);">SEDE PRINCIPALE</h3>
+          <p style="font-size:14px; color:rgba(255,255,255,.85); line-height:1.8; margin-bottom:20px;">
+            <strong>Via Alessandro Volta 17 A/B</strong><br>
+            95122 Catania (CT) · Italia<br><br>
+            <strong>Superficie:</strong> 3.800 m²<br>
+            <strong>Livelli:</strong> 3 (uffici, magazzino, punto vendita)<br>
+            <strong>Personale:</strong> 25 dipendenti specializzati
+          </p>
+          <p style="font-size:12px; color:rgba(0,212,255,.7); margin-bottom:0;">
+            Accesso 24/7 per clienti con SLA contrattuale
+          </p>
+        </div>
+
+        <div style="background:linear-gradient(135deg, rgba(0,212,255,.08) 0%, rgba(0,87,184,.15) 100%); padding:30px; border-radius:12px; border:1px solid rgba(0,87,184,.2);">
+          <h3 style="color:#00d4ff; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:16px; font-family:var(--F);">TEAM SPECIALIZZATO</h3>
+          <p style="font-size:14px; color:rgba(255,255,255,.85); line-height:1.8; margin-bottom:20px;">
+            <strong>Aree di competenza:</strong><br>
+            • Motori marini diesel/LNG<br>
+            • Sistemi di iniezione common-rail<br>
+            • Filtrazione e lubrificazione<br>
+            • Sistemi elettrici marini<br>
+            • Componenti di trasmissione<br><br>
+            <strong>Formazione continua:</strong> Certificazioni OEM aggiornate
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETENZE -->
+  <section class="section" id="competenze">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">EXPERTISE</p>
+        <h2 class="section-title">Competenze Principali</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:24px; margin-top:40px;">
+        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
+          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Motori Marini</h4>
+          <p style="font-size:13px; color:rgba(255,255,255,.8);">MTU, Caterpillar, Cummins, Wärtsilä, MAN B&W, Deutz MWM – sia nuovi che legacy</p>
+        </div>
+
+        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
+          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Sistemi CR</h4>
+          <p style="font-size:13px; color:rgba(255,255,255,.8);">Common-rail Bosch, Delphi, Cummins – sensori, iniettori, pompe a pressione</p>
+        </div>
+
+        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
+          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Filtrazione</h4>
+          <p style="font-size:13px; color:rgba(255,255,255,.8);">Carburante, olio, aria, acqua di raffreddamento – Fleetguard, OEM equivalenti</p>
+        </div>
+
+        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
+          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Componenti</h4>
+          <p style="font-size:13px; color:rgba(255,255,255,.8);">Alternatori, pompe, turbine, sensori – supporto diagnostico incluso</p>
+        </div>
+
+        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
+          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Analisi Usura</h4>
+          <p style="font-size:13px; color:rgba(255,255,255,.8);">Modello Wiener per previsione manutenzione – intervalli fiducia statistici</p>
+        </div>
+
+        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
+          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Logistica</h4>
+          <p style="font-size:13px; color:rgba(255,255,255,.8);">Consegna < 12h, tracciamento real-time, SLA 99.5% availability</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORI AZIENDALI -->
+  <section class="section" id="valori" style="background:linear-gradient(135deg, rgba(0,87,184,.05) 0%, rgba(0,212,255,.03) 100%);">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">VALORI</p>
+        <h2 class="section-title">I Nostri Tre Pilastri</h2>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:32px; margin-top:40px;">
+        <div style="text-align:center;">
+          <div style="font-size:48px; margin-bottom:16px;">⚖️</div>
+          <h4 style="color:#00d4ff; font-size:14px; font-weight:700; letter-spacing:1px; margin-bottom:12px;">QUALITÀ vs PREZZO</h4>
+          <p style="color:rgba(255,255,255,.75); font-size:13px; line-height:1.6;">
+            Componenti originali e rigenerati da case madri ufficiali, con rapporto qualità-prezzo competitivo e trasparente.
+          </p>
+        </div>
+
+        <div style="text-align:center;">
+          <div style="font-size:48px; margin-bottom:16px;">🔧</div>
+          <h4 style="color:#00d4ff; font-size:14px; font-weight:700; letter-spacing:1px; margin-bottom:12px;">AREA TECNICA</h4>
+          <p style="color:rgba(255,255,255,.75); font-size:13px; line-height:1.6;">
+            Team di tecnici specializzati con formazione continua OEM, diagnostica avanzata e assistenza post-vendita 24/7.
+          </p>
+        </div>
+
+        <div style="text-align:center;">
+          <div style="font-size:48px; margin-bottom:16px;">🎯</div>
+          <h4 style="color:#00d4ff; font-size:14px; font-weight:700; letter-spacing:1px; margin-bottom:12px;">GESTIONE STRATEGICA</h4>
+          <p style="color:rgba(255,255,255,.75); font-size:13px; line-height:1.6;">
+            Non solo vendita: analisi predittiva, programmazione manutenzione e ottimizzazione della flotta nel tempo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="section" id="contatti">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">CONTATTI</p>
+        <h2 class="section-title">Informazioni Ufficiali</h2>
+      </div>
+
+      <div style="background:linear-gradient(135deg, rgba(0,87,184,.15) 0%, rgba(0,212,255,.08) 100%); padding:40px; border-radius:12px; border:1px solid rgba(0,87,184,.2); max-width:700px; margin:40px auto 0;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+          <div>
+            <h4 style="color:#00d4ff; font-size:11px; font-weight:700; letter-spacing:2px; margin-bottom:14px; text-transform:uppercase;">Dati Legali</h4>
+            <div style="font-size:12px; color:rgba(255,255,255,.8); line-height:2;">
+              <div><strong>Ragione Sociale:</strong><br>RICAMBI CENTRO SUD S.R.L.</div>
+              <div style="margin-top:12px;"><strong>Partita IVA:</strong><br>03176280877</div>
+              <div style="margin-top:12px;"><strong>Codice Fiscale:</strong><br>03176280877</div>
+              <div style="margin-top:12px;"><strong>VAT Europeo:</strong><br>IT03176280877</div>
+              <div style="margin-top:12px;"><strong>REA:</strong><br>203412</div>
+              <div style="margin-top:12px;"><strong>Fatturato (2024):</strong><br>€ 9.981.326,00</div>
+            </div>
+          </div>
+
+          <div>
+            <h4 style="color:#00d4ff; font-size:11px; font-weight:700; letter-spacing:2px; margin-bottom:14px; text-transform:uppercase;">Indirizzo & Contatti</h4>
+            <div style="font-size:12px; color:rgba(255,255,255,.8); line-height:2;">
+              <div><strong>Sede:</strong><br>Via Alessandro Volta 17 A/B<br>95122 Catania (CT) · Italia</div>
+              <div style="margin-top:12px;"><strong>PEC:</strong><br><span style="color:#00d4ff; word-break:break-all;">info@pec.ricambicentrosud.com</span></div>
+              <div style="margin-top:12px;"><strong>Orari Uffici:</strong><br>Lun-Ven: 8:00-18:00 CET</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="dash-footer">
+    <div class="footer-inner">
+      <div class="footer-section">
+        <h4>RICAMBI CENTRO SUD S.R.L.</h4>
+        <p>Via Alessandro Volta 17 A/B<br>95122 Catania (CT) · Italia</p>
+        <p><strong>P.IVA:</strong> IT03176280877<br><strong>REA:</strong> 203412</p>
+      </div>
+      <div class="footer-section">
+        <h4>CONTATTI</h4>
+        <p><strong>PEC:</strong> info@pec.ricambicentrosud.com<br>
+        <strong>Sede:</strong> +39 95 (call during office hours)</p>
+      </div>
+      <div class="footer-section">
+        <h4>NAVIGAZIONE</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="chi-siamo.html">Chi Siamo</a></li>
+          <li><a href="analisi-usura.html">Analisi Usura</a></li>
+          <li><a href="strategia-operativa.html">Strategia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 1995-2026 Ricambi Centro Sud S.r.l. · Tutti i diritti riservati</p>
+    </div>
+  </footer>
+
+  <!-- HERO WAVES -->
+  <script>
+    const canvas = document.getElementById("heroWaves");
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+      let W, H, t = 0;
+
+      function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = 220;
+      }
+      resize();
+      window.addEventListener("resize", resize);
+
+      function drawWaves() {
+        ctx.clearRect(0, 0, W, H);
+        t += 0.008;
+
+        ctx.beginPath();
+        ctx.moveTo(0, H);
+        for (let x = 0; x <= W; x += 4) {
+          const y = 90 + Math.sin(x * 0.006 + t) * 28 + Math.sin(x * 0.012 + t * 1.3) * 14;
+          ctx.lineTo(x, y);
+        }
+        ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath();
+        ctx.fillStyle = "rgba(0,87,184,0.12)";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(0, H);
+        for (let x = 0; x <= W; x += 4) {
+          const y = 120 + Math.sin(x * 0.008 + t * .8 + 1) * 20 + Math.sin(x * 0.015 + t * 1.6) * 10;
+          ctx.lineTo(x, y);
+        }
+        ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath();
+        ctx.fillStyle = "rgba(0,212,255,0.07)";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(0, H);
+        for (let x = 0; x <= W; x += 4) {
+          const y = 150 + Math.sin(x * 0.01 + t * .6 + 2) * 14 + Math.cos(x * 0.007 + t * 1.1) * 8;
+          ctx.lineTo(x, y);
+        }
+        ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath();
+        ctx.fillStyle = "rgba(0,150,220,0.09)";
+        ctx.fill();
+
+        requestAnimationFrame(drawWaves);
+      }
+
+      drawWaves();
+    }
+  </script>
+
+  <!-- AUTH & NAVBAR -->
+  <script>
+    const user = sessionStorage.getItem("rcs_user") || "—";
+    const navUser = document.getElementById("navUser");
+    if (navUser) navUser.textContent = user.toUpperCase();
+
+    function logout() {
+      sessionStorage.removeItem("rcs_auth");
+      sessionStorage.removeItem("rcs_user");
+      window.location.href = "../index.html";
+    }
+
+    const nav = document.getElementById("nav");
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("scrolled", window.scrollY > 40);
+    });
+  </script>
+</body>
+</html>
