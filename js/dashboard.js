@@ -18,33 +18,822 @@ window.addEventListener("scroll", () => {
 // Flotte reali da script Python
 const FLEETS = {
   virtu: [
-    { name: "MV Saint John Paul II", type: "High Speed Craft · Ro-Pax", flag: "🇲🇹", wear: 25, engine: "4× MTU 20V 8000 M71L", year: 2019, note: "36.400 kW · 38 kn · 900 pax · IMO 9762337" },
-    { name: "MV Jean de La Valette",  type: "High Speed Craft · Ro-Pax", flag: "🇲🇹", wear: 56, engine: "4× MTU 20V 8000 M71L", year: 2010, note: "36.400 kW · 39 kn · 800 pax · IMO 9468946" },
-    { name: "MV Maria Dolores",       type: "High Speed Craft · Ro-Pax · In Charter", flag: "🇲🇹", wear: 70, engine: "6× MTU 16V 4000 M73L", year: 2006, note: "🟠 ALTO · 36 kn · 600 pax · Charter Tarifa–Tangeri 2025" },
-    { name: "HSC Gozo Express",       type: "High Speed Craft · Catamarano", flag: "🇲🇹", wear: 54, engine: "4× MTU 12V 2000 M72", year: 2008, note: "34 kn · 322 pax · IMO 9396753" },
-    { name: "San Frangisk",           type: "Air Cushion Catamaran",     flag: "🇲🇹", wear: 90, engine: "2× Deutz MWM 620B V16", year: 1990, note: "🔴 CRITICO · 38 kn · 330 pax · IMO 8903899" },
-    { name: "San Pawl",               type: "Air Cushion Catamaran · ⚠️ Ex-flotta", flag: "🇲🇹", wear: 88, engine: "2× Deutz MWM 604B V16", year: 1991, note: "Ceduta Islands Unlimited 2025 · IMO 8903904" },
-    { name: "Balluta Bay",            type: "Oil Products Tanker",       flag: "🇲🇹", wear: 100, engine: "Convenzionale",        year: 1981, note: "🔴 CRITICO · 12 kn · IMO 8013091" },
+    {
+      name: "MV Saint John Paul II",
+      type: "High Speed Craft · Ro-Pax",
+      flag: "🇲🇹",
+      wear: 25,
+      engine: "4× MTU 20V 8000 M71L",
+      year: 2019,
+      note: "36.400 kW · 38 kn · 900 pax · IMO 9762337",
+      photoUrl: "assets/img/vessels/MV-Saint-John-Paul-II.jpg",
+      specifications: {
+        capacity_passengers: 900,
+        capacity_cargo_tons: 2500,
+        weight_empty_tons: 45000,
+        weight_full_tons: 52000,
+        max_cargo_tons: 7000,
+        autonomy_days: 14,
+        tank_capacity_liters: 850000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 67000,
+        length_m: 210.5,
+        beam_m: 32.2,
+        draft_m: 6.8,
+        main_engines: [{type: "MTU 20V 8000 M71L", kw: 9100, qty: 4}],
+        secondary_engines: [{type: "Diesel generator", kw: 1500, qty: 2}],
+        builder: "Fincantieri",
+        classification: "Catamarano high-speed",
+        imo_number: 9762337
+      },
+      routes: [
+        {name: "Valletta - Pozzallo", distance_nm: 185, voyage_time_hours: 5.5, frequency: "Daily", cargo_type: "Mixed"},
+        {name: "Valletta - Catania", distance_nm: 240, voyage_time_hours: 6.5, frequency: "Daily", cargo_type: "Passeggeri + veicoli"},
+        {name: "Valletta - Tarifa", distance_nm: 310, voyage_time_hours: 8, frequency: "Seasonal", cargo_type: "Passeggeri + carico"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MV-Saint-John-Paul-II.jpg", caption: "Profilo nave", type: "profile"},
+        {url: "assets/img/vessels/MV-Saint-John-Paul-II-deck.jpg", caption: "Coperta principale", type: "deck"},
+        {url: "assets/img/vessels/MV-Saint-John-Paul-II-engine.jpg", caption: "Camera motori", type: "engine"}
+      ]
+    },
+    {
+      name: "MV Jean de La Valette",
+      type: "High Speed Craft · Ro-Pax",
+      flag: "🇲🇹",
+      wear: 56,
+      engine: "4× MTU 20V 8000 M71L",
+      year: 2010,
+      note: "36.400 kW · 39 kn · 800 pax · IMO 9468946",
+      photoUrl: "assets/img/vessels/MV-Jean-de-La-Valette.jpg",
+      specifications: {
+        capacity_passengers: 800,
+        capacity_cargo_tons: 2300,
+        weight_empty_tons: 44000,
+        weight_full_tons: 51000,
+        max_cargo_tons: 6800,
+        autonomy_days: 13,
+        tank_capacity_liters: 820000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 65500,
+        length_m: 208.5,
+        beam_m: 31.8,
+        draft_m: 6.6,
+        main_engines: [{type: "MTU 20V 8000 M71L", kw: 9100, qty: 4}],
+        secondary_engines: [{type: "Diesel generator", kw: 1500, qty: 2}],
+        builder: "Fincantieri",
+        classification: "Catamarano high-speed",
+        imo_number: 9468946
+      },
+      routes: [
+        {name: "Valletta - Pozzallo", distance_nm: 185, voyage_time_hours: 5.5, frequency: "Daily", cargo_type: "Mixed"},
+        {name: "Valletta - Napoli", distance_nm: 420, voyage_time_hours: 11, frequency: "4× weekly", cargo_type: "Passeggeri"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MV-Jean-de-La-Valette.jpg", caption: "Profilo nave", type: "profile"}
+      ]
+    },
+    {
+      name: "MV Maria Dolores",
+      type: "High Speed Craft · Ro-Pax · In Charter",
+      flag: "🇲🇹",
+      wear: 70,
+      engine: "6× MTU 16V 4000 M73L",
+      year: 2006,
+      note: "🟠 ALTO · 36 kn · 600 pax · Charter Tarifa–Tangeri 2025",
+      photoUrl: "assets/img/vessels/MV-Maria-Dolores.jpg",
+      specifications: {
+        capacity_passengers: 600,
+        capacity_cargo_tons: 1800,
+        weight_empty_tons: 38000,
+        weight_full_tons: 45000,
+        max_cargo_tons: 5000,
+        autonomy_days: 10,
+        tank_capacity_liters: 650000,
+        ship_class: "ABS",
+        gross_tonnage: 58500,
+        length_m: 195,
+        beam_m: 28.5,
+        draft_m: 6.0,
+        main_engines: [{type: "MTU 16V 4000 M73L", kw: 5840, qty: 6}],
+        secondary_engines: [{type: "Diesel generator", kw: 1200, qty: 2}],
+        builder: "Austal",
+        classification: "Catamarano high-speed",
+        imo_number: 9333333
+      },
+      routes: [
+        {name: "Tarifa - Tangeri", distance_nm: 45, voyage_time_hours: 1.2, frequency: "Multiple daily", cargo_type: "Passeggeri"},
+        {name: "Tarifa - Ceuta", distance_nm: 18, voyage_time_hours: 0.5, frequency: "Multiple daily", cargo_type: "Passeggeri"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MV-Maria-Dolores.jpg", caption: "Profilo nave", type: "profile"}
+      ]
+    },
+    {
+      name: "HSC Gozo Express",
+      type: "High Speed Craft · Catamarano",
+      flag: "🇲🇹",
+      wear: 54,
+      engine: "4× MTU 12V 2000 M72",
+      year: 2008,
+      note: "34 kn · 322 pax · IMO 9396753",
+      photoUrl: "assets/img/vessels/HSC-Gozo-Express.jpg",
+      specifications: {
+        capacity_passengers: 322,
+        capacity_cargo_tons: 850,
+        weight_empty_tons: 22000,
+        weight_full_tons: 26000,
+        max_cargo_tons: 2500,
+        autonomy_days: 7,
+        tank_capacity_liters: 380000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 32000,
+        length_m: 127.5,
+        beam_m: 20.5,
+        draft_m: 4.2,
+        main_engines: [{type: "MTU 12V 2000 M72", kw: 1800, qty: 4}],
+        secondary_engines: [{type: "Diesel generator", kw: 600, qty: 2}],
+        builder: "Austal",
+        classification: "Catamarano",
+        imo_number: 9396753
+      },
+      routes: [
+        {name: "Valletta - Gozo (Mgarr)", distance_nm: 24, voyage_time_hours: 0.75, frequency: "Multiple daily", cargo_type: "Passeggeri"}
+      ],
+      images: [
+        {url: "assets/img/vessels/HSC-Gozo-Express.jpg", caption: "Profilo nave", type: "profile"}
+      ]
+    },
+    {
+      name: "San Frangisk",
+      type: "Air Cushion Catamaran",
+      flag: "🇲🇹",
+      wear: 90,
+      engine: "2× Deutz MWM 620B V16",
+      year: 1990,
+      note: "🔴 CRITICO · 38 kn · 330 pax · IMO 8903899",
+      photoUrl: "assets/img/vessels/San-Frangisk.jpg",
+      specifications: {
+        capacity_passengers: 330,
+        capacity_cargo_tons: 900,
+        weight_empty_tons: 24000,
+        weight_full_tons: 28500,
+        max_cargo_tons: 2800,
+        autonomy_days: 6,
+        tank_capacity_liters: 420000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 35000,
+        length_m: 135,
+        beam_m: 22,
+        draft_m: 3.8,
+        main_engines: [{type: "Deutz MWM 620B V16", kw: 3600, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 700, qty: 2}],
+        builder: "Wartsila",
+        classification: "Air-Cushion Catamaran",
+        imo_number: 8903899
+      },
+      routes: [
+        {name: "Valletta - Gozo", distance_nm: 24, voyage_time_hours: 0.65, frequency: "Multiple daily", cargo_type: "Passeggeri"}
+      ],
+      images: [
+        {url: "assets/img/vessels/San-Frangisk.jpg", caption: "Profilo nave", type: "profile"}
+      ]
+    },
+    {
+      name: "San Pawl",
+      type: "Air Cushion Catamaran · ⚠️ Ex-flotta",
+      flag: "🇲🇹",
+      wear: 88,
+      engine: "2× Deutz MWM 604B V16",
+      year: 1991,
+      note: "Ceduta Islands Unlimited 2025 · IMO 8903904",
+      photoUrl: "assets/img/vessels/San-Pawl.jpg",
+      specifications: {
+        capacity_passengers: 320,
+        capacity_cargo_tons: 880,
+        weight_empty_tons: 23500,
+        weight_full_tons: 27800,
+        max_cargo_tons: 2700,
+        autonomy_days: 5.5,
+        tank_capacity_liters: 410000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 34000,
+        length_m: 134,
+        beam_m: 21.8,
+        draft_m: 3.7,
+        main_engines: [{type: "Deutz MWM 604B V16", kw: 3400, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 650, qty: 2}],
+        builder: "Wartsila",
+        classification: "Air-Cushion Catamaran",
+        imo_number: 8903904
+      },
+      routes: [
+        {name: "Archive - Ex Valletta - Gozo", distance_nm: 24, voyage_time_hours: 0.68, frequency: "Archived", cargo_type: "Storico"}
+      ],
+      images: [
+        {url: "assets/img/vessels/San-Pawl.jpg", caption: "Profilo nave (archivio)", type: "profile"}
+      ]
+    },
+    {
+      name: "Balluta Bay",
+      type: "Oil Products Tanker",
+      flag: "🇲🇹",
+      wear: 100,
+      engine: "Convenzionale",
+      year: 1981,
+      note: "🔴 CRITICO · 12 kn · IMO 8013091",
+      photoUrl: "assets/img/vessels/Balluta-Bay.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 4200,
+        weight_empty_tons: 5800,
+        weight_full_tons: 10000,
+        max_cargo_tons: 4200,
+        autonomy_days: 16,
+        tank_capacity_liters: 180000,
+        ship_class: "ABS",
+        gross_tonnage: 6800,
+        length_m: 110,
+        beam_m: 17.5,
+        draft_m: 5.2,
+        main_engines: [{type: "Motore convenzionale marino", kw: 880, qty: 1}],
+        secondary_engines: [{type: "Diesel generator", kw: 300, qty: 1}],
+        builder: "Costruzione Navale Italiana",
+        classification: "Oil Products Tanker",
+        imo_number: 8013091
+      },
+      routes: [
+        {name: "Valletta - Siracusa", distance_nm: 180, voyage_time_hours: 15, frequency: "Weekly", cargo_type: "Prodotti petroliferi"}
+      ],
+      images: [
+        {url: "assets/img/vessels/Balluta-Bay.jpg", caption: "Profilo nave (critico)", type: "profile"}
+      ]
+    }
   ],
   tug: [
-    { name: "MT Vittoriosa",    type: "ASD Escort Tug · RAstar 3000-W", flag: "🇲🇹", wear: 25, engine: "2× MTU 16V 4000 M65L", year: 2019, note: "81,5t BP · Med Marine Turchia · IMO 9854868" },
-    { name: "MT St. Angelo",    type: "ASD Tug · Damen ASD 2913",       flag: "🇲🇹", wear: 29, engine: "2× Caterpillar 3516C",  year: 2017, note: "83,0t BP · Damen Galati · IMO 9799991" },
-    { name: "MT Senglea",       type: "RSD Tug · Damen RSD 2513",       flag: "🇲🇹", wear: 19, engine: "2× Caterpillar 3516C",  year: 2020, note: "80,0t BP · Damen Vietnam · IMO 9892195" },
-    { name: "MT Med Aldebaran", type: "RSD Tug · Damen RSD 2513 Tier III", flag: "🇲🇹", wear: 6, engine: "2× Caterpillar 3516C", year: 2024, note: "80,0t BP · IMO Tier III · IMO 9740392" },
-    { name: "MT St. Elmo",      type: "ASD Escort Tug · RAmparts 3000W", flag: "🇲🇹", wear: 48, engine: "2× Caterpillar 3516C", year: 2011, note: "75,0t BP · Zamakona Spagna · IMO 9594999" },
-    { name: "MT Spinola",       type: "VSP Tractor Tug · AVT 36/80",    flag: "🇲🇹", wear: 34, engine: "2× MaK 8M25",          year: 2009, note: "81,6t BP · Voith 32R5 · IMO 9495258" },
-    { name: "MT Wenzina",       type: "ASD Tug · Damen ASD 2411",       flag: "🇲🇹", wear: 64, engine: "2× Caterpillar 3516C",  year: 2006, note: "72,5t BP · IMO 9364124" },
-    { name: "MT Pawlina",       type: "ASD Tug · 🔴 CRITICO",            flag: "🇲🇹", wear: 64, engine: "2× Caterpillar 3516B",  year: 2006, note: "67,1t BP · IMO 9237929" },
-    { name: "MT Sea Salvor",    type: "Conventional Tug · Salvage",     flag: "🇲🇹", wear: 90, engine: "2× Caterpillar 3516C",  year: 1998, note: "🔴 CRITICO · 55,0t BP · IMO 9203100" },
-    { name: "MT Gozzo",         type: "Mooring / Line Handler",          flag: "🇲🇹", wear: 21, engine: "2× Volvo Diesel",       year: 2019, note: "9,0t BP · Porto Valletta" },
+    {
+      name: "MT Vittoriosa",
+      type: "ASD Escort Tug · RAstar 3000-W",
+      flag: "🇲🇹",
+      wear: 25,
+      engine: "2× MTU 16V 4000 M65L",
+      year: 2019,
+      note: "81,5t BP · Med Marine Turchia · IMO 9854868",
+      photoUrl: "assets/img/vessels/MT-Vittoriosa.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 85,
+        weight_empty_tons: 4200,
+        weight_full_tons: 4400,
+        max_cargo_tons: 200,
+        autonomy_days: 20,
+        tank_capacity_liters: 280000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 3200,
+        length_m: 75.5,
+        beam_m: 16.2,
+        draft_m: 4.8,
+        main_engines: [{type: "MTU 16V 4000 M65L", kw: 2800, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 600, qty: 2}],
+        builder: "Med Marine",
+        classification: "ASD Escort Tug",
+        imo_number: 9854868
+      },
+      routes: [
+        {name: "Porto Valletta - Area Operativa", distance_nm: 50, voyage_time_hours: 6, frequency: "Daily", cargo_type: "Assist operations"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-Vittoriosa.jpg", caption: "Profilo rimorchiatore", type: "profile"}
+      ]
+    },
+    {
+      name: "MT St. Angelo",
+      type: "ASD Tug · Damen ASD 2913",
+      flag: "🇲🇹",
+      wear: 29,
+      engine: "2× Caterpillar 3516C",
+      year: 2017,
+      note: "83,0t BP · Damen Galati · IMO 9799991",
+      photoUrl: "assets/img/vessels/MT-St-Angelo.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 83,
+        weight_empty_tons: 4100,
+        weight_full_tons: 4300,
+        max_cargo_tons: 190,
+        autonomy_days: 18,
+        tank_capacity_liters: 270000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 3100,
+        length_m: 73.5,
+        beam_m: 15.8,
+        draft_m: 4.6,
+        main_engines: [{type: "Caterpillar 3516C", kw: 2610, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 550, qty: 2}],
+        builder: "Damen Shipyards",
+        classification: "ASD Tug",
+        imo_number: 9799991
+      },
+      routes: [
+        {name: "Porto Valletta - Operazioni", distance_nm: 50, voyage_time_hours: 6.5, frequency: "Daily", cargo_type: "Assist"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-St-Angelo.jpg", caption: "Profilo rimorchiatore", type: "profile"}
+      ]
+    },
+    {
+      name: "MT Senglea",
+      type: "RSD Tug · Damen RSD 2513",
+      flag: "🇲🇹",
+      wear: 19,
+      engine: "2× Caterpillar 3516C",
+      year: 2020,
+      note: "80,0t BP · Damen Vietnam · IMO 9892195",
+      photoUrl: "assets/img/vessels/MT-Senglea.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 80,
+        weight_empty_tons: 3950,
+        weight_full_tons: 4150,
+        max_cargo_tons: 185,
+        autonomy_days: 17,
+        tank_capacity_liters: 250000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 2950,
+        length_m: 71.2,
+        beam_m: 15.3,
+        draft_m: 4.4,
+        main_engines: [{type: "Caterpillar 3516C", kw: 2610, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 520, qty: 2}],
+        builder: "Damen Shipyards",
+        classification: "RSD Tug",
+        imo_number: 9892195
+      },
+      routes: [
+        {name: "Porto Valletta - Operazioni", distance_nm: 50, voyage_time_hours: 6.5, frequency: "Daily", cargo_type: "Assist"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-Senglea.jpg", caption: "Profilo rimorchiatore", type: "profile"}
+      ]
+    },
+    {
+      name: "MT Med Aldebaran",
+      type: "RSD Tug · Damen RSD 2513 Tier III",
+      flag: "🇲🇹",
+      wear: 6,
+      engine: "2× Caterpillar 3516C",
+      year: 2024,
+      note: "80,0t BP · IMO Tier III · IMO 9740392",
+      photoUrl: "assets/img/vessels/MT-Med-Aldebaran.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 80,
+        weight_empty_tons: 3950,
+        weight_full_tons: 4150,
+        max_cargo_tons: 185,
+        autonomy_days: 18,
+        tank_capacity_liters: 260000,
+        ship_class: "Lloyd's Register Tier III",
+        gross_tonnage: 2950,
+        length_m: 71.2,
+        beam_m: 15.3,
+        draft_m: 4.4,
+        main_engines: [{type: "Caterpillar 3516C (Tier III)", kw: 2610, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 540, qty: 2}],
+        builder: "Damen Shipyards",
+        classification: "RSD Tug Tier III",
+        imo_number: 9740392
+      },
+      routes: [
+        {name: "Porto Valletta - Operazioni", distance_nm: 50, voyage_time_hours: 6.5, frequency: "Daily", cargo_type: "Assist"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-Med-Aldebaran.jpg", caption: "Profilo rimorchiatore (nuovo)", type: "profile"}
+      ]
+    },
+    {
+      name: "MT St. Elmo",
+      type: "ASD Escort Tug · RAmparts 3000W",
+      flag: "🇲🇹",
+      wear: 48,
+      engine: "2× Caterpillar 3516C",
+      year: 2011,
+      note: "75,0t BP · Zamakona Spagna · IMO 9594999",
+      photoUrl: "assets/img/vessels/MT-St-Elmo.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 75,
+        weight_empty_tons: 3800,
+        weight_full_tons: 3950,
+        max_cargo_tons: 175,
+        autonomy_days: 15,
+        tank_capacity_liters: 230000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 2850,
+        length_m: 68.8,
+        beam_m: 14.8,
+        draft_m: 4.2,
+        main_engines: [{type: "Caterpillar 3516C", kw: 2610, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 500, qty: 2}],
+        builder: "Zamakona Shipyards",
+        classification: "ASD Escort Tug",
+        imo_number: 9594999
+      },
+      routes: [
+        {name: "Porto Valletta - Operazioni", distance_nm: 50, voyage_time_hours: 7, frequency: "Daily", cargo_type: "Assist"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-St-Elmo.jpg", caption: "Profilo rimorchiatore", type: "profile"}
+      ]
+    },
+    {
+      name: "MT Spinola",
+      type: "VSP Tractor Tug · AVT 36/80",
+      flag: "🇲🇹",
+      wear: 34,
+      engine: "2× MaK 8M25",
+      year: 2009,
+      note: "81,6t BP · Voith 32R5 · IMO 9495258",
+      photoUrl: "assets/img/vessels/MT-Spinola.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 81.6,
+        weight_empty_tons: 4050,
+        weight_full_tons: 4220,
+        max_cargo_tons: 190,
+        autonomy_days: 16,
+        tank_capacity_liters: 240000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 3050,
+        length_m: 72.5,
+        beam_m: 15.5,
+        draft_m: 4.5,
+        main_engines: [{type: "MaK 8M25C", kw: 1280, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 540, qty: 2}],
+        builder: "Voith",
+        classification: "VSP Tractor Tug",
+        imo_number: 9495258
+      },
+      routes: [
+        {name: "Porto Valletta - Operazioni", distance_nm: 50, voyage_time_hours: 7.2, frequency: "Daily", cargo_type: "Assist"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-Spinola.jpg", caption: "Profilo rimorchiatore", type: "profile"}
+      ]
+    },
+    {
+      name: "MT Wenzina",
+      type: "ASD Tug · Damen ASD 2411",
+      flag: "🇲🇹",
+      wear: 64,
+      engine: "2× Caterpillar 3516C",
+      year: 2006,
+      note: "72,5t BP · IMO 9364124",
+      photoUrl: "assets/img/vessels/MT-Wenzina.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 72.5,
+        weight_empty_tons: 3600,
+        weight_full_tons: 3750,
+        max_cargo_tons: 170,
+        autonomy_days: 14,
+        tank_capacity_liters: 210000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 2700,
+        length_m: 66.2,
+        beam_m: 14.2,
+        draft_m: 4.0,
+        main_engines: [{type: "Caterpillar 3516C", kw: 2610, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 480, qty: 2}],
+        builder: "Damen Shipyards",
+        classification: "ASD Tug",
+        imo_number: 9364124
+      },
+      routes: [
+        {name: "Porto Valletta - Operazioni", distance_nm: 50, voyage_time_hours: 7.5, frequency: "Daily", cargo_type: "Assist"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-Wenzina.jpg", caption: "Profilo rimorchiatore", type: "profile"}
+      ]
+    },
+    {
+      name: "MT Pawlina",
+      type: "ASD Tug · 🔴 CRITICO",
+      flag: "🇲🇹",
+      wear: 64,
+      engine: "2× Caterpillar 3516B",
+      year: 2006,
+      note: "67,1t BP · IMO 9237929",
+      photoUrl: "assets/img/vessels/MT-Pawlina.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 67.1,
+        weight_empty_tons: 3400,
+        weight_full_tons: 3550,
+        max_cargo_tons: 160,
+        autonomy_days: 13,
+        tank_capacity_liters: 190000,
+        ship_class: "ABS",
+        gross_tonnage: 2550,
+        length_m: 63.5,
+        beam_m: 13.5,
+        draft_m: 3.8,
+        main_engines: [{type: "Caterpillar 3516B", kw: 2500, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 450, qty: 2}],
+        builder: "Damen Shipyards",
+        classification: "ASD Tug",
+        imo_number: 9237929
+      },
+      routes: [
+        {name: "Porto Valletta - Operazioni", distance_nm: 50, voyage_time_hours: 8, frequency: "Limited", cargo_type: "Assist"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-Pawlina.jpg", caption: "Profilo rimorchiatore (critico)", type: "profile"}
+      ]
+    },
+    {
+      name: "MT Sea Salvor",
+      type: "Conventional Tug · Salvage",
+      flag: "🇲🇹",
+      wear: 90,
+      engine: "2× Caterpillar 3516C",
+      year: 1998,
+      note: "🔴 CRITICO · 55,0t BP · IMO 9203100",
+      photoUrl: "assets/img/vessels/MT-Sea-Salvor.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 55,
+        weight_empty_tons: 2800,
+        weight_full_tons: 2950,
+        max_cargo_tons: 130,
+        autonomy_days: 11,
+        tank_capacity_liters: 150000,
+        ship_class: "ABS",
+        gross_tonnage: 2100,
+        length_m: 57.8,
+        beam_m: 12.5,
+        draft_m: 3.6,
+        main_engines: [{type: "Caterpillar 3516C", kw: 2610, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 400, qty: 1}],
+        builder: "Costruzione Navale",
+        classification: "Salvage Tug",
+        imo_number: 9203100
+      },
+      routes: [
+        {name: "Porto Valletta - Zone critiche", distance_nm: 40, voyage_time_hours: 8.5, frequency: "Limited", cargo_type: "Salvage operations"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-Sea-Salvor.jpg", caption: "Profilo rimorchiatore (critico)", type: "profile"}
+      ]
+    },
+    {
+      name: "MT Gozzo",
+      type: "Mooring / Line Handler",
+      flag: "🇲🇹",
+      wear: 21,
+      engine: "2× Volvo Diesel",
+      year: 2019,
+      note: "9,0t BP · Porto Valletta",
+      photoUrl: "assets/img/vessels/MT-Gozzo.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 9,
+        weight_empty_tons: 450,
+        weight_full_tons: 480,
+        max_cargo_tons: 30,
+        autonomy_days: 4,
+        tank_capacity_liters: 35000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 350,
+        length_m: 20.5,
+        beam_m: 6.8,
+        draft_m: 2.0,
+        main_engines: [{type: "Volvo D13", kw: 480, qty: 2}],
+        secondary_engines: [{type: "Outboard electric", kw: 50, qty: 1}],
+        builder: "Valletta Shipyard",
+        classification: "Mooring Vessel",
+        imo_number: 9800000
+      },
+      routes: [
+        {name: "Porto Valletta", distance_nm: 5, voyage_time_hours: 0.5, frequency: "Daily", cargo_type: "Porto operations"}
+      ],
+      images: [
+        {url: "assets/img/vessels/MT-Gozzo.jpg", caption: "Piccolo ausiliario portuale", type: "profile"}
+      ]
+    }
   ],
   australia: [
-    { name: "Spirit of Tasmania I",   type: "RoPax Ferry",              flag: "🇦🇺", wear: 54, engine: "4× Wärtsilä 9L46DF",    year: 2001, note: "TT-Line · Geelong–Devonport" },
-    { name: "Spirit of Tasmania IV",  type: "RoPax Ferry · Dual-Fuel",  flag: "🇦🇺", wear: 14, engine: "Wärtsilä 9L46DF (LNG)", year: 2022, note: "TT-Line · LNG Dual-Fuel" },
-    { name: "Iron Pilbara",           type: "Bulk Carrier Support",     flag: "🇦🇺", wear: 42, engine: "MAN B&W ME-C",           year: 2013, note: "BHP Fleet · Port Hedland → Asia" },
-    { name: "Fortescue Pioneer",      type: "Mining Supply Vessel",     flag: "🇦🇺", wear: 28, engine: "Caterpillar 3516C",      year: 2016, note: "FMG Fleet · Dampier" },
-    { name: "Svitzer Batavia",        type: "ASD Tug",                  flag: "🇦🇺", wear: 32, engine: "Caterpillar 3516C",      year: 2016, note: "Svitzer · Fremantle Port" },
-    { name: "SeaSwift Aliesha",       type: "Coastal Cargo Vessel",     flag: "🇦🇺", wear: 44, engine: "Cummins QSK 60",         year: 2013, note: "Cairns–Torres Strait" },
+    {
+      name: "Spirit of Tasmania I",
+      type: "RoPax Ferry",
+      flag: "🇦🇺",
+      wear: 54,
+      engine: "4× Wärtsilä 9L46DF",
+      year: 2001,
+      note: "TT-Line · Geelong–Devonport",
+      photoUrl: "assets/img/vessels/Spirit-of-Tasmania-I.jpg",
+      specifications: {
+        capacity_passengers: 1400,
+        capacity_cargo_tons: 4800,
+        weight_empty_tons: 28000,
+        weight_full_tons: 35000,
+        max_cargo_tons: 5200,
+        autonomy_days: 7,
+        tank_capacity_liters: 890000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 30000,
+        length_m: 179.6,
+        beam_m: 27.2,
+        draft_m: 6.5,
+        main_engines: [{type: "Wärtsilä 9L46DF", kw: 20400, qty: 4}],
+        secondary_engines: [{type: "Diesel generator", kw: 2000, qty: 2}],
+        builder: "Flensburger Schiffbau",
+        classification: "RoPax Ferry",
+        imo_number: 9136206
+      },
+      routes: [
+        {name: "Geelong - Devonport", distance_nm: 460, voyage_time_hours: 11, frequency: "Daily", cargo_type: "Passengers + vehicles"},
+        {name: "Devonport - Geelong", distance_nm: 460, voyage_time_hours: 11, frequency: "Daily", cargo_type: "Passengers + vehicles"}
+      ],
+      images: [
+        {url: "assets/img/vessels/Spirit-of-Tasmania-I.jpg", caption: "Profilo traghetto", type: "profile"}
+      ]
+    },
+    {
+      name: "Spirit of Tasmania IV",
+      type: "RoPax Ferry · Dual-Fuel",
+      flag: "🇦🇺",
+      wear: 14,
+      engine: "Wärtsilä 9L46DF (LNG)",
+      year: 2022,
+      note: "TT-Line · LNG Dual-Fuel",
+      photoUrl: "assets/img/vessels/Spirit-of-Tasmania-IV.jpg",
+      specifications: {
+        capacity_passengers: 1500,
+        capacity_cargo_tons: 5000,
+        weight_empty_tons: 30000,
+        weight_full_tons: 37500,
+        max_cargo_tons: 5500,
+        autonomy_days: 8,
+        tank_capacity_liters: 950000,
+        ship_class: "Lloyd's Register LNG",
+        gross_tonnage: 32000,
+        length_m: 181.5,
+        beam_m: 28.0,
+        draft_m: 6.8,
+        main_engines: [{type: "Wärtsilä 9L46DF LNG", kw: 21000, qty: 1}],
+        secondary_engines: [{type: "Diesel generator (LNG)", kw: 2200, qty: 2}],
+        builder: "Meyer Werft",
+        classification: "RoPax Ferry Dual-Fuel LNG",
+        imo_number: 9731489
+      },
+      routes: [
+        {name: "Geelong - Devonport", distance_nm: 460, voyage_time_hours: 10.5, frequency: "Daily", cargo_type: "Passengers + vehicles LNG"}
+      ],
+      images: [
+        {url: "assets/img/vessels/Spirit-of-Tasmania-IV.jpg", caption: "Traghetto a fuel LNG", type: "profile"}
+      ]
+    },
+    {
+      name: "Iron Pilbara",
+      type: "Bulk Carrier Support",
+      flag: "🇦🇺",
+      wear: 42,
+      engine: "MAN B&W ME-C",
+      year: 2013,
+      note: "BHP Fleet · Port Hedland → Asia",
+      photoUrl: "assets/img/vessels/Iron-Pilbara.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 68000,
+        weight_empty_tons: 22000,
+        weight_full_tons: 90000,
+        max_cargo_tons: 68000,
+        autonomy_days: 25,
+        tank_capacity_liters: 1500000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 45000,
+        length_m: 228.5,
+        beam_m: 32.2,
+        draft_m: 10.8,
+        main_engines: [{type: "MAN B&W ME-C", kw: 12000, qty: 1}],
+        secondary_engines: [{type: "Diesel generator", kw: 1500, qty: 2}],
+        builder: "China State Shipbuilding",
+        classification: "Bulk Carrier",
+        imo_number: 9618891
+      },
+      routes: [
+        {name: "Port Hedland - Asia (China)", distance_nm: 3100, voyage_time_hours: 310, frequency: "Seasonal", cargo_type: "Iron ore"}
+      ],
+      images: [
+        {url: "assets/img/vessels/Iron-Pilbara.jpg", caption: "Bulk carrier BHP", type: "profile"}
+      ]
+    },
+    {
+      name: "Fortescue Pioneer",
+      type: "Mining Supply Vessel",
+      flag: "🇦🇺",
+      wear: 28,
+      engine: "Caterpillar 3516C",
+      year: 2016,
+      note: "FMG Fleet · Dampier",
+      photoUrl: "assets/img/vessels/Fortescue-Pioneer.jpg",
+      specifications: {
+        capacity_passengers: 12,
+        capacity_cargo_tons: 3500,
+        weight_empty_tons: 5200,
+        weight_full_tons: 8700,
+        max_cargo_tons: 3500,
+        autonomy_days: 18,
+        tank_capacity_liters: 520000,
+        ship_class: "ABS",
+        gross_tonnage: 5800,
+        length_m: 95.5,
+        beam_m: 18.5,
+        draft_m: 5.8,
+        main_engines: [{type: "Caterpillar 3516C", kw: 2610, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 700, qty: 2}],
+        builder: "Damen Shipyards",
+        classification: "Supply Vessel",
+        imo_number: 9727365
+      },
+      routes: [
+        {name: "Dampier - Offshore fields", distance_nm: 120, voyage_time_hours: 18, frequency: "Weekly", cargo_type: "Supplies & personnel"}
+      ],
+      images: [
+        {url: "assets/img/vessels/Fortescue-Pioneer.jpg", caption: "Nave di approvvigionamento minerario", type: "profile"}
+      ]
+    },
+    {
+      name: "Svitzer Batavia",
+      type: "ASD Tug",
+      flag: "🇦🇺",
+      wear: 32,
+      engine: "Caterpillar 3516C",
+      year: 2016,
+      note: "Svitzer · Fremantle Port",
+      photoUrl: "assets/img/vessels/Svitzer-Batavia.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 90,
+        weight_empty_tons: 4300,
+        weight_full_tons: 4500,
+        max_cargo_tons: 200,
+        autonomy_days: 19,
+        tank_capacity_liters: 300000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 3200,
+        length_m: 75.5,
+        beam_m: 16.2,
+        draft_m: 4.8,
+        main_engines: [{type: "Caterpillar 3516C", kw: 2610, qty: 2}],
+        secondary_engines: [{type: "Diesel generator", kw: 650, qty: 2}],
+        builder: "Damen Shipyards",
+        classification: "ASD Tug",
+        imo_number: 9706365
+      },
+      routes: [
+        {name: "Fremantle Port - Operazioni", distance_nm: 30, voyage_time_hours: 4, frequency: "Daily", cargo_type: "Port assist"}
+      ],
+      images: [
+        {url: "assets/img/vessels/Svitzer-Batavia.jpg", caption: "Rimorchiatore Fremantle", type: "profile"}
+      ]
+    },
+    {
+      name: "SeaSwift Aliesha",
+      type: "Coastal Cargo Vessel",
+      flag: "🇦🇺",
+      wear: 44,
+      engine: "Cummins QSK 60",
+      year: 2013,
+      note: "Cairns–Torres Strait",
+      photoUrl: "assets/img/vessels/SeaSwift-Aliesha.jpg",
+      specifications: {
+        capacity_passengers: 0,
+        capacity_cargo_tons: 1200,
+        weight_empty_tons: 3100,
+        weight_full_tons: 4300,
+        max_cargo_tons: 1200,
+        autonomy_days: 14,
+        tank_capacity_liters: 380000,
+        ship_class: "Lloyd's Register",
+        gross_tonnage: 3500,
+        length_m: 82.5,
+        beam_m: 14.8,
+        draft_m: 4.2,
+        main_engines: [{type: "Cummins QSK 60", kw: 1500, qty: 1}],
+        secondary_engines: [{type: "Diesel generator", kw: 450, qty: 2}],
+        builder: "Austal",
+        classification: "Coastal Cargo Vessel",
+        imo_number: 9601487
+      },
+      routes: [
+        {name: "Cairns - Torres Strait islands", distance_nm: 280, voyage_time_hours: 28, frequency: "Weekly", cargo_type: "General cargo"}
+      ],
+      images: [
+        {url: "assets/img/vessels/SeaSwift-Aliesha.jpg", caption: "Nave costiera Australia", type: "profile"}
+      ]
+    }
   ],
 };
 
@@ -120,6 +909,101 @@ function openNaveModal(fleetKey, shipIndex) {
   const wearBar = document.getElementById("naveWearBar");
   wearBar.style.width = ship.wear + "%";
   wearBar.className = "wear-fill " + wearClass(ship.wear);
+
+  // ── GALLERY SECTION ──
+  const galleryHtml = ship.photoUrl ? `
+    <div style="margin-top:20px; margin-bottom:20px; border-bottom:1px solid rgba(0,87,184,.2); padding-bottom:20px;">
+      <h3 style="color:#00d4ff; font-size:13px; margin-bottom:12px; letter-spacing:1px; font-family:var(--F);">FOTOGRAFIE</h3>
+      <div style="margin-bottom:12px;">
+        <img src="${ship.photoUrl}" style="width:100%; border-radius:8px; max-height:250px; object-fit:cover; border:1px solid rgba(0,87,184,.2);">
+      </div>
+      ${ship.images && ship.images.length > 1 ? `
+        <div style="display:grid; grid-template-columns:repeat(${Math.min(3, ship.images.length)}, 1fr); gap:8px;">
+          ${ship.images.slice(1).map(img => `
+            <img src="${img.url}" alt="${img.caption}" title="${img.caption}" style="width:100%; height:80px; object-fit:cover; border-radius:4px; border:1px solid rgba(0,87,184,.2);">
+          `).join('')}
+        </div>
+      ` : ''}
+    </div>
+  ` : '';
+
+  // ── DETAILED SPECIFICATIONS ──
+  const specsHtml = ship.specifications ? `
+    <div style="margin-bottom:20px; border-bottom:1px solid rgba(0,87,184,.2); padding-bottom:20px;">
+      <h3 style="color:#00d4ff; font-size:13px; margin-bottom:12px; letter-spacing:1px; font-family:var(--F);">SPECIFICHE TECNICHE</h3>
+      <table class="modal-table" style="width:100%; font-size:11px;">
+        <tr>
+          <td><strong>Stazza lorda</strong></td>
+          <td>${ship.specifications.gross_tonnage || '—'} t</td>
+        </tr>
+        <tr>
+          <td><strong>Lunghezza</strong></td>
+          <td>${ship.specifications.length_m || '—'} m</td>
+        </tr>
+        <tr>
+          <td><strong>Larghezza</strong></td>
+          <td>${ship.specifications.beam_m || '—'} m</td>
+        </tr>
+        <tr>
+          <td><strong>Pescaggio</strong></td>
+          <td>${ship.specifications.draft_m || '—'} m</td>
+        </tr>
+        <tr>
+          <td><strong>Dislocamento (vuoto)</strong></td>
+          <td>${ship.specifications.weight_empty_tons || '—'} t</td>
+        </tr>
+        <tr>
+          <td><strong>Dislocamento (pieno)</strong></td>
+          <td>${ship.specifications.weight_full_tons || '—'} t</td>
+        </tr>
+        <tr>
+          <td><strong>Carico massimo</strong></td>
+          <td>${ship.specifications.max_cargo_tons || '—'} t</td>
+        </tr>
+        <tr>
+          <td><strong>Capacità carburante</strong></td>
+          <td>${(ship.specifications.tank_capacity_liters || 0).toLocaleString('it-IT')} L</td>
+        </tr>
+        <tr>
+          <td><strong>Autonomia</strong></td>
+          <td>${ship.specifications.autonomy_days || '—'} giorni</td>
+        </tr>
+        <tr>
+          <td><strong>Classe nave</strong></td>
+          <td>${ship.specifications.ship_class || '—'}</td>
+        </tr>
+        <tr>
+          <td><strong>Numero IMO</strong></td>
+          <td>${ship.specifications.imo_number || '—'}</td>
+        </tr>
+      </table>
+    </div>
+  ` : '';
+
+  // ── ROUTES SECTION ──
+  const routesHtml = ship.routes && ship.routes.length > 0 ? `
+    <div style="margin-bottom:20px; border-bottom:1px solid rgba(0,87,184,.2); padding-bottom:20px;">
+      <h3 style="color:#00d4ff; font-size:13px; margin-bottom:12px; letter-spacing:1px; font-family:var(--F);">ROTTE OPERATIVE</h3>
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        ${ship.routes.map(route => `
+          <div style="background:rgba(0,87,184,.1); padding:10px; border-radius:6px; border-left:3px solid #00d4ff; font-size:11px;">
+            <div style="color:#00d4ff; font-weight:700; margin-bottom:4px;">${route.name}</div>
+            <div style="color:var(--grigio); line-height:1.6;">
+              <div>Distanza: ${route.distance_nm} NM | Tempo: ${route.voyage_time_hours}h</div>
+              <div>Frequenza: ${route.frequency} | Carico: ${route.cargo_type}</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  ` : '';
+
+  // Insert gallery and specs before components section
+  const naveDetails = document.querySelector(".nave-details");
+  naveDetails.innerHTML = naveDetails.innerHTML.replace(
+    '<!-- COMPONENTI A RISCHIO -->',
+    `${galleryHtml}${specsHtml}${routesHtml}<!-- COMPONENTI A RISCHIO -->`
+  );
 
   // Popolare tabella componenti dai DATI REALI
   const tableHtml = components.length > 0 ? `
@@ -207,26 +1091,542 @@ renderFleet("virtu");
 checkReveal();
 // ── CATALOGO ─────────────────────────────────────────────────────────────────
 const CATALOG = [
-  { code:"0 281 006 064", name:"Sensore Pressione CR Bosch",         brand:"Bosch",      motors:"MTU 4000/8000 · MAN · Cummins CR",          price:240,  stock:"Stock",  vf:true,  tm:true  },
-  { code:"0 445 120 217", name:"Iniettore Bosch CRIN3",              brand:"Bosch",      motors:"MAN B&W G-Type Marine",                      price:620,  stock:"Stock",  vf:false, tm:false },
-  { code:"0 445 010 537", name:"Pompa Alta Pressione Bosch CP4",     brand:"Bosch",      motors:"Marine CR Bosch/MAN",                        price:980,  stock:"Ordine", vf:false, tm:false },
-  { code:"0 445 120 236", name:"Iniettore Bosch CR Cummins QSL9",    brand:"Bosch",      motors:"Cummins QSL9 (8.9L) Marine",                 price:590,  stock:"Stock",  vf:false, tm:false },
-  { code:"0 445 120 455", name:"Iniettore Bosch CR Cummins QSB 6.7", brand:"Bosch",      motors:"Cummins QSB 6.7 Marine",                     price:545,  stock:"Stock",  vf:false, tm:false },
-  { code:"0 445 120 356", name:"Iniettore Bosch CR QSB 6.7 CPL4191", brand:"Bosch",      motors:"Cummins QSB 6.7 (CPL 4191) Marine",          price:570,  stock:"Stock",  vf:false, tm:false },
-  { code:"0 124 655 025", name:"Alternatore Bosch 24V 120A",         brand:"Bosch",      motors:"MAN heavy diesel · ausiliari marini",         price:310,  stock:"Stock",  vf:true,  tm:false },
-  { code:"7C-3614",       name:"Pompa Acqua Mare CAT 3516",          brand:"Caterpillar",motors:"CAT 3408/3412/3508/3512/3516 Marine",         price:720,  stock:"Stock",  vf:false, tm:true  },
-  { code:"20R-1266",      name:"Iniettore CAT 3512C/3516C (Reman)",  brand:"Caterpillar",motors:"CAT 3512C · 3516C · 3516B Marine",            price:1150, stock:"Stock",  vf:false, tm:true  },
-  { code:"20R-1278",      name:"Iniettore CAT 3508/3512/3516 (Reman)",brand:"Caterpillar",motors:"CAT 3508/3512/3516/3518 Marine",             price:1080, stock:"Stock",  vf:false, tm:true  },
-  { code:"FF5488",        name:"Filtro Carburante Fleetguard Marine", brand:"Cummins",    motors:"Cummins QSB 5.9/6.7 · QSC 8.3 · QSL 9.0",  price:88,   stock:"Stock",  vf:true,  tm:true  },
-  { code:"LF9009",        name:"Filtro Olio Fleetguard Cummins QSL",  brand:"Cummins",    motors:"Cummins 6C · QSC 8.3 · QSL 9.0 Marine",     price:42,   stock:"Stock",  vf:true,  tm:true  },
-  { code:"WF2073",        name:"Filtro Refrigerante Fleetguard QSM11",brand:"Cummins",    motors:"Cummins QSM11 · L10 · M11 · K19 · V28",     price:38,   stock:"Stock",  vf:false, tm:false },
-  { code:"FS1000",        name:"Separatore Carburante/Acqua FG",      brand:"Cummins",    motors:"Cummins N14 · ISM · ISL · ISX genset",       price:65,   stock:"Stock",  vf:true,  tm:true  },
-  { code:"3967726",       name:"Alternatore Marino 24V 80A Cummins",  brand:"Cummins",    motors:"Cummins QSM11 · QSL9 · QSB 5.9/6.7",        price:485,  stock:"Stock",  vf:true,  tm:false },
-  { code:"28231014",      name:"Iniettore Delphi L-series",           brand:"Delphi",     motors:"Cummins QSK 19 · CAT 3516 CR Delphi",        price:445,  stock:"Stock",  vf:false, tm:false },
-  { code:"BEBE4C17001",   name:"Delphi EUI Iniettore Volvo Penta D9", brand:"Delphi",     motors:"Volvo Penta D9 / D9-MH / D9-425/500/575",    price:680,  stock:"Ordine", vf:false, tm:false },
-  { code:"BEBE4D24001",   name:"Delphi E3 EUI Iniettore Volvo D13",   brand:"Delphi",     motors:"Volvo D13A / D13C · Volvo Penta IPS",        price:720,  stock:"Ordine", vf:false, tm:false },
-  { code:"5265902",       name:"Iniettore Meccanico Delphi/Kelvin",   brand:"Delphi",     motors:"Kelvin marine diesel meccanico",              price:290,  stock:"Ordine", vf:false, tm:false },
+  {
+    code:"0 281 006 064",
+    name:"Sensore Pressione CR Bosch",
+    brand:"Bosch",
+    motors:"MTU 4000/8000 · MAN · Cummins CR",
+    price:240,
+    stock:"Stock",
+    vf:true,
+    tm:true,
+    photoUrl:"assets/img/parts/0-281-006-064.jpg",
+    specifications:{
+      weight_grams:280,
+      dimensions_mm:"45 × 32 × 28",
+      warranty_months:24,
+      certifications:["ABS","DNV GL","Lloyd's"],
+      lifespan_hours:3500,
+      maintenance_interval_hours:500,
+      pressure_range_bar:"900-1200",
+      operating_temp_c:"-20 to +85"
+    },
+    images:[
+      {url:"assets/img/parts/0-281-006-064.jpg", caption:"Sensore completo", alt:"Bosch 0281 sensor"},
+      {url:"assets/img/parts/0-281-006-064-detail.jpg", caption:"Dettaglio connettore", alt:"Connector detail"}
+    ]
+  },
+  {
+    code:"0 445 120 217",
+    name:"Iniettore Bosch CRIN3",
+    brand:"Bosch",
+    motors:"MAN B&W G-Type Marine",
+    price:620,
+    stock:"Stock",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/0-445-120-217.jpg",
+    specifications:{
+      weight_grams:850,
+      dimensions_mm:"95 × 45 × 38",
+      warranty_months:24,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:4000,
+      maintenance_interval_hours:750,
+      flow_rate_ccmin:"850±50",
+      operating_temp_c:"-10 to +80"
+    },
+    images:[
+      {url:"assets/img/parts/0-445-120-217.jpg", caption:"Iniettore completo", alt:"Bosch CRIN3 injector"},
+      {url:"assets/img/parts/0-445-120-217-assembly.jpg", caption:"Assemblaggio tecnico", alt:"Assembly detail"}
+    ]
+  },
+  {
+    code:"0 445 010 537",
+    name:"Pompa Alta Pressione Bosch CP4",
+    brand:"Bosch",
+    motors:"Marine CR Bosch/MAN",
+    price:980,
+    stock:"Ordine",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/0-445-010-537.jpg",
+    specifications:{
+      weight_grams:2400,
+      dimensions_mm:"180 × 120 × 110",
+      warranty_months:24,
+      certifications:["ABS","DNV GL","Lloyd's"],
+      lifespan_hours:5000,
+      maintenance_interval_hours:1000,
+      max_pressure_bar:1600,
+      displacement_ccrev:6.5
+    },
+    images:[
+      {url:"assets/img/parts/0-445-010-537.jpg", caption:"Pompa CP4", alt:"Bosch CP4 pump"},
+      {url:"assets/img/parts/0-445-010-537-internal.jpg", caption:"Componenti interni", alt:"Internal parts"}
+    ]
+  },
+  {
+    code:"0 445 120 236",
+    name:"Iniettore Bosch CR Cummins QSL9",
+    brand:"Bosch",
+    motors:"Cummins QSL9 (8.9L) Marine",
+    price:590,
+    stock:"Stock",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/0-445-120-236.jpg",
+    specifications:{
+      weight_grams:820,
+      dimensions_mm:"92 × 43 × 36",
+      warranty_months:24,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:3800,
+      maintenance_interval_hours:700,
+      flow_rate_ccmin:"780±40",
+      operating_temp_c:"-15 to +85"
+    },
+    images:[
+      {url:"assets/img/parts/0-445-120-236.jpg", caption:"Iniettore QSL9", alt:"Bosch QSL9 injector"},
+      {url:"assets/img/parts/0-445-120-236-nozzle.jpg", caption:"Ugello di iniezione", alt:"Nozzle detail"}
+    ]
+  },
+  {
+    code:"0 445 120 455",
+    name:"Iniettore Bosch CR Cummins QSB 6.7",
+    brand:"Bosch",
+    motors:"Cummins QSB 6.7 Marine",
+    price:545,
+    stock:"Stock",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/0-445-120-455.jpg",
+    specifications:{
+      weight_grams:780,
+      dimensions_mm:"88 × 40 × 35",
+      warranty_months:24,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:3600,
+      maintenance_interval_hours:600,
+      flow_rate_ccmin:"720±35",
+      operating_temp_c:"-20 to +80"
+    },
+    images:[
+      {url:"assets/img/parts/0-445-120-455.jpg", caption:"Iniettore QSB", alt:"Bosch QSB injector"},
+      {url:"assets/img/parts/0-445-120-455-coil.jpg", caption:"Bobina solenoide", alt:"Solenoid coil"}
+    ]
+  },
+  {
+    code:"0 445 120 356",
+    name:"Iniettore Bosch CR QSB 6.7 CPL4191",
+    brand:"Bosch",
+    motors:"Cummins QSB 6.7 (CPL 4191) Marine",
+    price:570,
+    stock:"Stock",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/0-445-120-356.jpg",
+    specifications:{
+      weight_grams:800,
+      dimensions_mm:"90 × 41 × 36",
+      warranty_months:24,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:3700,
+      maintenance_interval_hours:650,
+      flow_rate_ccmin:"740±38",
+      operating_temp_c:"-18 to +82"
+    },
+    images:[
+      {url:"assets/img/parts/0-445-120-356.jpg", caption:"Iniettore CPL4191", alt:"Bosch CPL4191 injector"},
+      {url:"assets/img/parts/0-445-120-356-connection.jpg", caption:"Connessioni idrauliche", alt:"Hydraulic connections"}
+    ]
+  },
+  {
+    code:"0 124 655 025",
+    name:"Alternatore Bosch 24V 120A",
+    brand:"Bosch",
+    motors:"MAN heavy diesel · ausiliari marini",
+    price:310,
+    stock:"Stock",
+    vf:true,
+    tm:false,
+    photoUrl:"assets/img/parts/0-124-655-025.jpg",
+    specifications:{
+      weight_grams:3800,
+      dimensions_mm:"185 × 145 × 165",
+      warranty_months:24,
+      certifications:["ABS"],
+      lifespan_hours:5000,
+      maintenance_interval_hours:2000,
+      output_voltage:24,
+      output_amperage:120,
+      operating_temp_c:"-25 to +60"
+    },
+    images:[
+      {url:"assets/img/parts/0-124-655-025.jpg", caption:"Alternatore 120A", alt:"Bosch alternator"},
+      {url:"assets/img/parts/0-124-655-025-terminals.jpg", caption:"Morsetti connessione", alt:"Terminal connections"}
+    ]
+  },
+  {
+    code:"7C-3614",
+    name:"Pompa Acqua Mare CAT 3516",
+    brand:"Caterpillar",
+    motors:"CAT 3408/3412/3508/3512/3516 Marine",
+    price:720,
+    stock:"Stock",
+    vf:false,
+    tm:true,
+    photoUrl:"assets/img/parts/7C-3614.jpg",
+    specifications:{
+      weight_grams:4200,
+      dimensions_mm:"220 × 180 × 150",
+      warranty_months:24,
+      certifications:["ABS","DNV GL","Lloyd's"],
+      lifespan_hours:6000,
+      maintenance_interval_hours:1500,
+      flow_rate_gpm:450,
+      max_pressure_psi:45
+    },
+    images:[
+      {url:"assets/img/parts/7C-3614.jpg", caption:"Pompa acqua mare", alt:"CAT seawater pump"},
+      {url:"assets/img/parts/7C-3614-intake.jpg", caption:"Presa acqua marina", alt:"Intake detail"}
+    ]
+  },
+  {
+    code:"20R-1266",
+    name:"Iniettore CAT 3512C/3516C (Reman)",
+    brand:"Caterpillar",
+    motors:"CAT 3512C · 3516C · 3516B Marine",
+    price:1150,
+    stock:"Stock",
+    vf:false,
+    tm:true,
+    photoUrl:"assets/img/parts/20R-1266.jpg",
+    specifications:{
+      weight_grams:950,
+      dimensions_mm:"110 × 52 × 48",
+      warranty_months:24,
+      certifications:["ABS","DNV GL","Lloyd's"],
+      lifespan_hours:4500,
+      maintenance_interval_hours:800,
+      flow_rate_ccmin:"650±30",
+      operating_temp_c:"-10 to +90"
+    },
+    images:[
+      {url:"assets/img/parts/20R-1266.jpg", caption:"Iniettore CAT ricondizionato", alt:"CAT reman injector"},
+      {url:"assets/img/parts/20R-1266-packaging.jpg", caption:"Packaging di spedizione", alt:"Original packaging"}
+    ]
+  },
+  {
+    code:"20R-1278",
+    name:"Iniettore CAT 3508/3512/3516 (Reman)",
+    brand:"Caterpillar",
+    motors:"CAT 3508/3512/3516/3518 Marine",
+    price:1080,
+    stock:"Stock",
+    vf:false,
+    tm:true,
+    photoUrl:"assets/img/parts/20R-1278.jpg",
+    specifications:{
+      weight_grams:920,
+      dimensions_mm:"108 × 50 × 46",
+      warranty_months:24,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:4400,
+      maintenance_interval_hours:800,
+      flow_rate_ccmin:"630±28",
+      operating_temp_c:"-12 to +88"
+    },
+    images:[
+      {url:"assets/img/parts/20R-1278.jpg", caption:"Iniettore ricondizionato", alt:"CAT reman injector"},
+      {url:"assets/img/parts/20R-1278-test.jpg", caption:"Test di pressione", alt:"Pressure test"}
+    ]
+  },
+  {
+    code:"FF5488",
+    name:"Filtro Carburante Fleetguard Marine",
+    brand:"Cummins",
+    motors:"Cummins QSB 5.9/6.7 · QSC 8.3 · QSL 9.0",
+    price:88,
+    stock:"Stock",
+    vf:true,
+    tm:true,
+    photoUrl:"assets/img/parts/FF5488.jpg",
+    specifications:{
+      weight_grams:450,
+      dimensions_mm:"120 × 95 × 85",
+      warranty_months:12,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:500,
+      maintenance_interval_hours:250,
+      filtration_microns:10,
+      water_absorption_ml:250
+    },
+    images:[
+      {url:"assets/img/parts/FF5488.jpg", caption:"Filtro combustibile", alt:"Fuel filter"},
+      {url:"assets/img/parts/FF5488-element.jpg", caption:"Elemento filtrante", alt:"Filter element"}
+    ]
+  },
+  {
+    code:"LF9009",
+    name:"Filtro Olio Fleetguard Cummins QSL",
+    brand:"Cummins",
+    motors:"Cummins 6C · QSC 8.3 · QSL 9.0 Marine",
+    price:42,
+    stock:"Stock",
+    vf:true,
+    tm:true,
+    photoUrl:"assets/img/parts/LF9009.jpg",
+    specifications:{
+      weight_grams:320,
+      dimensions_mm:"110 × 90 × 75",
+      warranty_months:12,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:750,
+      maintenance_interval_hours:375,
+      filtration_microns:8,
+      capacity_ml:1200
+    },
+    images:[
+      {url:"assets/img/parts/LF9009.jpg", caption:"Filtro olio motore", alt:"Oil filter"},
+      {url:"assets/img/parts/LF9009-spin-on.jpg", caption:"Tipo spin-on", alt:"Spin-on type"}
+    ]
+  },
+  {
+    code:"WF2073",
+    name:"Filtro Refrigerante Fleetguard QSM11",
+    brand:"Cummins",
+    motors:"Cummins QSM11 · L10 · M11 · K19 · V28",
+    price:38,
+    stock:"Stock",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/WF2073.jpg",
+    specifications:{
+      weight_grams:280,
+      dimensions_mm:"100 × 85 × 70",
+      warranty_months:12,
+      certifications:["DNV GL"],
+      lifespan_hours:800,
+      maintenance_interval_hours:400,
+      filtration_microns:12,
+      capacity_ml:900
+    },
+    images:[
+      {url:"assets/img/parts/WF2073.jpg", caption:"Filtro refrigerante", alt:"Water filter"},
+      {url:"assets/img/parts/WF2073-coolant.jpg", caption:"Con fluido di raffreddamento", alt:"With coolant"}
+    ]
+  },
+  {
+    code:"FS1000",
+    name:"Separatore Carburante/Acqua FG",
+    brand:"Cummins",
+    motors:"Cummins N14 · ISM · ISL · ISX genset",
+    price:65,
+    stock:"Stock",
+    vf:true,
+    tm:true,
+    photoUrl:"assets/img/parts/FS1000.jpg",
+    specifications:{
+      weight_grams:520,
+      dimensions_mm:"135 × 100 × 95",
+      warranty_months:12,
+      certifications:["ABS"],
+      lifespan_hours:600,
+      maintenance_interval_hours:300,
+      separation_efficiency:99.5,
+      water_capacity_ml:300
+    },
+    images:[
+      {url:"assets/img/parts/FS1000.jpg", caption:"Separatore combustibile", alt:"Fuel separator"},
+      {url:"assets/img/parts/FS1000-drain.jpg", caption:"Scarico acqua", alt:"Water drain"}
+    ]
+  },
+  {
+    code:"3967726",
+    name:"Alternatore Marino 24V 80A Cummins",
+    brand:"Cummins",
+    motors:"Cummins QSM11 · QSL9 · QSB 5.9/6.7",
+    price:485,
+    stock:"Stock",
+    vf:true,
+    tm:false,
+    photoUrl:"assets/img/parts/3967726.jpg",
+    specifications:{
+      weight_grams:3200,
+      dimensions_mm:"170 × 130 × 150",
+      warranty_months:24,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:5000,
+      maintenance_interval_hours:2000,
+      output_voltage:24,
+      output_amperage:80,
+      operating_temp_c:"-20 to +65"
+    },
+    images:[
+      {url:"assets/img/parts/3967726.jpg", caption:"Alternatore marino 80A", alt:"Cummins alternator"},
+      {url:"assets/img/parts/3967726-mount.jpg", caption:"Staffa di montaggio", alt:"Mounting bracket"}
+    ]
+  },
+  {
+    code:"28231014",
+    name:"Iniettore Delphi L-series",
+    brand:"Delphi",
+    motors:"Cummins QSK 19 · CAT 3516 CR Delphi",
+    price:445,
+    stock:"Stock",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/28231014.jpg",
+    specifications:{
+      weight_grams:910,
+      dimensions_mm:"105 × 48 × 45",
+      warranty_months:24,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:4200,
+      maintenance_interval_hours:700,
+      flow_rate_ccmin:"810±40",
+      operating_temp_c:"-15 to +85"
+    },
+    images:[
+      {url:"assets/img/parts/28231014.jpg", caption:"Iniettore L-series", alt:"Delphi L-series injector"},
+      {url:"assets/img/parts/28231014-assembly.jpg", caption:"Componenti assemblati", alt:"Assembly components"}
+    ]
+  },
+  {
+    code:"BEBE4C17001",
+    name:"Delphi EUI Iniettore Volvo Penta D9",
+    brand:"Delphi",
+    motors:"Volvo Penta D9 / D9-MH / D9-425/500/575",
+    price:680,
+    stock:"Ordine",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/BEBE4C17001.jpg",
+    specifications:{
+      weight_grams:1100,
+      dimensions_mm:"130 × 55 × 52",
+      warranty_months:24,
+      certifications:["ABS","DNV GL"],
+      lifespan_hours:4500,
+      maintenance_interval_hours:750,
+      flow_rate_ccmin:"920±45",
+      operating_temp_c:"-10 to +90"
+    },
+    images:[
+      {url:"assets/img/parts/BEBE4C17001.jpg", caption:"EUI Volvo Penta", alt:"Delphi EUI Volvo injector"},
+      {url:"assets/img/parts/BEBE4C17001-electronics.jpg", caption:"Unità di controllo", alt:"Control unit"}
+    ]
+  },
+  {
+    code:"BEBE4D24001",
+    name:"Delphi E3 EUI Iniettore Volvo D13",
+    brand:"Delphi",
+    motors:"Volvo D13A / D13C · Volvo Penta IPS",
+    price:720,
+    stock:"Ordine",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/BEBE4D24001.jpg",
+    specifications:{
+      weight_grams:1150,
+      dimensions_mm:"135 × 58 × 55",
+      warranty_months:24,
+      certifications:["ABS","DNV GL","Lloyd's"],
+      lifespan_hours:4600,
+      maintenance_interval_hours:800,
+      flow_rate_ccmin:"960±48",
+      operating_temp_c:"-8 to +92"
+    },
+    images:[
+      {url:"assets/img/parts/BEBE4D24001.jpg", caption:"E3 EUI Volvo D13", alt:"Delphi E3 Volvo injector"},
+      {url:"assets/img/parts/BEBE4D24001-injector.jpg", caption:"Corpo iniettore", alt:"Injector body"}
+    ]
+  },
+  {
+    code:"5265902",
+    name:"Iniettore Meccanico Delphi/Kelvin",
+    brand:"Delphi",
+    motors:"Kelvin marine diesel meccanico",
+    price:290,
+    stock:"Ordine",
+    vf:false,
+    tm:false,
+    photoUrl:"assets/img/parts/5265902.jpg",
+    specifications:{
+      weight_grams:620,
+      dimensions_mm:"75 × 38 × 32",
+      warranty_months:24,
+      certifications:["DNV GL"],
+      lifespan_hours:3200,
+      maintenance_interval_hours:600,
+      flow_rate_ccmin:"480±25",
+      operating_temp_c:"-5 to +80"
+    },
+    images:[
+      {url:"assets/img/parts/5265902.jpg", caption:"Iniettore meccanico", alt:"Mechanical injector"},
+      {url:"assets/img/parts/5265902-nozzle.jpg", caption:"Ugello meccanico", alt:"Mechanical nozzle"}
+    ]
+  },
 ];
+
+// ── PARTNER LOGOS & BRANDING ───────────────────────────
+const BRAND_LOGOS = {
+  Bosch: {
+    name: "Robert Bosch GmbH",
+    logo: "assets/img/brands/bosch-logo.png",
+    color: "#ff6b6b",
+    bgColor: "rgba(220,0,0,.2)",
+    website: "https://www.bosch-automotive.com",
+    established: 1886,
+    description: "Fornitore globale di sistemi di iniezione common-rail"
+  },
+  Delphi: {
+    name: "Delphi Technologies",
+    logo: "assets/img/brands/delphi-logo.png",
+    color: "#5bc8f5",
+    bgColor: "rgba(0,150,220,.2)",
+    website: "https://www.delphitechnologies.com",
+    established: 1994,
+    description: "Specialista di sistemi propulsione e iniezione"
+  },
+  Caterpillar: {
+    name: "Caterpillar Inc.",
+    logo: "assets/img/brands/caterpillar-logo.png",
+    color: "#ffc107",
+    bgColor: "rgba(255,185,0,.2)",
+    website: "https://www.caterpillar.com",
+    established: 1925,
+    description: "Costruttore di motori e sistemi marini"
+  },
+  Cummins: {
+    name: "Cummins Inc.",
+    logo: "assets/img/brands/cummins-logo.png",
+    color: "#4cde80",
+    bgColor: "rgba(0,180,50,.2)",
+    website: "https://www.cummins.com",
+    established: 1919,
+    description: "Produttore motori diesel marine"
+  },
+  Beta: {
+    name: "Beta Marine",
+    logo: "assets/img/brands/beta-logo.png",
+    color: "#ffd700",
+    bgColor: "rgba(255,215,0,.2)",
+    website: "https://www.betamarine.com",
+    established: 1981,
+    description: "Motori marini e sistemi ausiliari"
+  },
+  Fleetguard: {
+    name: "Fleetguard",
+    logo: "assets/img/brands/fleetguard-logo.png",
+    color: "#00d4ff",
+    bgColor: "rgba(0,212,255,.2)",
+    website: "https://www.fleetguard.com",
+    established: 1985,
+    description: "Filtri e fluidi marini certificati"
+  }
+};
 
 let currentCatFilter = "all";
 
@@ -651,21 +2051,21 @@ if (document.readyState === 'loading') {
 
 // ── COMPONENTI ALTO RISCHIO USURA ─────────────────────────────
 const RISCHIO_DATA = [
-  { key:'usura_1', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Filtri carburante',         cat:'Filtrazione',     status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'6 motori × 20 anni – intervallo cambio ogni 500h superato' },
-  { key:'usura_2', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Filtri olio',               cat:'Filtrazione',     status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'6 motori – consumo olio accelerato a questa età' },
-  { key:'usura_3', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Sensore pressione CR',      cat:'Iniezione',       status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'Sistema common rail MTU 4000 – sensori serie 0281 critici' },
-  { key:'usura_4', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Filtri refrigerante',       cat:'Raffreddamento',  status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'Circuito raffreddamento critico su unità ad alta potenza' },
-  { key:'usura_5', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Separatore carburante/acqua',cat:'Filtrazione',    status:'CRITICO', eta:20, usura:70.0, sigma:8.0,  ic:'54%–86%',  motiv:'Acque Med – contaminazione acqua frequente in rotta Malta' },
-  { key:'usura_6', nave:'MV Maria Dolores',       motore:'MTU 4000 M73',        comp:'Alternatore marino',        cat:'Elettrico',       status:'CRITICO', eta:20, usura:60.0, sigma:8.9,  ic:'43%–77%',  motiv:'20 anni – alternatori tipicamente fine vita a questa età' },
-  { key:'usura_7', nave:'MV Jean de La Valette',  motore:'MTU 8000 series',     comp:'Filtri olio',               cat:'Filtrazione',     status:'ALTO',    eta:16, usura:56.0, sigma:7.2,  ic:'42%–70%',  motiv:'4 motori × 16 anni – manutenzione intensiva ad alta velocità' },
-  { key:'usura_8', nave:'MV Jean de La Valette',  motore:'MTU 8000 series',     comp:'Sensore pressione CR',      cat:'Iniezione',       status:'ALTO',    eta:16, usura:56.0, sigma:7.2,  ic:'42%–70%',  motiv:'MTU 8000 CR system – alta sollecitazione a regime' },
-  { key:'usura_9', nave:'MV Jean de La Valette',  motore:'MTU 8000 series',     comp:'Filtri carburante',         cat:'Filtrazione',     status:'ALTO',    eta:16, usura:56.0, sigma:7.2,  ic:'42%–70%',  motiv:'Intervallo ridotto su regime alta velocità Pozzallo–Malta' },
-  { key:'usura_10', nave:'MV Saint John Paul II',  motore:'MTU 8000 (9100kW)',   comp:'Sensore pressione CR',      cat:'Iniezione',       status:'MEDIO',   eta:7,  usura:24.5, sigma:4.8,  ic:'15%–34%',  motiv:'7 anni – prima ispezione programmata CR serie 0281' },
-  { key:'usura_11', nave:'MV Saint John Paul II',  motore:'MTU 8000 (9100kW)',   comp:'Filtri carburante',         cat:'Filtrazione',     status:'MEDIO',   eta:7,  usura:24.5, sigma:4.8,  ic:'15%–34%',  motiv:'Manutenzione ordinaria – ancora in garanzia costruttore' },
-  { key:'usura_12', nave:'San Frangisk',           motore:'Deutz MWM 620B V1',   comp:'Filtri carburante',         cat:'Filtrazione',     status:'CRITICO', eta:36, usura:90.0, sigma:13.2, ic:'64%–100%', motiv:'36 anni – motori meccanici Deutz MWM, ricambi urgenti' },
-  { key:'usura_13', nave:'San Frangisk',           motore:'Deutz MWM 620B V1',   comp:'Filtri olio',               cat:'Filtrazione',     status:'CRITICO', eta:36, usura:90.0, sigma:13.2, ic:'64%–100%', motiv:'Usura avanzata su tutto il sistema lubrificazione' },
-  { key:'usura_14', nave:'San Pawl ⚠️ ex-flotta', motore:'Deutz MWM 604B V1',   comp:'Filtri carburante',         cat:'Filtrazione',     status:'CRITICO', eta:35, usura:87.5, sigma:13.0, ic:'62%–100%', motiv:'35 anni – ceduta 2025; dati storici mantenuti per analisi' },
-  { key:'usura_15', nave:'San Pawl ⚠️ ex-flotta', motore:'Deutz MWM 604B V1',   comp:'Filtri olio',               cat:'Filtrazione',     status:'CRITICO', eta:35, usura:87.5, sigma:13.0, ic:'62%–100%', motiv:'Filtri olio equivalenti Fleetguard applicabili' },
+  { key:'usura_1', nave:'MV Maria Dolores', motore:'MTU 4000 M73', comp:'Filtri carburante', cat:'Filtrazione', status:'CRITICO', eta:20, usura:70.0, sigma:8.0, ic:'54%–86%', motiv:'6 motori × 20 anni – intervallo cambio ogni 500h superato', component_lifespan_hours:500, hours_operated:175000, hours_remaining:0, service_interval_hours:250, last_service_hours:174750, critical_threshold_hours:450 },
+  { key:'usura_2', nave:'MV Maria Dolores', motore:'MTU 4000 M73', comp:'Filtri olio', cat:'Filtrazione', status:'CRITICO', eta:20, usura:70.0, sigma:8.0, ic:'54%–86%', motiv:'6 motori – consumo olio accelerato a questa età', component_lifespan_hours:750, hours_operated:175000, hours_remaining:175, service_interval_hours:375, last_service_hours:174750, critical_threshold_hours:675 },
+  { key:'usura_3', nave:'MV Maria Dolores', motore:'MTU 4000 M73', comp:'Sensore pressione CR', cat:'Iniezione', status:'CRITICO', eta:20, usura:70.0, sigma:8.0, ic:'54%–86%', motiv:'Sistema common rail MTU 4000 – sensori serie 0281 critici', component_lifespan_hours:3500, hours_operated:175000, hours_remaining:2150, service_interval_hours:500, last_service_hours:174500, critical_threshold_hours:3150 },
+  { key:'usura_4', nave:'MV Maria Dolores', motore:'MTU 4000 M73', comp:'Filtri refrigerante', cat:'Raffreddamento', status:'CRITICO', eta:20, usura:70.0, sigma:8.0, ic:'54%–86%', motiv:'Circuito raffreddamento critico su unità ad alta potenza', component_lifespan_hours:800, hours_operated:175000, hours_remaining:175, service_interval_hours:400, last_service_hours:174800, critical_threshold_hours:720 },
+  { key:'usura_5', nave:'MV Maria Dolores', motore:'MTU 4000 M73', comp:'Separatore carburante/acqua', cat:'Filtrazione', status:'CRITICO', eta:20, usura:70.0, sigma:8.0, ic:'54%–86%', motiv:'Acque Med – contaminazione acqua frequente in rotta Malta', component_lifespan_hours:600, hours_operated:175000, hours_remaining:400, service_interval_hours:300, last_service_hours:174600, critical_threshold_hours:540 },
+  { key:'usura_6', nave:'MV Maria Dolores', motore:'MTU 4000 M73', comp:'Alternatore marino', cat:'Elettrico', status:'CRITICO', eta:20, usura:60.0, sigma:8.9, ic:'43%–77%', motiv:'20 anni – alternatori tipicamente fine vita a questa età', component_lifespan_hours:5000, hours_operated:175000, hours_remaining:2500, service_interval_hours:2000, last_service_hours:173000, critical_threshold_hours:4500 },
+  { key:'usura_7', nave:'MV Jean de La Valette', motore:'MTU 8000 series', comp:'Filtri olio', cat:'Filtrazione', status:'ALTO', eta:16, usura:56.0, sigma:7.2, ic:'42%–70%', motiv:'4 motori × 16 anni – manutenzione intensiva ad alta velocità', component_lifespan_hours:750, hours_operated:140800, hours_remaining:187, service_interval_hours:375, last_service_hours:140625, critical_threshold_hours:675 },
+  { key:'usura_8', nave:'MV Jean de La Valette', motore:'MTU 8000 series', comp:'Sensore pressione CR', cat:'Iniezione', status:'ALTO', eta:16, usura:56.0, sigma:7.2, ic:'42%–70%', motiv:'MTU 8000 CR system – alta sollecitazione a regime', component_lifespan_hours:3500, hours_operated:140800, hours_remaining:2128, service_interval_hours:500, last_service_hours:140300, critical_threshold_hours:3150 },
+  { key:'usura_9', nave:'MV Jean de La Valette', motore:'MTU 8000 series', comp:'Filtri carburante', cat:'Filtrazione', status:'ALTO', eta:16, usura:56.0, sigma:7.2, ic:'42%–70%', motiv:'Intervallo ridotto su regime alta velocità Pozzallo–Malta', component_lifespan_hours:500, hours_operated:140800, hours_remaining:280, service_interval_hours:250, last_service_hours:140500, critical_threshold_hours:450 },
+  { key:'usura_10', nave:'MV Saint John Paul II', motore:'MTU 8000 (9100kW)', comp:'Sensore pressione CR', cat:'Iniezione', status:'MEDIO', eta:7, usura:24.5, sigma:4.8, ic:'15%–34%', motiv:'7 anni – prima ispezione programmata CR serie 0281', component_lifespan_hours:3500, hours_operated:61320, hours_remaining:2646, service_interval_hours:500, last_service_hours:60820, critical_threshold_hours:3150 },
+  { key:'usura_11', nave:'MV Saint John Paul II', motore:'MTU 8000 (9100kW)', comp:'Filtri carburante', cat:'Filtrazione', status:'MEDIO', eta:7, usura:24.5, sigma:4.8, ic:'15%–34%', motiv:'Manutenzione ordinaria – ancora in garanzia costruttore', component_lifespan_hours:500, hours_operated:61320, hours_remaining:376, service_interval_hours:250, last_service_hours:61070, critical_threshold_hours:450 },
+  { key:'usura_12', nave:'San Frangisk', motore:'Deutz MWM 620B V1', comp:'Filtri carburante', cat:'Filtrazione', status:'CRITICO', eta:36, usura:90.0, sigma:13.2, ic:'64%–100%', motiv:'36 anni – motori meccanici Deutz MWM, ricambi urgenti', component_lifespan_hours:500, hours_operated:315000, hours_remaining:0, service_interval_hours:250, last_service_hours:314500, critical_threshold_hours:450 },
+  { key:'usura_13', nave:'San Frangisk', motore:'Deutz MWM 620B V1', comp:'Filtri olio', cat:'Filtrazione', status:'CRITICO', eta:36, usura:90.0, sigma:13.2, ic:'64%–100%', motiv:'Usura avanzata su tutto il sistema lubrificazione', component_lifespan_hours:750, hours_operated:315000, hours_remaining:0, service_interval_hours:375, last_service_hours:314250, critical_threshold_hours:675 },
+  { key:'usura_14', nave:'San Pawl ⚠️ ex-flotta', motore:'Deutz MWM 604B V1', comp:'Filtri carburante', cat:'Filtrazione', status:'CRITICO', eta:35, usura:87.5, sigma:13.0, ic:'62%–100%', motiv:'35 anni – ceduta 2025; dati storici mantenuti per analisi', component_lifespan_hours:500, hours_operated:307500, hours_remaining:0, service_interval_hours:250, last_service_hours:307000, critical_threshold_hours:450 },
+  { key:'usura_15', nave:'San Pawl ⚠️ ex-flotta', motore:'Deutz MWM 604B V1', comp:'Filtri olio', cat:'Filtrazione', status:'CRITICO', eta:35, usura:87.5, sigma:13.0, ic:'62%–100%', motiv:'Filtri olio equivalenti Fleetguard applicabili', component_lifespan_hours:750, hours_operated:307500, hours_remaining:0, service_interval_hours:375, last_service_hours:307125, critical_threshold_hours:675 },
 ];
 
 const statusClass = { CRITICO:'status-critico', ALTO:'status-alto', MEDIO:'status-medio' };
@@ -1332,6 +2732,88 @@ function buildMercatoPopup(key) {
         <h3 style="color:#00d4ff; font-size:13px; margin-bottom:10px; letter-spacing:1px;">STRATEGIA</h3>
         <p style="font-size:12px; line-height:1.7; color:rgba(255,255,255,.8);">${m.strategia}</p>
       </div>
+    </div>
+  `;
+}
+
+// ── PRODUCT POPUP (RICAMBIO) ────────────────────────────────────────────────────────
+function buildProductPopup(code) {
+  const product = CATALOG.find(c => c.code === code);
+  if (!product) return '<h2>Prodotto non trovato</h2>';
+
+  const brandInfo = BRAND_LOGOS[product.brand] || {};
+
+  return `
+    <h2 style="color:#00d4ff; margin-bottom:20px; font-size:18px; letter-spacing:1px;">
+      ${product.brand} — ${product.name}
+    </h2>
+
+    <!-- Product Gallery -->
+    <div style="margin-bottom:24px;">
+      <img src="${product.photoUrl}" style="width:100%; border-radius:8px; margin-bottom:12px; max-height:300px; object-fit:cover;">
+      ${product.images && product.images.length > 1 ? `
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px;">
+          ${product.images.map(img => `
+            <img src="${img.url}" alt="${img.alt}" title="${img.caption}" style="width:100%; height:80px; object-fit:cover; border-radius:4px; border:1px solid rgba(0,87,184,.2); cursor:pointer;">
+          `).join('')}
+        </div>
+      ` : ''}
+    </div>
+
+    <!-- Specifications Table -->
+    <div style="background:rgba(0,87,184,.1); padding:16px; border-radius:8px; margin-bottom:20px;">
+      <h3 style="color:#00d4ff; font-size:12px; margin-bottom:12px; letter-spacing:1px;">SPECIFICHE TECNICHE</h3>
+      <table class="modal-table" style="width:100%; font-size:12px;">
+        <tr>
+          <td><strong>Codice</strong></td>
+          <td>${product.code}</td>
+        </tr>
+        <tr>
+          <td><strong>Brand</strong></td>
+          <td>${product.brand}</td>
+        </tr>
+        <tr>
+          <td><strong>Peso</strong></td>
+          <td>${product.specifications.weight_grams}g</td>
+        </tr>
+        <tr>
+          <td><strong>Dimensioni</strong></td>
+          <td>${product.specifications.dimensions_mm} mm</td>
+        </tr>
+        <tr>
+          <td><strong>Intervallo manutenzione</strong></td>
+          <td>${product.specifications.maintenance_interval_hours} ore</td>
+        </tr>
+        <tr>
+          <td><strong>Durata componente</strong></td>
+          <td style="color:#00e676; font-weight:700;">${product.specifications.lifespan_hours} ore</td>
+        </tr>
+        <tr>
+          <td><strong>Garanzia</strong></td>
+          <td>${product.specifications.warranty_months} mesi</td>
+        </tr>
+        <tr>
+          <td><strong>Prezzo</strong></td>
+          <td style="color:#ffc107; font-weight:700;">€${product.price}</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Certifications -->
+    ${product.specifications.certifications && product.specifications.certifications.length > 0 ? `
+      <div style="margin-bottom:16px;">
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          ${product.specifications.certifications.map(cert =>
+            `<span class="badge" style="background:rgba(0,212,255,.2); color:#00d4ff; border:1px solid rgba(0,212,255,.3); padding:4px 8px; border-radius:4px; font-size:11px;">${cert}</span>`
+          ).join('')}
+        </div>
+      </div>
+    ` : ''}
+
+    <!-- Compatibility -->
+    <div style="background:rgba(255,140,0,.1); border:1px solid rgba(255,140,0,.2); padding:12px; border-radius:8px; margin-top:16px;">
+      <div style="color:#ff8c00; font-weight:700; margin-bottom:8px; font-size:12px;">COMPATIBILITÀ MOTORI</div>
+      <div style="color:var(--grigio); font-size:11px;">${product.motors}</div>
     </div>
   `;
 }

@@ -4,7 +4,7 @@
 
 // ── Credenziali ──────────────────────────
 const UTENTI = {
-  "nunzio":        "rcsmarke5t22%w",
+  "nunzio":        "rcsmarke5t22%w78h-67",
   "admin":         "rcs2026!",
   "direttore":     "navale99",
   "virtu_ferries": "virtu11_%hjs",
