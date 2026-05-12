@@ -1933,7 +1933,7 @@ function initBubbleChart() {
             x: c.cost,
             y: c.price,
             r: Math.max(5, c.roi / 9),
-            cod: c.cod,
+            cod: c.code,
           })),
           backgroundColor: BRAND_COLOR[brand].fill,
           borderColor: BRAND_COLOR[brand].border,
@@ -2294,13 +2294,13 @@ function showIncrocio(filter) {
   document.querySelectorAll('#incrocio .tab').forEach((t, i) => {
     t.classList.toggle('active', (filter === 'all' && i === 0) || (filter === 'alto' && i === 1));
   });
-  const rows = filter === 'alto' ? INCROCIO.filter(r => r.rischio === 'ALTO') : INCROCIO;
+  const rows = filter === 'alto' ? INCROCIO.filter(r => r.status === 'ALTO') : INCROCIO;
   const riskClass = { ALTO:'risk-alto', MEDIO:'risk-medio', BASSO:'risk-basso' };
   const riskIcon  = { ALTO:'🔴', MEDIO:'🟡', BASSO:'🟢' };
   document.getElementById('incrocioBody').innerHTML = rows.map(r => `
     <tr>
       <td><span class="incr-nave">${r.nave}</span></td>
-      <td><span class="incr-cod">${r.cod}</span></td>
+      <td><span class="incr-cod">${r.code}</span></td>
       <td>${r.ric}</td>
       <td><span class="incr-cat">${r.cat}</span></td>
       <td><span class="incr-motiv">${r.motiv}</span></td>
@@ -2856,7 +2856,7 @@ function buildProductPopup(code) {
 
 // ── CODICE POPUP ────────────────────────────────────────────────────────────────────
 function buildCodicePopup(codiceKey) {
-  const codice = ECO_CODICI.find(c => c.cod === codiceKey);
+  const codice = ECO_CODICI.find(c => c.code === codiceKey);
   if (!codice) return '<h2>Codice non trovato</h2>';
 
   const margin = codice.price - codice.cost;
@@ -2864,7 +2864,7 @@ function buildCodicePopup(codiceKey) {
 
   return `
     <h2 style="font-size:22px; color:#00d4ff; margin-bottom:18px; letter-spacing:1px;">
-      🔧 ${codice.cod}
+      🔧 ${codice.code}
     </h2>
 
     <div class="nave-details">
