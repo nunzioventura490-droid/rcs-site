@@ -3,6 +3,9 @@ const user = sessionStorage.getItem("rcs_user") || "—";
 const navUser = document.getElementById("navUser");
 if (navUser) navUser.textContent = user.toUpperCase();
 
+// Accesso privilegiato: solo nunzio vede nomi reali aziende e dati specifici
+const IS_ADMIN = (user === "nunzio");
+
 function logout() {
   sessionStorage.removeItem("rcs_auth");
   sessionStorage.removeItem("rcs_user");
@@ -854,37 +857,58 @@ function wearClass(pct) {
   return "low";
 }
 
+const FLEET_LABELS = IS_ADMIN
+  ? ["Virtu Ferries", "Tug Malta", "Australia"]
+  : ["Flotta Mediterraneo A", "Flotta Mediterraneo B", "Flotta Oceano Indiano"];
+
+function maskShip(ship, i) {
+  if (IS_ADMIN) return ship;
+  const types = ["High Speed Craft · Ro-Pax","ASD Escort Tug","Coastal Cargo Vessel","RoPax Ferry","Container Vessel"];
+  return {
+    name: `Unità Navale ${String.fromCharCode(65 + i)}`,
+    type: ship.type,
+    flag: "🏴",
+    wear: ship.wear,
+    engine: ship.engine.replace(/MTU|CAT|Caterpillar|Cummins|Deutz/g, "Motore marino"),
+    year: ship.year,
+    note: `${ship.wear >= 75 ? "🔴 CRITICO" : ship.wear >= 45 ? "🟡 ATTENZIONE" : "🟢 OK"} · Anno ${ship.year}`
+  };
+}
+
 function renderFleet(key) {
   const grid = document.getElementById("fleetGrid");
-  grid.innerHTML = FLEETS[key].map((ship, i) => `
-    <div class="fleet-card" style="animation-delay:${i * 0.08}s; cursor:pointer;" onclick="openNaveModal('${key}', ${i})">
+  grid.innerHTML = FLEETS[key].map((ship, i) => {
+    const s = maskShip(ship, i);
+    return `
+    <div class="fleet-card" style="animation-delay:${i * 0.08}s; cursor:pointer;" onclick="${IS_ADMIN ? `openNaveModal('${key}', ${i})` : 'void(0)'}">
       <div class="fleet-card-header">
         <div>
-          <div class="fleet-name">${ship.name}</div>
-          <div class="fleet-type">${ship.type}</div>
+          <div class="fleet-name">${s.name}</div>
+          <div class="fleet-type">${s.type}</div>
         </div>
-        <div class="fleet-flag">${ship.flag}</div>
+        <div class="fleet-flag">${s.flag}</div>
       </div>
       <div class="wear-label">
         <span>USURA MOTORE</span>
-        <span class="wear-pct">${ship.wear}%</span>
+        <span class="wear-pct">${s.wear}%</span>
       </div>
       <div class="wear-bar">
-        <div class="wear-fill ${wearClass(ship.wear)}" style="width:${ship.wear}%"></div>
+        <div class="wear-fill ${wearClass(s.wear)}" style="width:${s.wear}%"></div>
       </div>
       <div class="fleet-meta">
-        <span><strong>${ship.engine}</strong></span>
-        <span>Anno <strong>${ship.year}</strong></span>
-        <span>${ship.note}</span>
+        <span><strong>${s.engine}</strong></span>
+        <span>Anno <strong>${s.year}</strong></span>
+        <span>${s.note}</span>
       </div>
-    </div>
-  `).join("");
+    </div>`;
+  }).join("");
 }
 
 function switchTab(key) {
   document.querySelectorAll(".tab").forEach((btn, i) => {
     const keys = ["virtu", "tug", "australia"];
     btn.classList.toggle("active", keys[i] === key);
+    btn.textContent = FLEET_LABELS[i];
   });
   renderFleet(key);
 }
@@ -1087,6 +1111,10 @@ if (canvas) {
   draw();
 }
 
+// Aggiorna label tab con nomi corretti in base al profilo utente
+document.querySelectorAll("#fleetTabs .tab").forEach((btn, i) => {
+  btn.textContent = FLEET_LABELS[i];
+});
 renderFleet("virtu");
 checkReveal();
 // ── CATALOGO ─────────────────────────────────────────────────────────────────
@@ -1714,7 +1742,7 @@ if (ctxF) {
 // 2 — SCORE RCS COMPAGNIE ─────────────────────────────────────
 const ctxM = document.getElementById('chartMercati')?.getContext('2d');
 if (ctxM) {
-  const comp = [
+  const compRaw = [
     { n: 'Tug Malta Ltd.',    s: 99 }, { n: 'Svitzer Australia',  s: 99 },
     { n: 'BHP Fleet',         s: 98 }, { n: 'Maersk Line',        s: 98 },
     { n: 'Rio Tinto Marine',  s: 97 }, { n: 'Grimaldi Lines',     s: 96 },
@@ -1722,6 +1750,7 @@ if (ctxM) {
     { n: 'MSC',               s: 95 }, { n: 'TT-Line',            s: 95 },
     { n: 'GNV',               s: 94 }, { n: 'CMA CGM',            s: 92 },
   ];
+  const comp = IS_ADMIN ? compRaw : compRaw.map((c, i) => ({ n: `Armatore ${String.fromCharCode(65+i)}`, s: c.s }));
   new Chart(ctxM, {
     type: 'bar',
     data: {
@@ -1745,10 +1774,10 @@ if (ctxM) {
   });
 }
 
-// 3 — USURA VIRTU FERRIES ─────────────────────────────────────
+// 3 — USURA FLOTTA PRINCIPALE ─────────────────────────────────
 const ctxV = document.getElementById('chartVirtu')?.getContext('2d');
 if (ctxV) {
-  const virtu = [
+  const virtuRaw = [
     { n: 'MV Saint John Paul II', w: 25 },
     { n: 'HSC Gozo Express',      w: 54 },
     { n: 'MV Jean de La Valette', w: 56 },
@@ -1757,6 +1786,7 @@ if (ctxV) {
     { n: 'San Frangisk',          w: 90 },
     { n: 'Balluta Bay',           w: 100 },
   ];
+  const virtu = IS_ADMIN ? virtuRaw : virtuRaw.map((d,i) => ({ n: `Unità ${String.fromCharCode(65+i)}`, w: d.w }));
   new Chart(ctxV, {
     type: 'bar',
     data: {
@@ -2069,10 +2099,16 @@ const RISCHIO_DATA = [
 ];
 
 const statusClass = { CRITICO:'status-critico', ALTO:'status-alto', MEDIO:'status-medio' };
+// Mappa nomi nave → codici anonimi per utenti non admin
+const _naveIndex = {};
+RISCHIO_DATA.forEach(r => { if (!_naveIndex[r.nave]) _naveIndex[r.nave] = Object.keys(_naveIndex).length + 1; });
+const maskNave = n => IS_ADMIN ? n : `Unità N${_naveIndex[n]}`;
+const maskMotore = m => IS_ADMIN ? m : m.replace(/MTU|Caterpillar|Cummins|Deutz|MWM/g,'Motore').replace(/\d{3,5}/g,'XXX');
+
 document.getElementById('rischioBody').innerHTML = RISCHIO_DATA.map(r => `
   <tr>
-    <td><span class="incr-nave">${r.nave}</span></td>
-    <td><span class="incr-cat">${r.motore}</span></td>
+    <td><span class="incr-nave">${maskNave(r.nave)}</span></td>
+    <td><span class="incr-cat">${maskMotore(r.motore)}</span></td>
     <td>${r.comp}</td>
     <td><span class="incr-cat">${r.cat}</span></td>
     <td><span class="status-badge ${statusClass[r.status]}">${r.status}</span></td>
