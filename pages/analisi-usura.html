@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analisi Usura Componenti — RCS Marine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <script>if(!sessionStorage.getItem('rcs_auth'))location.href='../index.html';</script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="../index.html">
+        <span>⚓</span>
+        <span class="nav-rcs">RCS</span>
+        <span class="nav-sub">MARINE INTELLIGENCE</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../pages/dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="analisi-usura.html" class="nav-link active">Analisi Usura</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="nav-user" id="navUser">—</span>
+        <button class="nav-logout" onclick="logout()">ESCI</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="overview" style="padding-top:80px;">
+    <div class="hero-bg">
+      <div class="hero-ship"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label">ANALISI SCIENTIFICA</p>
+      <h1 class="hero-title">CALCOLO USURA COMPONENTI</h1>
+      <p class="hero-subtitle">Modello matematico con previsioni statistiche</p>
+    </div>
+  </section>
+
+  <!-- CONTENUTO -->
+  <section class="section" id="analisi">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="section-label">METODOLOGIA</p>
+        <h2 class="section-title">Parametri di Calcolo</h2>
+      </div>
+
+      <div style="background: rgba(4,17,31,.7); border: 1px solid rgba(0,87,184,.2); border-radius: 8px; padding: 24px; margin-bottom: 32px;">
+        <h3 style="color:#00d4ff; font-family:var(--F); font-size:16px; margin-bottom:16px; font-weight:700; letter-spacing:2px;">FATTORI CONSIDERATI</h3>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div style="background:rgba(0,0,0,.3); padding:12px; border-left:3px solid #00d4ff; border-radius:4px;">
+            <div style="color:#00d4ff; font-weight:700; font-size:12px; margin-bottom:8px;">1. ETÀ NAVE/MOTORE</div>
+            <div style="color:var(--grigio); font-size:11px; line-height:1.6;">
+              • Curve di degradazione esponenziale<br>
+              • Accelerazione dopo 15-20 anni<br>
+              • Baseline: 0% a anno 0, 100% a anno 40
+            </div>
+          </div>
+
+          <div style="background:rgba(0,0,0,.3); padding:12px; border-left:3px solid #ff8c00; border-radius:4px;">
+            <div style="color:#ff8c00; font-weight:700; font-size:12px; margin-bottom:8px;">2. TIPO MOTORE</div>
+            <div style="color:var(--grigio); font-size:11px; line-height:1.6;">
+              • MTU (0.95) - Usura media<br>
+              • Caterpillar (1.0) - Standard<br>
+              • Deutz (1.1) - Usura più rapida
+            </div>
+          </div>
+
+          <div style="background:rgba(0,0,0,.3); padding:12px; border-left:3px solid #00e676; border-radius:4px;">
+            <div style="color:#00e676; font-weight:700; font-size:12px; margin-bottom:8px;">3. UTILIZZO INTENSIVO</div>
+            <div style="color:var(--grigio); font-size:11px; line-height:1.6;">
+              • Alta velocità (1.3x)<br>
+              • Normale (1.0x)<br>
+              • Bassa velocità (0.7x)
+            </div>
+          </div>
+
+          <div style="background:rgba(0,0,0,.3); padding:12px; border-left:3px solid #ffd700; border-radius:4px;">
+            <div style="color:#ffd700; font-weight:700; font-size:12px; margin-bottom:8px;">4. AMBIENTE OPERATIVO</div>
+            <div style="color:var(--grigio); font-size:11px; line-height:1.6;">
+              • Oceano aperto (1.2x)<br>
+              • Acque costiere (1.0x)<br>
+              • Acque dolci (0.8x)
+            </div>
+          </div>
+
+          <div style="background:rgba(0,0,0,.3); padding:12px; border-left:3px solid #ff3333; border-radius:4px;">
+            <div style="color:#ff3333; font-weight:700; font-size:12px; margin-bottom:8px;">5. TIPO COMPONENTE</div>
+            <div style="color:var(--grigio); font-size:11px; line-height:1.6;">
+              • Filtri (Usura alta)<br>
+              • Sensori (Usura media)<br>
+              • Alternatore (Usura lenta)
+            </div>
+          </div>
+
+          <div style="background:rgba(0,0,0,.3); padding:12px; border-left:3px solid #0096d4; border-radius:4px;">
+            <div style="color:#0096d4; font-weight:700; font-size:12px; margin-bottom:8px;">6. NUMERO MOTORI</div>
+            <div style="color:var(--grigio); font-size:11px; line-height:1.6;">
+              • 1 motore = carico 100%<br>
+              • 2 motori = carico 75%<br>
+              • 6 motori = carico 50%
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULA -->
+      <div style="background:rgba(0,87,184,.1); border:1px solid rgba(0,87,184,.3); border-radius:8px; padding:20px; margin-bottom:32px;">
+        <h3 style="color:#00d4ff; font-family:var(--F); font-size:14px; margin-bottom:12px; font-weight:700;">FORMULA DI CALCOLO</h3>
+        <div style="background:rgba(0,0,0,.5); padding:16px; border-radius:4px; font-family:monospace; font-size:12px; color:#00d4ff; line-height:1.8; overflow-x:auto;">
+usura(%) = MIN(100, <br>
+&nbsp;&nbsp;base_eta(anno) × <br>
+&nbsp;&nbsp;factor_motore × <br>
+&nbsp;&nbsp;factor_utilizzo × <br>
+&nbsp;&nbsp;factor_ambiente × <br>
+&nbsp;&nbsp;factor_componente ÷ <br>
+&nbsp;&nbsp;factor_manutenzione<br>
+)<br><br>
+Intervallo confidenza: ±σ(%)
+        </div>
+      </div>
+
+      <!-- TABELLA NAVI -->
+      <div style="margin-top:32px;">
+        <h3 style="color:#00d4ff; font-family:var(--F); font-size:16px; margin-bottom:16px; font-weight:700; letter-spacing:2px;">ANALISI PER NAVE</h3>
+        <div id="analisiTable" style="background:rgba(0,0,0,.3); border:1px solid rgba(0,87,184,.15); border-radius:6px; overflow-x:auto;"></div>
+      </div>
+
+      <!-- GRAFICI -->
+      <div style="margin-top:40px; display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <div style="background:rgba(4,17,31,.7); border:1px solid rgba(0,87,184,.2); border-radius:8px; padding:20px;">
+          <h4 style="color:#00d4ff; margin-bottom:16px; font-family:var(--F); font-weight:700;">Distribuzione Usura per Nave</h4>
+          <canvas id="chartUsuraDistrib"></canvas>
+        </div>
+        <div style="background:rgba(4,17,31,.7); border:1px solid rgba(0,87,184,.2); border-radius:8px; padding:20px;">
+          <h4 style="color:#00d4ff; margin-bottom:16px; font-family:var(--F); font-weight:700;">Curva Previsione Usura vs Eta</h4>
+          <canvas id="chartUsuraAge"></canvas>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div style="background:rgba(255,140,0,.1); border:1px solid rgba(255,140,0,.3); border-radius:8px; padding:16px; margin-top:32px;">
+        <div style="color:#ff8c00; font-weight:700; margin-bottom:8px;">⚠️ NOTA IMPORTANTE</div>
+        <div style="color:var(--grigio); font-size:12px; line-height:1.6;">
+          Questi calcoli sono STIME basate su modelli matematici e standard industria marittima.
+          L'usura reale dipende da fattori non misurabili (manutenzione storica, condizioni meteo,
+          pratica di condotta, qualità carburante, etc).
+          I valori mostrati rappresentano un intervallo di confidenza statistico (±σ%).
+          <strong style="color:#ff8c00;">Per validazione precisa, è consigliata ispezione tecnica in loco.</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Ricambi Centro Sud S.r.l. · P.IVA IT03176280877 · Catania</footer>
+
+  <script src="../js/analisi-usura.js"></script>
+</body>
+</html>
