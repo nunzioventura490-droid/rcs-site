@@ -858,6 +858,24 @@ const ALL_MMSI = [...Object.keys(MMSI_VIRTU), ...Object.keys(MMSI_TUG)].map(Numb
 
 let aisMap = null, aisSocket = null;
 const aisMarkers = {};
+let aisDataReceived = false;
+let aisTimeoutId = null;
+
+// DEMO MODE: Posizioni simulate per le navi (Mediterraneo centrale)
+const DEMO_SHIPS = [
+  // VIRTU FERRIES (rotta Malta-Italia)
+  { mmsi: 229524000, name: 'MV Saint John Paul II', lat: 36.2, lon: 15.5, sog: '38.2', cog: '355', isVirtu: true },
+  { mmsi: 229500000, name: 'MV Jean de La Valette', lat: 36.8, lon: 14.2, sog: '36.5', cog: '220', isVirtu: true },
+  { mmsi: 229497000, name: 'MV Maria Dolores', lat: 35.9, lon: 15.8, sog: '35.8', cog: '110', isVirtu: true },
+  { mmsi: 229460000, name: 'HSC Gozo Express', lat: 36.0, lon: 14.5, sog: '34.2', cog: '180', isVirtu: true },
+
+  // TUG MALTA (rotte portuali Malta-Sicilia)
+  { mmsi: 229440000, name: 'MT Vittoriosa', lat: 36.05, lon: 13.9, sog: '12.5', cog: '45', isVirtu: false },
+  { mmsi: 229442000, name: 'MT St. Angelo', lat: 35.87, lon: 14.65, sog: '14.0', cog: '90', isVirtu: false },
+  { mmsi: 229444000, name: 'MT Senglea', lat: 36.15, lon: 14.1, sog: '11.8', cog: '270', isVirtu: false },
+  { mmsi: 229446000, name: 'Med Aldebaran', lat: 36.02, lon: 14.85, sog: '13.2', cog: '135', isVirtu: false },
+  { mmsi: 229448000, name: 'MT St. Elmo', lat: 35.95, lon: 14.35, sog: '15.0', cog: '225', isVirtu: false },
+];
 
 function makeAisIcon(isVirtu) {
   return L.divIcon({
@@ -880,12 +898,40 @@ function initAISMap() {
   connectAIS();
 }
 
+function loadDemoMode() {
+  const dot    = document.getElementById('aisDot');
+  const status = document.getElementById('aisStatus');
+  const count  = document.getElementById('aisCount');
+
+  dot.className = 'ais-dot ais-dot-demo';
+  status.textContent = '📡 Demo Mode · Posizioni simulate';
+
+  DEMO_SHIPS.forEach(ship => {
+    const popHtml = `<div class="ais-popup"><strong>${ship.name}</strong><br>SOG: ${ship.sog} kn · COG: ${ship.cog}°<br><span class="ais-mmsi">MMSI: ${ship.mmsi}</span></div>`;
+
+    aisMarkers[ship.mmsi] = L.marker([ship.lat, ship.lon], { icon: makeAisIcon(ship.isVirtu) })
+      .bindPopup(popHtml)
+      .addTo(aisMap);
+  });
+
+  count.textContent = `${DEMO_SHIPS.length} navi tracciate (demo)`;
+}
+
 function connectAIS() {
   const dot    = document.getElementById('aisDot');
   const status = document.getElementById('aisStatus');
   const count  = document.getElementById('aisCount');
 
   if (aisSocket) { try { aisSocket.close(); } catch(e) {} }
+
+  // Timeout di 10 secondi - se non arrivano dati, carica demo mode
+  if (aisTimeoutId) clearTimeout(aisTimeoutId);
+  aisTimeoutId = setTimeout(() => {
+    if (!aisDataReceived) {
+      console.warn('AIS timeout - caricamento demo mode');
+      loadDemoMode();
+    }
+  }, 10000);
 
   aisSocket = new WebSocket('wss://stream.aisstream.io/v0/stream');
 
@@ -902,6 +948,9 @@ function connectAIS() {
 
   aisSocket.onmessage = evt => {
     try {
+      aisDataReceived = true;
+      if (aisTimeoutId) clearTimeout(aisTimeoutId);
+
       const msg  = JSON.parse(evt.data);
       const mmsi = msg.MetaData?.MMSI;
       const lat  = msg.MetaData?.latitude;
@@ -912,7 +961,7 @@ function connectAIS() {
       const name    = MMSI_VIRTU[mmsi] || MMSI_TUG[mmsi] || `MMSI ${mmsi}`;
       const sog     = msg.Message?.PositionReport?.Sog?.toFixed(1) ?? '—';
       const cog     = msg.Message?.PositionReport?.Cog?.toFixed(0) ?? '—';
-      const popHtml = `<div class="ais-popup"><strong>${name}</strong>SOG: ${sog} kn &nbsp;·&nbsp; COG: ${cog}°<br><span class="ais-mmsi">MMSI: ${mmsi}</span></div>`;
+      const popHtml = `<div class="ais-popup"><strong>${name}</strong><br>SOG: ${sog} kn · COG: ${cog}°<br><span class="ais-mmsi">MMSI: ${mmsi}</span></div>`;
 
       if (aisMarkers[mmsi]) {
         aisMarkers[mmsi].setLatLng([lat, lon]);
@@ -924,7 +973,7 @@ function connectAIS() {
       }
 
       const n = Object.keys(aisMarkers).length;
-      count.textContent = `${n} nav${n === 1 ? 'e' : 'i'} tracciat${n === 1 ? 'a' : 'e'}`;
+      count.textContent = `${n} nav${n === 1 ? 'e' : 'i'} tracciat${n === 1 ? 'a' : 'e'} (AIS Live)`;
     } catch(e) {}
   };
 

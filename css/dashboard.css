@@ -947,6 +947,11 @@ canvas#heroWaves {
   box-shadow: 0 0 8px #00e676;
   animation: aisPulse 1.6s ease-in-out infinite;
 }
+.ais-dot-demo {
+  background: #ff8c00;
+  box-shadow: 0 0 10px #ff8c00;
+  animation: aisPulse 1.6s ease-in-out infinite;
+}
 .ais-dot-err { background: #ff4444; box-shadow: 0 0 8px #ff4444; }
 .ais-count { margin-left: auto; color: var(--cyan); font-weight: 600; }
 #aisMap { height: 520px; }
