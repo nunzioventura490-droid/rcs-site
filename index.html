@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCS Marine Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- SFONDO ANIMATO -->
+  <div class="bg">
+    <div class="bg-overlay"></div>
+    <canvas id="waves"></canvas>
+    <div class="ship" id="ship"></div>
+  </div>
+
+  <!-- LOGO -->
+  <header>
+    <div class="logo">
+      <span class="logo-icon">⚓</span>
+      <div>
+        <div class="logo-rcs">RCS</div>
+        <div class="logo-sub">MARINE INTELLIGENCE</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- LOGIN -->
+  <main>
+    <div class="card" id="card">
+      <div class="card-line"></div>
+      <div class="card-body">
+        <h1>ACCESSO RISERVATO</h1>
+        <p class="card-desc">Ricambi Centro Sud S.r.l. · Catania</p>
+
+        <div class="field">
+          <label>UTENTE</label>
+          <input type="text" id="u" placeholder="nome utente" autocomplete="off">
+        </div>
+        <div class="field">
+          <label>PASSWORD</label>
+          <input type="password" id="p" placeholder="••••••••">
+        </div>
+
+        <div class="error" id="err">Credenziali non corrette.</div>
+
+        <button id="btn" onclick="login()">
+          <span id="btnTxt">ACCEDI</span>
+          <span class="arrow">→</span>
+        </button>
+
+        <div class="divider"></div>
+        <a href="pages/clienti.html" class="client-link">Area Clienti →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2026 Ricambi Centro Sud S.r.l. · P.IVA IT03176280877 · Catania</footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

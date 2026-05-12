@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — RCS Marine Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <script>if(!sessionStorage.getItem('rcs_auth'))location.href='../index.html';</script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="../index.html">
+        <span>⚓</span>
+        <span class="nav-rcs">RCS</span>
+        <span class="nav-sub">MARINE INTELLIGENCE</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#overview" class="nav-link active">Overview</a></li>
+        <li><a href="#flotte" class="nav-link">Flotte</a></li>
+        <li><a href="#mercati" class="nav-link">Mercati</a></li>
+        <li><a href="#strategia" class="nav-link">Strategia</a></li>
+        <li><a href="#mappa" class="nav-link">Mappa AIS</a></li>
+        <li><a href="#catalogo" class="nav-link">Catalogo</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="nav-user" id="navUser">—</span>
+        <button class="nav-logout" onclick="logout()">ESCI</button>
+      </div>
+    </div>
+  </nav>
+    <!-- HERO -->
+  <section class="hero" id="overview">
+    <div class="hero-bg">
+      <canvas id="heroWaves"></canvas>
+      <div class="hero-ship"></div>
+    </div>
+    <div class="hero-content">
+           <img src="../assets/img/logo-rcs.png" class="hero-logo" alt="RCS Marine">
+      <p class="hero-label">PANNELLO DI CONTROLLO</p>
+      <h1 class="hero-title">RICAMBI CENTRO SUD</h1>
+      <p class="hero-subtitle">Marine Intelligence · Catania · Dal 1987</p>
+    </div>
+
+    <div class="kpi-strip">
+      <div class="kpi-item">
+        <span class="kpi-val">€14,6M</span>
+        <span class="kpi-lbl">FATTURATO 2025</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi-item">
+        <span class="kpi-val">€2,0M</span>
+        <span class="kpi-lbl">EXPORT</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi-item">
+        <span class="kpi-val">32</span>
+        <span class="kpi-lbl">DIPENDENTI</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi-item">
+        <span class="kpi-val">5</span>
+        <span class="kpi-lbl">FLOTTE SERVITE</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi-item kpi-target">
+        <span class="kpi-val">€21M</span>
+        <span class="kpi-lbl">TARGET 2027</span>
+      </div>
+    </div>
+  </section>
+    <!-- FLOTTE -->
+  <section class="section" id="flotte">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="section-label">FLOTTE CLIENTI</p>
+        <h2 class="section-title">Gestione Navi</h2>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('virtu')">Virtu Ferries</button>
+        <button class="tab" onclick="switchTab('tug')">Tug Malta</button>
+        <button class="tab" onclick="switchTab('australia')">Australia</button>
+      </div>
+
+      <div class="fleet-grid" id="fleetGrid"></div>
+    </div>
+  </section>
+    <!-- MERCATI -->
+  <section class="section" id="mercati">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">MERCATI TARGET</p>
+        <h2 class="section-title">Aree di Business</h2>
+      </div>
+      <div class="mercati-grid reveal">
+
+        <div class="mercato-card">
+          <div class="mercato-top">
+            <span class="mercato-flag">🇲🇹</span>
+            <div>
+              <div class="mercato-nome">Malta · Priorità 1</div>
+              <div class="mercato-tipo">Malta-Based &amp; Malta-Flag</div>
+            </div>
+            <span class="mercato-score">99</span>
+          </div>
+          <div class="mercato-aziende">
+            <span>Tug Malta Ltd.</span><span>Virtu Ferries</span><span>MSC</span><span>Grimaldi Lines</span><span>V.Ships</span>
+          </div>
+          <div class="mercato-kpi">
+            <div class="mkpi"><span class="mkpi-val">€2,0M</span><span class="mkpi-lbl">Export attuale</span></div>
+            <div class="mkpi"><span class="mkpi-val">€4,0M</span><span class="mkpi-lbl">Target 2027</span></div>
+            <div class="mkpi"><span class="mkpi-val">+35%</span><span class="mkpi-lbl">Markup medio</span></div>
+          </div>
+        </div>
+
+        <div class="mercato-card">
+          <div class="mercato-top">
+            <span class="mercato-flag">🇮🇹</span>
+            <div>
+              <div class="mercato-nome">Italia · Transito Malta</div>
+              <div class="mercato-tipo">Compagnie italiane in transito</div>
+            </div>
+            <span class="mercato-score">94</span>
+          </div>
+          <div class="mercato-aziende">
+            <span>GNV</span><span>Tirrenia / Moby</span><span>Caronte &amp; Tourist</span><span>Liberty Lines</span><span>SNAV</span>
+          </div>
+          <div class="mercato-kpi">
+            <div class="mkpi"><span class="mkpi-val">Sicilia–Malta</span><span class="mkpi-lbl">Rotta principale</span></div>
+            <div class="mkpi"><span class="mkpi-val">€300K</span><span class="mkpi-lbl">Potenziale Q3 2025</span></div>
+            <div class="mkpi"><span class="mkpi-val">15–35</span><span class="mkpi-lbl">Navi per compagnia</span></div>
+          </div>
+        </div>
+
+        <div class="mercato-card">
+          <div class="mercato-top">
+            <span class="mercato-flag">🇦🇺</span>
+            <div>
+              <div class="mercato-nome">Australia · Oceania</div>
+              <div class="mercato-tipo">Fleet AUS-Based &amp; Mining</div>
+            </div>
+            <span class="mercato-score">98</span>
+          </div>
+          <div class="mercato-aziende">
+            <span>BHP Fleet</span><span>Rio Tinto Marine</span><span>FMG</span><span>Svitzer Australia</span><span>TT-Line</span>
+          </div>
+          <div class="mercato-kpi">
+            <div class="mkpi"><span class="mkpi-val">+55%</span><span class="mkpi-lbl">Markup medio</span></div>
+            <div class="mkpi"><span class="mkpi-val">€400K</span><span class="mkpi-lbl">Potenziale anno 1</span></div>
+            <div class="mkpi"><span class="mkpi-val">Port Hedland</span><span class="mkpi-lbl">Hub principale</span></div>
+          </div>
+        </div>
+
+        <div class="mercato-card">
+          <div class="mercato-top">
+            <span class="mercato-flag">🌍</span>
+            <div>
+              <div class="mercato-nome">Internazionale · Hub Malta</div>
+              <div class="mercato-tipo">Transito Malta Freeport</div>
+            </div>
+            <span class="mercato-score">98</span>
+          </div>
+          <div class="mercato-aziende">
+            <span>Maersk Line</span><span>CMA CGM</span><span>Hapag-Lloyd</span><span>Evergreen</span><span>ZIM</span>
+          </div>
+          <div class="mercato-kpi">
+            <div class="mkpi"><span class="mkpi-val">1.000+</span><span class="mkpi-lbl">Navi MSC (apr.2026)</span></div>
+            <div class="mkpi"><span class="mkpi-val">Asia–Suez</span><span class="mkpi-lbl">Rotta principale</span></div>
+            <div class="mkpi"><span class="mkpi-val">MAN B&amp;W</span><span class="mkpi-lbl">Motori principali</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    <!-- STRATEGIA -->
+  <section class="section" id="strategia">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">PIANO STRATEGICO 2025–2028</p>
+        <h2 class="section-title">Roadmap di Espansione</h2>
+      </div>
+
+      <div class="strat-timeline reveal">
+
+        <div class="strat-item">
+          <div class="strat-year">2025</div>
+          <div class="strat-content">
+            <div class="strat-title">Consolidamento Hub Malta</div>
+            <div class="strat-body">
+              <div class="strat-row"><span class="strat-tag tag-active">IN CORSO</span><span>Contratti diretti Virtu Ferries + Tug Malta Ltd.</span></div>
+              <div class="strat-row"><span class="strat-tag tag-active">Q3 2025</span><span>Accordo fleet GNV / Grimaldi Lines — 15–35 navi target</span></div>
+              <div class="strat-row"><span class="strat-tag tag-active">Q3 2025</span><span>Liberty Lines + Caronte &amp; Tourist — ricambi Cummins QSB</span></div>
+            </div>
+            <div class="strat-kpi"><span class="strat-kpi-val">€14,6M</span><span class="strat-kpi-lbl">Fatturato obiettivo</span></div>
+          </div>
+        </div>
+
+        <div class="strat-item">
+          <div class="strat-year">2026</div>
+          <div class="strat-content">
+            <div class="strat-title">Ingresso Mercato Australia</div>
+            <div class="strat-body">
+              <div class="strat-row"><span class="strat-tag tag-plan">Q1 2026</span><span>Primo contatto BHP / Rio Tinto Marine — Cummins QSK60</span></div>
+              <div class="strat-row"><span class="strat-tag tag-plan">Q2 2026</span><span>Partnership distributore Perth / Port Hedland</span></div>
+              <div class="strat-row"><span class="strat-tag tag-plan">Q3 2026</span><span>Targeting diretto FMG + Woodside Energy — CAT 3516</span></div>
+            </div>
+            <div class="strat-kpi"><span class="strat-kpi-val">€18,0M</span><span class="strat-kpi-lbl">Fatturato obiettivo</span></div>
+          </div>
+        </div>
+
+        <div class="strat-item">
+          <div class="strat-year">2027</div>
+          <div class="strat-content">
+            <div class="strat-title">Sourcing OEM Germania + Export €4M</div>
+            <div class="strat-body">
+              <div class="strat-row"><span class="strat-tag tag-plan">Q1 2027</span><span>Accordo sourcing diretto con OEM Germania (f.acq. 0,82)</span></div>
+              <div class="strat-row"><span class="strat-tag tag-plan">Q2 2027</span><span>Hub logistico Malta Freeport — ricambi in transito Asia–Med</span></div>
+              <div class="strat-row"><span class="strat-tag tag-plan">Q4 2027</span><span>MSC / CMA CGM / Hapag-Lloyd — contratti manutenzione flotta</span></div>
+            </div>
+            <div class="strat-kpi"><span class="strat-kpi-val">€21,0M</span><span class="strat-kpi-lbl">Target revenue · €4M export</span></div>
+          </div>
+        </div>
+
+        <div class="strat-item strat-item-last">
+          <div class="strat-year strat-year-gold">2028</div>
+          <div class="strat-content">
+            <div class="strat-title">Marine Intelligence Platform — Full International</div>
+            <div class="strat-body">
+              <div class="strat-row"><span class="strat-tag tag-gold">VISIONE</span><span>Piattaforma digitale ricambi navali — Singapore · Emirati · USA</span></div>
+              <div class="strat-row"><span class="strat-tag tag-gold">VISIONE</span><span>Certificazione ISO 9001 Marine + Lloyd's Register approved supplier</span></div>
+            </div>
+            <div class="strat-kpi"><span class="strat-kpi-val">€30M+</span><span class="strat-kpi-lbl">Proiezione lungo termine</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    <!-- ANALISI -->
+  <section class="section" id="analisi">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">DATI & ANALISI</p>
+        <h2 class="section-title">Statistiche Fleet</h2>
+      </div>
+      <div class="analisi-grid">
+        <div class="chart-card reveal">
+          <div class="chart-title">📈 Fatturato & Export 2017–2027</div>
+          <canvas id="chartFatturato" height="220"></canvas>
+        </div>
+        <div class="chart-card reveal">
+          <div class="chart-title">🏢 Score RCS — Compagnie Target</div>
+          <canvas id="chartMercati" height="220"></canvas>
+        </div>
+        <div class="chart-card reveal">
+          <div class="chart-title">🚢 Usura Motori — Virtu Ferries</div>
+          <canvas id="chartVirtu" height="260"></canvas>
+        </div>
+        <div class="chart-card reveal">
+          <div class="chart-title">⚓ Usura Motori — Tug Malta Ltd.</div>
+          <canvas id="chartTug" height="260"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- KPI FINANZIARI -->
+  <section class="section section-dark" id="kpi-finanziari">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">DATI REALI 2024–2025</p>
+        <h2 class="section-title">KPI Finanziari &amp; Operativi</h2>
+      </div>
+      <div class="kpi-fin-grid reveal">
+        <div class="kpi-fin-card">
+          <div class="kpi-fin-label">💰 Fatturato 2025</div>
+          <div class="kpi-fin-val">€ 14.600.000</div>
+          <div class="kpi-fin-delta">↑ +€ 4.618.674 vs 2024</div>
+          <div class="gauge-wrap">
+            <canvas id="gaugeFatturato" height="130"></canvas>
+            <div class="gauge-center"><span class="gauge-pct">73%</span><span class="gauge-sub">di €20M</span></div>
+          </div>
+        </div>
+        <div class="kpi-fin-card">
+          <div class="kpi-fin-label">🎯 Target Fatturato 2026</div>
+          <div class="kpi-fin-val">€ 18.000.000</div>
+          <div class="kpi-fin-delta">↑ +€ 3.400.000 vs 2025</div>
+          <div class="gauge-wrap">
+            <canvas id="gaugeTarget" height="130"></canvas>
+            <div class="gauge-center"><span class="gauge-pct">72%</span><span class="gauge-sub">di €25M</span></div>
+          </div>
+        </div>
+        <div class="kpi-fin-card">
+          <div class="kpi-fin-label">👥 Produttività / Dipendente 2025</div>
+          <div class="kpi-fin-val">€ 456.250</div>
+          <div class="kpi-fin-delta">↑ +€ 144.334 vs 2024</div>
+          <div class="gauge-wrap">
+            <canvas id="gaugeProd" height="130"></canvas>
+            <div class="gauge-center"><span class="gauge-pct">76%</span><span class="gauge-sub">di €600K</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREND AVANZATO (sostituisce il semplice chartFatturato) -->
+  <section class="section" id="trend-avanzato">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">DATI REALI + PROIEZIONI 2019–2027</p>
+        <h2 class="section-title">Trend Fatturato Totale vs Estero</h2>
+      </div>
+      <div class="chart-card reveal" style="margin-top:32px">
+        <div class="chart-title">📊 Fatturato Totale (barre) vs Estero (linea rossa) &amp; Organico (verde) · 2019–2027</div>
+        <div class="trend-legend">
+          <span class="tleg tleg-real">Barre blu = Dati reali confermati (2024–2025)</span>
+          <span class="tleg tleg-proj">Barre arancioni = Stime aziendali (2026–2027)</span>
+          <span class="tleg tleg-est">Linea rossa = Fatturato Estero (obiettivo: €4M al 2027)</span>
+        </div>
+        <canvas id="chartTrend" height="240"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- INCROCIO FLOTTA × CODICI -->
+  <section class="section section-dark" id="incrocio">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">ANALISI TECNICA</p>
+        <h2 class="section-title">Incrocio Flotta Reale × Codici RCS Verificati</h2>
+      </div>
+      <div class="incr-alert reveal">
+        ⚠️ <strong>Dato tecnico fondamentale:</strong> Le 3 navi veloci principali (Saint John Paul II, Jean de La Valette, Maria Dolores) montano motori <strong>MTU Series 8000 e 4000</strong> — il catalogo ricambi è accessibile SOLO tramite dealer MTU (ETK 2.0). I componenti di iniezione specifici NON sono disponibili pubblicamente. I componenti <strong>periferici e ausiliari</strong> dei 19 codici RCS SI applicano e sono vendibili.
+      </div>
+      <div class="tabs reveal" style="margin-top:24px">
+        <button class="tab active" onclick="showIncrocio('all')">✅ Tutti (18 occorrenze)</button>
+        <button class="tab" onclick="showIncrocio('alto')">🔴 Solo Status ALTO</button>
+      </div>
+      <div class="incr-table-wrap reveal">
+        <table class="incr-table">
+          <thead>
+            <tr>
+              <th>NAVE</th><th>CODICE</th><th>RICAMBIO</th><th>CATEGORIA</th><th>MOTIVAZIONE TECNICA</th><th>RISCHIO</th>
+            </tr>
+          </thead>
+          <tbody id="incrocioBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- STIMA FATTURATO POTENZIALE -->
+  <section class="section" id="potenziale">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">STIMA COMMERCIALE · VIRTU FERRIES</p>
+        <h2 class="section-title">Fatturato Potenziale RCS — Codici Applicabili</h2>
+      </div>
+      <div class="pot-layout reveal">
+        <div class="chart-card" style="flex:2">
+          <div class="chart-title">📊 Fatturato Potenziale Anno per Codice RCS — Virtu Ferries Malta</div>
+          <canvas id="chartPotenziale" height="260"></canvas>
+        </div>
+        <div class="pot-kpis">
+          <div class="pot-kpi-card">
+            <div class="pot-kpi-label">📊 Fatturato Potenziale Totale/Anno</div>
+            <div class="pot-kpi-val">€13.535</div>
+          </div>
+          <div class="pot-kpi-card pot-kpi-red">
+            <div class="pot-kpi-label">🚨 Navi a Status Critico</div>
+            <div class="pot-kpi-val-sm">MV Maria Dolores · ACC San Frangisk · ACC San Pawl</div>
+          </div>
+          <div class="pot-kpi-card pot-kpi-cyan">
+            <div class="pot-kpi-label">🎯 Nave Priorità #1 RCS</div>
+            <div class="pot-kpi-val-sm">MV Maria Dolores – 19 anni, 6 motori CR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANALISI ECONOMICA 3D -->
+  <section class="section section-dark" id="analisi-economica">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">ANALISI ECONOMICA · 19 CODICI REALI RCS</p>
+        <h2 class="section-title">Analisi Economica 3D – Portfolio Ricambi</h2>
+      </div>
+      <div class="eco-kpi-strip reveal">
+        <div class="eco-kpi"><span class="eco-kpi-lbl">📊 Fatturato Totale 19 Codici</span><span class="eco-kpi-val">€671.734</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">💰 Margine Totale Annuo</span><span class="eco-kpi-val eco-gold">€326.865</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">📈 ROI Medio Portfolio</span><span class="eco-kpi-val eco-cyan">57,6%</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">🏆 ROE Medio</span><span class="eco-kpi-val eco-cyan">178,1%</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">📉 ROS Medio</span><span class="eco-kpi-val">36,3%</span></div>
+      </div>
+      <div class="eco-charts-grid reveal">
+        <div class="chart-card">
+          <div class="chart-title">📊 ROI (Return on Investment) per Codice %</div>
+          <canvas id="chartROI" height="340"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">🔵 Costo Acquisto × Prezzo Vendita × Margine %</div>
+          <div class="eco-bubble-note">Dimensione bolla = Margine % · Colore = Brand</div>
+          <canvas id="chartBubble" height="340"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CMg & RMg -->
+  <section class="section" id="cmg-rmg">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">MICROECONOMIA · ESEMPIO: 0 445 120 217 – INIETTORE BOSCH CRIN3</p>
+        <h2 class="section-title">CMg &amp; RMg – Punto di Ottimo Economico + Curva D/S</h2>
+      </div>
+      <div class="cmg-charts-grid reveal">
+        <div class="chart-card">
+          <div class="chart-title">📉 CMg vs RMg · Iniettore Bosch CRIN3 (0 445 120 217)</div>
+          <canvas id="chartCMg" height="260"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-title">📈 Domanda &amp; Offerta · Equilibrio Q=211 P=€522</div>
+          <canvas id="chartDS" height="260"></canvas>
+        </div>
+      </div>
+      <div class="cmg-kpi-strip reveal">
+        <div class="eco-kpi"><span class="eco-kpi-lbl">⭐ Q* Ottimo (CMg=RMg)</span><span class="eco-kpi-val">211 unità/anno</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">💶 Prezzo al Punto Ottimo</span><span class="eco-kpi-val eco-gold">€506</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">⚖️ Q Equilibrio D/S</span><span class="eco-kpi-val">211 unità/anno</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">🔑 Break-Even</span><span class="eco-kpi-val eco-cyan">21 unità</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">📊 Margine Unitario</span><span class="eco-kpi-val eco-cyan">€328,60 (96,4%)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPONENTI ALTO RISCHIO -->
+  <section class="section section-dark" id="componenti-rischio">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">MODELLO WIENER · LLOYD'S REGISTER LQS</p>
+        <h2 class="section-title">Componenti ad Alto Rischio Usura – Status Tecnico per Nave</h2>
+      </div>
+      <div class="incr-table-wrap reveal" style="margin-top:28px">
+        <table class="incr-table">
+          <thead>
+            <tr>
+              <th>NAVE</th><th>MOTORE</th><th>COMPONENTE</th><th>CATEGORIA</th>
+              <th>STATUS</th><th>ETÀ (ANNI)</th><th>USURA MEDIA %</th><th>σ USURA</th><th>IC 95%</th><th>MOTIVAZIONE TECNICA</th>
+            </tr>
+          </thead>
+          <tbody id="rischioBody"></tbody>
+        </table>
+      </div>
+      <div class="wiener-note reveal">
+        <strong>Metodologia statistica:</strong> Usura Media = k × età (anni) · σ = σ_base × √età (modello processo Wiener – ispirato Lloyd's Register LQS) · IC 95% = Media ± 1,96σ<br>
+        k per tipo motore: MTU 4000/8000 = 3,5%/anno · MTU 2000 = 3,0%/anno · Deutz MWM (meccanico) = 2,5%/anno · σ_base: MTU = 1,8 · Deutz = 2,2 · Ausiliario = 2,0
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOGO BOSCH REALE -->
+  <section class="section" id="catalogo-bosch">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">LISTINO PREZZI UFFICIALE BOSCH · DOCUMENTI INTERNI RCS S.r.l.</p>
+        <h2 class="section-title">Catalogo Reale Bosch – KPI Portfolio</h2>
+      </div>
+      <div class="eco-kpi-strip reveal" style="margin-top:32px">
+        <div class="eco-kpi"><span class="eco-kpi-lbl">📋 Codici in Catalogo</span><span class="eco-kpi-val">52</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">📦 Valore Stock Stimato</span><span class="eco-kpi-val eco-gold">€112.096</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">💰 Potenziale Ricavo</span><span class="eco-kpi-val eco-cyan">€246.609</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">📈 Margine % Medio</span><span class="eco-kpi-val eco-cyan">120%</span></div>
+        <div class="eco-kpi-sep"></div>
+        <div class="eco-kpi"><span class="eco-kpi-lbl">🗂️ Categorie</span><span class="eco-kpi-val">6</span></div>
+      </div>
+      <div class="bosch-cat-wrap reveal">
+        <div class="bosch-cat-note">Categorie: Elettronica · Iniezione · Common Rail · Filtraggio · Tenuta · Accessori — Margine 120% su listino netto Bosch</div>
+        <div class="cat-table-wrap">
+          <table class="cat-table" id="boschTable">
+            <thead>
+              <tr>
+                <th>CODICE</th><th>DESCRIZIONE</th><th>CATEGORIA</th><th>APPLICAZIONE</th>
+                <th>P. NETTO €</th><th>P. VENDITA EST. €</th><th>MARGINE UNIT. €</th><th>MARGINE %</th><th>QTY DISP.</th><th>USO NAVALE</th>
+              </tr>
+            </thead>
+            <tbody id="boschBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPPA AIS LIVE -->
+  <section class="section" id="mappa">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="section-label">TRACKING LIVE · AISSTREAM.IO</p>
+        <h2 class="section-title">Mappa AIS Live</h2>
+      </div>
+      <div class="ais-wrap reveal">
+        <div class="ais-status-bar">
+          <span class="ais-dot" id="aisDot"></span>
+          <span id="aisStatus">In attesa di connessione...</span>
+          <span class="ais-count" id="aisCount">0 navi tracciate</span>
+        </div>
+        <div id="aisMap"></div>
+        <div class="ais-legend">
+          <div class="ais-leg-item"><span class="ais-leg-dot ais-leg-virtu"></span>Virtu Ferries</div>
+          <div class="ais-leg-item"><span class="ais-leg-dot ais-leg-tug"></span>Tug Malta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!-- CATALOGO -->
+  <section class="section" id="catalogo">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="section-label">RICAMBI VERIFICATI · FONTI PUBBLICHE</p>
+        <h2 class="section-title">Catalogo Marine</h2>
+      </div>
+      <div class="tabs">
+        <button class="tab active" onclick="filterCatalog('all')">TUTTI</button>
+        <button class="tab" onclick="filterCatalog('Bosch')">BOSCH</button>
+        <button class="tab" onclick="filterCatalog('Caterpillar')">CATERPILLAR</button>
+        <button class="tab" onclick="filterCatalog('Cummins')">CUMMINS/FLEETGUARD</button>
+        <button class="tab" onclick="filterCatalog('Delphi')">DELPHI</button>
+      </div>
+      <div class="cat-table-wrap reveal">
+        <table class="cat-table" id="catTable">
+          <thead>
+            <tr>
+              <th>CODICE</th>
+              <th>RICAMBIO</th>
+              <th>BRAND</th>
+              <th>MOTORI</th>
+              <th>PREZZO</th>
+              <th>STOCK</th>
+              <th>VF</th>
+              <th>TM</th>
+            </tr>
+          </thead>
+          <tbody id="catBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="dash-footer">
+    <div class="footer-inner">
+      <span>⚓ RCS — Ricambi Centro Sud S.r.l.</span>
+      <span>Via A. Volta 17 · Catania · P.IVA 03176280877</span>
+      <span>Marine Intelligence Platform · Dal 1987</span>
+    </div>
+  </footer>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

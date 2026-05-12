@@ -1,0 +1,302 @@
+/* ═══════════════════════════════════════
+   RCS MARINE INTELLIGENCE — style.css
+════════════════════════════════════════ */
+
+:root {
+  --blu:    #0057b8;
+  --cyan:   #00d4ff;
+  --notte:  #020b18;
+  --scuro:  #04111f;
+  --testo:  #ffffff;
+  --grigio: #7a9abf;
+  --oro:    #c9a84c;
+  --F: 'Barlow Condensed', sans-serif;
+  --f: 'Barlow', sans-serif;
+  --ease: cubic-bezier(.25,.46,.45,.94);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--f);
+  background: var(--notte);
+  color: var(--testo);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ── SFONDO ─────────────────────────────── */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 15% 50%, #0a2a5e44 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 20%, #00336644 0%, transparent 50%),
+    linear-gradient(160deg, #020b18 0%, #041828 60%, #020d20 100%);
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(2,11,24,.2) 0%,
+    rgba(2,11,24,.55) 70%,
+    rgba(2,11,24,.9) 100%);
+}
+
+canvas#waves {
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 220px;
+  opacity: .5;
+}
+
+/* ── NAVE ───────────────────────────────── */
+.ship {
+  position: absolute;
+  bottom: 68px;
+  left: -340px;
+  width: 320px;
+  height: 75px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 75'%3E%3Cg fill='%230057b8' opacity='.4'%3E%3Crect x='18' y='42' width='280' height='18' rx='3'/%3E%3Crect x='36' y='22' width='130' height='22' rx='2'/%3E%3Crect x='76' y='8' width='55' height='16' rx='2'/%3E%3Crect x='92' y='1' width='4' height='9'/%3E%3Crect x='106' y='4' width='3' height='6'/%3E%3Cpolygon points='18,42 0,60 302,60 284,42'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+  animation: sail 32s linear infinite;
+}
+
+@keyframes sail {
+  0%   { left: -340px; opacity: 0; }
+  4%   { opacity: 1; }
+  96%  { opacity: 1; }
+  100% { left: 110vw; opacity: 0; }
+}
+
+/* ── HEADER ─────────────────────────────── */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 28px 48px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-icon {
+  font-size: 30px;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%,100% { filter: drop-shadow(0 0 8px rgba(0,212,255,.4)); }
+  50%      { filter: drop-shadow(0 0 22px rgba(0,212,255,.9)); }
+}
+
+.logo-rcs {
+  font-family: var(--F);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-family: var(--F);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 3.5px;
+  color: var(--cyan);
+  margin-top: 2px;
+}
+
+/* ── MAIN ───────────────────────────────── */
+main {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px 80px;
+}
+
+/* ── CARD ───────────────────────────────── */
+.card {
+  width: 100%;
+  max-width: 430px;
+  background: rgba(4,17,31,.88);
+  border: 1px solid rgba(0,87,184,.3);
+  border-radius: 4px;
+  backdrop-filter: blur(24px);
+  box-shadow: 0 32px 80px rgba(0,0,0,.6), 0 0 60px rgba(0,87,184,.12);
+  animation: appear .8s var(--ease) forwards;
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+@keyframes appear {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* linea shimmer in cima */
+.card-line {
+  height: 3px;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(90deg, var(--blu), var(--cyan), var(--blu));
+  background-size: 200%;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.card-body {
+  padding: 46px 42px 42px;
+}
+
+.card-body h1 {
+  font-family: var(--F);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 5px;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: var(--grigio);
+  letter-spacing: 1px;
+  margin-bottom: 38px;
+}
+
+/* ── CAMPI ──────────────────────────────── */
+.field {
+  margin-bottom: 22px;
+}
+
+.field label {
+  display: block;
+  font-family: var(--F);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: var(--grigio);
+  margin-bottom: 7px;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px 15px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(0,87,184,.35);
+  border-radius: 3px;
+  font-family: var(--f);
+  font-size: 15px;
+  color: var(--testo);
+  outline: none;
+  transition: all .3s var(--ease);
+}
+
+.field input::placeholder { color: rgba(255,255,255,.2); }
+
+.field input:focus {
+  border-color: var(--cyan);
+  background: rgba(0,212,255,.05);
+  box-shadow: 0 0 0 3px rgba(0,212,255,.1);
+}
+
+/* ── ERRORE ─────────────────────────────── */
+.error {
+  display: none;
+  font-size: 12px;
+  color: #ff6b6b;
+  padding: 10px 13px;
+  background: rgba(255,107,107,.1);
+  border: 1px solid rgba(255,107,107,.25);
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+.error.show { display: block; }
+
+/* ── PULSANTE ───────────────────────────── */
+button {
+  width: 100%;
+  padding: 15px 22px;
+  background: var(--blu);
+  border: none;
+  border-radius: 3px;
+  font-family: var(--F);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all .35s var(--ease);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+  transition: left .5s;
+}
+
+button:hover::before { left: 100%; }
+button:hover { background: #0077dd; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,87,184,.45); }
+button:active { transform: translateY(0); }
+
+.arrow { font-size: 18px; transition: transform .3s; }
+button:hover .arrow { transform: translateX(6px); }
+
+/* ── DIVIDER + LINK CLIENTI ─────────────── */
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,.07);
+  margin-bottom: 20px;
+}
+
+.client-link {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: var(--grigio);
+  letter-spacing: .5px;
+  transition: color .3s;
+}
+.client-link:hover { color: var(--cyan); }
+
+/* ── FOOTER ─────────────────────────────── */
+footer {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 10;
+  text-align: center;
+  padding: 14px;
+  font-size: 11px;
+  color: rgba(255,255,255,.18);
+  letter-spacing: .5px;
+}
+
+/* ── SHAKE ──────────────────────────────── */
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%      { transform: translateX(-8px); }
+  40%      { transform: translateX( 8px); }
+  60%      { transform: translateX(-5px); }
+  80%      { transform: translateX( 5px); }
+}
