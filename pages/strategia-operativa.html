@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategia Operativa — RCS Marine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <script>if(!sessionStorage.getItem('rcs_auth'))location.href='../index.html';</script>
+  <style>
+    .op-section {
+      background: rgba(4,17,31,.7);
+      border: 1px solid rgba(0,87,184,.2);
+      border-radius: 8px;
+      padding: 28px;
+      margin-bottom: 32px;
+    }
+
+    .op-section h2 {
+      color: #00d4ff;
+      font-family: var(--F);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .op-section h3 {
+      color: #ff8c00;
+      font-family: var(--F);
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    .op-section h4 {
+      color: #00d4ff;
+      font-family: var(--F);
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 16px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .op-section p {
+      color: var(--grigio);
+      line-height: 1.8;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .action-box {
+      background: rgba(0,230,118,.08);
+      border: 1px solid rgba(0,230,118,.3);
+      border-left: 4px solid #00e676;
+      padding: 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+    }
+
+    .action-box strong {
+      color: #00e676;
+      font-weight: 700;
+    }
+
+    .timeline {
+      background: rgba(0,0,0,.3);
+      border-left: 4px solid #00d4ff;
+      padding: 16px;
+      margin: 16px 0;
+      border-radius: 4px;
+    }
+
+    .timeline strong {
+      color: #00d4ff;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .fleet-card {
+      background: rgba(0,0,0,.3);
+      border: 1px solid rgba(0,87,184,.15);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .fleet-card h3 {
+      margin-top: 0;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    .metric-box {
+      background: rgba(0,0,0,.3);
+      border: 1px solid rgba(255,140,0,.2);
+      border-left: 3px solid #ff8c00;
+      padding: 12px;
+      border-radius: 4px;
+    }
+
+    .metric-label {
+      color: #ff8c00;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+
+    .metric-value {
+      color: #00d4ff;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: var(--F);
+    }
+
+    .priority-high {
+      border-left-color: #ff3333;
+    }
+
+    .priority-high .metric-label {
+      color: #ff3333;
+    }
+
+    .target-list {
+      margin: 16px 0;
+      padding-left: 0;
+    }
+
+    .target-list li {
+      color: var(--grigio);
+      margin-bottom: 10px;
+      padding-left: 28px;
+      position: relative;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .target-list li:before {
+      content: "▸";
+      position: absolute;
+      left: 8px;
+      color: #00e676;
+      font-weight: 700;
+    }
+
+    .success-indicator {
+      color: #00e676;
+      font-weight: 600;
+    }
+
+    .urgency-red {
+      color: #ff3333;
+      font-weight: 600;
+    }
+
+    .warning-orange {
+      color: #ff8c00;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="../index.html">
+        <span>⚓</span>
+        <span class="nav-rcs">RCS</span>
+        <span class="nav-sub">MARINE INTELLIGENCE</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../pages/dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="analisi-usura.html" class="nav-link">Analisi Usura</a></li>
+        <li><a href="analisi-strategica.html" class="nav-link">Analisi Strategica</a></li>
+        <li><a href="strategia-operativa.html" class="nav-link active">Strategia Operativa</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="nav-user" id="navUser">—</span>
+        <button class="nav-logout" onclick="logout()">ESCI</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="overview" style="padding-top:80px;">
+    <div class="hero-bg">
+      <div class="hero-ship"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label">IMPLEMENTAZIONE PRATICA</p>
+      <h1 class="hero-title">STRATEGIA OPERATIVA RCS</h1>
+      <p class="hero-subtitle">Piano d'azione concreto per Tug Malta e Virtu Ferries</p>
+    </div>
+  </section>
+
+  <!-- CONTENUTO -->
+  <section class="section" id="operativa">
+    <div class="section-inner">
+
+      <!-- INTRO -->
+      <div class="op-section">
+        <h2>Obiettivo: Da Fornitore a Partner Strategico</h2>
+        <p>Questa sezione trasforma la strategia generale in <span class="success-indicator">azioni concrete e tempistiche</span> per conquistare Tug Malta e Virtu Ferries come clienti ricorrenti. Non si tratta di aumentare il volume d'ordini, ma di <span class="urgency-red">entrare nei loro processi decisionali di manutenzione</span> con dati, previsioni e soluzioni su misura.</p>
+      </div>
+
+      <!-- SEZIONE 1: VIRTU FERRIES -->
+      <div class="fleet-card">
+        <h2 style="color:#00d4ff; margin-top:0;">🚢 VIRTU FERRIES — Strategia di Conquista</h2>
+
+        <h3>Il Quadro Attuale</h3>
+        <p>Virtu Ferries opera 7 navi ad alta velocità (4-6 motori per nave, prevalentemente MTU e Deutz). Il traffico è stagionale (picco primavera-estate, manutenzione concentrata gennaio-marzo). Velocità di crociera media: 36-39 nodi.</p>
+
+        <div class="metric-grid">
+          <div class="metric-box priority-high">
+            <div class="metric-label">🔴 Criticità Alta</div>
+            <div class="metric-value">MV Maria Dolores</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">2006 · 70% usura · 6 motori</p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Usura Media Flotta</div>
+            <div class="metric-value">54.3%</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Major overhaul probabile Q1 2026</p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Approdi Annui (Stima)</div>
+            <div class="metric-value">2.500+</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Alta usura accelerata</p>
+          </div>
+        </div>
+
+        <h3>Fase 1: Infiltrazione Tattica (NOVEMBRE 2025)</h3>
+
+        <div class="action-box">
+          <strong>1.1 — Contatto Direttore di Macchina (MV Maria Dolores)</strong><br>
+          Il direttore di macchina è il vostro punto di ingresso. Contattarlo via email/telefono con un'analisi specifica:<br>
+          <ul class="target-list">
+            <li><strong>Oggetto email:</strong> "Analisi usura motori Deutz MWM · MV Maria Dolores · Previsione major overhaul Q1 2026"</li>
+            <li><strong>Allegato:</strong> Report PDF con calcolo esatto usura componenti (iniettori, pompanti, turbocompressore)</li>
+            <li><strong>Offerta immediate:</strong> Kit di guarnizioni + ispezione PMS ad Agosto (prima del picco autunnale)</li>
+            <li><strong>Follow-up:</strong> Telefonata entro 48h "per validare i dati insieme"</li>
+          </ul>
+        </div>
+
+        <div class="action-box">
+          <strong>1.2 — Proposta di Contratto "Safety Stock Dedicato"</strong><br>
+          Se il direttore valida il vostro report, proponete:<br>
+          <ul class="target-list">
+            <li>Un magazzino fisico a Catania/Messina con <span class="success-indicator">stock permanente</span> di componenti critici Virtu</li>
+            <li>Commissioni su ordini ricorrenti (non margine al pezzo, ma fatturato annuale garantito)</li>
+            <li>Accesso al cruscotto Virtu PMS per monitoraggio real-time usura</li>
+            <li><strong>Scadenza proposta:</strong> Entro fine Gennaio 2026</li>
+          </ul>
+        </div>
+
+        <h3>Fase 2: Installazione della Relazione (GENNAIO-MARZO 2026)</h3>
+
+        <div class="timeline">
+          <strong>📅 Gennaio 2026: Revisione MV Maria Dolores</strong><br>
+          Se la nave entra in cantiere, RCS deve essere il fornitore per il 100% dei ricambi. Coordinare con il cantiere di riparazione (Augusta, Palermo o Messina). Tempi di consegna <span class="success-indicator">inferiori alle 12 ore</span>.
+        </div>
+
+        <div class="timeline">
+          <strong>📅 Febbraio 2026: Cross-Selling alle Altre Navi</strong><br>
+          Sfruttare la relazione di fiducia con MV Maria Dolores per entrare nelle manutenzioni ordinarie delle altre 6 navi. Proporre analisi usura personalizzate per ogni nave.
+        </div>
+
+        <div class="timeline">
+          <strong>📅 Marzo 2026: Chiusura Contratto Annuale</strong><br>
+          Target: Contratto <strong>€150-200k annuali</strong> in ricambi + servizi, con esclusiva per alcune categorie (iniettori, turbo, pompe).
+        </div>
+
+        <h3>Componenti Critici Virtu (Priorità Stock)</h3>
+        <p><span class="success-indicator">Questi componenti vanno in stock permanente a Catania</span>:</p>
+        <ul class="target-list">
+          <li><strong>Iniettori MTU</strong> (modello 0445110xxx) — €450-800/pezzo · 4-6 pezzi/flotta</li>
+          <li><strong>Pompanti Bosch</strong> (CP3 high-pressure) — €1.200/pezzo · 2-4 pezzi</li>
+          <li><strong>Turbocompressore</strong> (Garrett/MHI) — €3.500/pezzo · 1-2 pezzi</li>
+          <li><strong>Sensori pressione CR</strong> — €200-300/pezzo · 8-10 pezzi</li>
+          <li><strong>Filtri carburante</strong> (Fleetguard/Parker) — €80-120 · 20 pezzi</li>
+        </ul>
+      </div>
+
+      <!-- SEZIONE 2: TUG MALTA -->
+      <div class="fleet-card">
+        <h2 style="color:#ff8c00; margin-top:0;">🌊 TUG MALTA — Strategia di Ancoraggio</h2>
+
+        <h3>Il Quadro Attuale</h3>
+        <p>Tug Malta opera 10 rimorchiatori (2 motori per nave, Caterpillar 3516C prevalente). Uso costante e prevedibile (operazioni portuali giornaliere). Ciclo manutenzione più regolare e prevedibile vs. Virtu. <span class="urgency-red">Due navi critiche:</span> MT Sea Salvor (1998, 90% usura) e MT Pawlina (2006, 64% usura).</p>
+
+        <div class="metric-grid">
+          <div class="metric-box priority-high">
+            <div class="metric-label">🔴 Criticità Massima</div>
+            <div class="metric-value">MT Sea Salvor</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">1998 · 90% usura · Major overhaul NOW</p>
+          </div>
+          <div class="metric-box priority-high">
+            <div class="metric-label">🟠 Criticità Alta</div>
+            <div class="metric-value">MT Pawlina</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">2006 · 64% usura · Q2 2026</p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Usura Media Flotta</div>
+            <div class="metric-value">38.6%</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Più stabile di Virtu</p>
+          </div>
+        </div>
+
+        <h3>Fase 1: Emergency Play (SUBITO - NOVEMBRE 2025)</h3>
+
+        <div class="action-box">
+          <strong>1.1 — Intercettare la Revisione di MT Sea Salvor</strong><br>
+          Questa nave è in crisis. Il capo-macchina sa che va revisionata. Azione immediata:<br>
+          <ul class="target-list">
+            <li>Contattare <span class="urgency-red">telefonicamente</span> (non email) il Fleet Manager di Tug Malta</li>
+            <li>Soggetto: "RCS può fornire kit completo revisione MT Sea Salvor in 24 ore · Catania"</li>
+            <li>Proposta: <strong>Quotazione aggressiva</strong> (-15% vs. listino) per entrare nella relazione</li>
+            <li>Valore ordine stimato: €35-50k (revisione generale Caterpillar 3516C)</li>
+            <li><strong>Urgenza:</strong> Se MT Sea Salvor è ferma, i giorni di downtime costano €15-20k/giorno</li>
+          </ul>
+        </div>
+
+        <div class="action-box">
+          <strong>1.2 — Diventare "Fornitore di Emergenza"</strong><br>
+          Nel settore portuale, le emergenze accadono costantemente (rotture improvvise, guasti durante operazioni). RCS deve posizionarsi come:<br>
+          <ul class="target-list">
+            <li><strong>"Disponibilità 24/7 in Sicilia"</strong> — Se un motore cala pressione alle 3 di notte, RCS può avere il ricambio entro le 8 di mattina</li>
+            <li>Numero di telefono prioritario per emergenze</li>
+            <li>Primo ordine: Ricambi comuni (filtri, guarnizioni, sensori) a stock permanente a Catania</li>
+          </ul>
+        </div>
+
+        <h3>Fase 2: Penetrazione Strutturale (DICEMBRE 2025 - MARZO 2026)</h3>
+
+        <div class="timeline">
+          <strong>📅 Dicembre 2025: Contratto di Manutenzione Ordinaria</strong><br>
+          Una volta risolta l'emergenza di MT Sea Salvor, proporre un contratto di <span class="success-indicator">manutenzione ordinaria annuale</span>: Tutti i filtri, olio, guarnizioni per le 10 navi = €40-60k/anno.
+        </div>
+
+        <div class="timeline">
+          <strong>📅 Gennaio-Febbraio 2026: Revisione MT Pawlina</strong><br>
+          MT Pawlina (2006, 64% usura) entrerà in cantiere. Stesso playbook di Virtu: diventare fornitore esclusivo, deliveries in 12h, margini contenuti ma relazione stabile.
+        </div>
+
+        <div class="timeline">
+          <strong>📅 Marzo 2026: Chiusura Contratto Annuale "Master"</strong><br>
+          Target: Contratto umbrella € 80-120k annuali (manutenzione ordinaria + emergenze + revisioni periodiche).
+        </div>
+
+        <h3>Componenti Critici Tug Malta (Priorità Stock)</h3>
+        <p><span class="success-indicator">Questi componenti vanno in stock permanente a Catania</span>:</p>
+        <ul class="target-list">
+          <li><strong>Iniettori Caterpillar</strong> (modello 320-0770) — €600-1.000/pezzo · 4-6 pezzi</li>
+          <li><strong>Pompa Iniezione</strong> (Stanadyne DB4) — €2.000/pezzo · 1-2 pezzi</li>
+          <li><strong>Sensori pressione olio/acqua</strong> — €150-250/pezzo · 12-15 pezzi</li>
+          <li><strong>Filtri olio marino</strong> (Donaldson) — €45-80 · 30 pezzi (uso frequente)</li>
+          <li><strong>Serpentini acqua dolce</strong> — €800-1.200/pezzo · 1-2 pezzi</li>
+          <li><strong>Turbocompressore Caterpillar</strong> — €2.500-3.500/pezzo · 1 pezzo</li>
+        </ul>
+      </div>
+
+      <!-- SEZIONE 3: KPI E METRICHE -->
+      <div class="op-section">
+        <h2>KPI di Successo — Cosa Misurare</h2>
+
+        <h3>Per Virtu Ferries</h3>
+        <div class="metric-grid">
+          <div class="metric-box">
+            <div class="metric-label">Ordini Mensili</div>
+            <div class="metric-value">Target: 4-6</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Baseline 2026</p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Valore Medio Ordine</div>
+            <div class="metric-value">€3.500-5.000</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Componenti d'alto valore</p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Tempo Consegna</div>
+            <div class="metric-value">&lt; 12 ore</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Vantaggio strategico</p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Target Annuale</div>
+            <div class="metric-value">€180-200k</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Revenue 2026</p>
+          </div>
+        </div>
+
+        <h3>Per Tug Malta</h3>
+        <div class="metric-grid">
+          <div class="metric-box">
+            <div class="metric-label">Ordini Mensili</div>
+            <div class="metric-value">Target: 6-8</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Manutenzione più frequente</p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Valore Medio Ordine</div>
+            <div class="metric-value">€2.000-3.500</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Manutenzione vs overhaul</p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">% Emergenze Risolte</div>
+            <div class="metric-value">95%+ in 4h</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Brand differenziante</p>
+          </div>
+          <div class="metric-box">
+            <div class="metric-box">
+            <div class="metric-label">Target Annuale</div>
+            <div class="metric-value">€100-120k</div>
+            <p style="color:var(--grigio); font-size:12px; margin-top:6px;">Revenue 2026</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEZIONE 4: IMPLEMENTATION CHECKLIST -->
+      <div class="op-section">
+        <h2>Checklist Implementazione Immediata</h2>
+
+        <h3>📋 NOVEMBRE 2025 — Settimana 1-2</h3>
+        <ul class="target-list">
+          <li>☐ Ottenere contatti precisi (direttore macchina, fleet manager) per Virtu e Tug</li>
+          <li>☐ Preparare analisi usura PDF personalizzate per MV Maria Dolores + MT Sea Salvor</li>
+          <li>☐ Verificare disponibilità stock componenti critici a Catania</li>
+          <li>☐ Creare "shock therapy" email/telefonata con dati concreti</li>
+          <li>☐ Allocare budget per quotazioni aggressive (margini ridotti entry)</li>
+        </ul>
+
+        <h3>📋 NOVEMBRE 2025 — Settimana 3-4</h3>
+        <ul class="target-list">
+          <li>☐ Primo contatto confermato con almeno uno dei due fleet manager</li>
+          <li>☐ Discussione iniziale su "disponibilità stock" e "tempi consegna"</li>
+          <li>☐ Proposta di incontro fisico a Malta (volo Catania-Malta €50-100, ROI infinito)</li>
+          <li>☐ Preparare presentazione 20 minuti su "Vantaggi RCS per flotta Virtu/Tug"</li>
+        </ul>
+
+        <h3>📋 DICEMBRE 2025 — Implementazione Fase 1</h3>
+        <ul class="target-list">
+          <li>☐ Visita in loco a Malta (porto Valletta per Virtu, porto di Marsaxlokk per Tug)</li>
+          <li>☐ Incontro con direttore macchina + fleet manager</li>
+          <li>☐ Definizione stock dedicato (quali pezzi, quantità, storage a Catania/Messina)</li>
+          <li>☐ Primo ordine test (valore €5-10k)</li>
+          <li>☐ Delivery express con coordinamento logistico porto-store</li>
+        </ul>
+
+        <h3>📋 GENNAIO-MARZO 2026 — Fase 2 & Stabilizzazione</h3>
+        <ul class="target-list">
+          <li>☐ Monitorare major overhaul (MV Maria Dolores, MT Sea Salvor, MT Pawlina)</li>
+          <li>☐ Diventare fornitore primario per queste revisioni</li>
+          <li>☐ Consolidare ordini ricorrenti ordinari</li>
+          <li>☐ Proposta contratti master annuali by fine Marzo</li>
+          <li>☐ Target: Virtu €15k/mese · Tug €10k/mese (€25k/mese combinato)</li>
+        </ul>
+      </div>
+
+      <!-- SEZIONE 5: POSITIONING STATEMENT -->
+      <div class="op-section" style="background: rgba(0,230,118,.08); border-color: rgba(0,230,118,.3);">
+        <h2 style="color: #00e676;">💡 Il Vostro Elevator Pitch</h2>
+        <p style="font-size: 16px; line-height: 1.9;">
+          <strong>"RCS non è un fornitore di ricambi maritimi come gli altri. Siamo la stazione di servizio logistica a chilometro zero per le flotte siciliane. Se una vostra nave ferma costa €20k al giorno in downtime, RCS elimina quel rischio garantendo consegne in meno di 12 ore da Catania a qualunque porto siciliano. Abbiamo in stock permanente i componenti che le vostre navi consumano ogni mese, anticipato le vostre esigenze di manutenzione analizzando le vostre rotte e i vostri cicli operativi, e vi offriamo non il prezzo più basso, ma la <span class="success-indicator">continuità operativa più alta</span>."</strong>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>© 2026 Ricambi Centro Sud S.r.l. · P.IVA IT03176280877 · Catania</footer>
+
+  <script>
+    const user = sessionStorage.getItem("rcs_user") || "—";
+    const navUser = document.getElementById("navUser");
+    if (navUser) navUser.textContent = user.toUpperCase();
+
+    function logout() {
+      sessionStorage.removeItem("rcs_auth");
+      sessionStorage.removeItem("rcs_user");
+      window.location.href = "../index.html";
+    }
+
+    const nav = document.getElementById("nav");
+    window.addEventListener("scroll", () => {
+      nav.classList.toggle("scrolled", window.scrollY > 40);
+    });
+  </script>
+</body>
+</html>

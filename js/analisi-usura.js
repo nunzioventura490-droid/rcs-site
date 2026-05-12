@@ -2,10 +2,16 @@
 // ANALISI USURA COMPONENTI — Modello Matematico
 // ═══════════════════════════════════════════════════════════
 
-// Auth check
+// Auth check & Fleet determination
 const user = sessionStorage.getItem("rcs_user") || "—";
 const navUser = document.getElementById("navUser");
 if (navUser) navUser.textContent = user.toUpperCase();
+
+// Determina il fleet dell'utente loggato
+let userFleet = null;
+if (user.includes("virtu")) userFleet = "virtu";
+if (user.includes("tug")) userFleet = "tug";
+// nunzio, admin, direttore vedono tutto (userFleet rimane null)
 
 function logout() {
   sessionStorage.removeItem("rcs_auth");
@@ -142,13 +148,18 @@ function calculateWear(shipName, shipYear, engine, componentName, numEngines = 2
 function generateAnalysisTable() {
   let allShips = [];
 
-  for (const fleet in FLEETS) {
-    FLEETS[fleet].forEach(ship => {
-      allShips.push({
-        ...ship,
-        fleet: fleet,
+  // Se l'utente ha un fleet specifico, mostra solo quello
+  const fleetsToShow = userFleet ? [userFleet] : Object.keys(FLEETS);
+
+  for (const fleet of fleetsToShow) {
+    if (FLEETS[fleet]) {
+      FLEETS[fleet].forEach(ship => {
+        allShips.push({
+          ...ship,
+          fleet: fleet,
+        });
       });
-    });
+    }
   }
 
   const tableHtml = `
@@ -209,10 +220,16 @@ window.addEventListener("scroll", () => {
 function generateCharts() {
   // Grafico 1: Distribuzione Usura per Nave
   let allShips = [];
-  for (const fleet in FLEETS) {
-    FLEETS[fleet].forEach(ship => {
-      allShips.push(ship);
-    });
+
+  // Se l'utente ha un fleet specifico, mostra solo quello
+  const fleetsToShow = userFleet ? [userFleet] : Object.keys(FLEETS);
+
+  for (const fleet of fleetsToShow) {
+    if (FLEETS[fleet]) {
+      FLEETS[fleet].forEach(ship => {
+        allShips.push(ship);
+      });
+    }
   }
 
   const shipNames = allShips.map(s => s.name.substring(0, 15));
