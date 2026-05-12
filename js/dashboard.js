@@ -57,7 +57,7 @@ function wearClass(pct) {
 function renderFleet(key) {
   const grid = document.getElementById("fleetGrid");
   grid.innerHTML = FLEETS[key].map((ship, i) => `
-    <div class="fleet-card" style="animation-delay:${i * 0.08}s">
+    <div class="fleet-card" style="animation-delay:${i * 0.08}s; cursor:pointer;" onclick="openNaveModal('${key}', ${i})">
       <div class="fleet-card-header">
         <div>
           <div class="fleet-name">${ship.name}</div>
@@ -87,6 +87,32 @@ function switchTab(key) {
     btn.classList.toggle("active", keys[i] === key);
   });
   renderFleet(key);
+}
+
+// ── MODAL DETTAGLI NAVE ──────────────────────────────────────
+function openNaveModal(fleetKey, shipIndex) {
+  const ship = FLEETS[fleetKey][shipIndex];
+  const modal = document.getElementById("naveModal");
+
+  document.getElementById("naveName").textContent = ship.name;
+  document.getElementById("naveType").textContent = ship.type;
+  document.getElementById("naveBandiera").textContent = ship.flag;
+  document.getElementById("naveMotore").textContent = ship.engine;
+  document.getElementById("naveAlimentazione").textContent = ship.type.includes("Dual-Fuel") ? "Dual-Fuel LNG" : "Diesel Convenzionale";
+  document.getElementById("naveAnno").textContent = ship.year;
+  document.getElementById("naveUsura").textContent = ship.wear + "%";
+  document.getElementById("naveNote").textContent = ship.note;
+
+  const wearBar = document.getElementById("naveWearBar");
+  wearBar.style.width = ship.wear + "%";
+  wearBar.className = "wear-fill " + wearClass(ship.wear);
+
+  modal.classList.add("show");
+}
+
+function closeNaveModal() {
+  const modal = document.getElementById("naveModal");
+  modal.classList.remove("show");
 }
 
 // Reveal on scroll (slide da destra)

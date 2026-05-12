@@ -93,6 +93,51 @@
       <div class="fleet-grid" id="fleetGrid"></div>
     </div>
   </section>
+
+  <!-- MODAL DETTAGLI NAVE -->
+  <div class="modal" id="naveModal">
+    <div class="modal-overlay" onclick="closeNaveModal()"></div>
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeNaveModal()">✕</button>
+      <div class="modal-body">
+        <h2 id="naveName" class="nave-title"></h2>
+        <div class="nave-details">
+          <div class="detail-group">
+            <span class="detail-label">TIPO:</span>
+            <span class="detail-value" id="naveType"></span>
+          </div>
+          <div class="detail-group">
+            <span class="detail-label">BANDIERA:</span>
+            <span class="detail-value" id="naveBandiera"></span>
+          </div>
+          <div class="detail-group">
+            <span class="detail-label">MOTORE:</span>
+            <span class="detail-value" id="naveMotore"></span>
+          </div>
+          <div class="detail-group">
+            <span class="detail-label">ALIMENTAZIONE:</span>
+            <span class="detail-value" id="naveAlimentazione"></span>
+          </div>
+          <div class="detail-group">
+            <span class="detail-label">ANNO COSTRUZIONE:</span>
+            <span class="detail-value" id="naveAnno"></span>
+          </div>
+          <div class="detail-group">
+            <span class="detail-label">USURA MOTORE:</span>
+            <span class="detail-value" id="naveUsura"></span>
+          </div>
+          <div class="detail-group">
+            <span class="detail-label">SPECIFICHE:</span>
+            <span class="detail-value" id="naveNote"></span>
+          </div>
+          <div class="wear-bar" style="margin-top:20px">
+            <div class="wear-fill" id="naveWearBar" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- MERCATI -->
   <section class="section" id="mercati">
     <div class="section-inner">

@@ -4,9 +4,12 @@
 
 // ── Credenziali ──────────────────────────
 const UTENTI = {
-  "nunzio":    "rcsmarke5t22%w",
-  "admin":     "rcs2026!",
-  "direttore": "navale99",
+  "nunzio":        "rcsmarke5t22%w",
+  "admin":         "rcs2026!",
+  "direttore":     "navale99",
+  "virtu_ferries": "virtu11_%hjs",
+  "tug_malta":     "tulta-rjh-/case&",
+  "francesco":     "fran562_",
 };
 
 // ── Login ────────────────────────────────
