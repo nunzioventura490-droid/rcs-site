@@ -147,11 +147,9 @@ main {
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   box-shadow: 0 32px 80px rgba(0,0,0,.6), 0 0 60px rgba(0,87,184,.12);
-  -webkit-animation: appear .8s cubic-bezier(.25,.46,.45,.94) forwards;
-  animation: appear .8s cubic-bezier(.25,.46,.45,.94) forwards;
-  opacity: 0;
-  -webkit-transform: translateY(28px);
-  transform: translateY(28px);
+  -webkit-animation: appear .8s cubic-bezier(.25,.46,.45,.94) both;
+  animation: appear .8s cubic-bezier(.25,.46,.45,.94) both;
+  will-change: opacity, transform;
 }
 
 @-webkit-keyframes appear {
