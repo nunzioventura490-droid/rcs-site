@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/dashboard.css">
-  <script>if(!sessionStorage.getItem('rcs_auth'))location.href='../index.html';</script>
   <style>
     .op-section {
       background: rgba(4,17,31,.7);
@@ -172,7 +171,7 @@
     }
   </style>
 </head>
-<body>
+<body style="visibility:hidden">
   <!-- NAVBAR -->
   <nav id="nav">
     <div class="nav-inner">
@@ -623,16 +622,23 @@
 
   <footer>© 2026 Ricambi Centro Sud S.r.l. · P.IVA IT03176280877 · Catania</footer>
 
-  <script>
-    const user = sessionStorage.getItem("rcs_user") || "—";
-    const navUser = document.getElementById("navUser");
-    if (navUser) navUser.textContent = user.toUpperCase();
+  <script type="module">
+    import { auth, onAuthStateChanged, signOut } from '../js/firebase-auth.js';
 
-    function logout() {
-      sessionStorage.removeItem("rcs_auth");
-      sessionStorage.removeItem("rcs_user");
-      window.location.href = "../index.html";
-    }
+    onAuthStateChanged(auth, user => {
+      if (!user) { location.href = '../index.html'; return; }
+      document.body.style.visibility = 'visible';
+      const username = user.email.split('@')[0];
+      sessionStorage.setItem('rcs_user', username);
+      const navUser = document.getElementById('navUser');
+      if (navUser) navUser.textContent = username.toUpperCase();
+    });
+
+    window.logout = async function() {
+      await signOut(auth);
+      sessionStorage.removeItem('rcs_user');
+      window.location.href = '../index.html';
+    };
 
     const nav = document.getElementById("nav");
     window.addEventListener("scroll", () => {
