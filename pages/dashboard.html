@@ -696,7 +696,10 @@
     <script type="module">
       import { auth, onAuthStateChanged, signOut } from '../js/firebase-auth.js';
 
+      const authTimeout = setTimeout(() => { location.href = '../index.html'; }, 8000);
+
       onAuthStateChanged(auth, user => {
+        clearTimeout(authTimeout);
         if (!user) { location.href = '../index.html'; return; }
         document.body.style.visibility = 'visible';
         const username = user.email.split('@')[0];
