@@ -72,5 +72,59 @@
   <footer>© 2026 Ricambi Centro Sud S.r.l. · P.IVA IT03176280877 · Catania</footer>
 
   <script src="js/app.js"></script>
+
+  <script type="module">
+    import { auth, signInWithEmailAndPassword, onAuthStateChanged, toEmail } from './js/firebase-auth.js';
+
+    onAuthStateChanged(auth, user => {
+      if (user) window.location.href = 'pages/dashboard.html';
+    });
+
+    window.login = async function() {
+      const u   = document.getElementById("u").value.trim().toLowerCase();
+      const p   = document.getElementById("p").value;
+      const err = document.getElementById("err");
+      const btn = document.getElementById("btn");
+      const txt = document.getElementById("btnTxt");
+
+      txt.textContent = "VERIFICA...";
+      btn.style.opacity = ".7";
+
+      try {
+        await signInWithEmailAndPassword(auth, toEmail(u), p);
+        sessionStorage.setItem("rcs_user", u);
+        const card = document.getElementById("card");
+        card.style.transition = "all .35s ease";
+        card.style.opacity    = "0";
+        card.style.transform  = "scale(.97)";
+        setTimeout(() => { window.location.href = "pages/dashboard.html"; }, 380);
+      } catch {
+        err.classList.add("show");
+        btn.style.opacity = "1";
+        txt.textContent   = "ACCEDI";
+        const card = document.getElementById("card");
+        card.style.animation = "none";
+        void card.offsetHeight;
+        card.style.animation = "shake .4s ease";
+        setTimeout(() => err.classList.remove("show"), 4000);
+      }
+    };
+
+    document.addEventListener("keydown", e => { if (e.key === "Enter") window.login(); });
+
+    window.handleQuickPaste = function(event) {
+      event.preventDefault();
+      document.getElementById("quickPaste").value = event.clipboardData.getData('text');
+    };
+
+    window.parseAndLogin = function() {
+      const val = document.getElementById("quickPaste").value.trim();
+      if (!val.includes(":")) { alert("Formato errato! Usa: utente:password"); return; }
+      const [u, p] = val.split(":", 2);
+      document.getElementById("u").value = u;
+      document.getElementById("p").value = p;
+      window.login();
+    };
+  </script>
 </body>
 </html>

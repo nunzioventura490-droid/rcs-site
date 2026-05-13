@@ -9,10 +9,9 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/dashboard.css">
-  <script>if(!sessionStorage.getItem('rcs_auth'))location.href='../index.html';</script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
-<body>
+<body style="visibility:hidden">
   <!-- NAVBAR -->
   <nav id="nav">
     <div class="nav-inner">
@@ -183,5 +182,22 @@ Intervallo confidenza: ±σ(%)
   </section>
 
   <script src="../js/analisi-usura.js"></script>
+
+  <script type="module">
+    import { auth, onAuthStateChanged, signOut } from '../js/firebase-auth.js';
+
+    onAuthStateChanged(auth, user => {
+      if (!user) { location.href = '../index.html'; return; }
+      document.body.style.visibility = 'visible';
+      const username = user.email.split('@')[0];
+      sessionStorage.setItem('rcs_user', username);
+    });
+
+    window.logout = async function() {
+      await signOut(auth);
+      sessionStorage.removeItem('rcs_user');
+      window.location.href = '../index.html';
+    };
+  </script>
 </body>
 </html>
