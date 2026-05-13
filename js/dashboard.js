@@ -2301,10 +2301,10 @@ function showIncrocio(filter) {
     <tr>
       <td><span class="incr-nave">${r.nave}</span></td>
       <td><span class="incr-cod">${r.code}</span></td>
-      <td>${r.ric}</td>
+      <td>${r.comp}</td>
       <td><span class="incr-cat">${r.cat}</span></td>
       <td><span class="incr-motiv">${r.motiv}</span></td>
-      <td><span class="risk-badge ${riskClass[r.rischio]}">${riskIcon[r.rischio]} ${r.rischio} – ${r.rnote}</span></td>
+      <td><span class="risk-badge ${riskClass[r.status]}">${riskIcon[r.status]} ${r.status} – ${r.rnote}</span></td>
     </tr>`).join('');
 }
 showIncrocio('all');

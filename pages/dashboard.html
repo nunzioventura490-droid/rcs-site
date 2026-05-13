@@ -314,6 +314,52 @@
       </div>
     </div>
   </section>
+
+  <!-- GALLERIA IMMAGINI -->
+  <section class="photo-scroll-section" id="gallery-cantiere">
+    <div class="pss-img pss-from-right">
+      <img src="../assets/img/gallery/cantiere.jpg" alt="Cantiere Navale">
+    </div>
+    <div class="pss-text">
+      <p class="section-label">INDUSTRIA NAVALE</p>
+      <h2 class="pss-title">Al Centro della Filiera Marittima</h2>
+      <p class="pss-desc">RCS Marine Intelligence opera al cuore dell'industria navale mediterranea, fornendo ricambi certificati OEM direttamente a cantieri, armatori e operatori portuali.</p>
+    </div>
+  </section>
+
+  <section class="photo-scroll-section pss-reverse" id="gallery-motore">
+    <div class="pss-img pss-from-left">
+      <img src="../assets/img/gallery/motore-mtu.jpg" alt="Motore MTU Marine">
+    </div>
+    <div class="pss-text">
+      <p class="section-label">TECNOLOGIA MTU</p>
+      <h2 class="pss-title">Ricambi per i Motori più Potenti al Mondo</h2>
+      <p class="pss-desc">Specializzati sui motori MTU Series 8000 e 4000 — le unità di propulsione di Virtu Ferries e Tug Malta. Componenti periferici e ausiliari verificati su 19 codici RCS.</p>
+    </div>
+  </section>
+
+  <section class="photo-scroll-section" id="gallery-porto">
+    <div class="pss-img pss-from-right">
+      <img src="../assets/img/gallery/porto-catania.jpg" alt="Porto di Catania">
+    </div>
+    <div class="pss-text">
+      <p class="section-label">IL NOSTRO HUB</p>
+      <h2 class="pss-title">Catania — Gateway del Mediterraneo</h2>
+      <p class="pss-desc">Dal porto di Catania gestiamo le consegne verso Malta, la Sicilia e l'intero bacino mediterraneo. Posizione strategica per raggiungere qualsiasi flotta in meno di 24 ore.</p>
+    </div>
+  </section>
+
+  <section class="photo-scroll-section pss-reverse" id="gallery-nave">
+    <div class="pss-img pss-from-left">
+      <img src="../assets/img/gallery/nave-crociera.jpg" alt="Nave da Crociera">
+    </div>
+    <div class="pss-text">
+      <p class="section-label">MERCATO INTERNAZIONALE</p>
+      <h2 class="pss-title">Dall'Adriatico all'Oceano Indiano</h2>
+      <p class="pss-desc">Target 2027: hub logistico Malta Freeport per servire compagnie internazionali — MSC, CMA CGM, Hapag-Lloyd — in transito sulle rotte Asia–Suez–Mediterraneo.</p>
+    </div>
+  </section>
+
     <!-- ANALISI -->
   <section class="section" id="analisi">
     <div class="section-inner">
@@ -653,6 +699,13 @@
         sessionStorage.removeItem('rcs_user');
         window.location.href = '../index.html';
       };
+
+      const pssObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); pssObserver.unobserve(e.target); }
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.pss-img').forEach(el => pssObserver.observe(el));
     </script>
 </body>
 </html>
