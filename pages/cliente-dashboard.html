@@ -22,6 +22,7 @@
     <a href="#catalogo" onclick="scrollTo('catalogo')">CATALOGO</a>
     <a href="#mappa"    onclick="scrollTo('mappa')">AIS LIVE</a>
     <a href="#consegna" onclick="scrollTo('consegna')">CONSEGNA</a>
+    <a href="#rotte"    onclick="scrollTo('rotte')">ROTTE</a>
     <a href="#ordini"   onclick="scrollTo('ordini')">ORDINI</a>
   </div>
   <div class="c-nav-user">
@@ -97,6 +98,19 @@
     </div>
   </div>
   <div class="c-delivery-result" id="deliveryResult" style="display:none"></div>
+</section>
+
+<!-- ROTTE -->
+<section class="c-section" id="rotte">
+  <div class="c-section-title">ROTTE FLOTTA</div>
+  <div class="c-section-sub">Rotte storiche, operative e pianificate · Tracciato cartografico aggiornato</div>
+  <div style="display:flex;gap:16px;margin:16px 0;flex-wrap:wrap">
+    <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-family:var(--F);letter-spacing:1px;color:#7a9abf"><span style="width:28px;height:3px;background:#7a9abf;border-radius:2px;display:inline-block"></span>STORICO</span>
+    <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-family:var(--F);letter-spacing:1px;color:#00d4ff"><span style="width:28px;height:3px;background:#00d4ff;border-radius:2px;display:inline-block"></span>ATTUALE</span>
+    <span style="display:flex;align-items:center;gap:6px;font-size:11px;font-family:var(--F);letter-spacing:1px;color:#ff9800"><span style="width:28px;height:3px;background:#ff9800;border-radius:2px;display:inline-block;border-top:2px dashed #ff9800;height:0"></span>PIANIFICATA</span>
+  </div>
+  <div id="route-map" style="height:420px;border-radius:6px;overflow:hidden;border:1px solid rgba(0,87,184,.2);margin-bottom:28px"></div>
+  <div id="routeSchedule"></div>
 </section>
 
 <!-- ORDINI -->
