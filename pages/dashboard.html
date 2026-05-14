@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/cliente-dashboard.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
@@ -28,6 +29,8 @@
         <li><a href="#strategia" class="nav-link">Strategia</a></li>
         <li><a href="#mappa" class="nav-link">Mappa AIS</a></li>
         <li><a href="#catalogo" class="nav-link">Catalogo</a></li>
+        <li><a href="#sistemi-flotta" class="nav-link">Sistemi Bordo</a></li>
+        <li><a href="#consegna-team" class="nav-link">Consegna</a></li>
         <li><a href="#ordini-clienti" class="nav-link">Ordini <span id="ordiniCount" style="background:#ff9800;color:#000;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-left:4px;visibility:hidden">0</span></a></li>
         <li><a href="analisi-usura.html" class="nav-link">Analisi Usura</a></li>
         <li><a href="analisi-strategica.html" class="nav-link">Analisi Strategica</a></li>
@@ -722,6 +725,102 @@
     </div>
   </section>
 
+  <!-- ═══ SISTEMI DI BORDO — FLOTTA COMPLETA ═══ -->
+  <section class="section" id="sistemi-flotta" style="padding:60px 0">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">SISTEMI DI BORDO · DIAGNOSTICA COMPLETA</p>
+        <h2 class="section-title">Flotta Completa — <span class="accent">Tutti i Sistemi</span></h2>
+        <p class="section-desc" style="color:#7a9abf;font-size:14px;margin-top:8px">Clicca su una nave per visualizzare i 13 sistemi di bordo con usura, manutenzione e ricambi</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin:24px 0">
+        <button class="filter-btn active" onclick="teamFleetFilter('all',this)">TUTTE LE NAVI</button>
+        <button class="filter-btn" onclick="teamFleetFilter('virtu',this)">VIRTÙ FERRIES</button>
+        <button class="filter-btn" onclick="teamFleetFilter('tug',this)">TUG MALTA</button>
+      </div>
+      <div class="c-ship-grid" id="teamShipGrid" style="margin-top:8px"></div>
+    </div>
+  </section>
+
+  <!-- ═══ CONFIGURATORE CONSEGNA TEAM ═══ -->
+  <section class="section" id="consegna-team" style="padding:60px 0">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-label">LOGISTICA · TEMPI STIMATI</p>
+        <h2 class="section-title">Configuratore <span class="accent">Consegna</span></h2>
+        <p class="section-desc" style="color:#7a9abf;font-size:14px;margin-top:8px">Stima tempi di consegna ricambi dalla sede RCS (Catania) al porto di destinazione</p>
+      </div>
+      <div class="c-delivery-form" style="margin-top:32px">
+        <div class="c-form-group">
+          <label>PORTO DI DESTINAZIONE</label>
+          <select id="teamDeliveryPort" onchange="teamCalcDelivery()">
+            <option value="">— Seleziona porto —</option>
+          </select>
+        </div>
+        <div class="c-form-group">
+          <label>TIPOLOGIA SPEDIZIONE</label>
+          <select id="teamDeliveryMode" onchange="teamCalcDelivery()">
+            <option value="standard">Stradale / Marittima (Standard)</option>
+            <option value="express">Express (DHL / TNT)</option>
+            <option value="air">Aerea + Corriere Locale</option>
+          </select>
+        </div>
+      </div>
+      <div class="c-delivery-result" id="teamDeliveryResult" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- ═══ SHIP SUBSYSTEM MODAL (TEAM) ═══ -->
+  <div class="c-modal-overlay" id="teamShipModal">
+    <div class="c-modal">
+      <button class="c-modal-close" onclick="closeTeamShipModal()">✕</button>
+      <div class="c-modal-header">
+        <div class="c-modal-ship-name" id="teamModalShipName">—</div>
+        <div class="c-modal-ship-sub" id="teamModalShipSub">—</div>
+        <div class="c-modal-kpis" id="teamModalShipKpis"></div>
+      </div>
+      <div class="c-tabs" id="teamSysTabs"></div>
+      <div id="teamSysContents"></div>
+    </div>
+  </div>
+
+  <!-- ═══ ORDER MODAL (TEAM) ═══ -->
+  <div class="c-modal-overlay" id="teamOrderModal">
+    <div class="c-order-modal">
+      <button class="c-modal-close" onclick="closeTeamOrderModal()">✕</button>
+      <div class="c-order-title">RICHIESTA RICAMBI — VISTA TEAM</div>
+      <div class="c-order-items" id="teamOrderItems"></div>
+      <div class="c-form-group">
+        <label>NAVE DI RIFERIMENTO</label>
+        <select id="teamOrderShip"></select>
+      </div>
+      <div class="c-form-group">
+        <label>PORTO / PUNTO DI CONSEGNA</label>
+        <select id="teamOrderPort"></select>
+      </div>
+      <div class="c-form-group">
+        <label>CLIENTE</label>
+        <select id="teamOrderClient">
+          <option value="virtu">Virtù Ferries</option>
+          <option value="tug">Tug Malta</option>
+        </select>
+      </div>
+      <div class="c-form-group">
+        <label>NOTE AGGIUNTIVE (opzionale)</label>
+        <textarea id="teamOrderNote" rows="3" placeholder="Es. urgenza, orario preferito…" style="width:100%;padding:10px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(0,87,184,.3);border-radius:3px;font-family:var(--f);font-size:14px;color:#fff;outline:none;resize:vertical"></textarea>
+      </div>
+      <button class="btn-submit-order" id="teamSubmitOrderBtn" onclick="teamSubmitOrder()">INVIA RICHIESTA →</button>
+    </div>
+  </div>
+
+  <!-- CART FAB (TEAM) -->
+  <button class="c-cart-fab" id="teamCartFab" onclick="openTeamOrderModal()" style="display:none;right:180px">
+    🛒 ORDINE <span class="c-cart-count" id="teamCartCount">0</span>
+  </button>
+
+  <!-- TOAST (TEAM) -->
+  <div class="c-toast" id="teamToast"></div>
+
     <script src="../js/dashboard.js"></script>
 
     <script type="module">
@@ -806,5 +905,449 @@
       }, { threshold: 0.2 });
       document.querySelectorAll('.pss-img').forEach(el => pssObserver.observe(el));
     </script>
+
+  <!-- ═══ TEAM FLEET / SUBSYSTEM / DELIVERY / ORDER MODULE ═══ -->
+  <script type="module">
+    import { auth, onAuthStateChanged } from '../js/firebase-auth.js';
+    import { submitOrder as fsSubmit } from '../js/firebase-db.js';
+
+    /* ── FLEET DATA ── */
+    const FLEETS = {
+      virtu: {
+        name: 'Virtù Ferries',
+        ships: [
+          { id:'sjp2', name:'MV Saint John Paul II', type:'High Speed Ro-Pax', flag:'🇲🇹',
+            year:2019, wear:25, engine:'4× MTU 20V 8000 M71L', engineType:'MTU',
+            fuel:'Diesel marino DMA', kw:36400, speed:38, pax:900,
+            hours:35200, imo:'9762337', route:'Valletta–Pozzallo–Catania',
+            lat:35.896, lon:14.513 },
+          { id:'jdlv', name:'MV Jean de La Valette', type:'High Speed Ro-Pax', flag:'🇲🇹',
+            year:2010, wear:56, engine:'4× MTU 20V 8000 M71L', engineType:'MTU',
+            fuel:'Diesel marino DMA', kw:36400, speed:39, pax:800,
+            hours:87200, imo:'9468946', route:'Valletta–Pozzallo–Napoli',
+            lat:35.90, lon:14.51 },
+          { id:'md',   name:'MV Maria Dolores', type:'High Speed Ro-Pax · Charter', flag:'🇲🇹',
+            year:2006, wear:70, engine:'6× MTU 16V 4000 M73L', engineType:'MTU',
+            fuel:'Diesel marino DMA', kw:35040, speed:36, pax:600,
+            hours:110800, imo:'9333333', route:'Tarifa–Tangeri (Charter 2025)',
+            lat:36.01, lon:-5.60 },
+          { id:'gozo', name:'HSC Gozo Express', type:'High Speed Catamarano', flag:'🇲🇹',
+            year:2008, wear:54, engine:'4× MTU 12V 2000 M72', engineType:'MTU',
+            fuel:'Diesel marino DMA', kw:7200, speed:34, pax:322,
+            hours:98400, imo:'9396753', route:'Valletta–Gozo (Mġarr)',
+            lat:36.01, lon:14.31 },
+          { id:'sfr',  name:'San Frangisk', type:'Air Cushion Catamaran', flag:'🇲🇹',
+            year:1990, wear:90, engine:'2× Deutz MWM 620B V16', engineType:'Deutz',
+            fuel:'Diesel marino MDO', kw:7200, speed:38, pax:330,
+            hours:103600, imo:'8903899', route:'Valletta–Gozo',
+            lat:35.91, lon:14.52 },
+          { id:'spwl', name:'San Pawl', type:'Air Cushion Catamaran · Ex-flotta', flag:'🇲🇹',
+            year:1991, wear:88, engine:'2× Deutz MWM 604B V16', engineType:'Deutz',
+            fuel:'Diesel marino MDO', kw:6800, speed:36, pax:320,
+            hours:101400, imo:'8903904', route:'Ceduta Islands Unlimited 2025',
+            lat:35.90, lon:14.50 },
+          { id:'bb',   name:'Balluta Bay', type:'Oil Tanker', flag:'🇲🇹',
+            year:1981, wear:100, engine:'Wärtsilä Convenzionale', engineType:'Wärtsilä',
+            fuel:'HFO 380', kw:4200, speed:12, pax:0,
+            hours:194000, imo:'7900001', route:'Supporto logistico rifornimento',
+            lat:35.88, lon:14.50 }
+        ]
+      },
+      tug: {
+        name: 'Tug Malta',
+        ships: [
+          { id:'vitt', name:'MT Vittoriosa', type:'ASD Tug', flag:'🇲🇹',
+            year:2019, wear:25, engine:'2× MTU 16V 4000 M65L', engineType:'MTU',
+            fuel:'Diesel marino DMA', kw:5000, speed:14, pax:0,
+            hours:26300, imo:'9780001', route:'Grand Harbour — manovra',
+            lat:35.893, lon:14.521 },
+          { id:'stang',name:'MT St. Angelo', type:'ASD Tug', flag:'🇲🇹',
+            year:2017, wear:29, engine:'2× Caterpillar 3516C', engineType:'Caterpillar',
+            fuel:'Diesel marino DMA', kw:4600, speed:13.5, pax:0,
+            hours:35000, imo:'9780002', route:'Grand Harbour — manovra',
+            lat:35.894, lon:14.519 },
+          { id:'seng', name:'MT Senglea', type:'RSD Tug', flag:'🇲🇹',
+            year:2020, wear:19, engine:'2× Caterpillar 3516C', engineType:'Caterpillar',
+            fuel:'Diesel marino DMA', kw:4600, speed:13.5, pax:0,
+            hours:21000, imo:'9780003', route:'Grand Harbour — manovra',
+            lat:35.895, lon:14.520 },
+          { id:'aldb', name:'MT Med Aldebaran', type:'RSD Tier III', flag:'🇲🇹',
+            year:2024, wear:6, engine:'2× Caterpillar 3516C Tier III', engineType:'Caterpillar',
+            fuel:'Diesel marino DMA Tier III', kw:4800, speed:14, pax:0,
+            hours:5800, imo:'9780004', route:'Grand Harbour — manovra',
+            lat:35.892, lon:14.522 },
+          { id:'stelm',name:'MT St. Elmo', type:'ASD Tug', flag:'🇲🇹',
+            year:2011, wear:48, engine:'2× Caterpillar 3516C', engineType:'Caterpillar',
+            fuel:'Diesel marino DMA', kw:4600, speed:13.5, pax:0,
+            hours:61400, imo:'9780005', route:'Marsaxlokk — manovra',
+            lat:35.840, lon:14.541 },
+          { id:'spin', name:'MT Spinola', type:'VSP Tractor Tug', flag:'🇲🇹',
+            year:2009, wear:34, engine:'2× MaK 8M25', engineType:'MaK',
+            fuel:'Diesel marino DMA', kw:3600, speed:12, pax:0,
+            hours:72800, imo:'9780006', route:'Grand Harbour — manovra',
+            lat:35.893, lon:14.518 },
+          { id:'wenz', name:'MT Wenzina', type:'ASD Tug', flag:'🇲🇹',
+            year:2006, wear:64, engine:'2× Caterpillar 3516C', engineType:'Caterpillar',
+            fuel:'Diesel marino DMA', kw:4600, speed:13, pax:0,
+            hours:84200, imo:'9780007', route:'Grand Harbour — manovra',
+            lat:35.891, lon:14.523 },
+          { id:'pawl', name:'MT Pawlina', type:'ASD Tug', flag:'🇲🇹',
+            year:2006, wear:64, engine:'2× Caterpillar 3516B', engineType:'Caterpillar',
+            fuel:'Diesel marino DMA', kw:4400, speed:13, pax:0,
+            hours:83800, imo:'9780008', route:'Marsaxlokk — manovra',
+            lat:35.841, lon:14.540 },
+          { id:'salv', name:'MT Sea Salvor', type:'Salvage Tug', flag:'🇲🇹',
+            year:1998, wear:90, engine:'2× Caterpillar 3516C', engineType:'Caterpillar',
+            fuel:'Diesel marino DMA', kw:4600, speed:14, pax:0,
+            hours:114400, imo:'9780009', route:'Pattugliamento — emergenze',
+            lat:35.890, lon:14.525 },
+          { id:'gozzo',name:'MT Gozzo', type:'Mooring Handler', flag:'🇲🇹',
+            year:2019, wear:21, engine:'2× Volvo Diesel', engineType:'Volvo',
+            fuel:'Diesel marino DMA', kw:1200, speed:10, pax:0,
+            hours:21400, imo:'9780010', route:'Supporto ormeggio',
+            lat:35.896, lon:14.517 }
+        ]
+      }
+    };
+
+    /* ── SUBSYSTEM DEFS ── */
+    const SUBSYSTEM_DEFS = [
+      { key:'motore',         label:'⚙️ Motore',           desc:'Motore principale: tipo, alimentazione, componenti interni, usura.' },
+      { key:'filtrazione',    label:'🔽 Filtrazione',       desc:'Filtri carburante, olio, aria, refrigerante e separatori centrifughi.' },
+      { key:'iniezione',      label:'💉 Iniezione',         desc:'Sistema Common Rail, iniettori, pompa alta pressione, rail e sensori.' },
+      { key:'elettronica',    label:'⚡ Elettronica',       desc:'ECU motore, sensori di bordo, moduli di controllo e sistemi di monitoraggio.' },
+      { key:'pompistica',     label:'🔧 Pompistica',        desc:'Pompe carburante, olio, raffreddamento e circolazione.' },
+      { key:'lubrificazione', label:'🛢️ Lubrificazione',   desc:'Circuito olio lubrificante, filtri, scambiatori e purificatori.' },
+      { key:'comp_esterne',   label:'🪟 Comp. Esterne',    desc:'Scafo, vetri, guarnizioni esterne, anodi sacrificali, vernici.' },
+      { key:'propulsione',    label:'⚓ Propulsione',       desc:'Eliche, alberi di trasmissione, astucci, riduttori e giunti elastici.' },
+      { key:'elettrogeni',    label:'🔌 Elettrogeni',       desc:'Gensets diesel, alternatori e quadri di distribuzione principali.' },
+      { key:'raffreddamento', label:'🌊 Raffreddamento',    desc:'Circuiti acqua dolce e acqua mare, scambiatori, pompe, termostati.' },
+      { key:'idraulica',      label:'🔩 Idraulica/Pneum.',  desc:'Timoneria idraulica, verricelli, gru, salpa ancore, compressori aria.' },
+      { key:'filtraggio_tratt',label:'🧹 Filtraggio/Tratt.',desc:'Purificatori nafta/olio, separatori sentina, trattamento acque zavorra.' },
+      { key:'sicurezza',      label:'🚨 Sicurezza/SOLAS',   desc:'Pompe antincendio, rilevatori fumo/gas, sistemi CO₂/schiuma (SOLAS).' }
+    ];
+
+    const COMP_TEMPLATES = {
+      motore:          [{n:'Pistoni e segmenti',f:1.0,iv:20000,ph:['0 445 120 217']},{n:'Valvole e molle',f:1.1,iv:12000,ph:[]},{n:'Turbocompressore',f:1.2,iv:8000,ph:[]},{n:'Cuscinetti biella',f:1.1,iv:10000,ph:[]},{n:'Guarnizioni testa',f:0.9,iv:15000,ph:[]},{n:'Pompa acqua motore',f:1.0,iv:6000,ph:[]}],
+      filtrazione:     [{n:'Filtri carburante primari',f:1.3,iv:500,ph:['FF5652','FF5319']},{n:'Filtri carburante secondari',f:1.2,iv:1000,ph:['FF5652']},{n:'Filtri olio motore',f:1.25,iv:750,ph:['LF9009','LF691A']},{n:'Filtri aria aspirazione',f:1.2,iv:2000,ph:['AF25708']},{n:'Filtri refrigerante',f:1.0,iv:2000,ph:['WF2075']},{n:'Separatore centrifugo nafta',f:1.15,iv:4000,ph:['FF5319']}],
+      iniezione:       [{n:'Iniettori CR',f:1.3,iv:6000,ph:['0 445 120 217','0 445 120 231']},{n:'Pompa alta pressione',f:1.1,iv:8000,ph:['0 445 020 007']},{n:'Rail di pressione',f:0.8,iv:16000,ph:[]},{n:'Sensore pressione CR',f:0.9,iv:12000,ph:['1 644 7823']},{n:'Modulo controllo CR',f:0.85,iv:20000,ph:['0 281 006 064']},{n:'Valvola regolatrice press.',f:1.0,iv:10000,ph:[]}],
+      elettronica:     [{n:'ECU motore principale',f:0.7,iv:30000,ph:['0 281 006 064']},{n:'Sensori temperatura',f:1.0,iv:8000,ph:[]},{n:'Sensori pressione olio',f:1.0,iv:8000,ph:['1 644 7823']},{n:'Centralina allarmi',f:0.8,iv:20000,ph:[]},{n:'Cablaggio principale',f:0.7,iv:40000,ph:[]},{n:'Pannello di controllo',f:0.75,iv:25000,ph:[]}],
+      pompistica:      [{n:'Pompa carburante trasferta',f:1.1,iv:6000,ph:[]},{n:'Pompa olio bassa pressione',f:1.0,iv:5000,ph:[]},{n:'Pompa raffr. acqua dolce',f:1.0,iv:5000,ph:[]},{n:'Pompa raffr. acqua mare',f:1.2,iv:4000,ph:[]},{n:'Pompa sentina',f:1.1,iv:3000,ph:[]},{n:'Pompa carico carburante',f:0.9,iv:8000,ph:[]}],
+      lubrificazione:  [{n:'Olio lubrificante motore',f:1.25,iv:750,ph:['LF9009']},{n:'Filtro olio by-pass',f:1.1,iv:1500,ph:['LF691A']},{n:'Scambiatore olio-acqua',f:0.9,iv:8000,ph:[]},{n:'Purificatore olio centrifugo',f:1.0,iv:4000,ph:[]},{n:'Spia livello olio',f:0.8,iv:20000,ph:[]},{n:'Ventilazione carter',f:1.0,iv:6000,ph:[]}],
+      comp_esterne:    [{n:'Vetri timoneria',f:0.6,iv:20000,ph:[]},{n:'Guarnizioni portelloni',f:1.0,iv:5000,ph:[]},{n:'Anodi sacrificali zinco',f:1.5,iv:2000,ph:[]},{n:'Verniciatura antivegetativa',f:1.2,iv:8760,ph:[]},{n:'Bitte e gallocce coperta',f:0.7,iv:20000,ph:[]},{n:'Passacavi e raccordi scafo',f:0.8,iv:15000,ph:[]}],
+      propulsione:     [{n:'Eliche (passo fisso)',f:1.0,iv:20000,ph:[]},{n:'Alberi di trasmissione',f:0.9,iv:25000,ph:[]},{n:'Astucci porta-albero',f:1.1,iv:15000,ph:[]},{n:'Riduttori angolari',f:1.0,iv:12000,ph:[]},{n:'Giunti elastici',f:1.1,iv:10000,ph:[]},{n:'Cuscinetti reggispinta',f:1.0,iv:15000,ph:[]}],
+      elettrogeni:     [{n:'Genset diesel principale',f:0.9,iv:8000,ph:[]},{n:'Genset diesel emergenza',f:0.85,iv:10000,ph:[]},{n:'Alternatore principale',f:0.85,iv:12000,ph:[]},{n:'Quadro distribuzione 440V',f:0.7,iv:30000,ph:[]},{n:'Interruttori automatici',f:0.8,iv:20000,ph:[]},{n:'Batterie avviamento',f:1.2,iv:3000,ph:[]}],
+      raffreddamento:  [{n:'Scambiatore fascio tubiero',f:1.0,iv:8000,ph:[]},{n:'Valvola termostatica',f:1.1,iv:5000,ph:[]},{n:'Pompa centrifuga acq.dolce',f:1.0,iv:5000,ph:[]},{n:'Keel cooler / Box presa mare',f:1.1,iv:6000,ph:[]},{n:'Filtri acqua mare',f:1.3,iv:1000,ph:['WF2075']},{n:'Glicole refrigerante',f:1.0,iv:4000,ph:['CC2825']}],
+      idraulica:       [{n:'Pompa idraulica timoneria',f:1.0,iv:8000,ph:[]},{n:'Cilindri timone',f:0.9,iv:15000,ph:[]},{n:'Valvole distribuzione',f:1.0,iv:10000,ph:[]},{n:'Compressore aria (avv.)',f:1.1,iv:6000,ph:[]},{n:'Salpa ancore idraulico',f:1.0,iv:8000,ph:[]},{n:'Filtri olio idraulico',f:1.2,iv:2000,ph:[]}],
+      filtraggio_tratt:[{n:'Purificatore nafta',f:1.15,iv:4000,ph:['FF5319']},{n:'Purificatore olio lubr.',f:1.0,iv:4000,ph:[]},{n:'Separatore sentina (15ppm)',f:1.1,iv:6000,ph:[]},{n:'Filtri coalescenti',f:1.2,iv:2000,ph:[]},{n:'Sistema BWTS zavorra',f:0.9,iv:12000,ph:[]},{n:'Filtri cassa zavorra',f:1.1,iv:3000,ph:[]}],
+      sicurezza:       [{n:'Pompa antincendio emerg.',f:0.9,iv:10000,ph:[]},{n:'Rilevatori fumo (SOLAS)',f:1.0,iv:5000,ph:[]},{n:'Rilevatori gas',f:1.0,iv:5000,ph:[]},{n:'Impianto CO₂ sala macchine',f:0.7,iv:30000,ph:[]},{n:'Schiuma antincendio',f:0.8,iv:15000,ph:[]},{n:'Valvole chiusura rapida',f:0.9,iv:12000,ph:[]}]
+    };
+
+    /* ── CATALOG ── */
+    const CATALOG = [
+      {code:'0 445 120 217',name:'Iniettore Common Rail CRIN3',brand:'Bosch',cat:'Iniezione',price:522,stock:true},
+      {code:'0 445 120 231',name:'Iniettore CR CRIN3-18',brand:'Bosch',cat:'Iniezione',price:498,stock:true},
+      {code:'0 445 020 007',name:'Pompa alta pressione CP1',brand:'Bosch',cat:'Iniezione',price:1240,stock:false},
+      {code:'1 644 7823',   name:'Sensore pressione CR 1800bar',brand:'Bosch',cat:'Elettronica',price:156,stock:true},
+      {code:'0 281 006 064',name:'Modulo controllo CR EDC7',brand:'Bosch',cat:'Elettronica',price:890,stock:false},
+      {code:'FF5652',       name:'Filtro carburante marino',brand:'Fleetguard',cat:'Filtrazione',price:34,stock:true},
+      {code:'FF5319',       name:'Filtro carburante diesel',brand:'Fleetguard',cat:'Filtrazione',price:28,stock:true},
+      {code:'LF9009',       name:'Filtro olio lubrificante',brand:'Fleetguard',cat:'Lubrificazione',price:45,stock:true},
+      {code:'LF691A',       name:'Filtro olio by-pass',brand:'Fleetguard',cat:'Lubrificazione',price:38,stock:true},
+      {code:'AF25708',      name:'Filtro aria doppio stadio',brand:'Fleetguard',cat:'Filtrazione',price:62,stock:true},
+      {code:'WF2075',       name:'Filtro acqua refrigerante',brand:'Fleetguard',cat:'Raffreddamento',price:22,stock:true},
+      {code:'CC2825',       name:'Additivo glicole refrigerante',brand:'Fleetguard',cat:'Raffreddamento',price:55,stock:true},
+      {code:'3545040',      name:'Filtro olio Caterpillar',brand:'Caterpillar',cat:'Lubrificazione',price:45,stock:true},
+      {code:'1R-0750',      name:'Filtro carburante CAT',brand:'Caterpillar',cat:'Filtrazione',price:39,stock:true},
+      {code:'6I-2501',      name:'Elemento filtro idraulico CAT',brand:'Caterpillar',cat:'Idraulica',price:78,stock:true},
+      {code:'7E-6599',      name:'Kit guarnizioni CAT 3516',brand:'Caterpillar',cat:'Motore',price:320,stock:false},
+      {code:'4P-0710',      name:'Filtro olio CAT',brand:'Caterpillar',cat:'Lubrificazione',price:42,stock:true},
+      {code:'3516-INJ',     name:'Iniettore Caterpillar 3516',brand:'Caterpillar',cat:'Iniezione',price:780,stock:false},
+      {code:'CU-3087',      name:'Filtro carburante Cummins',brand:'Cummins',cat:'Filtrazione',price:36,stock:true},
+      {code:'CU-5319',      name:'Filtro olio Cummins ISL',brand:'Cummins',cat:'Lubrificazione',price:41,stock:true},
+      {code:'CU-AF-01',     name:'Filtro aria Cummins',brand:'Cummins',cat:'Filtrazione',price:58,stock:true},
+      {code:'MTU-INJ-8000', name:'Iniettore MTU 20V 8000 M71L',brand:'MTU',cat:'Iniezione',price:1450,stock:false},
+      {code:'MTU-FLT-4000', name:'Kit filtri MTU 16V 4000',brand:'MTU',cat:'Filtrazione',price:220,stock:true},
+      {code:'MTU-TURBO-01', name:'Turbocompressore MTU 8000',brand:'MTU',cat:'Motore',price:4200,stock:false},
+      {code:'MTU-GKT-001',  name:'Kit guarnizioni testata MTU',brand:'MTU',cat:'Motore',price:580,stock:false}
+    ];
+
+    /* ── PORTS ── */
+    const PORTS = [
+      {name:'Valletta / Grand Harbour (MT)',std:'12-24h',exp:'8-12h',air:'4-6h',note:'Porto principale Malta'},
+      {name:'Pozzallo (IT)',std:'4-6h',exp:'2-4h',air:'2-3h',note:'Sicilia — traghetto diretto'},
+      {name:'Catania (IT)',std:'—',exp:'—',air:'—',note:'Sede RCS — ritiro diretto'},
+      {name:'Messina (IT)',std:'1-2h',exp:'1h',air:'1h',note:'Stretto di Messina'},
+      {name:'Palermo (IT)',std:'4-6h',exp:'3h',air:'2h',note:'Sicilia occidentale'},
+      {name:'Taranto (IT)',std:'4-6h',exp:'3h',air:'2h',note:'Puglia'},
+      {name:'Bari (IT)',std:'5-7h',exp:'4h',air:'2h',note:'Puglia — hub Adriatico'},
+      {name:'Napoli (IT)',std:'1 giorno',exp:'8h',air:'3h',note:'Campania'},
+      {name:'Civitavecchia / Roma (IT)',std:'1-2gg',exp:'10h',air:'3h',note:'Porto di Roma'},
+      {name:'Livorno (IT)',std:'2gg',exp:'1gg',air:'4h',note:'Toscana'},
+      {name:'Genova (IT)',std:'2gg',exp:'1gg',air:'4h',note:'Liguria — hub container'},
+      {name:'Trieste (IT)',std:'2-3gg',exp:'1-2gg',air:'5h',note:'Alto Adriatico'},
+      {name:'Venezia / Marghera (IT)',std:'2-3gg',exp:'1-2gg',air:'5h',note:'Porto industriale Veneto'},
+      {name:'Pireo (GR)',std:'3gg',exp:'2gg',air:'6h',note:'Hub Mediterraneo orientale'},
+      {name:'Barcellona (ES)',std:'4gg',exp:'2-3gg',air:'8h',note:'Catalunya'},
+      {name:'Valencia (ES)',std:'4gg',exp:'2-3gg',air:'7h',note:'Levante spagnolo'},
+      {name:'Marsiglia (FR)',std:'3gg',exp:'2gg',air:'6h',note:'Francia meridionale'},
+      {name:'Split (HR)',std:'3gg',exp:'2gg',air:'6h',note:'Dalmazia — Croazia'},
+      {name:'Tarifa (ES)',std:'5gg',exp:'3gg',air:'9h',note:'Stretto di Gibilterra'},
+      {name:'Port Hedland (AU)',std:'N/D',exp:'N/D',air:'8-10gg',note:'Australia — via aerea obbligatoria'},
+      {name:'Amsterdam (NL)',std:'8-10gg',exp:'4gg',air:'10h',note:'Europa nord-occidentale'},
+      {name:'Hamburg (DE)',std:'9-11gg',exp:'4-5gg',air:'10h',note:'Europa nord — hub container'}
+    ];
+
+    /* ── UTILS ── */
+    function clamp(v){ return Math.min(100,Math.max(0,Math.round(v))); }
+    function wearColor(w){ return w>=80?'#ff4444':w>=55?'#ff9800':'#00e676'; }
+    function nextMaintDate(interval,wear,opsHpd=14){
+      const days=Math.round(interval*Math.max(0,(1-wear/100))/opsHpd);
+      const d=new Date(); d.setDate(d.getDate()+days);
+      return d.toLocaleDateString('it-IT');
+    }
+    function statusLabel(w){ return w>=80?{cls:'badge-crit',txt:'CRITICO'}:w>=55?{cls:'badge-warn',txt:'ATTENZIONE'}:{cls:'badge-ok',txt:'OK'}; }
+
+    function buildSubsystems(ship){
+      const base=ship.wear, ageBonus=Math.min(30,(2025-ship.year)*0.8);
+      const opsHpd=ship.type.includes('Tug')?12:14, res={};
+      for(const [key,comps] of Object.entries(COMP_TEMPLATES)){
+        res[key]=comps.map(c=>{
+          const w=clamp(base*c.f+ageBonus*0.4+(Math.random()*8-4));
+          const lastH=Math.round(ship.hours*(0.8+Math.random()*0.15));
+          return {name:c.n,wear:w,interval:c.iv,lastHours:lastH,totalHours:ship.hours,
+                  nextMaint:nextMaintDate(c.iv,w,opsHpd),parts:c.ph,
+                  status:w>=80?'crit':w>=55?'warn':'ok'};
+        });
+      }
+      return res;
+    }
+
+    /* ── ALL SHIPS (flat list, tagged by fleet) ── */
+    function allShips(){
+      return [
+        ...FLEETS.virtu.ships.map(s=>({...s,fleetId:'virtu',fleetName:'Virtù Ferries'})),
+        ...FLEETS.tug.ships.map(s=>({...s,fleetId:'tug',fleetName:'Tug Malta'}))
+      ];
+    }
+
+    let teamFleetActive='all';
+    window.teamFleetFilter=function(f,btn){
+      teamFleetActive=f;
+      document.querySelectorAll('#sistemi-flotta .filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      renderTeamShipGrid();
+    };
+
+    function renderTeamShipGrid(){
+      const ships=allShips().filter(s=>teamFleetActive==='all'||s.fleetId===teamFleetActive);
+      const grid=document.getElementById('teamShipGrid');
+      grid.innerHTML=ships.map((s,i)=>{
+        const st=statusLabel(s.wear);
+        const tagWear=s.wear>=80?'alert':s.wear>=55?'warn':'';
+        return `
+        <div class="c-ship-card" onclick="openTeamShipModal(${i},'${teamFleetActive}')">
+          <span class="badge-status ${st.cls}">${st.txt}</span>
+          <div class="c-ship-card-top">
+            <div>
+              <div class="c-ship-name">${s.name}</div>
+              <div class="c-ship-type">${s.type} · <span style="color:#00d4ff;font-size:10px">${s.fleetName}</span></div>
+            </div>
+            <div class="c-ship-flag">${s.flag}</div>
+          </div>
+          <div class="c-wear-label"><span>USURA GLOBALE</span><span>${s.wear}%</span></div>
+          <div class="c-wear-bar"><div class="c-wear-fill" style="width:${s.wear}%;background:${wearColor(s.wear)}"></div></div>
+          <div class="c-ship-meta">
+            <span class="c-ship-tag">${s.year}</span>
+            <span class="c-ship-tag ${tagWear}">${s.engine.split('×')[0].trim()}×…</span>
+            <span class="c-ship-tag">${s.hours.toLocaleString('it-IT')} h</span>
+            <span class="c-ship-tag">IMO ${s.imo}</span>
+          </div>
+        </div>`;
+      }).join('');
+      /* store visible list globally for modal index lookup */
+      window._teamVisibleShips=ships;
+      populateTeamOrderShips();
+    }
+
+    window.openTeamShipModal=function(i){
+      const ship=window._teamVisibleShips[i];
+      if(!ship) return;
+      const sys=buildSubsystems(ship);
+      document.getElementById('teamModalShipName').textContent=ship.name;
+      document.getElementById('teamModalShipSub').textContent=`${ship.type} · ${ship.flag} · IMO ${ship.imo} · ${ship.route}`;
+      document.getElementById('teamModalShipKpis').innerHTML=[
+        ['Motore',ship.engine],['Combustibile',ship.fuel],['Anno varo',ship.year],
+        ['Ore totali',ship.hours.toLocaleString('it-IT')+' h'],
+        ['Potenza',ship.kw.toLocaleString('it-IT')+' kW'],
+        ['Velocità max',ship.speed+' kn'],['Usura globale',ship.wear+'%']
+      ].map(([l,v])=>`<div class="c-modal-kpi"><strong>${v}</strong>${l}</div>`).join('');
+
+      document.getElementById('teamSysTabs').innerHTML=SUBSYSTEM_DEFS.map((s,i)=>
+        `<button class="c-tab${i===0?' active':''}" onclick="switchTeamTab('${s.key}')">${s.label}</button>`
+      ).join('');
+      document.getElementById('teamSysContents').innerHTML=SUBSYSTEM_DEFS.map((sd,i)=>`
+        <div class="c-tab-content${i===0?' active':''}" id="ttab-${sd.key}">
+          <div class="c-sys-header">
+            <div class="c-sys-title">${sd.label}</div>
+            <div class="c-sys-desc">${sd.desc}</div>
+            ${sd.key==='motore'?`<div class="c-engine-info">
+              <span class="c-engine-badge">${ship.engine}</span>
+              <span class="c-engine-badge">${ship.fuel}</span>
+              <span class="c-engine-badge">${ship.kw} kW totali</span>
+            </div>`:''}
+          </div>
+          <div class="c-comp-grid">
+            ${(sys[sd.key]||[]).map(c=>`
+            <div class="c-comp-row">
+              <div class="c-comp-top">
+                <span class="c-comp-name">${c.name}</span>
+                <span class="c-comp-pct" style="color:${wearColor(c.wear)}">${c.wear}%</span>
+              </div>
+              <div class="c-comp-bar"><div class="c-comp-fill" style="width:${c.wear}%;background:${wearColor(c.wear)}"></div></div>
+              <div class="c-comp-meta">
+                <span>Ore totali: <strong>${c.totalHours.toLocaleString('it-IT')} h</strong></span>
+                <span>Ultimo intervento: <strong>${c.lastHours.toLocaleString('it-IT')} h</strong></span>
+                <span>Intervallo: <strong>${c.interval.toLocaleString('it-IT')} h</strong></span>
+                <span>Prossima manutenzione: <strong>${c.nextMaint}</strong></span>
+              </div>
+              ${c.parts.length?`<div class="c-comp-actions">
+                ${c.parts.map(p=>`<button class="btn-order-part" onclick="teamQuickAddToCart('${p}','${ship.name}')">+ Ordina ${p}</button>`).join(' ')}
+              </div>`:''}
+            </div>`).join('')}
+          </div>
+        </div>`).join('');
+
+      document.getElementById('teamShipModal').classList.add('open');
+      document.body.style.overflow='hidden';
+    };
+    window.switchTeamTab=function(key){
+      document.querySelectorAll('#teamSysTabs .c-tab').forEach((t,i)=>t.classList.toggle('active',SUBSYSTEM_DEFS[i].key===key));
+      document.querySelectorAll('#teamSysContents .c-tab-content').forEach(c=>c.classList.remove('active'));
+      const el=document.getElementById('ttab-'+key);
+      if(el) el.classList.add('active');
+    };
+    window.closeTeamShipModal=function(){
+      document.getElementById('teamShipModal').classList.remove('open');
+      document.body.style.overflow='';
+    };
+
+    /* ── CART ── */
+    let teamCart=[];
+    function teamAddToCart(code){
+      if(!teamCart.find(c=>c.code===code)){
+        const item=CATALOG.find(c=>c.code===code);
+        if(item){ teamCart.push({...item,qty:1}); updateTeamCartFab(); showTeamToast('Aggiunto: '+code); }
+      }
+    }
+    window.teamAddToCart=teamAddToCart;
+    window.teamQuickAddToCart=function(code,ship){
+      teamAddToCart(code);
+      document.getElementById('teamOrderShip').value=ship;
+    };
+    function updateTeamCartFab(){
+      document.getElementById('teamCartCount').textContent=teamCart.length;
+      document.getElementById('teamCartFab').style.display=teamCart.length?'flex':'none';
+    }
+    window.removeTeamFromCart=function(code){
+      teamCart=teamCart.filter(c=>c.code!==code);
+      updateTeamCartFab();
+      renderTeamOrderItems();
+    };
+
+    /* ── ORDER MODAL ── */
+    function populateTeamOrderShips(){
+      const sel=document.getElementById('teamOrderShip');
+      const ships=allShips();
+      sel.innerHTML=ships.map(s=>`<option value="${s.name}">${s.name} (${s.fleetName})</option>`).join('');
+    }
+    function populateTeamPorts(){
+      const opts=PORTS.map(p=>`<option value="${p.name}">${p.name}</option>`).join('');
+      document.getElementById('teamOrderPort').innerHTML='<option value="">— Seleziona porto —</option>'+opts;
+      document.getElementById('teamDeliveryPort').innerHTML='<option value="">— Seleziona porto —</option>'+opts;
+    }
+    function renderTeamOrderItems(){
+      document.getElementById('teamOrderItems').innerHTML=teamCart.length
+        ?teamCart.map(c=>`
+          <div class="c-order-item">
+            <span><strong>${c.code}</strong> — ${c.name}</span>
+            <div style="display:flex;align-items:center;gap:12px">
+              <span style="color:var(--verde);font-family:var(--F);font-size:15px">€${c.price}</span>
+              <button class="c-order-item-remove" onclick="removeTeamFromCart('${c.code}')">✕</button>
+            </div>
+          </div>`).join('')
+        :'<p style="color:var(--grigio);font-size:13px">Nessun articolo nel carrello</p>';
+    }
+    window.openTeamOrderModal=function(){
+      renderTeamOrderItems();
+      document.getElementById('teamOrderModal').classList.add('open');
+      document.body.style.overflow='hidden';
+    };
+    window.closeTeamOrderModal=function(){
+      document.getElementById('teamOrderModal').classList.remove('open');
+      document.body.style.overflow='';
+    };
+    window.teamSubmitOrder=async function(){
+      if(!teamCart.length){ showTeamToast('Nessun articolo selezionato','error'); return; }
+      const ship=document.getElementById('teamOrderShip').value;
+      const port=document.getElementById('teamOrderPort').value;
+      const clientSel=document.getElementById('teamOrderClient').value;
+      const note=document.getElementById('teamOrderNote').value;
+      if(!port){ showTeamToast('Seleziona un porto di consegna','error'); return; }
+      const btn=document.getElementById('teamSubmitOrderBtn');
+      btn.disabled=true; btn.textContent='INVIO…';
+      const clientInfo={virtu:{company:'Virtù Ferries'},tug:{company:'Tug Malta'}};
+      const order={
+        clientId:clientSel, company:(clientInfo[clientSel]||{}).company||clientSel,
+        fleet:clientSel, ship, port,
+        items:teamCart.map(c=>({code:c.code,name:c.name,price:c.price,qty:c.qty})),
+        totalEur:teamCart.reduce((a,c)=>a+c.price,0),
+        note, createdByTeam:true
+      };
+      const res=await fsSubmit(order);
+      btn.disabled=false; btn.textContent='INVIA RICHIESTA →';
+      if(res.ok){
+        teamCart=[]; updateTeamCartFab(); closeTeamOrderModal();
+        showTeamToast('Ordine inviato! ID: '+res.id.slice(0,8));
+      } else {
+        showTeamToast('Errore: '+res.err,'error');
+      }
+    };
+
+    /* ── DELIVERY CONFIGURATOR ── */
+    window.teamCalcDelivery=function(){
+      const portName=document.getElementById('teamDeliveryPort').value;
+      const mode=document.getElementById('teamDeliveryMode').value;
+      const el=document.getElementById('teamDeliveryResult');
+      if(!portName){ el.style.display='none'; return; }
+      const port=PORTS.find(p=>p.name===portName);
+      if(!port){ el.style.display='none'; return; }
+      const times={standard:port.std,express:port.exp,air:port.air};
+      const modeLabel={standard:'Stradale/Marittima',express:'Express DHL/TNT',air:'Aerea + corriere locale'};
+      el.style.display='block';
+      el.innerHTML=`
+        <div class="c-delivery-result-title">Stima consegna: <strong style="color:var(--cyan)">${portName}</strong></div>
+        <div class="c-delivery-row"><span>Modalità selezionata</span><span class="c-delivery-val">${modeLabel[mode]}</span></div>
+        <div class="c-delivery-row"><span>Tempo stimato</span><span class="c-delivery-val">${times[mode]}</span></div>
+        <div class="c-delivery-row"><span>Partenza da</span><span class="c-delivery-val">Catania (CT), Sicilia</span></div>
+        <div class="c-delivery-row"><span>Note</span><span style="color:var(--grigio);font-size:12px">${port.note}</span></div>
+        <div style="margin-top:14px;font-size:11px;color:var(--grigio)">* Tempi indicativi in giorni lavorativi dalla conferma d'ordine.</div>`;
+    };
+
+    /* ── TOAST ── */
+    function showTeamToast(msg,type=''){
+      const t=document.getElementById('teamToast');
+      t.textContent=msg; t.className='c-toast'+(type?' '+type:'');
+      setTimeout(()=>t.classList.add('show'),10);
+      setTimeout(()=>t.classList.remove('show'),3500);
+    }
+
+    /* ── INIT ── */
+    onAuthStateChanged(auth, u=>{
+      if(!u) return;
+      renderTeamShipGrid();
+      populateTeamPorts();
+    });
+  </script>
 </body>
 </html>
