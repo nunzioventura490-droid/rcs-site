@@ -145,7 +145,7 @@ body { overflow: auto; }
 .hero-video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(2,11,24,.38) 0%, rgba(4,24,40,.22) 60%, rgba(2,13,32,.38) 100%);
+  background: linear-gradient(160deg, rgba(2,11,24,.08) 0%, rgba(4,24,40,.06) 60%, rgba(2,13,32,.12) 100%);
   z-index: 1;
 }
 
