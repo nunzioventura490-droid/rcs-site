@@ -519,11 +519,14 @@ window.setCatFilter = function(f, btn) {
 /* ── CART ───────────────────────────────────────────── */
 let cart = [];
 function addToCart(code) {
-  if(!cart.find(c=>c.code===code)){
-    const item = CATALOG.find(c=>c.code===code);
-    if(item) cart.push({...item,qty:1});
+  const existing = cart.find(c=>c.code===code);
+  if(existing){
+    existing.qty++;
     updateCartFab();
-    showToast('Aggiunto: '+code);
+    showToast(code+' — quantità: '+existing.qty);
+  } else {
+    const item = CATALOG.find(c=>c.code===code);
+    if(item){ cart.push({...item,qty:1}); updateCartFab(); showToast('Aggiunto: '+code); }
   }
 }
 window.addToCart = addToCart;
@@ -532,12 +535,19 @@ window.quickAddToCart = function(code, ship) {
   document.getElementById('orderShip').value = ship;
 };
 function updateCartFab() {
-  const fab = document.getElementById('cartFab');
-  document.getElementById('cartCount').textContent = cart.length;
-  fab.style.display = cart.length ? 'flex' : 'none';
+  const total = cart.reduce((a,c)=>a+c.qty,0);
+  document.getElementById('cartCount').textContent = total;
+  document.getElementById('cartFab').style.display = total ? 'flex' : 'none';
 }
 window.removeFromCart = function(code) {
   cart = cart.filter(c=>c.code!==code);
+  updateCartFab();
+  renderOrderItems();
+};
+window.changeQty = function(code, delta) {
+  const item = cart.find(c=>c.code===code);
+  if(!item) return;
+  item.qty = Math.max(1, item.qty + delta);
   updateCartFab();
   renderOrderItems();
 };
@@ -556,15 +566,25 @@ function populatePorts() {
   selDel.onchange = calcDelivery;
 }
 function renderOrderItems() {
+  const total = cart.reduce((a,c)=>a+c.price*c.qty,0);
   document.getElementById('orderItems').innerHTML = cart.length
     ? cart.map(c=>`
       <div class="c-order-item">
-        <span><strong>${c.code}</strong> — ${c.name}</span>
-        <div style="display:flex;align-items:center;gap:12px">
-          <span style="color:var(--verde);font-family:var(--F);font-size:15px">€${c.price}</span>
-          <button class="c-order-item-remove" onclick="removeFromCart('${c.code}')">✕</button>
+        <div style="flex:1;min-width:0">
+          <div><strong>${c.code}</strong> — ${c.name}</div>
+          <div style="color:var(--grigio);font-size:11px;margin-top:2px">€${c.price.toLocaleString('it-IT')} × ${c.qty} = <strong style="color:var(--verde)">€${(c.price*c.qty).toLocaleString('it-IT')}</strong></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
+          <button onclick="changeQty('${c.code}',-1)" style="width:26px;height:26px;background:rgba(255,255,255,.06);border:1px solid rgba(0,87,184,.3);border-radius:3px;color:#fff;cursor:pointer;font-size:14px;line-height:1">−</button>
+          <span style="font-family:var(--F);font-size:14px;min-width:20px;text-align:center">${c.qty}</span>
+          <button onclick="changeQty('${c.code}',1)" style="width:26px;height:26px;background:rgba(255,255,255,.06);border:1px solid rgba(0,87,184,.3);border-radius:3px;color:#fff;cursor:pointer;font-size:14px;line-height:1">+</button>
+          <button class="c-order-item-remove" onclick="removeFromCart('${c.code}')" style="margin-left:4px">✕</button>
         </div>
       </div>`).join('')
+    + `<div style="border-top:1px solid rgba(0,87,184,.2);margin-top:12px;padding-top:12px;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-family:var(--F);font-size:11px;letter-spacing:2px;color:var(--grigio)">TOTALE ORDINE</span>
+        <span style="font-family:var(--F);font-size:22px;font-weight:700;color:var(--verde)">€${total.toLocaleString('it-IT')}</span>
+      </div>`
     : '<p style="color:var(--grigio);font-size:13px">Nessun articolo nel carrello</p>';
 }
 window.openOrderModal = function() {
@@ -588,7 +608,7 @@ window.submitOrder = async function() {
     clientId: currentUser, company: currentCompany,
     fleet: currentFleet, ship, port,
     items: cart.map(c=>({code:c.code,name:c.name,price:c.price,qty:c.qty})),
-    totalEur: cart.reduce((a,c)=>a+c.price,0),
+    totalEur: cart.reduce((a,c)=>a+c.price*c.qty,0),
     note
   };
   const res = await fsSubmit(order);

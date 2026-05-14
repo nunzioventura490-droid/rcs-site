@@ -24,6 +24,7 @@
     <a href="#consegna" onclick="scrollTo('consegna')">CONSEGNA</a>
     <a href="#rotte"    onclick="scrollTo('rotte')">ROTTE</a>
     <a href="#ordini"   onclick="scrollTo('ordini')">ORDINI</a>
+    <a href="#chi-siamo-cliente" onclick="scrollTo('chi-siamo-cliente')">CHI SIAMO</a>
   </div>
   <div class="c-nav-user">
     <span id="navCompany">—</span>
@@ -31,12 +32,20 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="c-hero c-page">
-  <div class="c-hero-inner">
-    <div>
-      <div class="c-hero-title">Portale Flotta</div>
-      <div class="c-hero-company" id="heroCompany">—</div>
+<!-- HERO CON VIDEO -->
+<div class="c-hero c-page" style="position:relative;overflow:hidden;min-height:420px">
+  <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35;z-index:0" autoplay muted loop playsinline>
+    <source src="../assets/video/hero-bg.mp4" type="video/mp4">
+  </video>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,8,20,.5) 0%,rgba(2,8,20,.85) 100%);z-index:1"></div>
+  <div class="c-hero-inner" style="position:relative;z-index:2;padding:40px 0 32px">
+    <div style="display:flex;align-items:center;gap:24px;margin-bottom:20px">
+      <img src="../assets/img/logo-rcs.png" alt="RCS Marine" style="height:64px;filter:drop-shadow(0 0 12px rgba(0,212,255,.4))">
+      <div>
+        <div style="font-family:var(--F);font-size:11px;letter-spacing:3px;color:var(--cyan);margin-bottom:4px">PORTALE FLOTTA RISERVATO</div>
+        <div class="c-hero-title" style="font-size:clamp(22px,4vw,38px)">RICAMBI CENTRO SUD</div>
+        <div class="c-hero-company" id="heroCompany" style="font-size:clamp(13px,2vw,18px)">—</div>
+      </div>
     </div>
     <div class="c-kpi-strip">
       <div class="c-kpi"><div class="c-kpi-val" id="kpiNavi">—</div><div class="c-kpi-lbl">NAVI</div></div>
@@ -155,6 +164,93 @@
     <button class="btn-submit-order" id="submitOrderBtn" onclick="submitOrder()">INVIA RICHIESTA →</button>
   </div>
 </div>
+
+<!-- ═══ COME CALCOLIAMO L'USURA ═══ -->
+<section class="c-section" id="usura-metodo" style="background:rgba(0,87,184,.04);border-top:1px solid rgba(0,87,184,.12)">
+  <div class="c-section-title">COME CALCOLIAMO L'USURA</div>
+  <div class="c-section-sub">Metodologia RCS Marine Intelligence · Modello matematico proprietario basato su 9 fattori</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:28px">
+    <div style="background:rgba(0,0,0,.25);border:1px solid rgba(0,87,184,.18);border-radius:6px;padding:20px">
+      <div style="font-family:var(--F);font-size:13px;letter-spacing:2px;color:var(--cyan);margin-bottom:10px">⚙️ ORE DI ESERCIZIO</div>
+      <p style="font-size:13px;color:#aac;line-height:1.7">Le ore totali di funzionamento del motore sono il parametro primario. Ogni componente ha un intervallo di manutenzione raccomandato in ore motore (es. filtri: 500–2.000h, pistoni: 20.000h).</p>
+    </div>
+    <div style="background:rgba(0,0,0,.25);border:1px solid rgba(0,87,184,.18);border-radius:6px;padding:20px">
+      <div style="font-family:var(--F);font-size:13px;letter-spacing:2px;color:var(--cyan);margin-bottom:10px">📅 ETÀ DELLA NAVE</div>
+      <p style="font-size:13px;color:#aac;line-height:1.7">L'anzianità della nave introduce un bonus di deterioramento progressivo: +0,8% per anno fino a un massimo del 30%. Le navi costruite prima del 2000 ricevono un aggravio strutturale aggiuntivo.</p>
+    </div>
+    <div style="background:rgba(0,0,0,.25);border:1px solid rgba(0,87,184,.18);border-radius:6px;padding:20px">
+      <div style="font-family:var(--F);font-size:13px;letter-spacing:2px;color:var(--cyan);margin-bottom:10px">🔩 FATTORE COMPONENTE</div>
+      <p style="font-size:13px;color:#aac;line-height:1.7">Ogni componente ha un moltiplicatore specifico (f) basato sulla sua criticità e sensibilità all'usura. I filtri primari hanno f=1,3 (alta usura), le ECU f=0,7 (bassa usura meccanica).</p>
+    </div>
+    <div style="background:rgba(0,0,0,.25);border:1px solid rgba(0,87,184,.18);border-radius:6px;padding:20px">
+      <div style="font-family:var(--F);font-size:13px;letter-spacing:2px;color:var(--cyan);margin-bottom:10px">🌊 TIPO OPERATIVITÀ</div>
+      <p style="font-size:13px;color:#aac;line-height:1.7">I rimorchiatori (Tug) operano 12 ore/giorno in cicli discontinui ad alta sollecitazione. I traghetti veloci operano 14 ore/giorno in regime continuo. Questo influisce sui calcoli di manutenzione prevista.</p>
+    </div>
+    <div style="background:rgba(0,0,0,.25);border:1px solid rgba(0,87,184,.18);border-radius:6px;padding:20px">
+      <div style="font-family:var(--F);font-size:13px;letter-spacing:2px;color:var(--cyan);margin-bottom:10px">🔴 SOGLIE DI ALLERTA</div>
+      <p style="font-size:13px;color:#aac;line-height:1.7"><strong style="color:#ff4444">CRITICO ≥80%</strong> — intervento urgente entro 30 giorni.<br><strong style="color:#ff9800">ATTENZIONE ≥55%</strong> — pianificare manutenzione.<br><strong style="color:#00e676">OK &lt;55%</strong> — componente in buone condizioni operative.</p>
+    </div>
+    <div style="background:rgba(0,0,0,.25);border:1px solid rgba(0,87,184,.18);border-radius:6px;padding:20px">
+      <div style="font-family:var(--F);font-size:13px;letter-spacing:2px;color:var(--cyan);margin-bottom:10px">📦 RICAMBI ASSOCIATI</div>
+      <p style="font-size:13px;color:#aac;line-height:1.7">Per ogni componente critico, RCS associa i codici ricambio originali (Bosch, Fleetguard, Caterpillar, MTU) disponibili a magazzino o ordinabili. Il cliente può ordinare direttamente dalla scheda del componente.</p>
+    </div>
+  </div>
+  <div style="margin-top:24px;padding:16px 20px;background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.15);border-radius:4px;font-size:12px;color:var(--grigio);line-height:1.8">
+    <strong style="color:var(--cyan);font-family:var(--F);letter-spacing:1px">FORMULA:</strong>
+    Usura_componente = clamp( Usura_globale_nave × f_componente + bonus_età × 0,4 ) → intervallo [0–100%]<br>
+    Prossima manutenzione = oggi + round( Intervallo_h × (1 − Usura%) / Ore_operative_giornaliere )
+  </div>
+</section>
+
+<!-- ═══ CHI SIAMO ═══ -->
+<section class="c-section" id="chi-siamo-cliente">
+  <div class="c-section-title">CHI SIAMO</div>
+  <div class="c-section-sub">Ricambi Centro Sud S.r.l. · Dal 1987 al servizio della flotta marittima del Mediterraneo</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:32px;align-items:center">
+    <div>
+      <p style="font-size:14px;color:#aac;line-height:1.9;margin-bottom:16px">
+        <strong style="color:var(--testo)">Ricambi Centro Sud S.r.l.</strong> è un'azienda catanese specializzata nella fornitura di ricambi navali originali per motori marini diesel ad alta potenza. Con oltre 35 anni di esperienza, serviamo le principali flotte del Mediterraneo centrale.
+      </p>
+      <p style="font-size:14px;color:#aac;line-height:1.9;margin-bottom:16px">
+        Siamo <strong style="color:var(--cyan)">distributori autorizzati Bosch</strong>, con un catalogo di oltre 52 codici certificati per applicazioni navali. Lavoriamo con Fleetguard, Caterpillar, MTU, Cummins e MaK per garantire la massima affidabilità delle vostre navi.
+      </p>
+      <p style="font-size:14px;color:#aac;line-height:1.9">
+        Il nostro team tecnico è disponibile H24 per emergenze a bordo, con spedizioni express verso i principali porti del Mediterraneo in meno di 12 ore.
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="background:rgba(0,87,184,.1);border:1px solid rgba(0,87,184,.2);border-radius:6px;padding:20px;text-align:center">
+        <div style="font-family:var(--F);font-size:32px;font-weight:900;color:var(--cyan)">1987</div>
+        <div style="font-size:11px;letter-spacing:1px;color:var(--grigio);margin-top:4px">ANNO DI FONDAZIONE</div>
+      </div>
+      <div style="background:rgba(0,87,184,.1);border:1px solid rgba(0,87,184,.2);border-radius:6px;padding:20px;text-align:center">
+        <div style="font-family:var(--F);font-size:32px;font-weight:900;color:var(--cyan)">32</div>
+        <div style="font-size:11px;letter-spacing:1px;color:var(--grigio);margin-top:4px">DIPENDENTI</div>
+      </div>
+      <div style="background:rgba(0,87,184,.1);border:1px solid rgba(0,87,184,.2);border-radius:6px;padding:20px;text-align:center">
+        <div style="font-family:var(--F);font-size:32px;font-weight:900;color:#00e676">52+</div>
+        <div style="font-size:11px;letter-spacing:1px;color:var(--grigio);margin-top:4px">CODICI BOSCH</div>
+      </div>
+      <div style="background:rgba(0,87,184,.1);border:1px solid rgba(0,87,184,.2);border-radius:6px;padding:20px;text-align:center">
+        <div style="font-family:var(--F);font-size:32px;font-weight:900;color:#00e676">H24</div>
+        <div style="font-size:11px;letter-spacing:1px;color:var(--grigio);margin-top:4px">SUPPORTO TECNICO</div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:32px;padding:20px 24px;background:rgba(0,0,0,.2);border-left:3px solid var(--cyan);border-radius:0 4px 4px 0">
+    <div style="font-family:var(--F);font-size:11px;letter-spacing:2px;color:var(--grigio);margin-bottom:6px">CONTATTI</div>
+    <div style="font-size:14px;color:#aac;line-height:2">
+      📍 Via Etnea 123, 95121 Catania (CT) · <strong style="color:var(--testo)">P.IVA IT03176280877</strong><br>
+      📞 +39 095 123 4567 · 📧 <strong style="color:var(--cyan)">info@rcs-marine.it</strong><br>
+      🕐 Lun–Ven 08:00–18:00 · Emergenze H24
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer style="background:rgba(0,0,0,.4);border-top:1px solid rgba(0,87,184,.15);padding:20px 40px;text-align:center;font-size:11px;color:var(--grigio);letter-spacing:1px">
+  © 2026 Ricambi Centro Sud S.r.l. · P.IVA IT03176280877 · Catania · <span style="color:var(--cyan)">Marine Intelligence</span>
+</footer>
 
 <!-- CART FAB -->
 <button class="c-cart-fab" id="cartFab" onclick="openOrderModal()" style="display:none">
