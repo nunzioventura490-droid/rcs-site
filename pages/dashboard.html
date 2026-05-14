@@ -28,6 +28,7 @@
         <li><a href="#strategia" class="nav-link">Strategia</a></li>
         <li><a href="#mappa" class="nav-link">Mappa AIS</a></li>
         <li><a href="#catalogo" class="nav-link">Catalogo</a></li>
+        <li><a href="#ordini-clienti" class="nav-link">Ordini <span id="ordiniCount" style="background:#ff9800;color:#000;border-radius:50%;width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;margin-left:4px;visibility:hidden">0</span></a></li>
         <li><a href="analisi-usura.html" class="nav-link">Analisi Usura</a></li>
         <li><a href="analisi-strategica.html" class="nav-link">Analisi Strategica</a></li>
         <li><a href="strategia-operativa.html" class="nav-link">Operativa</a></li>
@@ -691,10 +692,41 @@
       </div>
     </div>
   </section>
+
+  <!-- ═══ SEZIONE ORDINI CLIENTI ═══ -->
+  <section class="section" id="ordini-clienti" style="padding:60px 0">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">GESTIONE ORDINI</div>
+        <h2 class="section-title">RICHIESTE RICAMBI <span class="accent">CLIENTI</span></h2>
+        <p class="section-desc">Ordini ricevuti dai portali cliente — aggiorna lo stato direttamente da qui</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+        <button class="filter-btn active" onclick="filterOrdini('all',this)">TUTTI</button>
+        <button class="filter-btn" onclick="filterOrdini('pending',this)">IN ATTESA</button>
+        <button class="filter-btn" onclick="filterOrdini('confirmed',this)">CONFERMATI</button>
+        <button class="filter-btn" onclick="filterOrdini('shipped',this)">SPEDITI</button>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="cat-table" id="ordiniTable">
+          <thead><tr>
+            <th>DATA</th><th>CLIENTE</th><th>NAVE</th>
+            <th>ARTICOLI</th><th>PORTO CONSEGNA</th>
+            <th>TOTALE</th><th>NOTE</th><th>STATO</th><th>AZIONE</th>
+          </tr></thead>
+          <tbody id="ordiniBody">
+            <tr><td colspan="9" style="text-align:center;padding:30px;color:#7a9abf">Caricamento ordini…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
     <script src="../js/dashboard.js"></script>
 
     <script type="module">
       import { auth, onAuthStateChanged, signOut } from '../js/firebase-auth.js';
+      import { getOrders, updateOrderStatus } from '../js/firebase-db.js';
 
       onAuthStateChanged(auth, user => {
         if (!user) { location.href = '../index.html'; return; }
@@ -703,12 +735,68 @@
         sessionStorage.setItem('rcs_user', username);
         const navUser = document.getElementById('navUser');
         if (navUser) navUser.textContent = username.toUpperCase();
+        loadOrdini();
       });
 
       window.logout = async function() {
         await signOut(auth);
         sessionStorage.removeItem('rcs_user');
         window.location.href = '../index.html';
+      };
+
+      /* ── ORDINI ── */
+      let allOrdini = [], ordiniFilter = 'all';
+      const STATUS_LABEL = { pending:'IN ATTESA', confirmed:'CONFERMATO', shipped:'SPEDITO', delivered:'CONSEGNATO' };
+      const STATUS_COL   = { pending:'#ff9800', confirmed:'#00e676', shipped:'#00d4ff', delivered:'#7a9abf' };
+      const STATUS_NEXT  = { pending:'confirmed', confirmed:'shipped', shipped:'delivered', delivered:'delivered' };
+      const STATUS_BTN   = { pending:'CONFERMA', confirmed:'SPEDITO', shipped:'CONSEGNATO', delivered:'—' };
+
+      async function loadOrdini() {
+        allOrdini = await getOrders();
+        const pending = allOrdini.filter(o=>o.status==='pending').length;
+        const badge = document.getElementById('ordiniCount');
+        if (pending > 0) { badge.textContent=pending; badge.style.visibility='visible'; }
+        renderOrdini();
+      }
+
+      function renderOrdini() {
+        const list = ordiniFilter==='all' ? allOrdini : allOrdini.filter(o=>o.status===ordiniFilter);
+        const tbody = document.getElementById('ordiniBody');
+        if (!list.length) {
+          tbody.innerHTML='<tr><td colspan="9" style="text-align:center;padding:30px;color:#7a9abf">Nessun ordine trovato</td></tr>';
+          return;
+        }
+        tbody.innerHTML = list.map(o => {
+          const dt = o.createdAt?.toDate?.()?.toLocaleDateString('it-IT') || '—';
+          const items = (o.items||[]).map(i=>`${i.code} ×${i.qty}`).join(', ');
+          const col = STATUS_COL[o.status]||'#7a9abf';
+          const lbl = STATUS_LABEL[o.status]||o.status;
+          const nextS = STATUS_NEXT[o.status];
+          const btnLbl = STATUS_BTN[o.status]||'—';
+          return `<tr>
+            <td>${dt}</td>
+            <td><strong>${o.company||o.clientId}</strong></td>
+            <td>${o.ship||'—'}</td>
+            <td style="font-size:11px;max-width:200px">${items}</td>
+            <td>${o.port||'—'}</td>
+            <td style="font-family:'Barlow Condensed',sans-serif;color:#00e676;font-size:15px">€${(o.totalEur||0).toLocaleString('it-IT')}</td>
+            <td style="font-size:11px;color:#7a9abf;max-width:160px">${o.note||'—'}</td>
+            <td><span style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1px;color:${col}">${lbl}</span></td>
+            <td>${btnLbl!=='—'?`<button class="filter-btn" style="font-size:11px;padding:4px 10px" onclick="advanceOrdine('${o.id}','${nextS}')">${btnLbl}</button>`:'—'}</td>
+          </tr>`;
+        }).join('');
+      }
+
+      window.filterOrdini = function(f, btn) {
+        ordiniFilter = f;
+        document.querySelectorAll('#ordini-clienti .filter-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        renderOrdini();
+      };
+
+      window.advanceOrdine = async function(id, newStatus) {
+        await updateOrderStatus(id, newStatus);
+        await loadOrdini();
       };
 
       const pssObserver = new IntersectionObserver((entries) => {
