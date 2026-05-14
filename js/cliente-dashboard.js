@@ -482,8 +482,10 @@ window.closeShipModal = function() {
 
 /* ── CATALOG ────────────────────────────────────────── */
 let catFilter = 'all', catSearch = '';
+let _filteredList = [];
+
 function renderCatalog() {
-  let list = CATALOG.filter(c => {
+  _filteredList = CATALOG.filter(c => {
     const matchFilter = catFilter==='all' ? true :
       catFilter==='in-stock' ? c.stock :
       c.brand===catFilter;
@@ -493,7 +495,7 @@ function renderCatalog() {
       c.brand.toLowerCase().includes(catSearch);
     return matchFilter && matchSearch;
   });
-  document.getElementById('catalogGrid').innerHTML = list.map(c=>`
+  document.getElementById('catalogGrid').innerHTML = _filteredList.map((c, idx)=>`
     <div class="c-catalog-card">
       <div class="c-catalog-code">${c.code}</div>
       <div class="c-catalog-name">${c.name}</div>
@@ -502,9 +504,35 @@ function renderCatalog() {
         <span class="c-catalog-price">€${c.price.toLocaleString('it-IT')}</span>
         <span class="c-stock-badge ${c.stock?'c-stock-in':'c-stock-out'}">${c.stock?'IN STOCK':'ORDINABILE'}</span>
       </div>
-      <button class="btn-add-cart" onclick="addToCart('${c.code}')">+ AGGIUNGI AL CARRELLO</button>
+      <div class="c-qty-row">
+        <button class="btn-qty" onclick="changeCatalogQty(${idx},-1)">−</button>
+        <span class="c-qty-num" id="cqty-${idx}">1</span>
+        <button class="btn-qty" onclick="changeCatalogQty(${idx},1)">+</button>
+      </div>
+      <button class="btn-add-cart" onclick="addToCartByIdx(${idx})">+ AGGIUNGI AL CARRELLO</button>
     </div>`).join('');
 }
+window.changeCatalogQty = function(idx, delta) {
+  const el = document.getElementById('cqty-' + idx);
+  if (!el) return;
+  el.textContent = Math.max(1, (parseInt(el.textContent) || 1) + delta);
+};
+window.addToCartByIdx = function(idx) {
+  const c = _filteredList[idx];
+  if (!c) return;
+  const qEl = document.getElementById('cqty-' + idx);
+  const qty = qEl ? Math.max(1, parseInt(qEl.textContent) || 1) : 1;
+  const existing = cart.find(x => x.code === c.code);
+  if (existing) {
+    existing.qty += qty;
+    updateCartFab();
+    showToast(c.code + ' — quantità: ' + existing.qty);
+  } else {
+    cart.push({...c, qty});
+    updateCartFab();
+    showToast('Aggiunto: ' + c.code + (qty > 1 ? ' × ' + qty : ''));
+  }
+};
 window.filterCatalog = function() {
   catSearch = document.getElementById('catSearch').value.toLowerCase();
   renderCatalog();

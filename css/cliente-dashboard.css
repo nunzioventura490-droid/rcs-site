@@ -153,6 +153,11 @@ a{text-decoration:none;color:inherit}
   padding:3px 8px;border-radius:2px}
 .c-stock-in{background:rgba(0,230,118,.12);color:var(--verde);border:1px solid rgba(0,230,118,.25)}
 .c-stock-out{background:rgba(255,152,0,.12);color:#ffb74d;border:1px solid rgba(255,152,0,.25)}
+.c-qty-row{display:flex;align-items:center;justify-content:center;gap:12px;margin:10px 0 8px}
+.btn-qty{width:28px;height:28px;background:rgba(0,87,184,.2);border:1px solid rgba(0,87,184,.4);
+  border-radius:3px;color:#fff;cursor:pointer;font-size:16px;line-height:1;transition:all .2s}
+.btn-qty:hover{background:rgba(0,87,184,.45)}
+.c-qty-num{font-family:var(--F);font-size:18px;font-weight:700;min-width:28px;text-align:center;color:var(--cyan)}
 .btn-add-cart{width:100%;font-family:var(--F);font-size:12px;letter-spacing:2px;
   padding:8px;border:1px solid rgba(0,87,184,.4);border-radius:3px;
   background:rgba(0,87,184,.15);color:var(--testo);cursor:pointer;transition:all .2s}
