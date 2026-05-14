@@ -76,8 +76,24 @@
   <script type="module">
     import { auth, signInWithEmailAndPassword, onAuthStateChanged, toEmail } from './js/firebase-auth.js';
 
+    const TEAM = ['nunzio','direttore','admin','commerciale','tecnico','logistica'];
+    const CLIENT_FLEET = {
+      virtu: { fleet:'virtu', company:'Virtù Ferries' },
+      tug:   { fleet:'tug',   company:'Tug Malta'     }
+    };
+
+    function roleRedirect(uname) {
+      if (CLIENT_FLEET[uname]) {
+        sessionStorage.setItem('rcs_fleet',   CLIENT_FLEET[uname].fleet);
+        sessionStorage.setItem('rcs_company', CLIENT_FLEET[uname].company);
+        window.location.href = 'pages/cliente-dashboard.html';
+      } else {
+        window.location.href = 'pages/dashboard.html';
+      }
+    }
+
     onAuthStateChanged(auth, user => {
-      if (user) window.location.href = 'pages/dashboard.html';
+      if (user) roleRedirect(user.email.split('@')[0].toLowerCase());
     });
 
     window.login = async function() {
@@ -93,11 +109,7 @@
       try {
         await signInWithEmailAndPassword(auth, toEmail(u), p);
         sessionStorage.setItem("rcs_user", u);
-        const card = document.getElementById("card");
-        card.style.transition = "all .35s ease";
-        card.style.opacity    = "0";
-        card.style.transform  = "scale(.97)";
-        setTimeout(() => { window.location.href = "pages/dashboard.html"; }, 380);
+        roleRedirect(u);
       } catch {
         err.classList.add("show");
         btn.style.opacity = "1";
