@@ -374,6 +374,8 @@ function init() {
   renderCatalog();
   populatePorts();
   initMap(ships);
+  initRouteMap(ships);
+  renderRouteSchedule();
   loadOrders();
   populateOrderShips(ships);
 }
@@ -517,11 +519,14 @@ window.setCatFilter = function(f, btn) {
 /* ── CART ───────────────────────────────────────────── */
 let cart = [];
 function addToCart(code) {
-  if(!cart.find(c=>c.code===code)){
-    const item = CATALOG.find(c=>c.code===code);
-    if(item) cart.push({...item,qty:1});
+  const existing = cart.find(c=>c.code===code);
+  if(existing){
+    existing.qty++;
     updateCartFab();
-    showToast('Aggiunto: '+code);
+    showToast(code+' — quantità: '+existing.qty);
+  } else {
+    const item = CATALOG.find(c=>c.code===code);
+    if(item){ cart.push({...item,qty:1}); updateCartFab(); showToast('Aggiunto: '+code); }
   }
 }
 window.addToCart = addToCart;
@@ -530,12 +535,19 @@ window.quickAddToCart = function(code, ship) {
   document.getElementById('orderShip').value = ship;
 };
 function updateCartFab() {
-  const fab = document.getElementById('cartFab');
-  document.getElementById('cartCount').textContent = cart.length;
-  fab.style.display = cart.length ? 'flex' : 'none';
+  const total = cart.reduce((a,c)=>a+c.qty,0);
+  document.getElementById('cartCount').textContent = total;
+  document.getElementById('cartFab').style.display = total ? 'flex' : 'none';
 }
 window.removeFromCart = function(code) {
   cart = cart.filter(c=>c.code!==code);
+  updateCartFab();
+  renderOrderItems();
+};
+window.changeQty = function(code, delta) {
+  const item = cart.find(c=>c.code===code);
+  if(!item) return;
+  item.qty = Math.max(1, item.qty + delta);
   updateCartFab();
   renderOrderItems();
 };
@@ -554,15 +566,25 @@ function populatePorts() {
   selDel.onchange = calcDelivery;
 }
 function renderOrderItems() {
+  const total = cart.reduce((a,c)=>a+c.price*c.qty,0);
   document.getElementById('orderItems').innerHTML = cart.length
     ? cart.map(c=>`
       <div class="c-order-item">
-        <span><strong>${c.code}</strong> — ${c.name}</span>
-        <div style="display:flex;align-items:center;gap:12px">
-          <span style="color:var(--verde);font-family:var(--F);font-size:15px">€${c.price}</span>
-          <button class="c-order-item-remove" onclick="removeFromCart('${c.code}')">✕</button>
+        <div style="flex:1;min-width:0">
+          <div><strong>${c.code}</strong> — ${c.name}</div>
+          <div style="color:var(--grigio);font-size:11px;margin-top:2px">€${c.price.toLocaleString('it-IT')} × ${c.qty} = <strong style="color:var(--verde)">€${(c.price*c.qty).toLocaleString('it-IT')}</strong></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px;flex-shrink:0">
+          <button onclick="changeQty('${c.code}',-1)" style="width:26px;height:26px;background:rgba(255,255,255,.06);border:1px solid rgba(0,87,184,.3);border-radius:3px;color:#fff;cursor:pointer;font-size:14px;line-height:1">−</button>
+          <span style="font-family:var(--F);font-size:14px;min-width:20px;text-align:center">${c.qty}</span>
+          <button onclick="changeQty('${c.code}',1)" style="width:26px;height:26px;background:rgba(255,255,255,.06);border:1px solid rgba(0,87,184,.3);border-radius:3px;color:#fff;cursor:pointer;font-size:14px;line-height:1">+</button>
+          <button class="c-order-item-remove" onclick="removeFromCart('${c.code}')" style="margin-left:4px">✕</button>
         </div>
       </div>`).join('')
+    + `<div style="border-top:1px solid rgba(0,87,184,.2);margin-top:12px;padding-top:12px;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-family:var(--F);font-size:11px;letter-spacing:2px;color:var(--grigio)">TOTALE ORDINE</span>
+        <span style="font-family:var(--F);font-size:22px;font-weight:700;color:var(--verde)">€${total.toLocaleString('it-IT')}</span>
+      </div>`
     : '<p style="color:var(--grigio);font-size:13px">Nessun articolo nel carrello</p>';
 }
 window.openOrderModal = function() {
@@ -586,7 +608,7 @@ window.submitOrder = async function() {
     clientId: currentUser, company: currentCompany,
     fleet: currentFleet, ship, port,
     items: cart.map(c=>({code:c.code,name:c.name,price:c.price,qty:c.qty})),
-    totalEur: cart.reduce((a,c)=>a+c.price,0),
+    totalEur: cart.reduce((a,c)=>a+c.price*c.qty,0),
     note
   };
   const res = await fsSubmit(order);
@@ -622,8 +644,178 @@ window.calcDelivery = function() {
     <div class="c-delivery-row"><span>Note</span><span style="color:var(--grigio);font-size:12px">${port.note}</span></div>
     <div style="margin-top:14px;font-size:11px;color:var(--grigio)">
       * Tempi indicativi in giorni lavorativi dalla conferma d'ordine. Per spedizioni urgenti contattare RCS direttamente.
-    </div>`;
+    </div>
+    <button onclick="orderFromDelivery('${portName}')" style="margin-top:16px;width:100%;padding:12px;background:var(--blu);border:none;border-radius:3px;color:#fff;font-family:var(--F);font-size:13px;letter-spacing:2px;cursor:pointer;font-weight:700">
+      + CREA ORDINE PER QUESTO PORTO →
+    </button>`;
 };
+
+window.orderFromDelivery = function(portName) {
+  document.getElementById('orderPort').value = portName;
+  openOrderModal();
+};
+
+/* ── ROUTE DATA ──────────────────────────────────────── */
+const PORT_COORDS = {
+  'Valletta':     [35.896, 14.513],
+  'Pozzallo':     [36.728, 14.849],
+  'Catania':      [37.502, 15.087],
+  'Napoli':       [40.839, 14.253],
+  'Gozo (Mġarr)':[36.024, 14.297],
+  'Tarifa':       [36.014, -5.605],
+  'Tangeri':      [35.765, -5.800],
+  'Marsaxlokk':  [35.840, 14.540],
+  'Grand Harbour':[35.893, 14.521],
+  'Palermo':      [38.115, 13.361],
+  'Messina':      [38.192, 15.556],
+  'Bari':         [41.118, 16.872],
+};
+
+const ROUTE_DATA = {
+  virtu: [
+    { ship:'MV Saint John Paul II', color:'#00d4ff',
+      history:[
+        { label:'Gen–Mar 2025', legs:['Valletta','Pozzallo','Catania'], status:'storico' },
+        { label:'Apr–Mag 2025', legs:['Valletta','Pozzallo','Catania'], status:'storico' },
+      ],
+      current: { label:'Giu–Ago 2025', legs:['Valletta','Pozzallo','Catania'], status:'attuale' },
+      planned: [
+        { label:'Set–Dic 2025', legs:['Valletta','Pozzallo','Catania'], status:'pianificata' },
+      ]
+    },
+    { ship:'MV Jean de La Valette', color:'#00e676',
+      history:[
+        { label:'Gen–Mar 2025', legs:['Valletta','Pozzallo','Napoli'], status:'storico' },
+      ],
+      current: { label:'Apr–Ago 2025', legs:['Valletta','Pozzallo','Napoli'], status:'attuale' },
+      planned: [
+        { label:'Set–Dic 2025', legs:['Valletta','Pozzallo','Napoli'], status:'pianificata' },
+      ]
+    },
+    { ship:'MV Maria Dolores', color:'#ff9800',
+      history:[
+        { label:'2024 — Valletta–Pozzallo', legs:['Valletta','Pozzallo'], status:'storico' },
+      ],
+      current: { label:'2025 Charter — Tarifa–Tangeri', legs:['Tarifa','Tangeri'], status:'attuale' },
+      planned: [
+        { label:'Gen 2026 — Rientro flotta', legs:['Tangeri','Valletta'], status:'pianificata' },
+      ]
+    },
+    { ship:'HSC Gozo Express', color:'#e040fb',
+      history:[
+        { label:'2024 — Valletta–Gozo', legs:['Valletta','Gozo (Mġarr)'], status:'storico' },
+      ],
+      current: { label:'2025 — Valletta–Gozo (Mġarr)', legs:['Valletta','Gozo (Mġarr)'], status:'attuale' },
+      planned: [
+        { label:'2026 — Servizio esteso Pozzallo', legs:['Valletta','Gozo (Mġarr)','Pozzallo'], status:'pianificata' },
+      ]
+    },
+    { ship:'San Frangisk', color:'#ff4444',
+      history:[{ label:'2024 — Valletta–Gozo', legs:['Valletta','Gozo (Mġarr)'], status:'storico' }],
+      current: { label:'2025 — Valletta–Gozo', legs:['Valletta','Gozo (Mġarr)'], status:'attuale' },
+      planned: []
+    },
+    { ship:'Balluta Bay', color:'#7a9abf',
+      history:[{ label:'2024 — Supporto logistico', legs:['Valletta','Marsaxlokk'], status:'storico' }],
+      current: { label:'2025 — Supporto logistico', legs:['Valletta','Marsaxlokk'], status:'attuale' },
+      planned: []
+    },
+  ],
+  tug: [
+    { ship:'MT Vittoriosa', color:'#00d4ff',
+      history:[{ label:'2024 — Grand Harbour', legs:['Grand Harbour','Marsaxlokk'], status:'storico' }],
+      current: { label:'2025 — Grand Harbour manovra', legs:['Grand Harbour','Valletta'], status:'attuale' },
+      planned: [{ label:'2026 — Espansione Marsaxlokk', legs:['Grand Harbour','Marsaxlokk'], status:'pianificata' }]
+    },
+    { ship:'MT St. Angelo', color:'#00e676',
+      history:[{ label:'2024 — Grand Harbour', legs:['Grand Harbour','Valletta'], status:'storico' }],
+      current: { label:'2025 — Grand Harbour', legs:['Grand Harbour','Valletta'], status:'attuale' },
+      planned: []
+    },
+    { ship:'MT Senglea', color:'#ff9800',
+      history:[],
+      current: { label:'2025 — Grand Harbour', legs:['Grand Harbour','Valletta'], status:'attuale' },
+      planned: [{ label:'2026 — Supporto Marsaxlokk', legs:['Grand Harbour','Marsaxlokk'], status:'pianificata' }]
+    },
+    { ship:'MT Sea Salvor', color:'#ff4444',
+      history:[{ label:'2024 — Pattugliamento', legs:['Valletta','Pozzallo'], status:'storico' }],
+      current: { label:'2025 — Pattugliamento / emergenze', legs:['Valletta','Marsaxlokk','Pozzallo'], status:'attuale' },
+      planned: []
+    },
+  ]
+};
+
+function initRouteMap(ships) {
+  const center = currentFleet==='virtu' ? [37.0,10.0] : [35.89,14.52];
+  const zoom   = currentFleet==='virtu' ? 5 : 10;
+  const map = L.map('route-map',{zoomControl:true}).setView(center,zoom);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+    attribution:'© OpenStreetMap · CartoDB', maxZoom:18
+  }).addTo(map);
+
+  const routes = ROUTE_DATA[currentFleet] || [];
+  routes.forEach(r=>{
+    const drawLegs = (legs, color, dash) => {
+      const coords = legs.map(p=>PORT_COORDS[p]).filter(Boolean);
+      if(coords.length<2) return;
+      L.polyline(coords,{color,weight:2.5,opacity:.7,dashArray:dash||null}).addTo(map);
+      coords.forEach((c,i)=>{
+        const icon=L.divIcon({
+          html:`<div style="background:${color};width:8px;height:8px;border-radius:50%;border:2px solid #fff"></div>`,
+          iconSize:[8,8],className:''
+        });
+        L.marker(c,{icon}).addTo(map)
+          .bindPopup(`<b>${legs[i]}</b><br><span style="font-size:11px;color:#aaa">${r.ship}</span>`);
+      });
+    };
+    r.history.forEach(h=>drawLegs(h.legs,'#7a9abf','4 4'));
+    if(r.current) drawLegs(r.current.legs, r.color, null);
+    r.planned.forEach(p=>drawLegs(p.legs,'#ff9800','6 3'));
+  });
+}
+
+function renderRouteSchedule() {
+  const routes = ROUTE_DATA[currentFleet] || [];
+  const el = document.getElementById('routeSchedule');
+  el.innerHTML = routes.map(r=>{
+    const allLegs = [
+      ...r.history.map(h=>({...h})),
+      r.current ? {...r.current} : null,
+      ...r.planned.map(p=>({...p}))
+    ].filter(Boolean);
+    const statusStyle = {
+      storico:    'background:rgba(122,154,191,.15);color:#7a9abf;border:1px solid rgba(122,154,191,.3)',
+      attuale:    'background:rgba(0,212,255,.12);color:#00d4ff;border:1px solid rgba(0,212,255,.3)',
+      pianificata:'background:rgba(255,152,0,.12);color:#ff9800;border:1px solid rgba(255,152,0,.3)'
+    };
+    return `
+    <div style="margin-bottom:20px;border:1px solid rgba(0,87,184,.15);border-radius:6px;overflow:hidden">
+      <div style="background:rgba(0,87,184,.12);padding:12px 16px;display:flex;align-items:center;gap:12px">
+        <span style="width:10px;height:10px;border-radius:50%;background:${r.color};display:inline-block;flex-shrink:0"></span>
+        <span style="font-family:var(--F);font-size:14px;letter-spacing:2px;font-weight:700">${r.ship}</span>
+      </div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:12px">
+          <thead><tr style="border-bottom:1px solid rgba(0,87,184,.15)">
+            <th style="padding:8px 14px;text-align:left;font-family:var(--F);font-size:10px;letter-spacing:1.5px;color:#7a9abf">PERIODO</th>
+            <th style="padding:8px 14px;text-align:left;font-family:var(--F);font-size:10px;letter-spacing:1.5px;color:#7a9abf">ROTTA</th>
+            <th style="padding:8px 14px;text-align:left;font-family:var(--F);font-size:10px;letter-spacing:1.5px;color:#7a9abf">STATO</th>
+          </tr></thead>
+          <tbody>
+            ${allLegs.map(l=>`
+            <tr style="border-bottom:1px solid rgba(0,87,184,.07)">
+              <td style="padding:9px 14px;color:#aac">${l.label}</td>
+              <td style="padding:9px 14px;font-weight:600">${l.legs.join(' → ')}</td>
+              <td style="padding:9px 14px">
+                <span style="font-family:var(--F);font-size:9px;letter-spacing:1.5px;padding:3px 8px;border-radius:2px;${statusStyle[l.status]}">${l.status.toUpperCase()}</span>
+              </td>
+            </tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>`;
+  }).join('');
+}
 
 /* ── AIS MAP ─────────────────────────────────────────── */
 function initMap(ships) {

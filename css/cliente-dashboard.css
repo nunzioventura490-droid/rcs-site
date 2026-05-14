@@ -104,10 +104,10 @@ a{text-decoration:none;color:inherit}
   border-bottom:1px solid rgba(0,87,184,.2);padding:0 32px;
   scrollbar-width:none}
 .c-tabs::-webkit-scrollbar{display:none}
-.c-tab{font-family:var(--F);font-size:11px;letter-spacing:1.5px;
-  padding:12px 16px;border:none;background:none;color:var(--grigio);
+.c-tab{font-family:var(--F);font-size:10px;letter-spacing:1px;
+  padding:10px 11px;border:none;background:none;color:var(--grigio);
   cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;
-  transition:color .2s,border-color .2s}
+  transition:color .2s,border-color .2s;flex-shrink:0}
 .c-tab:hover{color:var(--testo)}
 .c-tab.active{color:var(--cyan);border-bottom-color:var(--cyan)}
 
