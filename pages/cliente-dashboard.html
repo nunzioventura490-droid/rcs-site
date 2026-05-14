@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>RCS — Portale Cliente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="../css/cliente-dashboard.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="c-nav">
+  <div class="c-nav-logo">
+    <span>⚓ RCS</span>
+    <small>MARINE INTELLIGENCE</small>
+  </div>
+  <div class="c-nav-links">
+    <a href="#flotta"   class="active" onclick="scrollTo('flotta')">FLOTTA</a>
+    <a href="#catalogo" onclick="scrollTo('catalogo')">CATALOGO</a>
+    <a href="#mappa"    onclick="scrollTo('mappa')">AIS LIVE</a>
+    <a href="#consegna" onclick="scrollTo('consegna')">CONSEGNA</a>
+    <a href="#ordini"   onclick="scrollTo('ordini')">ORDINI</a>
+  </div>
+  <div class="c-nav-user">
+    <span id="navCompany">—</span>
+    <button class="btn-logout" onclick="logout()">ESCI</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="c-hero c-page">
+  <div class="c-hero-inner">
+    <div>
+      <div class="c-hero-title">Portale Flotta</div>
+      <div class="c-hero-company" id="heroCompany">—</div>
+    </div>
+    <div class="c-kpi-strip">
+      <div class="c-kpi"><div class="c-kpi-val" id="kpiNavi">—</div><div class="c-kpi-lbl">NAVI</div></div>
+      <div class="c-kpi"><div class="c-kpi-val" id="kpiCrit">—</div><div class="c-kpi-lbl">CRITICHE</div></div>
+      <div class="c-kpi"><div class="c-kpi-val" id="kpiWear">—</div><div class="c-kpi-lbl">USURA MEDIA</div></div>
+      <div class="c-kpi"><div class="c-kpi-val" id="kpiOrdini">—</div><div class="c-kpi-lbl">ORDINI ATTIVI</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- FLOTTA -->
+<section class="c-section" id="flotta">
+  <div class="c-section-title">LA TUA FLOTTA</div>
+  <div class="c-section-sub">Seleziona una nave per vedere i dettagli dei sistemi di bordo</div>
+  <div class="c-ship-grid" id="shipGrid"></div>
+</section>
+
+<!-- CATALOGO -->
+<section class="c-section" id="catalogo">
+  <div class="c-section-title">CATALOGO RICAMBI</div>
+  <div class="c-section-sub">Ricambi originali certificati — Stock disponibile e ordinabili</div>
+  <div class="c-filter-bar">
+    <input class="c-search" id="catSearch" placeholder="Cerca codice, nome, brand…" oninput="filterCatalog()">
+    <button class="c-filter-btn active" onclick="setCatFilter('all',this)">TUTTI</button>
+    <button class="c-filter-btn" onclick="setCatFilter('Bosch',this)">BOSCH</button>
+    <button class="c-filter-btn" onclick="setCatFilter('Caterpillar',this)">CAT</button>
+    <button class="c-filter-btn" onclick="setCatFilter('Fleetguard',this)">FLEETGUARD</button>
+    <button class="c-filter-btn" onclick="setCatFilter('Cummins',this)">CUMMINS</button>
+    <button class="c-filter-btn" onclick="setCatFilter('in-stock',this)">SOLO STOCK</button>
+  </div>
+  <div class="c-catalog-grid" id="catalogGrid"></div>
+</section>
+
+<!-- AIS MAPPA -->
+<section class="c-section" id="mappa">
+  <div class="c-section-title">POSIZIONE FLOTTA — AIS LIVE</div>
+  <div class="c-section-sub">Tracciamento in tempo reale via AISstream.io · IMO certificati Lloyd's Register</div>
+  <div id="ais-map"></div>
+</section>
+
+<!-- CONFIGURATORE CONSEGNA -->
+<section class="c-section" id="consegna">
+  <div class="c-section-title">CONFIGURATORE CONSEGNA</div>
+  <div class="c-section-sub">Stima tempi di consegna ricambi dalla sede RCS (Catania) al porto di destinazione</div>
+  <div class="c-delivery-form">
+    <div class="c-form-group">
+      <label>PORTO DI DESTINAZIONE</label>
+      <select id="deliveryPort" onchange="calcDelivery()">
+        <option value="">— Seleziona porto —</option>
+      </select>
+    </div>
+    <div class="c-form-group">
+      <label>TIPOLOGIA SPEDIZIONE</label>
+      <select id="deliveryMode" onchange="calcDelivery()">
+        <option value="standard">Stradale / Marittima (Standard)</option>
+        <option value="express">Express (DHL / TNT)</option>
+        <option value="air">Aerea + Corriere Locale</option>
+      </select>
+    </div>
+  </div>
+  <div class="c-delivery-result" id="deliveryResult" style="display:none"></div>
+</section>
+
+<!-- ORDINI -->
+<section class="c-section" id="ordini">
+  <div class="c-section-title">I TUOI ORDINI</div>
+  <div class="c-section-sub">Storico richieste ricambi inviate a RCS Marine Intelligence</div>
+  <div id="ordiniList"><p class="c-orders-empty">Caricamento ordini…</p></div>
+</section>
+
+<!-- ═══ MODAL NAVE ═══ -->
+<div class="c-modal-overlay" id="shipModal">
+  <div class="c-modal">
+    <button class="c-modal-close" onclick="closeShipModal()">✕</button>
+    <div class="c-modal-header">
+      <div class="c-modal-ship-name" id="modalShipName">—</div>
+      <div class="c-modal-ship-sub" id="modalShipSub">—</div>
+      <div class="c-modal-kpis" id="modalShipKpis"></div>
+    </div>
+    <div class="c-tabs" id="sysTabs"></div>
+    <div id="sysContents"></div>
+  </div>
+</div>
+
+<!-- ═══ MODAL ORDINE ═══ -->
+<div class="c-modal-overlay" id="orderModal">
+  <div class="c-order-modal">
+    <button class="c-modal-close" onclick="closeOrderModal()">✕</button>
+    <div class="c-order-title">RICHIESTA RICAMBI</div>
+    <div class="c-order-items" id="orderItems"></div>
+    <div class="c-form-group">
+      <label>NAVE DI RIFERIMENTO</label>
+      <select id="orderShip"></select>
+    </div>
+    <div class="c-form-group">
+      <label>PORTO / PUNTO DI CONSEGNA</label>
+      <select id="orderPort"></select>
+    </div>
+    <div class="c-form-group">
+      <label>NOTE AGGIUNTIVE (opzionale)</label>
+      <textarea id="orderNote" rows="3" placeholder="Es. urgenza, orario preferito…" style="width:100%;padding:10px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(0,87,184,.3);border-radius:3px;font-family:var(--f);font-size:14px;color:#fff;outline:none;resize:vertical"></textarea>
+    </div>
+    <button class="btn-submit-order" id="submitOrderBtn" onclick="submitOrder()">INVIA RICHIESTA →</button>
+  </div>
+</div>
+
+<!-- CART FAB -->
+<button class="c-cart-fab" id="cartFab" onclick="openOrderModal()" style="display:none">
+  🛒 CARRELLO <span class="c-cart-count" id="cartCount">0</span>
+</button>
+
+<!-- TOAST -->
+<div class="c-toast" id="toast"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="../js/cliente-dashboard.js"></script>
+</body>
+</html>
