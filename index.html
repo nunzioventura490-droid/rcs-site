@@ -103,9 +103,17 @@
         btn.style.opacity = "1";
         txt.textContent   = "ACCEDI";
         const card = document.getElementById("card");
-        card.style.animation = "none";
+        card.style.webkitTransition = 'none';
+        card.style.transition = 'none';
         void card.offsetHeight;
+        card.style.webkitAnimation = "shake .4s ease";
         card.style.animation = "shake .4s ease";
+        card.addEventListener('animationend', () => {
+          card.style.webkitAnimation = '';
+          card.style.animation = '';
+          card.style.webkitTransition = '';
+          card.style.transition = '';
+        }, { once: true });
         setTimeout(() => err.classList.remove("show"), 4000);
       }
     };

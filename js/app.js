@@ -2,6 +2,17 @@
    RCS Marine Intelligence — app.js
 ════════════════════════════════════════ */
 
+// ── Card appear (JS-driven transition, più affidabile di CSS animation su Safari) ──
+(function () {
+  var card = document.getElementById('card');
+  if (!card) return;
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      card.classList.add('appeared');
+    });
+  });
+}());
+
 // ── Onde animate su canvas ───────────────
 const canvas = document.getElementById("waves");
 if (canvas) {
