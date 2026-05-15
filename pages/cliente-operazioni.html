@@ -364,7 +364,7 @@
   <div class="maint-grid">
     <!-- SINISTRA: tabella interventi -->
     <div>
-      <div class="filters-bar">
+      <div class="filters-bar" style="flex-wrap:wrap">
         <select class="ops-select" id="maintFilterShip" onchange="renderMaint()" style="min-width:180px;">
           <option value="">Tutte le navi</option>
         </select>
@@ -379,6 +379,9 @@
           <option>Elettrico</option>
         </select>
         <input class="ops-input" id="maintSearch" placeholder="Cerca..." oninput="renderMaint()" style="min-width:140px;">
+        <input type="file" id="csvFileInput" accept=".csv,.xlsx" style="display:none" onchange="importCsv()">
+        <button class="ops-btn" onclick="document.getElementById('csvFileInput').click()" style="background:rgba(0,230,118,.1);border-color:rgba(0,230,118,.35);color:#00e676;padding:7px 14px;font-size:10px">📂 IMPORTA CSV</button>
+        <button class="ops-btn" onclick="downloadCsvTemplate()" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.5);padding:7px 14px;font-size:10px">⬇ MODELLO CSV</button>
       </div>
       <div id="maintTimeline"></div>
     </div>
@@ -943,11 +946,21 @@ let extraMaint = [];
 let extraCalEvents = [];
 
 // ─── INIT ALL ─────────────────────────────────────────────────────────────────
-function initAll(fleet, company) {
+async function initAll(fleet, company) {
   currentFleet = fleet;
   currentCompany = company;
   fleetShips = SHIPS[fleet] || [];
   fleetMaint = [...(MAINT_DATA[fleet] || [])];
+  // Carica manutenzioni salvate su Firebase (sovrascrivono i dati hardcoded se presenti)
+  if (window.loadMaints) {
+    const fbMaints = await window.loadMaints(fleet);
+    if (fbMaints.length > 0) {
+      // Merge: Firebase in cima, poi hardcoded che non sono già presenti
+      const fbKeys = new Set(fbMaints.map(m => m.data + m.nave + m.desc));
+      const hardOnly = fleetMaint.filter(m => !fbKeys.has(m.data + m.nave + m.desc));
+      fleetMaint = [...fbMaints, ...hardOnly];
+    }
+  }
   fleetTickets = JSON.parse(JSON.stringify(TICKETS_BASE[fleet] || []));
   fleetCalEvents = [...(CAL_EVENTS_BASE[fleet] || [])];
 
@@ -1094,7 +1107,7 @@ function renderMaint() {
   `).join('');
 }
 
-function registerMaint() {
+async function registerMaint() {
   const ship  = document.getElementById('mf-ship').value;
   const sys   = document.getElementById('mf-sys').value;
   const date  = document.getElementById('mf-date').value;
@@ -1103,14 +1116,63 @@ function registerMaint() {
   const hrs   = parseInt(document.getElementById('mf-hours').value) || 0;
   const cost  = parseFloat(document.getElementById('mf-cost').value) || 0;
   if (!ship || !date || !desc) { toast('Compila tutti i campi obbligatori','error'); return; }
-  extraMaint.unshift({ data:date, nave:ship, sistema:sys, desc, tecnico:tech||'N/D', ore:hrs, costo:cost });
+  const entry = { data:date, nave:ship, sistema:sys, desc, tecnico:tech||'N/D', ore:hrs, costo:cost };
+  extraMaint.unshift(entry);
   renderMaint();
   document.getElementById('mf-desc').value = '';
   document.getElementById('mf-tech').value = '';
   document.getElementById('mf-hours').value = '';
   document.getElementById('mf-cost').value = '';
-  toast('Intervento registrato con successo');
+  if (window.saveMaint) {
+    try { await window.saveMaint(currentFleet, entry); toast('Intervento salvato su Firebase'); }
+    catch { toast('Intervento aggiunto localmente (Firebase non disponibile)'); }
+  } else {
+    toast('Intervento registrato con successo');
+  }
 }
+
+window.importCsv = function() {
+  const file = document.getElementById('csvFileInput').files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = async (e) => {
+    const lines = e.target.result.split('\n');
+    const header = lines[0].toLowerCase();
+    if (!header.includes('nave') && !header.includes('data')) {
+      toast('Formato CSV non valido — scarica il modello', 'error'); return;
+    }
+    let imported = 0;
+    for (let i = 1; i < lines.length; i++) {
+      const l = lines[i].trim();
+      if (!l) continue;
+      const cols = l.split(',').map(s => s.trim().replace(/^"|"$/g, ''));
+      const [data, nave, sistema, desc, tecnico, ore, costo] = cols;
+      if (!data || !nave || !desc) continue;
+      const entry = { data, nave, sistema: sistema||'Motore', desc, tecnico: tecnico||'N/D', ore: parseInt(ore)||0, costo: parseFloat(costo)||0 };
+      extraMaint.unshift(entry);
+      if (window.saveMaint) { try { await window.saveMaint(currentFleet, entry); } catch {} }
+      imported++;
+    }
+    extraMaint.sort((a,b) => b.data > a.data ? 1 : -1);
+    renderMaint();
+    document.getElementById('csvFileInput').value = '';
+    toast(imported > 0 ? `${imported} interventi importati` : 'Nessun intervento valido trovato');
+  };
+  reader.readAsText(file, 'UTF-8');
+};
+
+window.downloadCsvTemplate = function() {
+  const rows = [
+    'data,nave,sistema,desc,tecnico,ore_motore,costo_eur',
+    '2026-05-15,Nome Nave,Motore,Sostituzione filtri olio e gasolio,Tecnico RCS,34500,380',
+    '2026-04-10,Nome Nave,Iniezione,Revisione iniettori Bosch CR,Tecnico RCS,34000,4200'
+  ];
+  const blob = new Blob([rows.join('\n')], {type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'modello-manutenzioni-rcs.csv';
+  a.click();
+};
 
 // ─── SEZIONE 3: PREVENTIVO ────────────────────────────────────────────────────
 function renderCatalog() {
@@ -1421,6 +1483,7 @@ function toast(msg, type) {
 <script type="module">
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
 import { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+import { getFirestore, collection, addDoc, getDocs, orderBy, query } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAQG5BPuNLtNSv6kn6-0D22RhLX9BUonO8",
@@ -1439,6 +1502,18 @@ const TEAM_USERS = ['nunzio','direttore','admin','rcs'];
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db   = getFirestore(app);
+
+// Esponi helper Firestore al regular script
+window.saveMaint = async (fleet, entry) => {
+  await addDoc(collection(db, `maintenances_${fleet}`), { ...entry, ts: Date.now() });
+};
+window.loadMaints = async (fleet) => {
+  try {
+    const snap = await getDocs(query(collection(db, `maintenances_${fleet}`), orderBy('data','desc')));
+    return snap.docs.map(d => d.data());
+  } catch { return []; }
+};
 
 onAuthStateChanged(auth, user => {
   if (!user) { window.location.href = '../index.html'; return; }
