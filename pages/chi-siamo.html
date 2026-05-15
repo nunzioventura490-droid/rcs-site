@@ -3,477 +3,504 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chi Siamo — RCS Marine Intelligence</title>
+  <title>Chi Siamo — RCS Marine Intelligence · Catania</title>
+  <meta name="description" content="Ricambi Centro Sud S.r.l. — distributore ufficiale di ricambi marini dal 1995. MTU, Bosch, Caterpillar, Cummins, Delphi. Magazzino 3.800 m² a Catania.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/dashboard.css">
-</head>
-<body style="visibility:hidden">
-  <!-- NAVBAR -->
-  <nav id="nav">
-    <div class="nav-inner">
-      <a class="nav-logo" href="../index.html">
-        <span>⚓</span>
-        <span class="nav-rcs">RCS</span>
-        <span class="nav-sub">MARINE INTELLIGENCE</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="dashboard.html" class="nav-link">Overview</a></li>
-        <li><a href="dashboard.html#flotte" class="nav-link">Flotte</a></li>
-        <li><a href="dashboard.html#mercati" class="nav-link">Mercati</a></li>
-        <li><a href="dashboard.html#strategia" class="nav-link">Strategia</a></li>
-        <li><a href="analisi-usura.html" class="nav-link">Analisi Usura</a></li>
-        <li><a href="analisi-strategica.html" class="nav-link">Analisi Strategica</a></li>
-        <li><a href="strategia-operativa.html" class="nav-link">Operativa</a></li>
-        <li><a href="chi-siamo.html" class="nav-link active">Chi Siamo</a></li>
-      </ul>
-      <div class="nav-right">
-        <span class="nav-user" id="navUser">—</span>
-        <button class="nav-logout" onclick="logout()">ESCI</button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section class="hero" style="padding-top:80px; padding-bottom:60px;">
-    <div class="hero-bg" style="background:linear-gradient(135deg, rgba(0,87,184,.1) 0%, rgba(0,212,255,.05) 100%);">
-      <video class="hero-video-bg" autoplay muted loop playsinline>
-        <source src="../assets/video/hero-bg.mp4" type="video/mp4">
-      </video>
-      <div class="hero-video-overlay"></div>
-      <canvas id="heroWaves"></canvas>
-    </div>
-    <div class="hero-content">
-      <p class="hero-label" style="margin-bottom:20px;">PROFILO AZIENDALE</p>
-      <h1 style="font-size:48px; color:#00d4ff; margin-bottom:12px; font-weight:800; letter-spacing:2px;">RICAMBI CENTRO SUD</h1>
-      <p style="font-size:20px; color:rgba(255,255,255,.8); font-weight:300; letter-spacing:1px; max-width:800px;">
-        Distributore Ufficiale di Ricambi Marini · Dal 1995 al vostro servizio
-      </p>
-    </div>
-  </section>
-
-  <!-- CHI SIAMO -->
-  <section class="section" id="chi-siamo">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <p class="section-label">STORIA</p>
-        <h2 class="section-title">Chi Siamo</h2>
-      </div>
-
-      <div style="max-width:900px; margin:0 auto; color:rgba(255,255,255,.85); line-height:1.8; font-size:15px;">
-        <p style="margin-bottom:20px;">
-          <strong style="color:#00d4ff;">Ricambi Centro Sud S.r.l.</strong> opera dal <strong>1995</strong> nel settore dei ricambi marini, costituendo un punto di riferimento affidabile per il mercato nautico del Mediterraneo. Nata a Catania con una visione chiara: fornire componenti di qualità e servizi tecnici specializzati per la manutenzione delle flotte marittime.
-        </p>
-
-        <p style="margin-bottom:20px;">
-          Nel corso di tre decenni, l'azienda ha consolidato la propria posizione attraverso:
-        </p>
-
-        <ul style="margin-left:20px; margin-bottom:20px;">
-          <li style="margin-bottom:10px;">✓ <strong>Professionalità e competenza</strong> nel settore della manutenzione navale</li>
-          <li style="margin-bottom:10px;">✓ <strong>Partnership strategiche</strong> con i principali costruttori mondiali (MTU, Bosch, Caterpillar, Delphi, Cummins)</li>
-          <li style="margin-bottom:10px;">✓ <strong>Reti distributive capillari</strong> che raggiungono porti e cantieri in tutto il Mediterraneo</li>
-          <li style="margin-bottom:10px;">✓ <strong>Servizi di assistenza tecnica</strong> 24/7 con personale specializzato</li>
-          <li style="margin-bottom:10px;">✓ <strong>Consegne rapide</strong> con delivery guarantee < 12 ore per componenti critiche</li>
-        </ul>
-
-        <p style="margin-bottom:20px;">
-          Oggi, l'azienda rappresenta una <strong>soluzione integrata</strong> per la manutenzione preventiva e correttiva delle flotte, combinando:
-        </p>
-
-        <ul style="margin-left:20px; margin-bottom:20px;">
-          <li style="margin-bottom:10px;">📊 Analisi predittive dell'usura componenti (Wiener model)</li>
-          <li style="margin-bottom:10px;">🔧 Supply chain ottimizzata per motori marini moderni e legacy</li>
-          <li style="margin-bottom:10px;">🌍 Copertura geografica: Malta hub principale, espansione Australia (2027) e Europa (2028)</li>
-          <li style="margin-bottom:10px;">💡 Piattaforma di intelligence per la gestione flotte (Marine Intelligence Platform)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- STRUTTURA OPERATIVA -->
-  <section class="section" id="struttura">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <p class="section-label">INFRASTRUTTURE</p>
-        <h2 class="section-title">Struttura Operativa</h2>
-      </div>
-
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:40px;">
-        <div style="background:linear-gradient(135deg, rgba(0,87,184,.15) 0%, rgba(0,212,255,.08) 100%); padding:30px; border-radius:12px; border:1px solid rgba(0,87,184,.2);">
-          <h3 style="color:#00d4ff; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:16px; font-family:var(--F);">SEDE PRINCIPALE</h3>
-          <p style="font-size:14px; color:rgba(255,255,255,.85); line-height:1.8; margin-bottom:20px;">
-            <strong>Via Alessandro Volta 17 A/B</strong><br>
-            95122 Catania (CT) · Italia<br><br>
-            <strong>Superficie:</strong> 3.800 m²<br>
-            <strong>Livelli:</strong> 3 (uffici, magazzino, punto vendita)<br>
-            <strong>Personale:</strong> 25 dipendenti specializzati
-          </p>
-          <p style="font-size:12px; color:rgba(0,212,255,.7); margin-bottom:0;">
-            Accesso 24/7 per clienti con SLA contrattuale
-          </p>
-        </div>
-
-        <div style="background:linear-gradient(135deg, rgba(0,212,255,.08) 0%, rgba(0,87,184,.15) 100%); padding:30px; border-radius:12px; border:1px solid rgba(0,87,184,.2);">
-          <h3 style="color:#00d4ff; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:16px; font-family:var(--F);">TEAM SPECIALIZZATO</h3>
-          <p style="font-size:14px; color:rgba(255,255,255,.85); line-height:1.8; margin-bottom:20px;">
-            <strong>Aree di competenza:</strong><br>
-            • Motori marini diesel/LNG<br>
-            • Sistemi di iniezione common-rail<br>
-            • Filtrazione e lubrificazione<br>
-            • Sistemi elettrici marini<br>
-            • Componenti di trasmissione<br><br>
-            <strong>Formazione continua:</strong> Certificazioni OEM aggiornate
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPETENZE -->
-  <section class="section" id="competenze">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <p class="section-label">EXPERTISE</p>
-        <h2 class="section-title">Competenze Principali</h2>
-      </div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:24px; margin-top:40px;">
-        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
-          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Motori Marini</h4>
-          <p style="font-size:13px; color:rgba(255,255,255,.8);">MTU, Caterpillar, Cummins, Wärtsilä, MAN B&W, Deutz MWM – sia nuovi che legacy</p>
-        </div>
-
-        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
-          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Sistemi CR</h4>
-          <p style="font-size:13px; color:rgba(255,255,255,.8);">Common-rail Bosch, Delphi, Cummins – sensori, iniettori, pompe a pressione</p>
-        </div>
-
-        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
-          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Filtrazione</h4>
-          <p style="font-size:13px; color:rgba(255,255,255,.8);">Carburante, olio, aria, acqua di raffreddamento – Fleetguard, OEM equivalenti</p>
-        </div>
-
-        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
-          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Componenti</h4>
-          <p style="font-size:13px; color:rgba(255,255,255,.8);">Alternatori, pompe, turbine, sensori – supporto diagnostico incluso</p>
-        </div>
-
-        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
-          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Analisi Usura</h4>
-          <p style="font-size:13px; color:rgba(255,255,255,.8);">Modello Wiener per previsione manutenzione – intervalli fiducia statistici</p>
-        </div>
-
-        <div style="background:rgba(0,87,184,.1); padding:24px; border-radius:8px; border-left:4px solid #00d4ff;">
-          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:12px; text-transform:uppercase;">Logistica</h4>
-          <p style="font-size:13px; color:rgba(255,255,255,.8);">Consegna < 12h, tracciamento real-time, SLA 99.5% availability</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARTNER SECTION -->
-  <section class="section" id="partner">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <p class="section-label">PARTNER</p>
-        <h2 class="section-title">I Nostri Fornitori Ufficiali</h2>
-      </div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:24px; margin-top:40px;">
-        <!-- BOSCH -->
-        <div style="background:rgba(220,0,0,.1); padding:20px; border-radius:8px; border:1px solid rgba(220,0,0,.2); text-align:center;">
-          <div style="height:60px; margin-bottom:16px; display:flex; align-items:center; justify-content:center;">
-            <div style="font-size:24px; font-weight:700; color:#ff6b6b;">BOSCH</div>
-          </div>
-          <h4 style="color:#ff6b6b; font-size:12px; font-weight:700; margin-bottom:8px;">Robert Bosch GmbH</h4>
-          <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6; margin-bottom:12px;">Fornitore globale di sistemi di iniezione common-rail</p>
-          <div style="font-size:10px; color:rgba(255,255,255,.6); margin-bottom:12px;">Fondazione: 1886</div>
-          <a href="https://www.bosch-automotive.com" target="_blank" style="color:#ff6b6b; text-decoration:none; font-size:11px; font-weight:700;">Visita sito →</a>
-        </div>
-
-        <!-- DELPHI -->
-        <div style="background:rgba(0,150,220,.1); padding:20px; border-radius:8px; border:1px solid rgba(0,150,220,.2); text-align:center;">
-          <div style="height:60px; margin-bottom:16px; display:flex; align-items:center; justify-content:center;">
-            <div style="font-size:24px; font-weight:700; color:#5bc8f5;">DELPHI</div>
-          </div>
-          <h4 style="color:#5bc8f5; font-size:12px; font-weight:700; margin-bottom:8px;">Delphi Technologies</h4>
-          <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6; margin-bottom:12px;">Specialista di sistemi propulsione e iniezione</p>
-          <div style="font-size:10px; color:rgba(255,255,255,.6); margin-bottom:12px;">Fondazione: 1994</div>
-          <a href="https://www.delphitechnologies.com" target="_blank" style="color:#5bc8f5; text-decoration:none; font-size:11px; font-weight:700;">Visita sito →</a>
-        </div>
-
-        <!-- CATERPILLAR -->
-        <div style="background:rgba(255,185,0,.1); padding:20px; border-radius:8px; border:1px solid rgba(255,185,0,.2); text-align:center;">
-          <div style="height:60px; margin-bottom:16px; display:flex; align-items:center; justify-content:center;">
-            <div style="font-size:24px; font-weight:700; color:#ffc107;">CAT</div>
-          </div>
-          <h4 style="color:#ffc107; font-size:12px; font-weight:700; margin-bottom:8px;">Caterpillar Inc.</h4>
-          <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6; margin-bottom:12px;">Costruttore di motori e sistemi marini</p>
-          <div style="font-size:10px; color:rgba(255,255,255,.6); margin-bottom:12px;">Fondazione: 1925</div>
-          <a href="https://www.caterpillar.com" target="_blank" style="color:#ffc107; text-decoration:none; font-size:11px; font-weight:700;">Visita sito →</a>
-        </div>
-
-        <!-- CUMMINS -->
-        <div style="background:rgba(0,180,50,.1); padding:20px; border-radius:8px; border:1px solid rgba(0,180,50,.2); text-align:center;">
-          <div style="height:60px; margin-bottom:16px; display:flex; align-items:center; justify-content:center;">
-            <div style="font-size:24px; font-weight:700; color:#4cde80;">CUMMINS</div>
-          </div>
-          <h4 style="color:#4cde80; font-size:12px; font-weight:700; margin-bottom:8px;">Cummins Inc.</h4>
-          <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6; margin-bottom:12px;">Produttore motori diesel marine</p>
-          <div style="font-size:10px; color:rgba(255,255,255,.6); margin-bottom:12px;">Fondazione: 1919</div>
-          <a href="https://www.cummins.com" target="_blank" style="color:#4cde80; text-decoration:none; font-size:11px; font-weight:700;">Visita sito →</a>
-        </div>
-
-        <!-- BETA MARINE -->
-        <div style="background:rgba(255,215,0,.1); padding:20px; border-radius:8px; border:1px solid rgba(255,215,0,.2); text-align:center;">
-          <div style="height:60px; margin-bottom:16px; display:flex; align-items:center; justify-content:center;">
-            <div style="font-size:24px; font-weight:700; color:#ffd700;">BETA</div>
-          </div>
-          <h4 style="color:#ffd700; font-size:12px; font-weight:700; margin-bottom:8px;">Beta Marine</h4>
-          <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6; margin-bottom:12px;">Motori marini e sistemi ausiliari</p>
-          <div style="font-size:10px; color:rgba(255,255,255,.6); margin-bottom:12px;">Fondazione: 1981</div>
-          <a href="https://www.betamarine.com" target="_blank" style="color:#ffd700; text-decoration:none; font-size:11px; font-weight:700;">Visita sito →</a>
-        </div>
-
-        <!-- FLEETGUARD -->
-        <div style="background:rgba(0,212,255,.1); padding:20px; border-radius:8px; border:1px solid rgba(0,212,255,.2); text-align:center;">
-          <div style="height:60px; margin-bottom:16px; display:flex; align-items:center; justify-content:center;">
-            <div style="font-size:24px; font-weight:700; color:#00d4ff;">FLEETGUARD</div>
-          </div>
-          <h4 style="color:#00d4ff; font-size:12px; font-weight:700; margin-bottom:8px;">Fleetguard</h4>
-          <p style="font-size:11px; color:rgba(255,255,255,.75); line-height:1.6; margin-bottom:12px;">Filtri e fluidi marini certificati</p>
-          <div style="font-size:10px; color:rgba(255,255,255,.6); margin-bottom:12px;">Fondazione: 1985</div>
-          <a href="https://www.fleetguard.com" target="_blank" style="color:#00d4ff; text-decoration:none; font-size:11px; font-weight:700;">Visita sito →</a>
-        </div>
-      </div>
-
-      <!-- CERTIFICATIONS -->
-      <div style="margin-top:40px; padding:20px; background:rgba(0,87,184,.1); border:1px solid rgba(0,87,184,.2); border-radius:8px;">
-        <h3 style="color:#00d4ff; font-size:13px; font-weight:700; letter-spacing:1px; margin-bottom:16px; font-family:var(--F);">CERTIFICAZIONI & PARTNERSHIP</h3>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px;">
-          <div style="font-size:12px; color:rgba(255,255,255,.8);">✓ Lloyd's Register – Società di Classificazione Ufficiale</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.8);">✓ ABS (American Bureau of Shipping)</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.8);">✓ DNV GL (Det Norske Veritas Germanischer Lloyd)</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.8);">✓ Autorizzato OEM per componenti marine</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.8);">✓ Certificazione ISO 9001 (Qualità)</div>
-          <div style="font-size:12px; color:rgba(255,255,255,.8);">✓ Certificazione ISO 14001 (Ambiente)</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PHOTO SCROLL SECTIONS -->
-
-  <!-- 1. TEAM — da destra -->
-  <section class="photo-scroll-section" id="gallery-team">
-    <div class="pss-img pss-from-right">
-      <img src="../assets/img/company/team.png" alt="Team RCS Marine">
-    </div>
-    <div class="pss-text">
-      <p class="section-label">IL TEAM</p>
-      <h2 class="pss-title">25 Specialisti al Vostro Servizio</h2>
-      <p class="pss-desc">Tecnici certificati OEM su MTU, Bosch, Caterpillar, Cummins e Delphi. Formazione continua e assistenza 24/7 per ogni esigenza della flotta.</p>
-    </div>
-  </section>
-
-  <!-- 2. FURGONE — da sinistra -->
-  <section class="photo-scroll-section pss-reverse" id="gallery-furgone">
-    <div class="pss-img pss-from-left">
-      <img src="../assets/img/company/furgone.png" alt="Furgone RCS Marine">
-    </div>
-    <div class="pss-text">
-      <p class="section-label">CONSEGNE</p>
-      <h2 class="pss-title">Delivery Garantita &lt; 12 Ore</h2>
-      <p class="pss-desc">Flotta di veicoli brandizzati RCS Marine per consegne rapide nel Mediterraneo. Tracciamento real-time e SLA contrattuale con ogni cliente.</p>
-    </div>
-  </section>
-
-  <!-- 3. MAGAZZINO — da destra -->
-  <section class="photo-scroll-section" id="gallery-magazzino">
-    <div class="pss-img pss-from-right">
-      <img src="../assets/img/company/magazzino.png" alt="Magazzino RCS Marine">
-    </div>
-    <div class="pss-text">
-      <p class="section-label">INFRASTRUTTURA</p>
-      <h2 class="pss-title">3.800 m² di Ricambi Pronti</h2>
-      <p class="pss-desc">Magazzino su 3 livelli: uffici, stock climatizzato e punto vendita. Accesso 24/7 per clienti con SLA contrattuale. Oltre 15.000 codici a scaffale.</p>
-    </div>
-  </section>
-
-  <!-- 4. NAVI — da sinistra -->
-  <section class="photo-scroll-section pss-reverse" id="gallery-navi">
-    <div class="pss-img pss-from-left">
-      <img src="../assets/img/company/operations.png" alt="Flotte Navali RCS">
-    </div>
-    <div class="pss-text">
-      <p class="section-label">CLIENTI</p>
-      <h2 class="pss-title">23 Navi in 3 Flotte Servite</h2>
-      <p class="pss-desc">Virtu Ferries, Tug Malta e operatori australiani. Ricambi per High Speed Craft, ASD Tug, navi cargo e tanker — consegne direttamente a bordo.</p>
-    </div>
-  </section>
-
-  <!-- VALORI AZIENDALI -->
-  <section class="section" id="valori" style="background:linear-gradient(135deg, rgba(0,87,184,.05) 0%, rgba(0,212,255,.03) 100%);">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <p class="section-label">VALORI</p>
-        <h2 class="section-title">I Nostri Tre Pilastri</h2>
-      </div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:32px; margin-top:40px;">
-        <div style="text-align:center;">
-          <div style="font-size:48px; margin-bottom:16px;">⚖️</div>
-          <h4 style="color:#00d4ff; font-size:14px; font-weight:700; letter-spacing:1px; margin-bottom:12px;">QUALITÀ vs PREZZO</h4>
-          <p style="color:rgba(255,255,255,.75); font-size:13px; line-height:1.6;">
-            Componenti originali e rigenerati da case madri ufficiali, con rapporto qualità-prezzo competitivo e trasparente.
-          </p>
-        </div>
-
-        <div style="text-align:center;">
-          <div style="font-size:48px; margin-bottom:16px;">🔧</div>
-          <h4 style="color:#00d4ff; font-size:14px; font-weight:700; letter-spacing:1px; margin-bottom:12px;">AREA TECNICA</h4>
-          <p style="color:rgba(255,255,255,.75); font-size:13px; line-height:1.6;">
-            Team di tecnici specializzati con formazione continua OEM, diagnostica avanzata e assistenza post-vendita 24/7.
-          </p>
-        </div>
-
-        <div style="text-align:center;">
-          <div style="font-size:48px; margin-bottom:16px;">🎯</div>
-          <h4 style="color:#00d4ff; font-size:14px; font-weight:700; letter-spacing:1px; margin-bottom:12px;">GESTIONE STRATEGICA</h4>
-          <p style="color:rgba(255,255,255,.75); font-size:13px; line-height:1.6;">
-            Non solo vendita: analisi predittiva, programmazione manutenzione e ottimizzazione della flotta nel tempo.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATTI -->
-  <section class="section" id="contatti">
-    <div class="section-inner">
-      <div class="section-head reveal">
-        <p class="section-label">CONTATTI</p>
-        <h2 class="section-title">Informazioni Ufficiali</h2>
-      </div>
-
-      <div style="background:linear-gradient(135deg, rgba(0,87,184,.15) 0%, rgba(0,212,255,.08) 100%); padding:40px; border-radius:12px; border:1px solid rgba(0,87,184,.2); max-width:700px; margin:40px auto 0;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
-          <div>
-            <h4 style="color:#00d4ff; font-size:11px; font-weight:700; letter-spacing:2px; margin-bottom:14px; text-transform:uppercase;">Dati Legali</h4>
-            <div style="font-size:12px; color:rgba(255,255,255,.8); line-height:2;">
-              <div><strong>Ragione Sociale:</strong><br>RICAMBI CENTRO SUD S.R.L.</div>
-              <div style="margin-top:12px;"><strong>Partita IVA:</strong><br>03176280877</div>
-              <div style="margin-top:12px;"><strong>Codice Fiscale:</strong><br>03176280877</div>
-              <div style="margin-top:12px;"><strong>VAT Europeo:</strong><br>IT03176280877</div>
-              <div style="margin-top:12px;"><strong>REA:</strong><br>203412</div>
-              <div style="margin-top:12px;"><strong>Fatturato (2024):</strong><br>€ 9.981.326,00</div>
-            </div>
-          </div>
-
-          <div>
-            <h4 style="color:#00d4ff; font-size:11px; font-weight:700; letter-spacing:2px; margin-bottom:14px; text-transform:uppercase;">Indirizzo & Contatti</h4>
-            <div style="font-size:12px; color:rgba(255,255,255,.8); line-height:2;">
-              <div><strong>Sede:</strong><br>Via Alessandro Volta 17 A/B<br>95122 Catania (CT) · Italia</div>
-              <div style="margin-top:12px;"><strong>PEC:</strong><br><span style="color:#00d4ff; word-break:break-all;">info@pec.ricambicentrosud.com</span></div>
-              <div style="margin-top:12px;"><strong>Orari Uffici:</strong><br>Lun-Ven: 8:00-18:00 CET</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HERO WAVES -->
-  <script>
-    const canvas = document.getElementById("heroWaves");
-    if (canvas) {
-      const ctx = canvas.getContext("2d");
-      let W, H, t = 0;
-
-      function resize() {
-        W = canvas.width  = window.innerWidth;
-        H = canvas.height = 220;
-      }
-      resize();
-      window.addEventListener("resize", resize);
-
-      function drawWaves() {
-        ctx.clearRect(0, 0, W, H);
-        t += 0.008;
-
-        ctx.beginPath();
-        ctx.moveTo(0, H);
-        for (let x = 0; x <= W; x += 4) {
-          const y = 90 + Math.sin(x * 0.006 + t) * 28 + Math.sin(x * 0.012 + t * 1.3) * 14;
-          ctx.lineTo(x, y);
-        }
-        ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath();
-        ctx.fillStyle = "rgba(0,87,184,0.12)";
-        ctx.fill();
-
-        ctx.beginPath();
-        ctx.moveTo(0, H);
-        for (let x = 0; x <= W; x += 4) {
-          const y = 120 + Math.sin(x * 0.008 + t * .8 + 1) * 20 + Math.sin(x * 0.015 + t * 1.6) * 10;
-          ctx.lineTo(x, y);
-        }
-        ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath();
-        ctx.fillStyle = "rgba(0,212,255,0.07)";
-        ctx.fill();
-
-        ctx.beginPath();
-        ctx.moveTo(0, H);
-        for (let x = 0; x <= W; x += 4) {
-          const y = 150 + Math.sin(x * 0.01 + t * .6 + 2) * 14 + Math.cos(x * 0.007 + t * 1.1) * 8;
-          ctx.lineTo(x, y);
-        }
-        ctx.lineTo(W, H); ctx.lineTo(0, H); ctx.closePath();
-        ctx.fillStyle = "rgba(0,150,220,0.09)";
-        ctx.fill();
-
-        requestAnimationFrame(drawWaves);
-      }
-
-      drawWaves();
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #020b18; --navy2: #041628; --cyan: #00d4ff; --cyan2: #00a8cc;
+      --green: #00e676; --white: #f0f4f8; --grey: #8ba3bf; --border: rgba(0,212,255,.18);
+      --F: 'Barlow Condensed', sans-serif;
     }
-  </script>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; background: var(--navy); color: var(--white); overflow-x: hidden; }
 
-  <!-- AUTH & NAVBAR -->
-  <script type="module">
-    import { auth, onAuthStateChanged, signOut } from '../js/firebase-auth.js';
+    /* ── PUBLIC NAV ── */
+    .pub-nav {
+      position: fixed; top: 0; left: 0; right: 0; height: 64px;
+      background: rgba(2,11,24,.97); border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; z-index: 1000; backdrop-filter: blur(12px);
+    }
+    .pub-nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .pub-nav-brand .anchor { font-size: 22px; }
+    .pub-nav-brand .brand-rcs {
+      font-family: var(--F); font-weight: 900; font-size: 20px;
+      color: var(--cyan); letter-spacing: 2px; line-height: 1;
+    }
+    .pub-nav-brand .brand-sub {
+      font-family: var(--F); font-weight: 400; font-size: 10px;
+      color: var(--grey); letter-spacing: 3px; line-height: 1;
+    }
+    .pub-nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .pub-nav-links a {
+      font-family: var(--F); font-weight: 600; font-size: 13px;
+      letter-spacing: 1.5px; color: var(--grey); text-decoration: none; transition: color .2s;
+    }
+    .pub-nav-links a:hover, .pub-nav-links a.active { color: var(--white); }
+    .pub-nav-cta {
+      background: var(--cyan); color: #000 !important;
+      padding: 10px 20px; border-radius: 3px; font-weight: 700 !important;
+      font-size: 13px !important; transition: background .2s !important;
+    }
+    .pub-nav-cta:hover { background: #00b8dd !important; }
 
-    onAuthStateChanged(auth, user => {
-      if (!user) { location.href = '../index.html'; return; }
-      document.body.style.visibility = 'visible';
-      const username = user.email.split('@')[0];
-      sessionStorage.setItem('rcs_user', username);
-      const navUser = document.getElementById('navUser');
-      if (navUser) navUser.textContent = username.toUpperCase();
+    /* ── HERO ── */
+    .pub-hero {
+      position: relative; min-height: 55vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 100px 20px 60px; overflow: hidden;
+    }
+    .pub-hero-video { position: absolute; inset: 0; z-index: 0; }
+    .pub-hero-video video { width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(1.6) contrast(1.15) saturate(1.4); }
+    .pub-hero-overlay { position: absolute; inset: 0; background: rgba(2,11,24,.6); z-index: 1; }
+    .pub-hero-content { position: relative; z-index: 2; }
+    .pub-hero-label {
+      font-family: var(--F); font-weight: 700; font-size: 11px;
+      letter-spacing: 4px; color: var(--cyan); margin-bottom: 20px;
+    }
+    .pub-hero h1 {
+      font-family: var(--F); font-weight: 800; font-size: clamp(32px, 5vw, 60px);
+      color: var(--white); line-height: 1.05; letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .pub-hero h1 span { color: var(--cyan); }
+    .pub-hero-sub { font-size: 18px; color: rgba(255,255,255,.75); font-weight: 300; letter-spacing: 1px; }
+
+    /* ── SECTION ── */
+    .cs-section { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
+    .cs-label {
+      font-family: var(--F); font-weight: 700; font-size: 11px;
+      letter-spacing: 3px; color: var(--cyan); margin-bottom: 12px;
+    }
+    .cs-title {
+      font-family: var(--F); font-weight: 800;
+      font-size: clamp(26px, 4vw, 44px); letter-spacing: -0.5px;
+      text-transform: uppercase; margin-bottom: 10px; line-height: 1.05;
+    }
+    .cs-desc { font-size: 15px; color: var(--grey); line-height: 1.8; max-width: 720px; }
+
+    /* ── GRID CARDS ── */
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 40px; }
+    .info-card {
+      background: linear-gradient(135deg, rgba(0,87,184,.15), rgba(0,212,255,.08));
+      padding: 28px; border-radius: 10px; border: 1px solid rgba(0,87,184,.25);
+    }
+    .info-card h3 {
+      font-family: var(--F); font-size: 12px; font-weight: 700;
+      letter-spacing: 2px; color: var(--cyan); margin-bottom: 14px; text-transform: uppercase;
+    }
+    .info-card p { font-size: 14px; color: rgba(255,255,255,.85); line-height: 1.8; }
+
+    /* ── COMPETENZE GRID ── */
+    .comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 36px; }
+    .comp-card {
+      background: rgba(0,87,184,.1); padding: 22px; border-radius: 8px;
+      border-left: 4px solid var(--cyan);
+    }
+    .comp-card h4 {
+      font-family: var(--F); font-size: 12px; font-weight: 700;
+      letter-spacing: 1px; color: var(--cyan); margin-bottom: 10px; text-transform: uppercase;
+    }
+    .comp-card p { font-size: 13px; color: rgba(255,255,255,.8); line-height: 1.6; }
+
+    /* ── PARTNER GRID ── */
+    .partner-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 12px; margin-top: 40px;
+    }
+    .partner-card {
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+      border-radius: 8px; padding: 14px 10px;
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      transition: all .25s; cursor: default;
+    }
+    .partner-card:hover {
+      background: rgba(255,255,255,.09); border-color: rgba(0,212,255,.3);
+      transform: translateY(-2px);
+    }
+    .partner-logo-wrap { width: 80px; height: 44px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .partner-logo-wrap img { max-width: 80px; max-height: 44px; object-fit: contain; }
+    .partner-logo-text {
+      font-family: var(--F); font-size: 11px; font-weight: 800;
+      letter-spacing: 1.5px; text-align: center; line-height: 1.2;
+      width: 80px; height: 44px; display: none; align-items: center; justify-content: center;
+    }
+    .partner-name { font-family: var(--F); font-size: 9px; letter-spacing: 1px; color: rgba(255,255,255,.45); text-align: center; text-transform: uppercase; }
+
+    /* ── CERT BOX ── */
+    .cert-box {
+      margin-top: 40px; padding: 24px;
+      background: rgba(0,87,184,.08); border: 1px solid rgba(0,87,184,.2); border-radius: 8px;
+    }
+    .cert-box h3 {
+      font-family: var(--F); font-size: 13px; font-weight: 700;
+      letter-spacing: 1px; color: var(--cyan); margin-bottom: 18px; text-transform: uppercase;
+    }
+    .cert-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .cert-list div { font-size: 12px; color: rgba(255,255,255,.8); display: flex; align-items: center; gap: 8px; }
+    .cert-list span { color: var(--green); font-size: 14px; }
+
+    /* ── VALORI ── */
+    .valori-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-top: 40px; }
+    .valore { text-align: center; }
+    .valore-icon { font-size: 44px; margin-bottom: 16px; }
+    .valore h4 { font-family: var(--F); font-size: 14px; font-weight: 700; letter-spacing: 1px; color: var(--cyan); margin-bottom: 12px; }
+    .valore p { color: rgba(255,255,255,.75); font-size: 13px; line-height: 1.6; }
+
+    /* ── CONTATTI ── */
+    .contatti-box {
+      background: linear-gradient(135deg, rgba(0,87,184,.15), rgba(0,212,255,.08));
+      padding: 40px; border-radius: 12px; border: 1px solid rgba(0,87,184,.2);
+      max-width: 700px; margin: 40px auto 0;
+    }
+    .contatti-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .contatti-col h4 { font-family: var(--F); font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--cyan); margin-bottom: 14px; text-transform: uppercase; }
+    .contatti-col div { font-size: 12px; color: rgba(255,255,255,.8); line-height: 2; }
+
+    /* ── BG SECTIONS ── */
+    .bg-alt { background: rgba(4,22,40,.5); }
+
+    /* ── FOOTER ── */
+    .pub-footer {
+      background: var(--navy); border-top: 1px solid var(--cyan);
+      padding: 28px 40px; text-align: center;
+      font-family: var(--F); font-size: 11px; color: var(--grey); letter-spacing: 1px;
+    }
+    .pub-footer a { color: var(--cyan); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .pub-nav { padding: 0 20px; }
+      .pub-nav-links { display: none; }
+      .info-grid { grid-template-columns: 1fr; }
+      .contatti-grid { grid-template-columns: 1fr; }
+      .cs-section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════ PUBLIC NAV -->
+<nav class="pub-nav" id="pubnav">
+  <a class="pub-nav-brand" href="../index.html">
+    <span class="anchor">⚓</span>
+    <div>
+      <div class="brand-rcs">RCS MARINE INTELLIGENCE</div>
+      <div class="brand-sub">RICAMBI CENTRO SUD S.R.L.</div>
+    </div>
+  </a>
+  <ul class="pub-nav-links">
+    <li><a href="../pages/ricerca-codici.html">RICERCA CODICI</a></li>
+    <li><a href="../pages/large-engine.html">LARGE ENGINE</a></li>
+    <li><a href="chi-siamo.html" class="active">CHI SIAMO</a></li>
+    <li><a href="../index.html#contatti">CONTATTI</a></li>
+    <li><a href="login.html" class="pub-nav-cta">PORTALE CLIENTI →</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════ HERO -->
+<section class="pub-hero">
+  <div class="pub-hero-video">
+    <video autoplay muted loop playsinline>
+      <source src="../assets/video/hero-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="pub-hero-overlay"></div>
+  <div class="pub-hero-content">
+    <p class="pub-hero-label">PROFILO AZIENDALE</p>
+    <h1>RICAMBI CENTRO SUD<br><span>DAL 1995</span></h1>
+    <p class="pub-hero-sub">Distributore Ufficiale di Ricambi Marini · Catania, Sicilia</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ STORIA -->
+<div class="bg-alt">
+  <div class="cs-section">
+    <div class="cs-label">STORIA</div>
+    <h2 class="cs-title">Chi Siamo</h2>
+    <p class="cs-desc" style="margin-bottom:24px;">
+      <strong style="color:var(--cyan)">Ricambi Centro Sud S.r.l.</strong> opera dal <strong>1995</strong> nel settore dei ricambi marini, costituendo un punto di riferimento affidabile per il mercato nautico del Mediterraneo. Nata a Catania con una visione chiara: fornire componenti di qualità e servizi tecnici specializzati per la manutenzione delle flotte marittime.
+    </p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>SEDE PRINCIPALE</h3>
+        <p>
+          <strong>Via Alessandro Volta 17 A/B</strong><br>
+          95122 Catania (CT) · Italia<br><br>
+          <strong>Superficie:</strong> 3.800 m²<br>
+          <strong>Livelli:</strong> 3 (uffici, magazzino, punto vendita)<br>
+          <strong>Personale:</strong> 25 dipendenti specializzati<br><br>
+          <span style="font-size:12px;color:rgba(0,212,255,.7)">Accesso 24/7 per clienti con SLA contrattuale</span>
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>TEAM SPECIALIZZATO</h3>
+        <p>
+          <strong>Aree di competenza:</strong><br>
+          • Motori marini diesel/LNG<br>
+          • Sistemi di iniezione common-rail<br>
+          • Filtrazione e lubrificazione<br>
+          • Sistemi elettrici marini<br>
+          • Componenti di trasmissione<br><br>
+          <strong>Formazione continua:</strong> Certificazioni OEM aggiornate
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ COMPETENZE -->
+<div>
+  <div class="cs-section">
+    <div class="cs-label">EXPERTISE</div>
+    <h2 class="cs-title">Competenze Principali</h2>
+    <div class="comp-grid">
+      <div class="comp-card">
+        <h4>Motori Marini</h4>
+        <p>MTU, Caterpillar, Cummins, Wärtsilä, MAN B&W, Deutz MWM — sia nuovi che legacy</p>
+      </div>
+      <div class="comp-card">
+        <h4>Sistemi CR</h4>
+        <p>Common-rail Bosch, Delphi, Cummins — sensori, iniettori, pompe ad alta pressione</p>
+      </div>
+      <div class="comp-card">
+        <h4>Filtrazione</h4>
+        <p>Carburante, olio, aria, acqua di raffreddamento — Fleetguard, OEM equivalenti</p>
+      </div>
+      <div class="comp-card">
+        <h4>Componenti</h4>
+        <p>Alternatori, pompe, turbine, sensori — supporto diagnostico incluso</p>
+      </div>
+      <div class="comp-card">
+        <h4>Analisi Usura</h4>
+        <p>Modello Wiener per previsione manutenzione — intervalli di fiducia statistici</p>
+      </div>
+      <div class="comp-card">
+        <h4>Logistica</h4>
+        <p>Consegna &lt; 12h, tracciamento real-time, SLA 99.5% availability</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ PARTNER & BRAND -->
+<div class="bg-alt">
+  <div class="cs-section">
+    <div class="cs-label">PARTNER &amp; FORNITORI</div>
+    <h2 class="cs-title">I Nostri Brand Ufficiali</h2>
+    <p class="cs-desc" style="text-align:center;margin:0 auto">
+      Oltre 90 marchi certificati — ricambi originali OEM per motori marini, sistemi di iniezione, filtrazione e componenti navali
+    </p>
+    <div class="partner-grid" id="partnerGrid"></div>
+    <div class="cert-box">
+      <h3>CERTIFICAZIONI &amp; CLASSIFICAZIONI</h3>
+      <div class="cert-list">
+        <div><span>✓</span> Lloyd's Register — Classificazione Ufficiale</div>
+        <div><span>✓</span> ABS — American Bureau of Shipping</div>
+        <div><span>✓</span> DNV GL — Det Norske Veritas</div>
+        <div><span>✓</span> Autorizzato OEM componenti marini</div>
+        <div><span>✓</span> ISO 9001 — Gestione Qualità</div>
+        <div><span>✓</span> ISO 14001 — Gestione Ambientale</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ PHOTO SCROLL: TEAM -->
+<section class="photo-scroll-section" id="gallery-team">
+  <div class="pss-img pss-from-right">
+    <img src="../assets/img/company/team.png" alt="Team RCS Marine">
+  </div>
+  <div class="pss-text">
+    <p class="section-label">IL TEAM</p>
+    <h2 class="pss-title">25 Specialisti al Vostro Servizio</h2>
+    <p class="pss-desc">Tecnici certificati OEM su MTU, Bosch, Caterpillar, Cummins e Delphi. Formazione continua e assistenza 24/7 per ogni esigenza della flotta.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ PHOTO SCROLL: DELIVERY -->
+<section class="photo-scroll-section pss-reverse" id="gallery-furgone">
+  <div class="pss-img pss-from-left">
+    <img src="../assets/img/company/furgone.png" alt="Furgone RCS Marine">
+  </div>
+  <div class="pss-text">
+    <p class="section-label">CONSEGNE</p>
+    <h2 class="pss-title">Delivery Garantita &lt; 12 Ore</h2>
+    <p class="pss-desc">Flotta di veicoli brandizzati RCS Marine per consegne rapide nel Mediterraneo. Tracciamento real-time e SLA contrattuale con ogni cliente.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ PHOTO SCROLL: MAGAZZINO -->
+<section class="photo-scroll-section" id="gallery-magazzino">
+  <div class="pss-img pss-from-right">
+    <img src="../assets/img/company/magazzino.png" alt="Magazzino RCS Marine">
+  </div>
+  <div class="pss-text">
+    <p class="section-label">INFRASTRUTTURA</p>
+    <h2 class="pss-title">3.800 m² di Ricambi Pronti</h2>
+    <p class="pss-desc">Magazzino su 3 livelli: uffici, stock climatizzato e punto vendita. Accesso 24/7 per clienti con SLA contrattuale. Oltre 15.000 codici a scaffale.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ PHOTO SCROLL: OPERAZIONI -->
+<section class="photo-scroll-section pss-reverse" id="gallery-ops">
+  <div class="pss-img pss-from-left">
+    <img src="../assets/img/company/operations.png" alt="Operazioni navali RCS">
+  </div>
+  <div class="pss-text">
+    <p class="section-label">OPERAZIONI</p>
+    <h2 class="pss-title">Ricambi Consegnati a Bordo</h2>
+    <p class="pss-desc">Navi cargo, traghetti, rimorchiatori e unità speciali servite direttamente nei principali porti del Mediterraneo. Stock reale, consegne veloci, zero fermo nave.</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ VALORI -->
+<div class="bg-alt">
+  <div class="cs-section">
+    <div class="cs-label">VALORI</div>
+    <h2 class="cs-title">I Nostri Tre Pilastri</h2>
+    <div class="valori-grid">
+      <div class="valore">
+        <div class="valore-icon">⚖️</div>
+        <h4>QUALITÀ vs PREZZO</h4>
+        <p>Componenti originali e rigenerati da case madri ufficiali, con rapporto qualità-prezzo competitivo e trasparente.</p>
+      </div>
+      <div class="valore">
+        <div class="valore-icon">🔧</div>
+        <h4>AREA TECNICA</h4>
+        <p>Team di tecnici specializzati con formazione continua OEM, diagnostica avanzata e assistenza post-vendita 24/7.</p>
+      </div>
+      <div class="valore">
+        <div class="valore-icon">🎯</div>
+        <h4>GESTIONE STRATEGICA</h4>
+        <p>Non solo vendita: analisi predittiva, programmazione manutenzione e ottimizzazione della flotta nel tempo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ CONTATTI -->
+<div>
+  <div class="cs-section">
+    <div class="cs-label">CONTATTI</div>
+    <h2 class="cs-title">Informazioni Ufficiali</h2>
+    <div class="contatti-box">
+      <div class="contatti-grid">
+        <div class="contatti-col">
+          <h4>Dati Legali</h4>
+          <div>
+            <div><strong>Ragione Sociale:</strong><br>RICAMBI CENTRO SUD S.R.L.</div>
+            <div style="margin-top:12px"><strong>Partita IVA:</strong><br>IT03176280877</div>
+            <div style="margin-top:12px"><strong>REA:</strong><br>203412</div>
+            <div style="margin-top:12px"><strong>Fatturato (2024):</strong><br>€ 9.981.326,00</div>
+          </div>
+        </div>
+        <div class="contatti-col">
+          <h4>Indirizzo &amp; Contatti</h4>
+          <div>
+            <div><strong>Sede:</strong><br>Via Alessandro Volta 17 A/B<br>95122 Catania (CT) · Italia</div>
+            <div style="margin-top:12px"><strong>PEC:</strong><br><span style="color:var(--cyan)">info@pec.ricambicentrosud.com</span></div>
+            <div style="margin-top:12px"><strong>Orari:</strong><br>Lun-Ven: 8:00–18:00 CET</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ FOOTER -->
+<footer class="pub-footer">
+  © 2026 Ricambi Centro Sud S.r.l. · P.IVA IT03176280877 · Catania, Sicilia ·
+  <a href="../index.html">← Torna al sito</a>
+</footer>
+
+<!-- ══════════════════════════════════════════ PARTNER SCRIPT -->
+<script>
+(function(){
+  const PARTNERS = [
+    {n:'AP',d:'apparts.com',c:'#c62828'},{n:'APAC',d:'apacgroup.com',c:'#1565c0'},
+    {n:'Arexons',d:'arexons.com',c:'#f57c00'},{n:'ASSO',d:'assofilters.com',c:'#0d47a1'},
+    {n:'AUTOCLIMA',d:'autoclima.it',c:'#1565c0'},{n:'BEHR',d:'behrgroup.com',c:'#0d47a1'},
+    {n:'Beta',d:'betatools.com',c:'#fdd835'},{n:'BF Original',d:'bf-original.com',c:'#e53935'},
+    {n:'BorgWarner',d:'borgwarner.com',c:'#1565c0'},{n:'BOSCH',d:'bosch.com',c:'#dc0000'},
+    {n:'CARGO',d:'cargo-parts.com',c:'#e65100'},{n:'Castrol',d:'castrol.com',c:'#00a651'},
+    {n:'Cattini',d:'cattini.it',c:'#1565c0'},{n:'CEI',d:'ceiparts.com',c:'#0d47a1'},
+    {n:'Continental',d:'continental.com',c:'#f59800'},{n:'CORTECO',d:'corteco.com',c:'#e53935'},
+    {n:'Cosibo',d:'cosibo.it',c:'#37474f'},{n:'COS.PEL',d:'cospel.it',c:'#37474f'},
+    {n:'CRAVER',d:'craver.com',c:'#1565c0'},{n:'DAYCO',d:'dayco.com',c:'#d32f2f'},
+    {n:'Delphi',d:'delphi.com',c:'#1e88e5'},{n:'DENSO',d:'denso.com',c:'#003087'},
+    {n:'DEPO',d:'depo.com.tw',c:'#1565c0'},{n:'Nova Ditex',d:'novaditex.com',c:'#37474f'},
+    {n:'DieselPower',d:'dieselpower.it',c:'#b71c1c'},{n:'EMMERRE',d:'emmerre.com',c:'#1565c0'},
+    {n:'ERREVI',d:'errevi.it',c:'#1565c0'},{n:'FASANO',d:'fasano.it',c:'#37474f'},
+    {n:'FIAT',d:'fiat.com',c:'#cc0000'},{n:'FIRAD',d:'firad.it',c:'#0d47a1'},
+    {n:'FORCH',d:'foerch.com',c:'#e53935'},{n:'FRIGAIR',d:'frigair.com',c:'#1565c0'},
+    {n:'Gamma Diesel',d:'gammadiesel.it',c:'#37474f'},{n:'Garrett',d:'garrettmotion.com',c:'#e65100'},
+    {n:'GART',d:'gart.it',c:'#37474f'},{n:'GLYCO',d:'glyco.de',c:'#1565c0'},
+    {n:'Govoni',d:'govoni.it',c:'#37474f'},{n:'Hartridge',d:'hartridge.com',c:'#003366'},
+    {n:'HOLSET',d:'holset.com',c:'#c62828'},{n:'Idro Italia Sud',d:'idroitaliasud.it',c:'#0288d1'},
+    {n:'InCar',d:'incar.it',c:'#37474f'},{n:'Intec',d:'intec.de',c:'#1565c0'},
+    {n:'IVECO',d:'iveco.com',c:'#d32f2f'},{n:'Jaltest',d:'jaltest.com',c:'#e53935'},
+    {n:'Schwitzer',d:'schwitzer.com',c:'#37474f'},{n:'KNORR-BREMSE',d:'knorr-bremse.com',c:'#003366'},
+    {n:'KOKYBE',d:'kokybe.lt',c:'#37474f'},{n:'KRIOS',d:'krios.it',c:'#1565c0'},
+    {n:'KOLBENSCHMIDT',d:'ms-motorservice.com',c:'#003366'},{n:'LE.MA.',d:'lema.it',c:'#37474f'},
+    {n:'LEMFÖRDER',d:'zf.com',c:'#002b5c'},{n:'ITF',d:'itf.it',c:'#1565c0'},
+    {n:'MAHLE',d:'mahle.com',c:'#d32f2f'},{n:'MANN FILTER',d:'mann-hummel.com',c:'#d32f2f'},
+    {n:'Mercedes',d:'mercedes-benz.com',c:'#212121'},{n:'Magneti Marelli',d:'magnetimarelli.com',c:'#1565c0'},
+    {n:'MONROE',d:'monroe.com',c:'#d32f2f'},{n:'MOTORPAL',d:'motorpal.cz',c:'#37474f'},
+    {n:'Nissens',d:'nissens.com',c:'#d32f2f'},{n:'OE Germany',d:'oegermany.de',c:'#37474f'},
+    {n:'Oksys',d:'oksys.com',c:'#37474f'},{n:'OXYHTECH',d:'oxyhtech.com',c:'#37474f'},
+    {n:'Prestolite',d:'prestolite.com',c:'#003366'},{n:'PRG',d:'prg.it',c:'#37474f'},
+    {n:'Ravaglioli',d:'ravaglioli.com',c:'#1565c0'},{n:'RCS',d:'ricambicentrosud.com',c:'#0057b8'},
+    {n:'Renault',d:'renault.com',c:'#ffd700'},{n:'SABO',d:'sabo.de',c:'#37474f'},
+    {n:'SACHS',d:'schaeffler.com',c:'#1565c0'},{n:'SAF',d:'safholland.com',c:'#003366'},
+    {n:'SCANIA',d:'scania.com',c:'#003399'},{n:'Selenia',d:'petronas.com',c:'#0d47a1'},
+    {n:'SEVEN',d:'seven.it',c:'#37474f'},{n:'SIDAT',d:'sidat.it',c:'#1565c0'},
+    {n:'Sirini',d:'sirini.it',c:'#37474f'},{n:'SKF',d:'skf.com',c:'#003087'},
+    {n:'Spaco Diesel',d:'spacodiesel.it',c:'#37474f'},{n:'SPIN',d:'spin.it',c:'#37474f'},
+    {n:'STANADYNE',d:'stanadyne.com',c:'#003366'},{n:'STAR',d:'star.it',c:'#37474f'},
+    {n:'Teknox',d:'teknox.it',c:'#37474f'},{n:'TIMKEN',d:'timken.com',c:'#003087'},
+    {n:'TRW',d:'trw.com',c:'#d32f2f'},{n:'UFI Filters',d:'ufifilters.com',c:'#d32f2f'},
+    {n:'Petronas Urania',d:'petronas.com',c:'#0d47a1'},{n:'Valeo',d:'valeo.com',c:'#003087'},
+    {n:'VICTOR REINZ',d:'victor-reinz.com',c:'#d32f2f'},{n:'VOLVO',d:'volvo.com',c:'#003366'},
+    {n:'WABCO',d:'wabco.com',c:'#1e88e5'},{n:'Webasto',d:'webasto.com',c:'#d32f2f'},
+    {n:'WSK Poznan',d:'wsk.pl',c:'#37474f'},{n:'ZEXEL',d:'zexel.com',c:'#37474f'},
+    {n:'ZF',d:'zf.com',c:'#002b5c'},{n:'Fleetguard',d:'fleetguard.com',c:'#00a651'},
+    {n:'Caterpillar',d:'caterpillar.com',c:'#f59800'},{n:'Cummins',d:'cummins.com',c:'#003087'},
+    {n:'Hifi Filter',d:'hififilter.com',c:'#e53935'},{n:'MTU',d:'mtu.com',c:'#0057b8'},
+  ];
+  const grid = document.getElementById('partnerGrid');
+  if (!grid) return;
+  grid.innerHTML = PARTNERS.map(p => `
+    <div class="partner-card">
+      <div class="partner-logo-wrap">
+        <img src="https://logo.clearbit.com/${p.d}" alt="${p.n}"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="partner-logo-text" style="color:${p.c};font-size:${p.n.length>9?'9':'11'}px">${p.n}</div>
+      </div>
+      <div class="partner-name">${p.n}</div>
+    </div>`).join('');
+})();
+</script>
+
+<!-- ══════════════════════════════════════════ SCROLL ANIMATIONS -->
+<script>
+  const pssObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); pssObserver.unobserve(e.target); }
     });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.pss-img').forEach(el => pssObserver.observe(el));
 
-    window.logout = async function() {
-      await signOut(auth);
-      sessionStorage.removeItem('rcs_user');
-      window.location.href = '../index.html';
-    };
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('pubnav');
+    nav.style.boxShadow = window.scrollY > 10 ? '0 4px 32px rgba(0,0,0,.5)' : 'none';
+  });
+</script>
 
-    const nav = document.getElementById("nav");
-    window.addEventListener("scroll", () => {
-      nav.classList.toggle("scrolled", window.scrollY > 40);
-    });
-
-    const pssObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add("visible");
-          pssObserver.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll(".pss-img").forEach(el => pssObserver.observe(el));
-  </script>
 </body>
 </html>
