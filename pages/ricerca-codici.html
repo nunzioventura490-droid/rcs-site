@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricerca Codici Cross-Reference — RCS Marine</title>
+  <meta name="description" content="Database cross-reference codici ricambio motori marini. Trova il codice Bosch, Delphi, Denso corrispondente al codice OEM MTU, Caterpillar, Cummins, Deutz, Wärtsilä.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* ── RESET / BASE ───────────────────────── */
+    body { overflow: auto; background: var(--notte); visibility: visible; }
+
+    /* ── NAVBAR PUBBLICA ────────────────────── */
+    #nav-pub {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 300;
+      background: rgba(2,11,24,.97);
+      border-bottom: 1px solid rgba(0,87,184,.25);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      transition: border-bottom-color .3s;
+    }
+    #nav-pub.scrolled { border-bottom-color: rgba(0,212,255,.2); }
+    .nav-pub-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-pub-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+    .nav-pub-logo span:first-child { font-size: 20px; }
+    .nav-pub-rcs {
+      font-family: var(--F);
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      line-height: 1;
+    }
+    .nav-pub-sub {
+      font-family: var(--F);
+      font-size: 7.5px;
+      letter-spacing: 2.5px;
+      color: var(--cyan);
+      display: block;
+      margin-top: 2px;
+    }
+    .nav-pub-links {
+      display: flex;
+      list-style: none;
+      gap: 2px;
+      flex: 1;
+      align-items: center;
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+    .nav-pub-link {
+      font-family: var(--F);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--grigio);
+      padding: 6px 11px;
+      border-radius: 2px;
+      transition: all .22s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-pub-link:hover { color: #fff; background: rgba(0,87,184,.2); }
+    .nav-pub-link.active {
+      color: var(--cyan);
+      background: rgba(0,212,255,.08);
+      border-bottom: 2px solid var(--cyan);
+    }
+    .nav-pub-portal {
+      font-family: var(--F);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--cyan);
+      border: 1px solid rgba(0,212,255,.4);
+      padding: 6px 14px;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: all .22s;
+      flex-shrink: 0;
+      margin-left: 8px;
+    }
+    .nav-pub-portal:hover {
+      background: rgba(0,212,255,.12);
+      border-color: var(--cyan);
+      color: #fff;
+    }
+
+    /* ── HERO ───────────────────────────────── */
+    .rc-hero {
+      padding: 100px 0 0;
+      background: linear-gradient(160deg, #020b18 0%, #031525 60%, #020e1e 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .rc-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 15% 60%, rgba(0,87,184,.18) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 20%, rgba(0,212,255,.08) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .rc-hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 40px 40px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .rc-hero-label {
+      font-family: var(--F);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      color: var(--cyan);
+      margin-bottom: 14px;
+    }
+    .rc-hero-title {
+      font-family: var(--F);
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 900;
+      letter-spacing: 6px;
+      line-height: 1;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #fff 40%, var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .rc-hero-sub {
+      font-size: 14px;
+      color: var(--grigio);
+      letter-spacing: 1px;
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    /* ── SEARCH BAR ─────────────────────────── */
+    .rc-search-wrap {
+      display: flex;
+      gap: 0;
+      max-width: 760px;
+      margin: 0 auto;
+      box-shadow: 0 8px 40px rgba(0,0,0,.5), 0 0 40px rgba(0,212,255,.06);
+    }
+    #rcSearchInput {
+      flex: 1;
+      padding: 18px 22px;
+      background: rgba(4,17,31,.92);
+      border: 1px solid rgba(0,87,184,.5);
+      border-right: none;
+      border-radius: 3px 0 0 3px;
+      font-family: var(--f);
+      font-size: 15px;
+      color: #fff;
+      outline: none;
+      transition: border-color .25s, box-shadow .25s;
+    }
+    #rcSearchInput::placeholder { color: rgba(255,255,255,.28); font-size: 13px; }
+    #rcSearchInput:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 2px rgba(0,212,255,.12);
+    }
+    #rcSearchBtn {
+      width: auto;
+      padding: 18px 32px;
+      background: var(--cyan);
+      border: none;
+      border-radius: 0 3px 3px 0;
+      font-family: var(--F);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #020b18;
+      cursor: pointer;
+      transition: background .22s, transform .22s;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    #rcSearchBtn:hover { background: #00f0ff; transform: none; box-shadow: none; }
+    #rcSearchBtn::before { display: none; }
+
+    /* ── STATS STRIP ────────────────────────── */
+    .rc-stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      background: rgba(4,17,31,.85);
+      border-top: 1px solid rgba(0,87,184,.2);
+      border-bottom: 1px solid rgba(0,87,184,.2);
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+    .rc-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 18px 40px;
+      gap: 4px;
+    }
+    .rc-stat-val {
+      font-family: var(--F);
+      font-size: 26px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .rc-stat-lbl {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--grigio);
+    }
+    .rc-stat-sep {
+      width: 1px;
+      height: 40px;
+      background: rgba(0,87,184,.25);
+      flex-shrink: 0;
+    }
+    .rc-stat:first-child .rc-stat-val,
+    .rc-stat-cyan { color: var(--cyan) !important; }
+
+    /* ── MAIN CONTENT ───────────────────────── */
+    .rc-main {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 48px 40px 80px;
+    }
+
+    /* ── FILTERS ────────────────────────────── */
+    .rc-filters-section {
+      background: rgba(4,17,31,.7);
+      border: 1px solid rgba(0,87,184,.2);
+      border-radius: 6px;
+      padding: 22px 28px;
+      margin-bottom: 28px;
+    }
+    .rc-filter-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .rc-filter-row:last-child { margin-bottom: 0; }
+    .rc-filter-lbl {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--grigio);
+      min-width: 90px;
+      flex-shrink: 0;
+    }
+    .rc-filter-btn {
+      font-family: var(--F);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 5px 12px;
+      border: 1px solid rgba(0,87,184,.3);
+      border-radius: 2px;
+      background: transparent;
+      color: var(--grigio);
+      cursor: pointer;
+      transition: all .2s;
+      white-space: nowrap;
+      margin-bottom: 0;
+      width: auto;
+    }
+    .rc-filter-btn:hover { color: #fff; border-color: rgba(0,87,184,.6); background: rgba(0,87,184,.15); transform: none; box-shadow: none; }
+    .rc-filter-btn.active {
+      background: rgba(0,212,255,.12);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+    .rc-filter-btn::before { display: none; }
+
+    /* ── RESULTS COUNT ──────────────────────── */
+    .rc-results-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .rc-results-count {
+      font-family: var(--F);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--grigio);
+    }
+    .rc-results-count span { color: var(--cyan); }
+    .rc-clear-btn {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--grigio);
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 4px 12px;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-bottom: 0;
+      width: auto;
+      transition: all .2s;
+    }
+    .rc-clear-btn:hover { color: #fff; border-color: rgba(255,255,255,.3); transform: none; box-shadow: none; }
+    .rc-clear-btn::before { display: none; }
+
+    /* ── TABLE ──────────────────────────────── */
+    .rc-table-wrap {
+      overflow-x: auto;
+      border: 1px solid rgba(0,87,184,.2);
+      border-radius: 6px;
+    }
+    .rc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 900px;
+    }
+    .rc-table thead tr {
+      background: rgba(0,87,184,.18);
+    }
+    .rc-table th {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--cyan);
+      padding: 13px 16px;
+      text-align: left;
+      white-space: nowrap;
+      border-bottom: 1px solid rgba(0,87,184,.3);
+      position: sticky;
+      top: 0;
+      background: rgba(3,14,28,.97);
+    }
+    .rc-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      vertical-align: middle;
+      color: rgba(255,255,255,.82);
+    }
+    .rc-table tr:last-child td { border-bottom: none; }
+    .rc-table tbody tr {
+      transition: background .18s;
+    }
+    .rc-table tbody tr:hover td { background: rgba(0,87,184,.1); }
+
+    .rc-oem {
+      font-family: var(--F);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: .5px;
+      white-space: nowrap;
+    }
+    .rc-codes {
+      font-family: monospace;
+      font-size: 11.5px;
+      color: rgba(200,220,255,.85);
+      white-space: nowrap;
+    }
+    .rc-code-empty { color: rgba(255,255,255,.2); }
+    .rc-engine { font-size: 12px; color: var(--grigio); white-space: nowrap; }
+    .rc-desc { font-size: 12px; color: rgba(255,255,255,.78); max-width: 240px; line-height: 1.4; }
+
+    /* brand badge */
+    .rc-brand {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 2px;
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .brand-mtu        { background: rgba(0,87,184,.25);  color: #5bc8f5; border: 1px solid rgba(0,87,184,.4); }
+    .brand-caterpillar{ background: rgba(255,185,0,.15); color: #ffc107; border: 1px solid rgba(255,185,0,.3); }
+    .brand-cummins    { background: rgba(0,180,50,.15);  color: #4cde80; border: 1px solid rgba(0,180,50,.3); }
+    .brand-deutz      { background: rgba(220,80,0,.18);  color: #ff8c42; border: 1px solid rgba(220,80,0,.35); }
+    .brand-wartsila   { background: rgba(140,0,220,.18); color: #c084fc; border: 1px solid rgba(140,0,220,.3); }
+    .brand-mak        { background: rgba(0,140,140,.18); color: #2dd4d4; border: 1px solid rgba(0,140,140,.3); }
+    .brand-bosch      { background: rgba(220,0,0,.15);   color: #ff6b6b; border: 1px solid rgba(220,0,0,.3); }
+    .brand-fleetguard { background: rgba(0,212,255,.12); color: var(--cyan); border: 1px solid rgba(0,212,255,.25); }
+    .brand-prestolite { background: rgba(201,168,76,.15);color: var(--oro); border: 1px solid rgba(201,168,76,.3); }
+
+    /* stock badges */
+    .rc-stock {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      border-radius: 2px;
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .rc-stock::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .stock-in    { background: rgba(0,230,118,.12); color: #00e676; border: 1px solid rgba(0,230,118,.25); }
+    .stock-in::before { background: #00e676; box-shadow: 0 0 6px #00e676; }
+    .stock-order { background: rgba(255,171,0,.12);  color: #ffab00; border: 1px solid rgba(255,171,0,.25); }
+    .stock-order::before { background: #ffab00; box-shadow: 0 0 6px #ffab00; }
+    .stock-req   { background: rgba(255,107,53,.12); color: #ff6b35; border: 1px solid rgba(255,107,53,.25); }
+    .stock-req::before { background: #ff6b35; }
+
+    /* action button */
+    .rc-req-btn {
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 6px 14px;
+      background: transparent;
+      border: 1px solid rgba(0,212,255,.35);
+      color: var(--cyan);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all .2s;
+      width: auto;
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
+    .rc-req-btn:hover {
+      background: rgba(0,212,255,.12);
+      border-color: var(--cyan);
+      transform: none;
+      box-shadow: 0 0 12px rgba(0,212,255,.2);
+    }
+    .rc-req-btn::before { display: none; }
+
+    /* no-results */
+    .rc-no-results {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--grigio);
+    }
+    .rc-no-results.show { display: block; }
+    .rc-no-results-icon { font-size: 48px; margin-bottom: 16px; opacity: .4; }
+    .rc-no-results-text {
+      font-family: var(--F);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      color: rgba(255,255,255,.4);
+    }
+    .rc-no-results-sub { font-size: 13px; color: var(--grigio); }
+
+    /* ── HOW IT WORKS ───────────────────────── */
+    .rc-how-section {
+      margin-top: 60px;
+      background: rgba(4,17,31,.6);
+      border: 1px solid rgba(0,87,184,.18);
+      border-radius: 8px;
+      padding: 40px 48px;
+    }
+    .rc-how-title {
+      font-family: var(--F);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      margin-bottom: 32px;
+    }
+    .rc-how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .rc-how-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .rc-how-num {
+      font-family: var(--F);
+      font-size: 36px;
+      font-weight: 900;
+      color: rgba(0,212,255,.2);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 44px;
+    }
+    .rc-how-step-title {
+      font-family: var(--F);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .rc-how-step-desc {
+      font-size: 13px;
+      color: var(--grigio);
+      line-height: 1.7;
+    }
+
+    /* ── MODAL ──────────────────────────────── */
+    #modalOverlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 600;
+      background: rgba(0,0,0,.72);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+    }
+    #modalOverlay.show { display: flex; animation: rcFadeIn .25s ease; }
+    @keyframes rcFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    #modalBox {
+      position: relative;
+      z-index: 601;
+      background: linear-gradient(135deg, rgba(3,15,30,.97) 0%, rgba(6,22,42,.97) 100%);
+      border: 1px solid rgba(0,87,184,.35);
+      border-radius: 10px;
+      max-width: 540px;
+      width: 92%;
+      max-height: 88vh;
+      overflow-y: auto;
+      box-shadow: 0 24px 70px rgba(0,0,0,.65);
+      animation: rcSlideUp .28s ease;
+    }
+    @keyframes rcSlideUp { from { transform: translateY(24px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    .modal-line {
+      height: 3px;
+      border-radius: 10px 10px 0 0;
+      background: linear-gradient(90deg, var(--blu), var(--cyan), var(--blu));
+      background-size: 200%;
+      animation: shimmer 3s linear infinite;
+    }
+    @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+
+    .modal-inner { padding: 32px 32px 28px; }
+
+    #modalCloseBtn {
+      position: absolute;
+      top: 14px; right: 14px;
+      background: rgba(255,0,0,.15);
+      border: 1px solid rgba(255,0,0,.3);
+      color: #ff4444;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 0;
+      width: 30px;
+      transition: all .2s;
+      line-height: 1;
+    }
+    #modalCloseBtn:hover { background: rgba(255,0,0,.35); transform: none; box-shadow: none; }
+    #modalCloseBtn::before { display: none; }
+
+    #modalCodiceTitolo {
+      font-family: var(--F);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+    #modalDescTitolo {
+      font-size: 13px;
+      color: var(--grigio);
+      margin-bottom: 24px;
+    }
+
+    .modal-form-group {
+      margin-bottom: 16px;
+    }
+    .modal-form-group label {
+      display: block;
+      font-family: var(--F);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--grigio);
+      margin-bottom: 6px;
+    }
+    .modal-form-group input,
+    .modal-form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(0,87,184,.3);
+      border-radius: 3px;
+      font-family: var(--f);
+      font-size: 14px;
+      color: #fff;
+      outline: none;
+      transition: border-color .25s, box-shadow .25s;
+      box-sizing: border-box;
+    }
+    .modal-form-group input::placeholder,
+    .modal-form-group textarea::placeholder { color: rgba(255,255,255,.2); }
+    .modal-form-group input:focus,
+    .modal-form-group textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 2px rgba(0,212,255,.1);
+    }
+    .modal-form-group textarea { min-height: 80px; resize: vertical; }
+
+    .modal-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    #modalSendBtn {
+      width: 100%;
+      padding: 14px;
+      background: var(--cyan);
+      border: none;
+      border-radius: 3px;
+      font-family: var(--F);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #020b18;
+      cursor: pointer;
+      margin-top: 6px;
+      margin-bottom: 0;
+      transition: background .22s;
+    }
+    #modalSendBtn:hover { background: #00f0ff; transform: none; box-shadow: none; }
+    #modalSendBtn::before { display: none; }
+
+    /* ── TOAST ──────────────────────────────── */
+    #toast {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 800;
+      background: rgba(0,230,118,.15);
+      border: 1px solid rgba(0,230,118,.4);
+      color: #00e676;
+      padding: 14px 22px;
+      border-radius: 4px;
+      font-family: var(--F);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      transform: translateX(400px);
+      opacity: 0;
+      transition: transform .35s ease, opacity .35s ease;
+      max-width: 320px;
+    }
+    #toast.show { transform: translateX(0); opacity: 1; }
+
+    /* ── FOOTER ─────────────────────────────── */
+    .rc-footer {
+      background: rgba(2,8,18,.95);
+      border-top: 1px solid rgba(0,87,184,.18);
+      padding: 36px 0 20px;
+      margin-top: 0;
+    }
+    .rc-footer-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+    .rc-footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+    }
+    .rc-footer-rcs {
+      font-family: var(--F);
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 4px;
+    }
+    .rc-footer-sub {
+      font-family: var(--F);
+      font-size: 8px;
+      letter-spacing: 2.5px;
+      color: var(--cyan);
+      margin-top: 3px;
+    }
+    .rc-footer-info {
+      text-align: center;
+      font-size: 12px;
+      color: var(--grigio);
+      line-height: 2;
+      letter-spacing: .5px;
+    }
+    .rc-footer-copy {
+      text-align: right;
+      font-size: 11px;
+      color: rgba(255,255,255,.18);
+      letter-spacing: .5px;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 900px) {
+      .nav-pub-inner { padding: 0 20px; gap: 6px; }
+      .nav-pub-links { display: none; }
+      .rc-hero-inner { padding: 32px 20px 28px; }
+      .rc-main { padding: 32px 16px 60px; }
+      .rc-how-steps { grid-template-columns: 1fr; gap: 24px; }
+      .rc-how-section { padding: 28px 24px; }
+      .rc-footer-inner { grid-template-columns: 1fr; gap: 20px; }
+      .rc-footer-copy { text-align: left; }
+      .rc-filters-section { padding: 16px 16px; }
+      .modal-form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .rc-stats { gap: 0; }
+      .rc-stat { padding: 14px 20px; }
+      .rc-stat-val { font-size: 20px; }
+      .rc-stat-sep { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR PUBBLICA ════════════════════ -->
+  <nav id="nav-pub">
+    <div class="nav-pub-inner">
+      <a class="nav-pub-logo" href="../index.html">
+        <span>⚓</span>
+        <div>
+          <div class="nav-pub-rcs">RCS</div>
+          <span class="nav-pub-sub">MARINE INTELLIGENCE</span>
+        </div>
+      </a>
+      <ul class="nav-pub-links">
+        <li><a href="../index.html" class="nav-pub-link">HOME</a></li>
+        <li><a href="ricerca-codici.html" class="nav-pub-link active">RICERCA CODICI</a></li>
+        <li><a href="#" class="nav-pub-link">LARGE ENGINE</a></li>
+        <li><a href="chi-siamo.html" class="nav-pub-link">CHI SIAMO</a></li>
+      </ul>
+      <a href="../index.html" class="nav-pub-portal">PORTALE CLIENTI →</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ══════════════════════════════ -->
+  <section class="rc-hero">
+    <div class="rc-hero-inner">
+      <p class="rc-hero-label">RICAMBI MOTORI MARINI</p>
+      <h1 class="rc-hero-title">DATABASE<br>CROSS-REFERENCE</h1>
+      <p class="rc-hero-sub">Trova il codice Bosch, Delphi, Denso corrispondente al codice OEM del costruttore &middot; 150+ codici marini certificati</p>
+
+      <div class="rc-search-wrap">
+        <input type="text" id="rcSearchInput"
+               placeholder="Inserisci codice OEM, Bosch, Delphi, Cummins, CAT, MTU..."
+               autocomplete="off" autocorrect="off" spellcheck="false">
+        <button id="rcSearchBtn">CERCA</button>
+      </div>
+    </div>
+
+    <!-- STATS STRIP -->
+    <div class="rc-stats">
+      <div class="rc-stat">
+        <span class="rc-stat-val rc-stat-cyan">150+</span>
+        <span class="rc-stat-lbl">CODICI</span>
+      </div>
+      <div class="rc-stat-sep"></div>
+      <div class="rc-stat">
+        <span class="rc-stat-val">6</span>
+        <span class="rc-stat-lbl">FAMIGLIE MOTORE</span>
+      </div>
+      <div class="rc-stat-sep"></div>
+      <div class="rc-stat">
+        <span class="rc-stat-val">2026</span>
+        <span class="rc-stat-lbl">AGGIORNATO</span>
+      </div>
+      <div class="rc-stat-sep"></div>
+      <div class="rc-stat">
+        <span class="rc-stat-val rc-stat-cyan">&lt; 2h</span>
+        <span class="rc-stat-lbl">RISPOSTA TECNICA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MAIN CONTENT ══════════════════════ -->
+  <div class="rc-main">
+
+    <!-- FILTRI -->
+    <div class="rc-filters-section">
+      <div class="rc-filter-row">
+        <span class="rc-filter-lbl">BRAND MOTORE</span>
+        <div id="filterBrand" style="display:flex;flex-wrap:wrap;gap:6px;">
+          <button class="rc-filter-btn active" data-brand="all">TUTTI</button>
+          <button class="rc-filter-btn" data-brand="MTU">MTU</button>
+          <button class="rc-filter-btn" data-brand="CATERPILLAR">CATERPILLAR</button>
+          <button class="rc-filter-btn" data-brand="CUMMINS">CUMMINS</button>
+          <button class="rc-filter-btn" data-brand="DEUTZ">DEUTZ</button>
+          <button class="rc-filter-btn" data-brand="WARTSILA">W&Auml;RTSILÄ</button>
+          <button class="rc-filter-btn" data-brand="MAK">MaK</button>
+          <button class="rc-filter-btn" data-brand="BOSCH">BOSCH</button>
+          <button class="rc-filter-btn" data-brand="FLEETGUARD">FLEETGUARD</button>
+          <button class="rc-filter-btn" data-brand="PRESTOLITE">PRESTOLITE</button>
+        </div>
+      </div>
+      <div class="rc-filter-row">
+        <span class="rc-filter-lbl">TIPO</span>
+        <div id="filterType" style="display:flex;flex-wrap:wrap;gap:6px;">
+          <button class="rc-filter-btn active" data-type="all">TUTTI</button>
+          <button class="rc-filter-btn" data-type="INIETTORI">INIETTORI</button>
+          <button class="rc-filter-btn" data-type="POMPE">POMPE</button>
+          <button class="rc-filter-btn" data-type="FILTRI">FILTRI</button>
+          <button class="rc-filter-btn" data-type="KIT">KIT REVISIONE</button>
+          <button class="rc-filter-btn" data-type="AVVIAMENTO">AVVIAMENTO</button>
+          <button class="rc-filter-btn" data-type="SENSORI">SENSORI</button>
+          <button class="rc-filter-btn" data-type="TURBO">TURBOCOMPRESSORI</button>
+          <button class="rc-filter-btn" data-type="VALVOLE">VALVOLE/REGOLATORI</button>
+        </div>
+      </div>
+      <div class="rc-filter-row">
+        <span class="rc-filter-lbl">DISPONIBILITÀ</span>
+        <div id="filterStock" style="display:flex;flex-wrap:wrap;gap:6px;">
+          <button class="rc-filter-btn active" data-stock="all">TUTTI</button>
+          <button class="rc-filter-btn" data-stock="IN STOCK">SOLO IN STOCK</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRA RISULTATI -->
+    <div class="rc-results-bar">
+      <div class="rc-results-count">
+        RISULTATI: <span id="rcCount">—</span>
+      </div>
+      <button class="rc-clear-btn" id="rcClearBtn">AZZERA FILTRI</button>
+    </div>
+
+    <!-- TABELLA RISULTATI -->
+    <div class="rc-table-wrap">
+      <table class="rc-table" id="rcTable">
+        <thead>
+          <tr>
+            <th>CODICE OEM</th>
+            <th>BRAND</th>
+            <th>BOSCH</th>
+            <th>DELPHI</th>
+            <th>DENSO</th>
+            <th>HIFI / FLEET. / MANN</th>
+            <th>MOTORE</th>
+            <th>DESCRIZIONE</th>
+            <th>DISPONIBILITÀ</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="rcTbody"></tbody>
+      </table>
+      <div class="rc-no-results" id="rcNoResults">
+        <div class="rc-no-results-icon">&#128270;</div>
+        <div class="rc-no-results-text">NESSUN RISULTATO</div>
+        <div class="rc-no-results-sub">Prova un codice diverso o rimuovi i filtri &mdash; il nostro team tecnico risponde entro 2h.</div>
+      </div>
+    </div>
+
+    <!-- COME FUNZIONA -->
+    <div class="rc-how-section">
+      <p class="rc-how-title">COME FUNZIONA LA RICERCA INCROCIATA</p>
+      <div class="rc-how-steps">
+        <div class="rc-how-step">
+          <div class="rc-how-num">01</div>
+          <div>
+            <div class="rc-how-step-title">INSERISCI IL CODICE OEM</div>
+            <div class="rc-how-step-desc">Digita il codice del costruttore originale (MTU, CAT, Cummins, Deutz, Wärtsilä&hellip;) oppure il codice Bosch, Delphi o il numero filtro Fleetguard/Hifi.</div>
+          </div>
+        </div>
+        <div class="rc-how-step">
+          <div class="rc-how-num">02</div>
+          <div>
+            <div class="rc-how-step-title">EQUIVALENTI CERTIFICATI</div>
+            <div class="rc-how-step-desc">Il sistema restituisce in tempo reale tutti i codici equivalenti verificati &mdash; cross-reference OEM&rarr;Bosch, OEM&rarr;Delphi e codici filtro alternativi certificati.</div>
+          </div>
+        </div>
+        <div class="rc-how-step">
+          <div class="rc-how-num">03</div>
+          <div>
+            <div class="rc-how-step-title">CONFERMA E PREVENTIVO</div>
+            <div class="rc-how-step-desc">RCS conferma disponibilità e prezzi entro 2 ore lavorative. Stock fisico a Catania, spedizioni express verso Malta, Australia e tutto il Mediterraneo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /rc-main -->
+
+  <!-- ═══ FOOTER ═════════════════════════════ -->
+  <footer class="rc-footer">
+    <div class="rc-footer-inner">
+      <div class="rc-footer-logo">
+        <span>⚓</span>
+        <div>
+          <div class="rc-footer-rcs">RCS</div>
+          <div class="rc-footer-sub">MARINE INTELLIGENCE</div>
+        </div>
+      </div>
+      <div class="rc-footer-info">
+        Ricambi Centro Sud S.r.l. &middot; Via Alessandro Volta 17 A/B &middot; 95122 Catania (CT)<br>
+        P.IVA IT03176280877 &middot; info@pec.ricambicentrosud.com
+      </div>
+      <div class="rc-footer-copy">
+        &copy; 2026 Ricambi Centro Sud S.r.l.<br>
+        Tutti i diritti riservati
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ MODAL PREVENTIVO ═══════════════════ -->
+  <div id="modalOverlay">
+    <div id="modalBox">
+      <div class="modal-line"></div>
+      <button id="modalCloseBtn" aria-label="Chiudi">&#215;</button>
+      <div class="modal-inner">
+        <div id="modalCodiceTitolo">—</div>
+        <div id="modalDescTitolo">—</div>
+        <div class="modal-form-row">
+          <div class="modal-form-group">
+            <label>NOME / AZIENDA</label>
+            <input type="text" id="mNome" placeholder="Es. Mario Rossi">
+          </div>
+          <div class="modal-form-group">
+            <label>EMAIL</label>
+            <input type="email" id="mEmail" placeholder="email@azienda.com">
+          </div>
+        </div>
+        <div class="modal-form-row">
+          <div class="modal-form-group">
+            <label>QUANTITÀ</label>
+            <input type="number" id="mQta" placeholder="1" min="1" value="1">
+          </div>
+          <div class="modal-form-group">
+            <label>PORTO / DESTINAZIONE</label>
+            <input type="text" id="mPorto" placeholder="Es. Malta, Catania...">
+          </div>
+        </div>
+        <div class="modal-form-group">
+          <label>NOTE AGGIUNTIVE</label>
+          <textarea id="mNote" placeholder="Urgenza, numero nave, esigenze specifiche..."></textarea>
+        </div>
+        <button id="modalSendBtn">INVIA RICHIESTA PREVENTIVO &#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TOAST ═══════════════════════════════ -->
+  <div id="toast">&#10003; Richiesta inviata &mdash; risposta entro 2h lavorative</div>
+
+  <!-- ═══ JAVASCRIPT ══════════════════════════ -->
+  <script>
+  /* ── DATABASE CROSS-REFERENCE ───────────────────────────────────
+     Struttura: { oem, bosch, delphi, denso, hifi, fleetguard, mann,
+                  brand, type, desc, engine, stock }
+  ──────────────────────────────────────────────────────────────── */
+  const DB = [
+
+    /* ────── MTU SERIE 4000 ────────────────────────────────────── */
+    { oem:'X40-800-200-003', bosch:'0 445 120 078', delphi:'R00001D',  denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'INIETTORI',       desc:'Iniettore CR common rail 1800 bar',          engine:'MTU 16V/20V 4000 M65L/M70L', stock:'IN STOCK'    },
+    { oem:'A0060178521',     bosch:'0 445 120 078', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'INIETTORI',       desc:'Iniettore CR (codice Mercedes)',              engine:'MTU 4000 M65/M70',           stock:'IN STOCK'    },
+    { oem:'5410700587',      bosch:'0 445 120 078', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'INIETTORI',       desc:'Iniettore CR alternativo',                   engine:'MTU 4000 series',            stock:'SU ORDINE'   },
+    { oem:'0414701076',      bosch:'0 414 701 076', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'INIETTORI',       desc:'Iniettore unitario UIS',                     engine:'MTU Serie 4000',             stock:'IN STOCK'    },
+    { oem:'0414799005',      bosch:'0 414 799 005', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'INIETTORI',       desc:'Iniettore unitario UIS',                     engine:'MTU Serie 2000',             stock:'IN STOCK'    },
+    { oem:'X39-800-300-006', bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'FILTRI',          desc:'Filtro gasolio primario',                    engine:'MTU 4000/8000',              stock:'IN STOCK'    },
+    { oem:'X39-800-300-009', bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'FILTRI',          desc:'Filtro gasolio secondario',                  engine:'MTU 4000/8000',              stock:'IN STOCK'    },
+    { oem:'X00063125',       bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'FILTRI',          desc:'Filtro olio',                                engine:'MTU Serie 4000',             stock:'IN STOCK'    },
+    { oem:'51.05504-0060',   bosch:'0 986 AF1 001', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'AVVIAMENTO',      desc:'Motorino avviamento 24V',                    engine:'MTU 16V 4000',               stock:'SU ORDINE'   },
+    { oem:'11658815',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'KIT',             desc:'Termostato raffreddamento',                  engine:'MTU 20V 8000',               stock:'IN STOCK'    },
+    { oem:'11658900',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'KIT',             desc:'Guarnizione collettore scarico',             engine:'MTU 20V 8000',               stock:'SU ORDINE'   },
+    { oem:'F00BL0J005',      bosch:'F00BL0J005',    delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'VALVOLE',         desc:'Regolatore pressione iniettore',             engine:'MTU 4000 series',            stock:'IN STOCK'    },
+    { oem:'F00BL0J003',      bosch:'F00BL0J003',    delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'VALVOLE',         desc:'Regolatore pressione iniettore',             engine:'MTU Serie 2000/4000',        stock:'IN STOCK'    },
+
+    /* ────── MTU SERIE 8000 ────────────────────────────────────── */
+    { oem:'11726100',        bosch:'0 445 120 141', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'INIETTORI',       desc:'Iniettore CR 2200 bar',                      engine:'MTU 20V 8000 M71L',          stock:'IN STOCK'    },
+    { oem:'11726101',        bosch:'0 445 120 141', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'INIETTORI',       desc:'Iniettore CR sostitutivo',                   engine:'MTU 8000 series',            stock:'SU ORDINE'   },
+    { oem:'X44-800-300-004', bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'FILTRI',          desc:'Filtro gasolio alta pressione',              engine:'MTU 8000',                   stock:'IN STOCK'    },
+    { oem:'11659234',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'POMPE',           desc:'Pompa carburante bassa pressione',           engine:'MTU 8000',                   stock:'SU RICHIESTA'},
+    { oem:'F00VC01338',      bosch:'F00VC01338',    delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'VALVOLE',         desc:'Valvola controllo pressione CR',             engine:'MTU/Bosch CR system',        stock:'IN STOCK'    },
+    { oem:'F00RJ01340',      bosch:'F00RJ01340',    delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'VALVOLE',         desc:'Valvola di ritorno iniettore',               engine:'MTU 4000/8000',              stock:'IN STOCK'    },
+
+    /* ────── MTU SERIE 2000 ────────────────────────────────────── */
+    { oem:'0 445 120 059',   bosch:'0 445 120 059', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'INIETTORI',       desc:'Iniettore CR 1600 bar',                      engine:'MTU 12V 2000 M72',           stock:'IN STOCK'    },
+    { oem:'A0000100367',     bosch:'0 445 120 059', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'INIETTORI',       desc:'Iniettore CR (codice Mercedes/MTU)',         engine:'MTU 2000 series',            stock:'SU ORDINE'   },
+    { oem:'X38-800-300-003', bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'FILTRI',          desc:'Filtro gasolio',                             engine:'MTU 2000 series',            stock:'IN STOCK'    },
+    { oem:'3842347',         bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MTU', type:'FILTRI',          desc:'Filtro olio',                                engine:'MTU 12V 2000',               stock:'IN STOCK'    },
+
+    /* ────── CATERPILLAR 3516C / 3516B ─────────────────────────── */
+    { oem:'328-2574',        bosch:'0 445 120 304', delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'INIETTORI',  desc:'Iniettore CR high-flow',                     engine:'CAT 3516C/3516E',            stock:'IN STOCK'    },
+    { oem:'387-9433',        bosch:'0 445 120 304', delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'INIETTORI',  desc:'Iniettore CR aggiornato Tier IV',            engine:'CAT 3516C Tier IV',          stock:'SU ORDINE'   },
+    { oem:'212-3467',        bosch:'0 432 193 637', delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'INIETTORI',  desc:'Iniettore meccanico',                        engine:'CAT 3508/3512/3516',         stock:'IN STOCK'    },
+    { oem:'7W-0470',         bosch:'',              delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'INIETTORI',  desc:'Iniettore unitario EUI',                     engine:'CAT 3500 series',            stock:'IN STOCK'    },
+    { oem:'9Y-4522',         bosch:'0 432 217 271', delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'INIETTORI',  desc:'Iniettore meccanico CAT',                    engine:'CAT 3516B',                  stock:'IN STOCK'    },
+    { oem:'1R-0749',         bosch:'',              delphi:'',         denso:'',          hifi:'SN 70099', fleetguard:'FS1242', mann:'WDK 11102/4', brand:'CATERPILLAR', type:'FILTRI', desc:'Filtro carburante primario',         engine:'CAT 3516/C15/C18',           stock:'IN STOCK'    },
+    { oem:'1R-0716',         bosch:'',              delphi:'',         denso:'',          hifi:'SO 4562', fleetguard:'LF3999', mann:'W 11102', brand:'CATERPILLAR', type:'FILTRI',    desc:'Filtro olio',                                engine:'CAT 3516C',                  stock:'IN STOCK'    },
+    { oem:'4P-0710',         bosch:'',              delphi:'',         denso:'',          hifi:'SN 80008', fleetguard:'FS1006', mann:'WDK 999/3', brand:'CATERPILLAR', type:'FILTRI', desc:'Filtro gasolio secondario',                  engine:'CAT 3500 series',            stock:'IN STOCK'    },
+    { oem:'01181584',        bosch:'',              delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'POMPE',      desc:'Pompa iniezione CAT 3516C',                  engine:'CAT 3516C',                  stock:'SU ORDINE'   },
+    { oem:'04291791',        bosch:'',              delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'KIT',        desc:'Kit revisione pompa acqua',                  engine:'CAT 3516',                   stock:'IN STOCK'    },
+    { oem:'7E-8818',         bosch:'',              delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'KIT',        desc:'Kit pistone CAT 3516C',                      engine:'CAT 3516C',                  stock:'SU RICHIESTA'},
+    { oem:'3L-3894',         bosch:'',              delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'KIT',        desc:'Guarnizione testa cilindro',                 engine:'CAT 3516',                   stock:'IN STOCK'    },
+    { oem:'3304929',         bosch:'',              delphi:'',         denso:'',          hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'TURBO',      desc:'Turbocompressore Caterpillar',               engine:'CAT 3516C',                  stock:'SU ORDINE'   },
+    { oem:'23530345',        bosch:'',              delphi:'',         denso:'195500-3480', hifi:'', fleetguard:'', mann:'', brand:'CATERPILLAR', type:'TURBO',    desc:'Turbocompressore Holset equiv.',             engine:'CAT 3516 alternativo',       stock:'SU ORDINE'   },
+    /* CAT filtri Hifi */
+    { oem:'SN 70099',        bosch:'',              delphi:'',         denso:'',          hifi:'SN 70099', fleetguard:'FS1242', mann:'WDK 11102/4', brand:'CATERPILLAR', type:'FILTRI', desc:'Filtro carburante CAT 3516 (Hifi)',   engine:'CAT 3516',                   stock:'IN STOCK'    },
+    { oem:'SO 4562',         bosch:'',              delphi:'',         denso:'',          hifi:'SO 4562',  fleetguard:'LF3999', mann:'W 11102',     brand:'CATERPILLAR', type:'FILTRI', desc:'Filtro olio CAT 3516 (Hifi)',        engine:'CAT 3516',                   stock:'IN STOCK'    },
+    { oem:'SH 87083',        bosch:'',              delphi:'',         denso:'',          hifi:'SH 87083', fleetguard:'',       mann:'H 300/3',     brand:'CATERPILLAR', type:'FILTRI', desc:'Filtro idraulico CAT',               engine:'CAT 3516',                   stock:'IN STOCK'    },
+    { oem:'SN 80008',        bosch:'',              delphi:'',         denso:'',          hifi:'SN 80008', fleetguard:'FS1006', mann:'WDK 999/3',   brand:'CATERPILLAR', type:'FILTRI', desc:'Filtro gasolio separatore',          engine:'CAT 3500 series',            stock:'IN STOCK'    },
+
+    /* ────── CUMMINS QSK19 ─────────────────────────────────────── */
+    { oem:'4952579',         bosch:'0 445 120 217', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'INIETTORI',  desc:'Iniettore CR QSK19',                         engine:'Cummins QSK19',              stock:'IN STOCK'    },
+    { oem:'2867147',         bosch:'0 445 120 238', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'INIETTORI',  desc:'Iniettore CR QSK19 rev.B',                   engine:'Cummins QSK19/QSM11',        stock:'IN STOCK'    },
+    { oem:'3087648',         bosch:'0 445 120 059', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'INIETTORI',  desc:'Iniettore CR versione precedente',           engine:'Cummins ISM/ISX',            stock:'SU ORDINE'   },
+    { oem:'3803223',         bosch:'',              delphi:'EX631013', denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'INIETTORI',  desc:'Iniettore Cummins QSK19 marine',             engine:'QSK19 marine',               stock:'IN STOCK'    },
+    { oem:'3090942',         bosch:'0 402 736 893', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'POMPE',      desc:'Pompa alta pressione KTA38',                 engine:'Cummins KTA38',              stock:'SU RICHIESTA'},
+    { oem:'3100188',         bosch:'',              delphi:'',         denso:'', hifi:'SN 80016', fleetguard:'FS1006', mann:'WDK 940/5', brand:'CUMMINS', type:'FILTRI', desc:'Filtro carburante Cummins',          engine:'QSK19/QSK38',                stock:'IN STOCK'    },
+    { oem:'3888654',         bosch:'',              delphi:'',         denso:'', hifi:'SO 4563',  fleetguard:'LF3349',  mann:'W 1374/5', brand:'CUMMINS', type:'FILTRI', desc:'Filtro olio Cummins',                engine:'QSK19/QSK38/QSK50',          stock:'IN STOCK'    },
+    { oem:'4955578',         bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'VALVOLE',    desc:'Valvola controllo pressione CR',             engine:'Cummins QSK series',         stock:'IN STOCK'    },
+    { oem:'3164405',         bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'TURBO',      desc:'Turbocompressore Holset QSK19',              engine:'Cummins QSK19',              stock:'SU ORDINE'   },
+    { oem:'3101872',         bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'KIT',        desc:'Kit anelli pistone QSK19',                   engine:'Cummins QSK19',              stock:'SU RICHIESTA'},
+
+    /* ────── CUMMINS QSK38 / QSK50 / KTA38 ─────────────────────── */
+    { oem:'0432191714',      bosch:'0 414 401 107', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'INIETTORI',  desc:'Pompante unit injector NT855/KTA19',         engine:'Cummins NT855/KTA19',        stock:'SU ORDINE'   },
+    { oem:'4918073',         bosch:'0 445 120 217', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'INIETTORI',  desc:'Iniettore QSK38',                            engine:'Cummins QSK38',              stock:'IN STOCK'    },
+    { oem:'4918993',         bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'INIETTORI',  desc:'Iniettore QSK50',                            engine:'Cummins QSK50',              stock:'SU RICHIESTA'},
+    { oem:'3088382',         bosch:'0 402 736 893', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'', brand:'CUMMINS', type:'POMPE',      desc:'Pompa carburante alta pressione',            engine:'KTA38/QSK38',                stock:'SU ORDINE'   },
+    { oem:'4003950',         bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'LF9009', mann:'', brand:'CUMMINS', type:'FILTRI',     desc:'Filtro olio Cummins QSK50',                  engine:'QSK50',                      stock:'IN STOCK'    },
+
+    /* ────── DEUTZ MWM ─────────────────────────────────────────── */
+    { oem:'01174463',        bosch:'0 430 232 056', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'',       brand:'DEUTZ', type:'INIETTORI', desc:'Iniettore meccanico Deutz',               engine:'MWM 620B V16',               stock:'IN STOCK'    },
+    { oem:'01174461',        bosch:'0 430 232 056', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'',       brand:'DEUTZ', type:'INIETTORI', desc:'Iniettore meccanico (variante)',          engine:'MWM 604B V16',               stock:'SU ORDINE'   },
+    { oem:'04294788',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'LF4056', mann:'',       brand:'DEUTZ', type:'FILTRI',    desc:'Filtro olio Deutz/MWM',                  engine:'MWM 620B/604B',              stock:'IN STOCK'    },
+    { oem:'04294790',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'FS1006', mann:'',       brand:'DEUTZ', type:'FILTRI',    desc:'Filtro gasolio Deutz',                   engine:'MWM series',                 stock:'IN STOCK'    },
+    { oem:'04295866',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'',       brand:'DEUTZ', type:'FILTRI',    desc:'Filtro aria Deutz MWM',                  engine:'MWM 620B V16',               stock:'IN STOCK'    },
+    { oem:'12194803',        bosch:'0 460 424 148', delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'',       brand:'DEUTZ', type:'POMPE',     desc:'Pompa iniezione Deutz',                  engine:'MWM TBD series',             stock:'SU ORDINE'   },
+    { oem:'MS39012',         bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'',       mann:'',       brand:'DEUTZ', type:'KIT',       desc:'Guarnizione testa MAHLE Deutz',          engine:'MWM 620B',                   stock:'IN STOCK'    },
+
+    /* ────── MaK 8M25 ──────────────────────────────────────────── */
+    { oem:'04505685',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MAK', type:'KIT',       desc:'Cinghia distribuzione',                      engine:'MaK 8M25',                   stock:'IN STOCK'    },
+    { oem:'3460598',         bosch:'0 414 702 006', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MAK', type:'INIETTORI', desc:'Iniettore unitario UPS MaK',                 engine:'MaK M25/M32',                stock:'SU ORDINE'   },
+    { oem:'3100523',         bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MAK', type:'FILTRI',    desc:'Filtro gasolio MaK',                         engine:'MaK 8M25',                   stock:'IN STOCK'    },
+    { oem:'3460100',         bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'MAK', type:'FILTRI',    desc:'Filtro olio MaK',                            engine:'MaK M25',                    stock:'IN STOCK'    },
+
+    /* ────── WÄRTSILÄ ──────────────────────────────────────────── */
+    { oem:'4V92A021',        bosch:'0 445 120 266', delphi:'',         denso:'', hifi:'', fleetguard:'',  mann:'', brand:'WARTSILA', type:'INIETTORI', desc:'Iniettore CR Wärtsilä',             engine:'Wärtsilä 20/32',             stock:'SU RICHIESTA'},
+    { oem:'182B2040',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'',  mann:'', brand:'WARTSILA', type:'FILTRI',    desc:'Filtro olio',                       engine:'Wärtsilä 6L20',              stock:'SU ORDINE'   },
+    { oem:'183B4029',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'',  mann:'', brand:'WARTSILA', type:'FILTRI',    desc:'Filtro gasolio',                    engine:'Wärtsilä series',            stock:'SU ORDINE'   },
+    { oem:'3V882029',        bosch:'0 460 426 184', delphi:'',         denso:'', hifi:'', fleetguard:'',  mann:'', brand:'WARTSILA', type:'POMPE',     desc:'Pompa iniezione Wärtsilä Vasa',    engine:'Wärtsilä Vasa',              stock:'SU RICHIESTA'},
+
+    /* ────── BOSCH — codici diretti ────────────────────────────── */
+    { oem:'F00VC01338',      bosch:'F00VC01338',    delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'BOSCH', type:'VALVOLE',    desc:'Valvola controllo pressione common rail',    engine:'MTU/Bosch CR system',        stock:'IN STOCK'    },
+    { oem:'F00RJ01340',      bosch:'F00RJ01340',    delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'BOSCH', type:'VALVOLE',    desc:'Return valve iniettore CR',                  engine:'CR universale',              stock:'IN STOCK'    },
+    { oem:'F00E200141',      bosch:'F00E200141',    delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'BOSCH', type:'INIETTORI',  desc:'Attuatore iniettore CR',                     engine:'Cummins/Bosch',              stock:'IN STOCK'    },
+    { oem:'0 265 450 004',   bosch:'0 265 450 004', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'BOSCH', type:'SENSORI',    desc:'Sensore pressione common rail',              engine:'CR universale',              stock:'IN STOCK'    },
+    { oem:'0 928 400 507',   bosch:'0 928 400 507', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'BOSCH', type:'VALVOLE',    desc:'Regolatore flusso pompa HP',                 engine:'CR universale',              stock:'IN STOCK'    },
+    { oem:'0 445 120 238',   bosch:'0 445 120 238', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'BOSCH', type:'INIETTORI',  desc:'Iniettore CR Cummins/Bosch',                 engine:'Cummins QSK19/Bosch',        stock:'IN STOCK'    },
+
+    /* ────── FILTRI FLEETGUARD — serie marina ───────────────────── */
+    { oem:'LF3349',          bosch:'',              delphi:'',         denso:'', hifi:'SO 4563', fleetguard:'LF3349',  mann:'W 1374/5',   brand:'FLEETGUARD', type:'FILTRI', desc:'Filtro olio QSK19/38/50',          engine:'Cummins QSK19/38/50',        stock:'IN STOCK'    },
+    { oem:'FS1006',          bosch:'',              delphi:'',         denso:'', hifi:'SN 80016',fleetguard:'FS1006',  mann:'WDK 940/5',  brand:'FLEETGUARD', type:'FILTRI', desc:'Filtro gasolio separatore QSK',    engine:'Cummins QSK series',         stock:'IN STOCK'    },
+    { oem:'FS20021',         bosch:'',              delphi:'',         denso:'', hifi:'SN 80097',fleetguard:'FS20021', mann:'WDK 11102/4',brand:'FLEETGUARD', type:'FILTRI', desc:'Filtro gasolio doppio MTU/CAT',    engine:'MTU/CAT universale',         stock:'IN STOCK'    },
+    { oem:'LF9009',          bosch:'',              delphi:'',         denso:'', hifi:'SO 4562', fleetguard:'LF9009',  mann:'W 12004',    brand:'FLEETGUARD', type:'FILTRI', desc:'Filtro olio pesante universale',   engine:'Pesanti universale',         stock:'IN STOCK'    },
+    { oem:'AF25708',         bosch:'',              delphi:'',         denso:'', hifi:'SA 16112',fleetguard:'AF25708', mann:'C 27 154',   brand:'FLEETGUARD', type:'FILTRI', desc:'Filtro aria turbodiesel',          engine:'Universale turbodiesel',     stock:'IN STOCK'    },
+    { oem:'WF2071',          bosch:'',              delphi:'',         denso:'', hifi:'SB 6108', fleetguard:'WF2071',  mann:'',           brand:'FLEETGUARD', type:'FILTRI', desc:'Filtro acqua additivata',          engine:'Universale marino',          stock:'IN STOCK'    },
+
+    /* ────── MOTORINI AVVIAMENTO PRESTOLITE ─────────────────────── */
+    { oem:'M105R3001SE',     bosch:'0 001 416 016', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'PRESTOLITE', type:'AVVIAMENTO', desc:'Motorino avviamento 24V 11kW',               engine:'CAT 3516/MTU 4000 — 24V',    stock:'IN STOCK'    },
+    { oem:'MHJ4019',         bosch:'0 001 420 004', delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'PRESTOLITE', type:'AVVIAMENTO', desc:'Motorino avviamento 24V pesante',            engine:'Cummins QSK/KTA — 24V',     stock:'IN STOCK'    },
+    { oem:'ACE7509C',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'PRESTOLITE', type:'AVVIAMENTO', desc:'Kit motorino marino certificato',            engine:'Deutz/MWM — 24V',            stock:'SU ORDINE'   },
+    { oem:'66021520',        bosch:'',              delphi:'',         denso:'', hifi:'', fleetguard:'', mann:'', brand:'PRESTOLITE', type:'AVVIAMENTO', desc:'Motorino avviamento 12V ausiliario',         engine:'Motori ausiliari — 12V',     stock:'IN STOCK'    }
+  ];
+
+  /* ── STATO ─────────────────────────────────────────────────────── */
+  let currentBrand = 'all';
+  let currentType  = 'all';
+  let currentStock = 'all';
+  let currentQuery = '';
+  let currentModalCode = '';
+
+  /* ── REFS ──────────────────────────────────────────────────────── */
+  const searchInput   = document.getElementById('rcSearchInput');
+  const searchBtn     = document.getElementById('rcSearchBtn');
+  const tbody         = document.getElementById('rcTbody');
+  const countEl       = document.getElementById('rcCount');
+  const noResults     = document.getElementById('rcNoResults');
+  const clearBtn      = document.getElementById('rcClearBtn');
+  const modalOverlay  = document.getElementById('modalOverlay');
+  const modalBox      = document.getElementById('modalBox');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+  const modalSendBtn  = document.getElementById('modalSendBtn');
+  const toast         = document.getElementById('toast');
+  const nav           = document.getElementById('nav-pub');
+
+  /* ── BRAND CSS CLASS ───────────────────────────────────────────── */
+  function brandClass(brand) {
+    const map = {
+      MTU: 'brand-mtu', CATERPILLAR: 'brand-caterpillar',
+      CUMMINS: 'brand-cummins', DEUTZ: 'brand-deutz',
+      WARTSILA: 'brand-wartsila', MAK: 'brand-mak',
+      BOSCH: 'brand-bosch', FLEETGUARD: 'brand-fleetguard',
+      PRESTOLITE: 'brand-prestolite'
+    };
+    return map[brand] || 'brand-bosch';
+  }
+
+  function brandLabel(brand) {
+    const map = {
+      WARTSILA: 'WÄRTSILÄ', MAK: 'MaK', FLEETGUARD: 'Fleetguard',
+      PRESTOLITE: 'Prestolite'
+    };
+    return map[brand] || brand;
+  }
+
+  /* ── STOCK BADGE ───────────────────────────────────────────────── */
+  function stockBadge(stock) {
+    if (stock === 'IN STOCK')     return '<span class="rc-stock stock-in">IN STOCK</span>';
+    if (stock === 'SU ORDINE')    return '<span class="rc-stock stock-order">SU ORDINE 3-5gg</span>';
+    if (stock === 'SU RICHIESTA') return '<span class="rc-stock stock-req">SU RICHIESTA</span>';
+    return stock;
+  }
+
+  /* ── CODE CELL ─────────────────────────────────────────────────── */
+  function codeCell(val) {
+    if (!val) return '<span class="rc-code-empty">—</span>';
+    return '<span class="rc-codes">' + val + '</span>';
+  }
+
+  /* ── FILTER CODE ───────────────────────────────────────────────── */
+  function filterCell(r) {
+    const parts = [];
+    if (r.hifi)       parts.push('<span style="color:#a0c4ff;font-size:11px;" title="Hifi">H: ' + r.hifi + '</span>');
+    if (r.fleetguard) parts.push('<span style="color:#7dd6a8;font-size:11px;" title="Fleetguard">FG: ' + r.fleetguard + '</span>');
+    if (r.mann)       parts.push('<span style="color:#c9a84c;font-size:11px;" title="Mann">M: ' + r.mann + '</span>');
+    if (!parts.length) return '<span class="rc-code-empty">—</span>';
+    return parts.join('<br>');
+  }
+
+  /* ── HIGHLIGHT ─────────────────────────────────────────────────── */
+  function hl(text, q) {
+    if (!q || !text) return text || '';
+    const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return text.replace(new RegExp('(' + esc + ')', 'gi'), '<mark style="background:rgba(0,212,255,.25);color:#fff;border-radius:2px;padding:0 1px;">$1</mark>');
+  }
+
+  /* ── RENDER ────────────────────────────────────────────────────── */
+  function renderResults() {
+    const q = currentQuery.toLowerCase().trim();
+
+    const filtered = DB.filter(r => {
+      const searchFields = [r.oem, r.bosch, r.delphi, r.denso, r.hifi, r.fleetguard, r.mann, r.desc, r.engine, r.brand, r.type];
+      const matchQ     = !q || searchFields.some(v => v && v.toLowerCase().includes(q));
+      const matchBrand = currentBrand === 'all' || r.brand === currentBrand;
+      const matchType  = currentType  === 'all' || r.type  === currentType;
+      const matchStock = currentStock === 'all' || r.stock === currentStock;
+      return matchQ && matchBrand && matchType && matchStock;
+    });
+
+    countEl.textContent = filtered.length;
+
+    if (!filtered.length) {
+      tbody.innerHTML = '';
+      noResults.classList.add('show');
+      return;
+    }
+    noResults.classList.remove('show');
+
+    tbody.innerHTML = filtered.map(r => `
+      <tr>
+        <td><span class="rc-oem">${hl(r.oem, q)}</span></td>
+        <td><span class="rc-brand ${brandClass(r.brand)}">${hl(brandLabel(r.brand), q)}</span></td>
+        <td>${codeCell(q ? hl(r.bosch, q) : r.bosch)}</td>
+        <td>${codeCell(q ? hl(r.delphi, q) : r.delphi)}</td>
+        <td>${codeCell(q ? hl(r.denso, q) : r.denso)}</td>
+        <td>${filterCell(r)}</td>
+        <td><span class="rc-engine">${hl(r.engine, q)}</span></td>
+        <td><span class="rc-desc">${hl(r.desc, q)}</span></td>
+        <td>${stockBadge(r.stock)}</td>
+        <td><button class="rc-req-btn" data-code="${r.oem}" data-desc="${r.desc}">RICHIEDI &rarr;</button></td>
+      </tr>
+    `).join('');
+
+    // Attach modal openers
+    tbody.querySelectorAll('.rc-req-btn').forEach(btn => {
+      btn.addEventListener('click', () => openModal(btn.dataset.code, btn.dataset.desc));
+    });
+  }
+
+  /* ── SEARCH TRIGGER ────────────────────────────────────────────── */
+  function doSearch() {
+    currentQuery = searchInput.value;
+    renderResults();
+  }
+
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('input', doSearch);
+  searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+
+  /* ── FILTER BUTTONS ────────────────────────────────────────────── */
+  document.getElementById('filterBrand').addEventListener('click', e => {
+    const btn = e.target.closest('.rc-filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('#filterBrand .rc-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentBrand = btn.dataset.brand;
+    renderResults();
+  });
+
+  document.getElementById('filterType').addEventListener('click', e => {
+    const btn = e.target.closest('.rc-filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('#filterType .rc-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentType = btn.dataset.type;
+    renderResults();
+  });
+
+  document.getElementById('filterStock').addEventListener('click', e => {
+    const btn = e.target.closest('.rc-filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('#filterStock .rc-filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentStock = btn.dataset.stock;
+    renderResults();
+  });
+
+  /* ── CLEAR ─────────────────────────────────────────────────────── */
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    currentQuery = '';
+    currentBrand = 'all';
+    currentType  = 'all';
+    currentStock = 'all';
+    document.querySelectorAll('#filterBrand .rc-filter-btn').forEach((b,i) => b.classList.toggle('active', i === 0));
+    document.querySelectorAll('#filterType  .rc-filter-btn').forEach((b,i) => b.classList.toggle('active', i === 0));
+    document.querySelectorAll('#filterStock .rc-filter-btn').forEach((b,i) => b.classList.toggle('active', i === 0));
+    renderResults();
+  });
+
+  /* ── URL PARAM ?q= ─────────────────────────────────────────────── */
+  (function() {
+    const urlQ = new URLSearchParams(location.search).get('q');
+    if (urlQ) {
+      searchInput.value = urlQ;
+      currentQuery = urlQ;
+    }
+    renderResults();
+  })();
+
+  /* ── NAV SCROLL ────────────────────────────────────────────────── */
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  /* ── MODAL ─────────────────────────────────────────────────────── */
+  function openModal(code, desc) {
+    currentModalCode = code;
+    document.getElementById('modalCodiceTitolo').textContent = code;
+    document.getElementById('modalDescTitolo').textContent   = desc || '';
+    modalOverlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('mNome').focus();
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  modalCloseBtn.addEventListener('click', closeModal);
+  modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  /* ── SEND ──────────────────────────────────────────────────────── */
+  modalSendBtn.addEventListener('click', () => {
+    const nome  = document.getElementById('mNome').value.trim();
+    const email = document.getElementById('mEmail').value.trim();
+    if (!nome || !email) {
+      document.getElementById(nome ? 'mEmail' : 'mNome').style.borderColor = '#ff4444';
+      setTimeout(() => {
+        document.getElementById('mNome').style.borderColor  = '';
+        document.getElementById('mEmail').style.borderColor = '';
+      }, 2000);
+      return;
+    }
+    closeModal();
+    showToast();
+    // reset form
+    ['mNome','mEmail','mQta','mPorto','mNote'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = el.type === 'number' ? '1' : '';
+    });
+  });
+
+  /* ── TOAST ─────────────────────────────────────────────────────── */
+  function showToast() {
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4500);
+  }
+  </script>
+
+</body>
+</html>
