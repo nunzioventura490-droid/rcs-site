@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo Large Engine — RCS Marine Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    :root{--blu:#0057b8;--cyan:#00d4ff;--verde:#00e676;--rosso:#ff4444;--arancio:#ff9800;--notte:#020b18;--grigio:#8aaccc;--F:'Barlow Condensed',sans-serif;--f:'Barlow',sans-serif}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--notte);color:#fff;font-family:var(--f);overflow-x:hidden}
+
+    /* NAV */
+    .pub-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 36px;height:64px;background:rgba(2,11,24,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,87,184,.2)}
+    .pub-nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+    .pub-nav-logo span{font-family:var(--F);font-size:22px;font-weight:900;letter-spacing:4px}
+    .pub-nav-logo small{font-family:var(--F);font-size:9px;letter-spacing:3px;color:var(--cyan);display:block}
+    .pub-nav-links{display:flex;gap:4px;align-items:center}
+    .pub-nav-links a{font-family:var(--F);font-size:11px;letter-spacing:2px;padding:5px 11px;border-radius:3px;color:var(--grigio);text-decoration:none;transition:color .2s,background .2s}
+    .pub-nav-links a:hover,.pub-nav-links a.active{color:var(--cyan);background:rgba(0,212,255,.08)}
+    .pub-nav-cta{font-family:var(--F);font-size:11px;letter-spacing:2px;padding:8px 18px;border:1px solid rgba(0,212,255,.5);border-radius:3px;color:var(--cyan);background:transparent;text-decoration:none;transition:all .2s;white-space:nowrap}
+    .pub-nav-cta:hover{background:rgba(0,212,255,.1)}
+
+    /* HERO */
+    .le-hero{padding:110px 40px 56px;background:linear-gradient(135deg,rgba(0,87,184,.12) 0%,rgba(0,20,60,.08) 100%);border-bottom:1px solid rgba(0,87,184,.2);text-align:center}
+    .le-hero-label{font-family:var(--F);font-size:11px;letter-spacing:4px;color:var(--cyan);margin-bottom:14px}
+    .le-hero-title{font-family:var(--F);font-size:clamp(34px,5vw,60px);font-weight:900;letter-spacing:3px;line-height:1;margin-bottom:14px}
+    .le-hero-title span{color:var(--cyan)}
+    .le-hero-sub{font-size:15px;color:rgba(255,255,255,.6);max-width:700px;margin:0 auto 32px;line-height:1.7}
+    .le-search-row{display:flex;gap:10px;max-width:580px;margin:0 auto}
+    .le-search-row input{flex:1;padding:13px 18px;background:rgba(255,255,255,.05);border:1px solid rgba(0,87,184,.4);border-radius:4px;color:#fff;font-family:var(--f);font-size:14px;outline:none}
+    .le-search-row input::placeholder{color:rgba(255,255,255,.35)}
+    .le-search-row input:focus{border-color:var(--cyan)}
+    .le-search-btn{padding:13px 22px;background:var(--cyan);border:none;border-radius:4px;color:#000;font-family:var(--F);font-size:12px;font-weight:700;letter-spacing:2px;cursor:pointer;white-space:nowrap;transition:opacity .2s}
+    .le-search-btn:hover{opacity:.85}
+
+    /* STRIP */
+    .le-strip{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(0,87,184,.15)}
+    .le-stat{padding:20px;text-align:center;border-right:1px solid rgba(0,87,184,.15)}
+    .le-stat:last-child{border-right:none}
+    .le-stat-val{font-family:var(--F);font-size:28px;font-weight:900;color:var(--cyan)}
+    .le-stat-lbl{font-family:var(--F);font-size:9px;letter-spacing:2px;color:var(--grigio);margin-top:3px}
+
+    /* FILTERS */
+    .le-filters{padding:28px 40px;background:rgba(0,10,30,.6);border-bottom:1px solid rgba(0,87,184,.12);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .le-filter-label{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--grigio);margin-right:4px}
+    .le-filter-btn{font-family:var(--F);font-size:10px;letter-spacing:1.5px;padding:6px 14px;border:1px solid rgba(255,255,255,.12);border-radius:3px;background:transparent;color:var(--grigio);cursor:pointer;transition:all .2s}
+    .le-filter-btn:hover,.le-filter-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(0,212,255,.07)}
+    .le-filter-sep{width:1px;height:28px;background:rgba(0,87,184,.3);margin:0 8px}
+
+    /* SECTIONS */
+    .le-section{padding:48px 40px}
+    .le-section-title{font-family:var(--F);font-size:11px;letter-spacing:3px;color:var(--cyan);margin-bottom:8px}
+    .le-section-heading{font-family:var(--F);font-size:26px;font-weight:800;letter-spacing:2px;margin-bottom:28px}
+
+    /* PRODUCT GRID */
+    .le-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+    .le-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:22px;display:flex;flex-direction:column;gap:14px;transition:all .25s}
+    .le-card:hover{border-color:rgba(0,212,255,.3);background:rgba(0,212,255,.03);transform:translateY(-2px)}
+    .le-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .le-card-brand{font-family:var(--F);font-size:10px;letter-spacing:2px;padding:3px 8px;border-radius:2px;font-weight:700}
+    .le-card-stock{font-family:var(--F);font-size:9px;letter-spacing:1px;padding:3px 8px;border-radius:2px}
+    .stock-in{background:rgba(0,230,118,.12);color:var(--verde);border:1px solid rgba(0,230,118,.3)}
+    .stock-order{background:rgba(255,152,0,.1);color:var(--arancio);border:1px solid rgba(255,152,0,.3)}
+    .stock-req{background:rgba(255,68,68,.08);color:#ff6b6b;border:1px solid rgba(255,68,68,.25)}
+    .le-card-name{font-family:var(--F);font-size:17px;font-weight:700;letter-spacing:1px;line-height:1.25}
+    .le-card-code{font-family:monospace;font-size:11px;color:var(--cyan);background:rgba(0,212,255,.08);padding:3px 8px;border-radius:3px;display:inline-block}
+    .le-card-desc{font-size:12px;color:rgba(255,255,255,.6);line-height:1.6}
+    .le-card-engines{font-size:11px;color:var(--grigio);display:flex;flex-wrap:wrap;gap:5px}
+    .le-engine-tag{background:rgba(0,87,184,.15);border:1px solid rgba(0,87,184,.25);padding:2px 7px;border-radius:2px;font-family:var(--F);font-size:9px;letter-spacing:1px}
+    .le-card-footer{display:flex;gap:10px;margin-top:auto}
+    .btn-quote{flex:1;padding:10px;background:rgba(0,87,184,.2);border:1px solid rgba(0,87,184,.4);border-radius:4px;color:#fff;font-family:var(--F);font-size:10px;letter-spacing:2px;cursor:pointer;transition:all .2s}
+    .btn-quote:hover{background:rgba(0,87,184,.4)}
+    .btn-cross{padding:10px 14px;background:transparent;border:1px solid rgba(0,212,255,.3);border-radius:4px;color:var(--cyan);font-family:var(--F);font-size:10px;letter-spacing:1px;cursor:pointer;transition:all .2s;text-decoration:none;display:flex;align-items:center}
+    .btn-cross:hover{background:rgba(0,212,255,.1)}
+
+    /* FOCUS BRAND */
+    .brand-section{padding:40px;border-top:1px solid rgba(0,87,184,.12)}
+    .brand-focus-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:24px}
+    .brand-focus-card{border-radius:8px;padding:24px;border:1px solid}
+    .bf-logo{font-family:var(--F);font-size:28px;font-weight:900;letter-spacing:3px;margin-bottom:10px}
+    .bf-desc{font-size:12px;color:rgba(255,255,255,.65);line-height:1.65;margin-bottom:14px}
+    .bf-products{font-family:var(--F);font-size:10px;letter-spacing:1px;color:rgba(255,255,255,.45);line-height:1.8}
+
+    /* MODAL */
+    .le-overlay{position:fixed;inset:0;background:rgba(2,11,24,.85);backdrop-filter:blur(8px);z-index:500;display:none;align-items:center;justify-content:center}
+    .le-overlay.open{display:flex}
+    .le-modal{background:rgba(4,18,40,.98);border:1px solid rgba(0,87,184,.35);border-radius:10px;padding:32px;width:100%;max-width:480px;position:relative}
+    .le-modal-title{font-family:var(--F);font-size:18px;font-weight:800;letter-spacing:2px;color:var(--cyan);margin-bottom:6px}
+    .le-modal-sub{font-size:12px;color:var(--grigio);margin-bottom:22px}
+    .le-modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--grigio);font-size:20px;cursor:pointer;line-height:1}
+    .le-form-row{margin-bottom:14px}
+    .le-form-row label{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--grigio);display:block;margin-bottom:5px}
+    .le-form-row input,.le-form-row textarea,.le-form-row select{width:100%;padding:10px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(0,87,184,.3);border-radius:3px;color:#fff;font-family:var(--f);font-size:13px;outline:none}
+    .le-form-row input:focus,.le-form-row textarea:focus{border-color:var(--cyan)}
+    .btn-submit{width:100%;padding:13px;background:var(--blu);border:none;border-radius:4px;color:#fff;font-family:var(--F);font-size:12px;font-weight:700;letter-spacing:2px;cursor:pointer;transition:opacity .2s;margin-top:8px}
+    .btn-submit:hover{opacity:.85}
+
+    /* TOAST */
+    .le-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:rgba(0,230,118,.15);border:1px solid rgba(0,230,118,.35);color:var(--verde);padding:12px 24px;border-radius:6px;font-family:var(--F);font-size:12px;letter-spacing:2px;z-index:900;transition:transform .3s}
+    .le-toast.show{transform:translateX(-50%) translateY(0)}
+
+    /* NO RESULTS */
+    .le-empty{text-align:center;padding:60px 20px;color:var(--grigio);font-family:var(--F);font-size:14px;letter-spacing:1px}
+
+    @media(max-width:768px){
+      .pub-nav-links{display:none}
+      .le-strip{grid-template-columns:repeat(2,1fr)}
+      .le-filters,.le-section,.brand-section{padding:28px 20px}
+      .le-hero{padding:90px 20px 40px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="pub-nav">
+  <a class="pub-nav-logo" href="../index.html">
+    <span>⚓ RCS</span>
+    <small>MARINE INTELLIGENCE</small>
+  </a>
+  <div class="pub-nav-links">
+    <a href="../index.html">HOME</a>
+    <a href="ricerca-codici.html">RICERCA CODICI</a>
+    <a href="large-engine.html" class="active">LARGE ENGINE</a>
+    <a href="chi-siamo.html">CHI SIAMO</a>
+    <a href="../index.html#contatti">CONTATTI</a>
+  </div>
+  <a href="login.html" class="pub-nav-cta">PORTALE CLIENTI →</a>
+</nav>
+
+<!-- HERO -->
+<div class="le-hero">
+  <div class="le-hero-label">CATALOGO SPECIALIZZATO · MOTORI MARINI AD ALTA POTENZA</div>
+  <h1 class="le-hero-title">LARGE ENGINE<br><span>MARINE PARTS</span></h1>
+  <p class="le-hero-sub">Ricambi OEM certificati per grandi motori navali — MTU, Caterpillar, Cummins, Deutz, Wärtsilä · Bosch · Delphi · Denso · Hifi Filter · Prestolite</p>
+  <div class="le-search-row">
+    <input type="text" id="leSearch" placeholder="Cerca codice, motore, brand, componente..." oninput="filterProducts()">
+    <button class="le-search-btn" onclick="filterProducts()">CERCA</button>
+  </div>
+</div>
+
+<!-- STRIP -->
+<div class="le-strip">
+  <div class="le-stat"><div class="le-stat-val">280+</div><div class="le-stat-lbl">CODICI LARGE ENGINE</div></div>
+  <div class="le-stat"><div class="le-stat-val">6</div><div class="le-stat-lbl">FAMIGLIE MOTORE</div></div>
+  <div class="le-stat"><div class="le-stat-val">OEM</div><div class="le-stat-lbl">QUALITÀ CERTIFICATA</div></div>
+  <div class="le-stat"><div class="le-stat-val">24h</div><div class="le-stat-lbl">CONSEGNA MALTA</div></div>
+</div>
+
+<!-- FILTRI -->
+<div class="le-filters">
+  <span class="le-filter-label">MOTORE:</span>
+  <button class="le-filter-btn active" onclick="setBrand('all',this)">TUTTI</button>
+  <button class="le-filter-btn" onclick="setBrand('MTU',this)">MTU</button>
+  <button class="le-filter-btn" onclick="setBrand('Caterpillar',this)">CATERPILLAR</button>
+  <button class="le-filter-btn" onclick="setBrand('Cummins',this)">CUMMINS</button>
+  <button class="le-filter-btn" onclick="setBrand('Deutz',this)">DEUTZ MWM</button>
+  <button class="le-filter-btn" onclick="setBrand('Wärtsilä',this)">WÄRTSILÄ</button>
+  <button class="le-filter-btn" onclick="setBrand('MaK',this)">MaK</button>
+  <div class="le-filter-sep"></div>
+  <span class="le-filter-label">TIPO:</span>
+  <button class="le-filter-btn active" onclick="setType('all',this)">TUTTI</button>
+  <button class="le-filter-btn" onclick="setType('INIETTORI',this)">INIETTORI</button>
+  <button class="le-filter-btn" onclick="setType('POMPE',this)">POMPE</button>
+  <button class="le-filter-btn" onclick="setType('FILTRI',this)">FILTRI</button>
+  <button class="le-filter-btn" onclick="setType('KIT',this)">KIT REVISIONE</button>
+  <button class="le-filter-btn" onclick="setType('AVVIAMENTO',this)">AVVIAMENTO</button>
+  <button class="le-filter-btn" onclick="setType('RICAMBI',this)">RICAMBI</button>
+</div>
+
+<!-- PRODOTTI -->
+<section class="le-section">
+  <div class="le-section-title">RISULTATI</div>
+  <div class="le-section-heading" id="resultsCount">Tutti i prodotti</div>
+  <div class="le-grid" id="productGrid"></div>
+</section>
+
+<!-- BRAND FOCUS -->
+<section class="brand-section">
+  <div class="le-section-title">BRAND IN EVIDENZA</div>
+  <div class="le-section-heading">I Nostri Partner Tecnici</div>
+  <div class="brand-focus-grid">
+    <div class="brand-focus-card" style="background:rgba(220,0,0,.06);border-color:rgba(220,0,0,.2)">
+      <div class="bf-logo" style="color:#ff3333">BOSCH</div>
+      <p class="bf-desc">Leader mondiale nei sistemi di iniezione common rail. RCS distribuisce iniettori, pompe e componenti Bosch per motori MTU, Cummins e CAT con garanzia OEM completa.</p>
+      <div class="bf-products">Serie 0 445 120 xxx · PE Series · Unit Injectors UIS/UPS · F00 Series valvole</div>
+    </div>
+    <div class="brand-focus-card" style="background:rgba(0,150,220,.06);border-color:rgba(0,150,220,.2)">
+      <div class="bf-logo" style="color:#5bc8f5">DELPHI</div>
+      <p class="bf-desc">Iniettori e pompe Delphi per i principali motori navali. Alternativa OEM di prima scelta con piena compatibilità e certificazione marine.</p>
+      <div class="bf-products">Serie EJBR · R00 series · Serie EX · Pompe EP/DP</div>
+    </div>
+    <div class="brand-focus-card" style="background:rgba(0,180,100,.06);border-color:rgba(0,180,100,.2)">
+      <div class="bf-logo" style="color:#00c878">HIFI FILTER</div>
+      <p class="bf-desc">La linea marine Hifi Filter garantisce filtrazione certificata per gasolio, olio e sistemi idraulici su tutti i grandi motori navali. Stock completo a Catania.</p>
+      <div class="bf-products">Serie SN (gasolio) · SO (olio) · SH (idraulica) · SA (aria) · SB (acqua)</div>
+    </div>
+    <div class="brand-focus-card" style="background:rgba(0,200,150,.06);border-color:rgba(0,200,150,.2)">
+      <div class="bf-logo" style="color:#00e6aa">FLEETGUARD</div>
+      <p class="bf-desc">Filtri Cummins Fleetguard per QSK19/38/50 e compatibili CAT. La scelta raccomandata dai costruttori per massimizzare la vita dei grandi diesel navali.</p>
+      <div class="bf-products">LF series · FS series · AF series · WF series · Serie StrataPore</div>
+    </div>
+    <div class="brand-focus-card" style="background:rgba(255,150,0,.06);border-color:rgba(255,150,0,.2)">
+      <div class="bf-logo" style="color:#ffaa00">PRESTOLITE</div>
+      <p class="bf-desc">Motorini d'avviamento pesanti certificati per applicazioni marine. Robustezza estrema, 24V per motori diesel di grandi dimensioni, resistenti all'ambiente salino.</p>
+      <div class="bf-products">Serie M105 · Serie MHJ · Kit marine · ACE series · 24V heavy duty</div>
+    </div>
+    <div class="brand-focus-card" style="background:rgba(50,100,200,.06);border-color:rgba(50,100,200,.2)">
+      <div class="bf-logo" style="color:#6699ff">MAHLE</div>
+      <p class="bf-desc">Guarnizioni, pistoni e kit revisione MAHLE per revisioni complete di grandi motori navali. Componenti di massima precisione per applicazioni industriali e marine.</p>
+      <div class="bf-products">Serie MS (guarnizioni) · Kit pistone · Anelli · Bronzine · Paraolio</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGISTICA SECTION -->
+<section style="background:rgba(0,87,184,.07);border-top:1px solid rgba(0,87,184,.2);border-bottom:1px solid rgba(0,87,184,.2);padding:48px 40px;text-align:center">
+  <div style="font-family:var(--F);font-size:11px;letter-spacing:3px;color:var(--cyan);margin-bottom:12px">CONSEGNA EXPRESS</div>
+  <div style="font-family:var(--F);font-size:clamp(22px,4vw,36px);font-weight:900;letter-spacing:2px;margin-bottom:16px">DA CATANIA A MALTA<br>IN 12–24 ORE</div>
+  <p style="font-size:14px;color:rgba(255,255,255,.6);max-width:560px;margin:0 auto 28px;line-height:1.7">Magazzino reale in Via Alessandro Volta 17, Catania. Connessioni marittime dirette per Malta. Zero intermediari, zero attese da Nord Europa.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a href="../index.html#contatti" style="padding:13px 28px;background:var(--cyan);border-radius:4px;color:#000;font-family:var(--F);font-size:12px;font-weight:700;letter-spacing:2px;text-decoration:none">RICHIEDI PREVENTIVO →</a>
+    <a href="ricerca-codici.html" style="padding:13px 28px;border:1px solid rgba(0,212,255,.5);border-radius:4px;color:var(--cyan);font-family:var(--F);font-size:12px;letter-spacing:2px;text-decoration:none">CERCA CODICE OEM →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:rgba(0,0,0,.5);border-top:1px solid rgba(0,87,184,.15);padding:32px 40px;text-align:center;font-size:11px;color:var(--grigio);letter-spacing:1px">
+  <div style="margin-bottom:8px;font-family:var(--F);font-size:14px;color:#fff">⚓ Ricambi Centro Sud S.r.l.</div>
+  Via Alessandro Volta 17 · 95121 Catania (CT) · P.IVA IT03176280877<br>
+  <span style="color:var(--cyan)">info@ricambicentrosud.com</span> · © 2026 RCS Marine Intelligence
+</footer>
+
+<!-- MODAL PREVENTIVO -->
+<div class="le-overlay" id="quoteOverlay" onclick="closeModal(event)">
+  <div class="le-modal">
+    <button class="le-modal-close" onclick="closeModal()">✕</button>
+    <div class="le-modal-title">RICHIEDI PREVENTIVO</div>
+    <div class="le-modal-sub" id="modalProductName">—</div>
+    <div class="le-form-row"><label>NOME / AZIENDA</label><input type="text" id="qName" placeholder="Es. Mario Rossi — Shipping Ltd."></div>
+    <div class="le-form-row"><label>EMAIL</label><input type="email" id="qEmail" placeholder="info@azienda.com"></div>
+    <div class="le-form-row"><label>QUANTITÀ</label><input type="number" id="qQty" min="1" value="1"></div>
+    <div class="le-form-row"><label>PORTO DI CONSEGNA</label>
+      <select id="qPort"><option>Valletta, Malta</option><option>Marsaxlokk, Malta</option><option>Pozzallo, Sicilia</option><option>Catania, Sicilia</option><option>Napoli</option><option>Altro (specifica nelle note)</option></select>
+    </div>
+    <div class="le-form-row"><label>NOTE (urgenza, specifiche tecniche)</label><textarea id="qNote" rows="3" placeholder="Es. urgente — nave in porto..."></textarea></div>
+    <button class="btn-submit" onclick="submitQuote()">INVIA RICHIESTA → RISPOSTA ENTRO 2H</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="le-toast" id="toast"></div>
+
+<script>
+const BRAND_COLORS = {
+  'Bosch':'#dc0000','Delphi':'#1e88e5','Hifi Filter':'#00c878','Fleetguard':'#00aa66',
+  'Prestolite':'#ffaa00','MAHLE':'#cc3333','Denso':'#003087','MTU OEM':'#0066cc',
+  'CAT OEM':'#f59800','Cummins OEM':'#003087','Deutz OEM':'#336699','Generico':'#7a9abf'
+};
+
+const PRODUCTS = [
+  // ─── MTU ───────────────────────────────────────────────────────────────────
+  {id:1,brand:'MTU',type:'INIETTORI',sup:'Bosch',code:'0 445 120 078',name:'Iniettore CR 1800 bar MTU 4000',desc:'Iniettore common rail ad alta pressione per serie MTU 4000. Pressione massima 1800 bar. Compatibile OEM X40-800-200-003.',engines:['MTU 16V 4000 M65L','MTU 20V 4000 M70L','MTU 20V 4000 M73L'],stock:'IN STOCK'},
+  {id:2,brand:'MTU',type:'INIETTORI',sup:'Bosch',code:'0 414 701 076',name:'Iniettore Unitario UIS MTU 4000',desc:'Unit Injector System per serie MTU 4000. Alta affidabilità per operazioni continue in applicazioni marine.',engines:['MTU Serie 4000'],stock:'IN STOCK'},
+  {id:3,brand:'MTU',type:'INIETTORI',sup:'Bosch',code:'0 414 799 005',name:'Iniettore Unitario UIS MTU 2000',desc:'Unit Injector per serie MTU 2000. Compatibile con motori HSC ad alta velocità.',engines:['MTU 12V 2000 M72','MTU Serie 2000'],stock:'IN STOCK'},
+  {id:4,brand:'MTU',type:'INIETTORI',sup:'Bosch',code:'0 445 120 141',name:'Iniettore CR 2200 bar MTU 8000',desc:'Iniettore common rail ultra-alta pressione 2200 bar per la serie MTU 8000 di alta potenza. OEM 11726100.',engines:['MTU 20V 8000 M71L','MTU Serie 8000'],stock:'IN STOCK'},
+  {id:5,brand:'MTU',type:'INIETTORI',sup:'Bosch',code:'0 445 120 059',name:'Iniettore CR MTU 2000 M72',desc:'Iniettore CR per MTU 12V 2000 M72 (HSC Gozo Express). Pressione 1600 bar, montaggio diretto OEM.',engines:['MTU 12V 2000 M72'],stock:'IN STOCK'},
+  {id:6,brand:'MTU',type:'RICAMBI',sup:'MTU OEM',code:'F00VC01338',name:'Valvola Controllo Pressione CR',desc:'Pressure control valve per sistema common rail MTU e Bosch. Regola la pressione di alimentazione degli iniettori.',engines:['MTU 4000/8000','Tutti CR Bosch'],stock:'IN STOCK'},
+  {id:7,brand:'MTU',type:'RICAMBI',sup:'MTU OEM',code:'F00RJ01340',name:'Valvola Ritorno Iniettore MTU',desc:'Return valve per iniettori common rail serie MTU. Kit da 6 pezzi disponibile.',engines:['MTU 4000/8000 series'],stock:'IN STOCK'},
+  {id:8,brand:'MTU',type:'FILTRI',sup:'Hifi Filter',code:'SN 80097',name:'Filtro Gasolio Doppio MTU/CAT',desc:'Filtro gasolio a doppio stadio Hifi Filter SN 80097. Equivale Fleetguard FS20021. Compatibile con MTU e CAT.',engines:['MTU 4000/8000','CAT 3516'],stock:'IN STOCK'},
+  {id:9,brand:'MTU',type:'FILTRI',sup:'Hifi Filter',code:'SN 70099',name:'Filtro Carburante MTU Marine',desc:'Filtro carburante marino Hifi Filter serie SN. Alta capacità filtrante, separazione acqua integrata.',engines:['MTU Serie 4000','MTU Serie 8000'],stock:'IN STOCK'},
+  {id:10,brand:'MTU',type:'RICAMBI',sup:'MTU OEM',code:'11658815',name:'Termostato Raffreddamento MTU 8000',desc:'Termostato del circuito di raffreddamento per serie MTU 20V 8000. Apertura 83°C, certificato OEM.',engines:['MTU 20V 8000 M71L'],stock:'IN STOCK'},
+
+  // ─── CATERPILLAR ───────────────────────────────────────────────────────────
+  {id:11,brand:'Caterpillar',type:'INIETTORI',sup:'Bosch',code:'0 445 120 304',name:'Iniettore CR CAT 3516C',desc:'Iniettore common rail ad alta portata per CAT 3516C e 3516E. Codice OEM CAT 328-2574. Garanzia 12 mesi.',engines:['CAT 3516C','CAT 3516E','CAT 3516C Tier IV'],stock:'IN STOCK'},
+  {id:12,brand:'Caterpillar',type:'INIETTORI',sup:'Bosch',code:'0 432 193 637',name:'Iniettore Meccanico CAT 3500',desc:'Iniettore meccanico per serie CAT 3508/3512/3516. OEM 212-3467. Ricostruito con pezzi nuovi certificati.',engines:['CAT 3508','CAT 3512','CAT 3516B'],stock:'IN STOCK'},
+  {id:13,brand:'Caterpillar',type:'INIETTORI',sup:'CAT OEM',code:'7W-0470',name:'Iniettore Unitario EUI CAT 3500',desc:'Electronic Unit Injector per serie CAT 3500. Alta affidabilità, ricondizionato certificato CAT.',engines:['CAT 3500 Series','CAT 3516C'],stock:'IN STOCK'},
+  {id:14,brand:'Caterpillar',type:'POMPE',sup:'CAT OEM',code:'01181584',name:'Pompa Iniezione CAT 3516C',desc:'Pompa ad alta pressione per sistema di iniezione CAT 3516C. Revisione completa, testata in banco.',engines:['CAT 3516C'],stock:'SU ORDINE'},
+  {id:15,brand:'Caterpillar',type:'FILTRI',sup:'Hifi Filter',code:'SO 4562',name:'Filtro Olio CAT 3516',desc:'Filtro olio Hifi Filter SO 4562, equivalente CAT 1R-0716 e Fleetguard LF3999. Carta StrataPore®.',engines:['CAT 3516C','CAT 3516B','CAT 3516E'],stock:'IN STOCK'},
+  {id:16,brand:'Caterpillar',type:'FILTRI',sup:'Hifi Filter',code:'SN 70099',name:'Filtro Carburante CAT 3516',desc:'Filtro carburante CAT serie 3500. Equivale CAT 1R-0749 e Fleetguard FS1242. Separazione acqua.',engines:['CAT 3516/3512/3508','CAT C15/C18'],stock:'IN STOCK'},
+  {id:17,brand:'Caterpillar',type:'KIT',sup:'MAHLE',code:'3L-3894',name:'Guarnizione Testa Cilindro CAT',desc:'Guarnizione testa cilindro MAHLE per CAT 3516. Resistenza termica certificata, materiale multi-strato.',engines:['CAT 3516B','CAT 3516C'],stock:'IN STOCK'},
+  {id:18,brand:'Caterpillar',type:'KIT',sup:'CAT OEM',code:'7E-8818',name:'Kit Pistone Completo CAT 3516C',desc:'Kit pistone CAT 3516C con segmenti, spinotto e anello raschia-olio. Oversize +0.50mm disponibile.',engines:['CAT 3516C'],stock:'SU RICHIESTA'},
+  {id:19,brand:'Caterpillar',type:'RICAMBI',sup:'CAT OEM',code:'04291791',name:'Kit Revisione Pompa Acqua CAT',desc:'Kit guarnizioni e tenute per revisione completa pompa acqua CAT 3516. Include paraolio e O-ring.',engines:['CAT 3516 series'],stock:'IN STOCK'},
+
+  // ─── CUMMINS ───────────────────────────────────────────────────────────────
+  {id:20,brand:'Cummins',type:'INIETTORI',sup:'Bosch',code:'0 445 120 217',name:'Iniettore CR Cummins QSK19',desc:'Iniettore common rail Bosch per Cummins QSK19 marine. OEM Cummins 4952579. Pressione 1600 bar. Certificato IMO.',engines:['Cummins QSK19','Cummins QSK19 Marine'],stock:'IN STOCK'},
+  {id:21,brand:'Cummins',type:'INIETTORI',sup:'Bosch',code:'0 445 120 238',name:'Iniettore CR Cummins QSK19/QSM11',desc:'Iniettore Bosch equivalente Cummins 2867147. Compatibile QSK19 rev.B e QSM11. Garanzia OEM.',engines:['Cummins QSK19','Cummins QSM11'],stock:'IN STOCK'},
+  {id:22,brand:'Cummins',type:'INIETTORI',sup:'Delphi',code:'EX631013',name:'Iniettore Delphi Cummins QSK19',desc:'Iniettore Delphi serie EX per Cummins QSK19 marine. Alternativa OEM certificata, piena compatibilità.',engines:['Cummins QSK19 Marine'],stock:'IN STOCK'},
+  {id:23,brand:'Cummins',type:'POMPE',sup:'Bosch',code:'0 402 736 893',name:'Pompa Alta Pressione Cummins KTA38',desc:'Pompa ad alta pressione Bosch per Cummins KTA38. OEM Cummins 3090942. Revisione completa, testata.',engines:['Cummins KTA38','Cummins QSK38'],stock:'SU RICHIESTA'},
+  {id:24,brand:'Cummins',type:'POMPE',sup:'Bosch',code:'0 414 401 107',name:'Pompante Cummins NT855/KTA19',desc:'Unit injector / pompante Bosch per Cummins NT855 e KTA19. OEM 0432191714. Standard industriale.',engines:['Cummins NT855','Cummins KTA19'],stock:'SU ORDINE'},
+  {id:25,brand:'Cummins',type:'FILTRI',sup:'Fleetguard',code:'LF3349',name:'Filtro Olio Fleetguard QSK Series',desc:'Filtro olio Fleetguard LF3349 per Cummins QSK19/38/50. Equivale Hifi SO 4563 e Mann W 1374/5. OEM Cummins 3888654.',engines:['Cummins QSK19','Cummins QSK38','Cummins QSK50'],stock:'IN STOCK'},
+  {id:26,brand:'Cummins',type:'FILTRI',sup:'Fleetguard',code:'FS1006',name:'Filtro Carburante Fleetguard QSK',desc:'Filtro gasolio separatore acqua Fleetguard FS1006. OEM Cummins 3100188. Equivale Hifi SN 80016.',engines:['Cummins QSK19','Cummins QSK38/50'],stock:'IN STOCK'},
+  {id:27,brand:'Cummins',type:'KIT',sup:'Cummins OEM',code:'3101872',name:'Kit Anelli Pistone QSK19',desc:'Kit anelli pistone Cummins QSK19. Include segmento fuoco, secondo anello e raschia-olio. Materiale in ghisa.",',engines:['Cummins QSK19'],stock:'SU RICHIESTA'},
+
+  // ─── DEUTZ MWM ─────────────────────────────────────────────────────────────
+  {id:28,brand:'Deutz',type:'INIETTORI',sup:'Bosch',code:'0 430 232 056',name:'Iniettore Meccanico Deutz MWM 620B',desc:'Iniettore meccanico Bosch per Deutz MWM 620B V16 e 604B V16. OEM 01174463. Ricondizionato certificato.',engines:['Deutz MWM 620B V16','Deutz MWM 604B V16'],stock:'IN STOCK'},
+  {id:29,brand:'Deutz',type:'POMPE',sup:'Bosch',code:'0 460 424 148',name:'Pompa Iniezione Deutz MWM',desc:'Pompa di iniezione Bosch per Deutz/MWM serie TBD. OEM 12194803. Revisione completa con test bench.',engines:['Deutz MWM TBD series','MWM 620B V16'],stock:'SU ORDINE'},
+  {id:30,brand:'Deutz',type:'FILTRI',sup:'Fleetguard',code:'LF4056',name:'Filtro Olio Deutz MWM',desc:'Filtro olio Fleetguard per Deutz/MWM. OEM 04294788. Compatibile con tutta la gamma MWM V-motori.',engines:['MWM 620B V16','MWM 604B V16','Deutz TBD'],stock:'IN STOCK'},
+  {id:31,brand:'Deutz',type:'FILTRI',sup:'Hifi Filter',code:'SN 80016',name:'Filtro Gasolio Deutz MWM',desc:'Filtro gasolio Hifi Filter per Deutz/MWM. Equivale OEM 04294790 e Fleetguard FS1006. Separazione acqua.',engines:['MWM 620B V16','MWM 604B V16'],stock:'IN STOCK'},
+  {id:32,brand:'Deutz',type:'KIT',sup:'MAHLE',code:'MS39012',name:'Guarnizione Testa MAHLE Deutz MWM',desc:'Guarnizione testata MAHLE per Deutz MWM 620B. Materiale composito multi-strato, tenuta gas certificata.',engines:['Deutz MWM 620B V16'],stock:'IN STOCK'},
+
+  // ─── WÄRTSILÄ ──────────────────────────────────────────────────────────────
+  {id:33,brand:'Wärtsilä',type:'INIETTORI',sup:'Bosch',code:'0 445 120 266',name:'Iniettore CR Wärtsilä 20/32',desc:'Iniettore common rail Bosch equivalente OEM Wärtsilä 4V92A021. Per motori Wärtsilä 20 e 32 series.',engines:['Wärtsilä 20','Wärtsilä 32'],stock:'SU RICHIESTA'},
+  {id:34,brand:'Wärtsilä',type:'POMPE',sup:'Bosch',code:'0 460 426 184',name:'Pompa Iniezione Wärtsilä Vasa',desc:'Pompa di iniezione Bosch per Wärtsilä/Vasa series. OEM 3V882029. Soluzione per motori storici in flotta.',engines:['Wärtsilä Vasa','Wärtsilä 6L20'],stock:'SU RICHIESTA'},
+  {id:35,brand:'Wärtsilä',type:'FILTRI',sup:'Hifi Filter',code:'SO 4562',name:'Filtro Olio Wärtsilä',desc:'Filtro olio Hifi Filter per Wärtsilä 6L20 e series. OEM 182B2040. Alta capacità filtrante.',engines:['Wärtsilä 6L20','Wärtsilä 20'],stock:'SU ORDINE'},
+
+  // ─── MaK ──────────────────────────────────────────────────────────────────
+  {id:36,brand:'MaK',type:'INIETTORI',sup:'Bosch',code:'0 414 702 006',name:'Iniettore Unitario UPS MaK M25',desc:'Unit Pump System Bosch per MaK 8M25/M32. OEM 3460598. Ricondizionato in banco certificato Bosch.',engines:['MaK 8M25','MaK M32'],stock:'SU ORDINE'},
+  {id:37,brand:'MaK',type:'RICAMBI',sup:'CAT OEM',code:'04505685',name:'Cinghia Distribuzione MaK 8M25',desc:'Cinghia di distribuzione per MaK 8M25. Ricambio preventivo consigliato ogni 8.000 ore di lavoro.',engines:['MaK 8M25'],stock:'IN STOCK'},
+  {id:38,brand:'MaK',type:'FILTRI',sup:'Hifi Filter',code:'SN 80008',name:'Filtro Gasolio MaK',desc:'Filtro carburante Hifi Filter per MaK 8M25. Separatore acqua integrato, certificato marine.',engines:['MaK 8M25','MaK M32'],stock:'IN STOCK'},
+
+  // ─── AVVIAMENTO PRESTOLITE ─────────────────────────────────────────────────
+  {id:39,brand:'MTU',type:'AVVIAMENTO',sup:'Prestolite',code:'M105R3001SE',name:'Motorino Avviamento 24V 11kW',desc:'Motorino di avviamento pesante Prestolite 11kW 24V. Certificato per uso marino, trattamento anti-corrosione salina. Per CAT 3516 e MTU 4000.',engines:['CAT 3516C','CAT 3516B','MTU 16V 4000'],stock:'IN STOCK'},
+  {id:40,brand:'Cummins',type:'AVVIAMENTO',sup:'Prestolite',code:'MHJ4019',name:'Motorino Avviamento Cummins QSK',desc:'Motorino Prestolite 24V per Cummins QSK19/38/KTA series. Alta coppia di spunto, ideale per grandi diesel navali.',engines:['Cummins QSK19','Cummins QSK38','Cummins KTA38'],stock:'IN STOCK'},
+  {id:41,brand:'Deutz',type:'AVVIAMENTO',sup:'Prestolite',code:'ACE7509C',name:'Kit Motorino Marine Deutz MWM',desc:'Kit motorino avviamento certificato marine per Deutz/MWM V-motori. Include pignone e relay.',engines:['Deutz MWM 620B','Deutz MWM 604B'],stock:'SU ORDINE'},
+  {id:42,brand:'MTU',type:'AVVIAMENTO',sup:'Bosch',code:'0 986 AF1 001',name:'Motorino Avviamento MTU 4000 24V',desc:'Motorino di avviamento Bosch 24V per MTU 16V 4000. OEM MTU 51.05504-0060. Coppia 11kW.',engines:['MTU 16V 4000 M65L','MTU 4000 series'],stock:'SU ORDINE'},
+
+  // ─── FILTRI UNIVERSALI MARINE ──────────────────────────────────────────────
+  {id:43,brand:'Caterpillar',type:'FILTRI',sup:'Fleetguard',code:'FS20021',name:'Filtro Gasolio Doppio Fleetguard',desc:'Filtro gasolio doppio Fleetguard FS20021. Equivale Hifi SN 80097. Compatibile MTU e CAT installazioni marine.',engines:['MTU 4000/8000','CAT 3516 series'],stock:'IN STOCK'},
+  {id:44,brand:'Cummins',type:'FILTRI',sup:'Fleetguard',code:'AF25708',name:'Filtro Aria Turbodiesel Fleetguard',desc:'Filtro aria Fleetguard AF25708 per grandi diesel marini. Equivale Hifi SA 16112 e Mann C 27154. Alta efficienza filtrante.',engines:['Cummins QSK','CAT 3516','MTU 4000'],stock:'IN STOCK'},
+  {id:45,brand:'Cummins',type:'FILTRI',sup:'Fleetguard',code:'WF2071',name:'Filtro Acqua Additivata Fleetguard',desc:'Filtro acqua con additivi anticavitazione Fleetguard. Protegge le camicie cilindro dalla corrosione per motori marine.',engines:['Cummins QSK series','CAT 3500'],stock:'IN STOCK'},
+
+  // ─── SENSORI E COMPONENTI ELETTRONICI ─────────────────────────────────────
+  {id:46,brand:'MTU',type:'RICAMBI',sup:'Bosch',code:'0 265 450 004',name:'Sensore Pressione Common Rail',desc:'Sensore pressione per rail common rail Bosch/MTU. Misura precisa 0-2000 bar. Connettore OEM compatibile.',engines:['MTU CR systems','Cummins QSK CR'],stock:'IN STOCK'},
+  {id:47,brand:'MTU',type:'RICAMBI',sup:'Bosch',code:'0 928 400 507',name:'Regolatore Flusso Pompa HP',desc:'Metering unit / regolatore flusso per pompa alta pressione Bosch. Controllo preciso della portata carburante.',engines:['Bosch CP1/CP3 systems','MTU 4000/8000'],stock:'IN STOCK'},
+  {id:48,brand:'Cummins',type:'RICAMBI',sup:'Cummins OEM',code:'4955578',name:'Valvola Controllo Pressione CR QSK',desc:'Pressure relief valve per sistema common rail Cummins QSK. Protezione da sovrapressione.',engines:['Cummins QSK series'],stock:'IN STOCK'},
+];
+
+let activeBrand = 'all';
+let activeType = 'all';
+
+function getStockClass(s){
+  if(s==='IN STOCK') return 'stock-in';
+  if(s==='SU ORDINE') return 'stock-order';
+  return 'stock-req';
+}
+
+function renderProducts(list) {
+  const grid = document.getElementById('productGrid');
+  const count = document.getElementById('resultsCount');
+  if(!list.length){
+    grid.innerHTML = '<div class="le-empty">Nessun prodotto trovato — prova una ricerca diversa o contattaci per ricambi speciali.</div>';
+    count.textContent = '0 prodotti';
+    return;
+  }
+  count.textContent = list.length + (list.length===1?' prodotto':' prodotti trovati');
+  const brandColor = (sup) => BRAND_COLORS[sup] || '#7a9abf';
+  grid.innerHTML = list.map(p => `
+    <div class="le-card">
+      <div class="le-card-top">
+        <span class="le-card-brand" style="background:${brandColor(p.sup)}22;color:${brandColor(p.sup)};border:1px solid ${brandColor(p.sup)}44">${p.sup}</span>
+        <span class="le-card-stock ${getStockClass(p.stock)}">${p.stock}</span>
+      </div>
+      <div class="le-card-name">${p.name}</div>
+      <div class="le-card-code">${p.code}</div>
+      <div class="le-card-desc">${p.desc}</div>
+      <div class="le-card-engines">${p.engines.map(e=>`<span class="le-engine-tag">${e}</span>`).join('')}</div>
+      <div class="le-card-footer">
+        <button class="btn-quote" onclick="openModal('${p.name} — ${p.code}')">RICHIEDI PREVENTIVO</button>
+        <a class="btn-cross" href="ricerca-codici.html?q=${encodeURIComponent(p.code)}" title="Cerca cross-reference">⇄</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterProducts(){
+  const q = document.getElementById('leSearch').value.toLowerCase().trim();
+  const filtered = PRODUCTS.filter(p => {
+    const matchQ = !q || [p.name,p.code,p.desc,p.sup,...p.engines].some(v=>v.toLowerCase().includes(q));
+    const matchBrand = activeBrand==='all' || p.brand===activeBrand;
+    const matchType = activeType==='all' || p.type===activeType;
+    return matchQ && matchBrand && matchType;
+  });
+  renderProducts(filtered);
+}
+
+window.setBrand = function(b, el){
+  activeBrand = b;
+  document.querySelectorAll('.le-filter-btn').forEach(btn=>{
+    if(['MTU','Caterpillar','Cummins','Deutz','Wärtsilä','MaK','all'].includes(btn.getAttribute('onclick')?.match(/'([^']+)'/)?.[1])){
+      btn.classList.remove('active');
+    }
+  });
+  el.classList.add('active');
+  filterProducts();
+};
+
+window.setType = function(t, el){
+  activeType = t;
+  document.querySelectorAll('.le-filter-btn').forEach(btn=>{
+    if(['INIETTORI','POMPE','FILTRI','KIT','AVVIAMENTO','RICAMBI','all'].includes(btn.getAttribute('onclick')?.match(/'([^']+)'/)?.[1])){
+      btn.classList.remove('active');
+    }
+  });
+  el.classList.add('active');
+  filterProducts();
+};
+
+window.openModal = function(productName){
+  document.getElementById('modalProductName').textContent = productName;
+  document.getElementById('quoteOverlay').classList.add('open');
+};
+
+window.closeModal = function(e){
+  if(!e || e.target.id==='quoteOverlay') document.getElementById('quoteOverlay').classList.remove('open');
+};
+
+window.submitQuote = function(){
+  const n = document.getElementById('qName').value.trim();
+  const em = document.getElementById('qEmail').value.trim();
+  if(!n||!em){showToast('Compila nome ed email'); return;}
+  document.getElementById('quoteOverlay').classList.remove('open');
+  showToast('Richiesta inviata — risposta entro 2 ore lavorative');
+};
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3200);
+}
+
+// Init
+renderProducts(PRODUCTS);
+
+// URL param
+const urlQ = new URLSearchParams(location.search).get('q');
+if(urlQ){ document.getElementById('leSearch').value=urlQ; filterProducts(); }
+</script>
+</body>
+</html>

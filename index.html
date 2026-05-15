@@ -3,148 +3,1512 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RCS Marine Intelligence</title>
+  <title>RCS Marine Intelligence — Ricambi Motori Marini · Catania</title>
+  <meta name="description" content="Ricambi motori marini di alta precisione. MTU, Caterpillar, Cummins, Bosch, Delphi, Denso. Consegna a Malta in 24 ore. Ricambi Centro Sud S.r.l., Catania.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #020b18;
+      --navy2:  #041628;
+      --navy3:  #071f36;
+      --cyan:   #00d4ff;
+      --cyan2:  #00a8cc;
+      --green:  #00e676;
+      --orange: #ff9800;
+      --white:  #f0f4f8;
+      --grey:   #8ba3bf;
+      --border: rgba(0,212,255,.18);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ──────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 64px;
+      background: rgba(2,11,24,.97);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      z-index: 1000;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .nav-brand .anchor { font-size: 22px; }
+    .nav-brand .brand-rcs {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 20px;
+      color: var(--cyan);
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+    .nav-brand .brand-sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      color: var(--grey);
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      color: var(--grey);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: var(--cyan);
+      color: #000 !important;
+      padding: 10px 20px;
+      border-radius: 3px;
+      font-weight: 700 !important;
+      font-size: 13px !important;
+      transition: background .2s, transform .15s !important;
+    }
+    .nav-cta:hover { background: #00b8dd !important; transform: translateY(-1px); }
+
+    .nav-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+
+    /* ── HERO ─────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 80px;
+      overflow: hidden;
+    }
+
+    .hero-video-wrap {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(1.6) contrast(1.15) saturate(1.4);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(2,11,24,.55);
+      z-index: 1;
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 900px; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,212,255,.12);
+      border: 1px solid rgba(0,212,255,.35);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--cyan);
+      margin-bottom: 28px;
+      animation: pulse-badge 2.5s ease-in-out infinite;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      animation: blink 1.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-badge {
+      0%,100% { box-shadow: 0 0 0 0 rgba(0,212,255,.0); }
+      50%      { box-shadow: 0 0 0 8px rgba(0,212,255,.08); }
+    }
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: .25; }
+    }
+
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(36px, 6vw, 72px);
+      line-height: 1;
+      letter-spacing: -1px;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero h1 .accent { color: var(--cyan); }
+
+    .hero-sub {
+      font-size: clamp(14px, 2vw, 18px);
+      color: rgba(240,244,248,.75);
+      max-width: 640px;
+      margin: 0 auto 44px;
+      line-height: 1.6;
+    }
+
+    .hero-search {
+      display: flex;
+      max-width: 680px;
+      margin: 0 auto 36px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 40px rgba(0,212,255,.15);
+    }
+    .hero-search input {
+      flex: 1;
+      padding: 18px 24px;
+      background: rgba(4,22,40,.95);
+      border: 1px solid var(--border);
+      border-right: none;
+      border-radius: 4px 0 0 4px;
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .hero-search input:focus { border-color: var(--cyan); }
+    .hero-search input::placeholder { color: #5a7a9a; }
+    .hero-search .search-btn {
+      padding: 18px 28px;
+      background: var(--cyan);
+      border: none;
+      color: #000;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      border-radius: 0 4px 4px 0;
+      transition: background .2s;
+      white-space: nowrap;
+    }
+    .hero-search .search-btn:hover { background: #00b8dd; }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 15px 32px;
+      background: var(--cyan);
+      color: #000;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background .2s, transform .15s;
+    }
+    .btn-primary:hover { background: #00b8dd; transform: translateY(-2px); }
+    .btn-ghost {
+      display: inline-block;
+      padding: 15px 32px;
+      border: 1px solid rgba(240,244,248,.35);
+      color: var(--white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: border-color .2s, color .2s;
+    }
+    .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    /* ── KPI STRIP ────────────────────────────────── */
+    .kpi-strip {
+      background: var(--navy2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .kpi-item {
+      padding: 40px 20px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .kpi-item:last-child { border-right: none; }
+    .kpi-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 52px;
+      color: var(--cyan);
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .kpi-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      color: var(--grey);
+      margin-top: 8px;
+    }
+
+    /* ── SECTION SHARED ───────────────────────────── */
+    section { padding: 100px 40px; }
+    .section-tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .section-sub {
+      font-size: 16px;
+      color: var(--grey);
+      max-width: 580px;
+      line-height: 1.7;
+    }
+    .section-header { margin-bottom: 56px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* ── SETTORI MOTORI ───────────────────────────── */
+    .engines-section { background: var(--navy); }
+    .engines-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .engine-card {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 32px 28px;
+      transition: border-color .25s, transform .2s;
+    }
+    .engine-card:hover { border-color: var(--cyan); transform: translateY(-4px); }
+    .engine-icon { font-size: 32px; margin-bottom: 16px; }
+    .engine-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.1;
+    }
+    .engine-desc { font-size: 14px; color: var(--grey); line-height: 1.6; }
+
+    /* ── PRODOTTI ─────────────────────────────────── */
+    .products-section { background: var(--navy2); }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .product-card {
+      background: var(--navy);
+      border: 1px solid rgba(0,212,255,.12);
+      border-radius: 6px;
+      padding: 28px;
+      transition: border-color .25s;
+    }
+    .product-card:hover { border-color: var(--cyan); }
+    .product-badges {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      padding: 3px 10px;
+      border-radius: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+    .badge-brand { background: rgba(220,0,30,.15); border: 1px solid rgba(220,0,30,.4); color: #ff4060; }
+    .badge-brand.bosch { background: rgba(220,0,30,.15); border: 1px solid rgba(220,0,30,.4); color: #ff4060; }
+    .badge-brand.mtu { background: rgba(0,60,160,.2); border: 1px solid rgba(0,100,255,.35); color: #5599ff; }
+    .badge-brand.prestolite { background: rgba(255,152,0,.12); border: 1px solid rgba(255,152,0,.35); color: var(--orange); }
+    .badge-brand.hifi { background: rgba(0,180,80,.12); border: 1px solid rgba(0,200,80,.3); color: #00e676; }
+    .badge-brand.fleetguard { background: rgba(100,180,0,.12); border: 1px solid rgba(120,200,0,.3); color: #aaee00; }
+    .badge-avail { background: rgba(0,230,118,.1); border: 1px solid rgba(0,230,118,.3); color: var(--green); }
+    .badge-order { background: rgba(255,152,0,.1); border: 1px solid rgba(255,152,0,.3); color: var(--orange); }
+
+    .product-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 19px;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.15;
+    }
+    .product-desc { font-size: 13px; color: var(--grey); line-height: 1.65; }
+
+    .products-cta { text-align: center; }
+
+    /* ── LOGISTICA ────────────────────────────────── */
+    .logistics-section {
+      background: linear-gradient(135deg, #020f22 0%, #031525 50%, #020b18 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .logistics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .logistics-cols {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .logistics-item { display: flex; gap: 20px; }
+    .logistics-item-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .logistics-item-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--cyan);
+      margin-bottom: 8px;
+    }
+    .logistics-item-desc { font-size: 14px; color: var(--grey); line-height: 1.7; }
+
+    /* SVG MAP */
+    .map-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .map-svg-wrap {
+      background: rgba(0,212,255,.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      width: 100%;
+      max-width: 400px;
+    }
+    .map-svg-wrap svg { width: 100%; height: auto; }
+    .map-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--grey);
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    @keyframes move-dot {
+      0%   { offset-distance: 0%; }
+      100% { offset-distance: 100%; }
+    }
+    .route-dot {
+      offset-path: path('M 80 60 C 120 100 240 140 320 180');
+      animation: move-dot 3s linear infinite;
+    }
+    @keyframes dash-flow {
+      to { stroke-dashoffset: -20; }
+    }
+    .route-line {
+      stroke-dasharray: 6 5;
+      animation: dash-flow 1.2s linear infinite;
+    }
+
+    /* ── RICERCA MOTORE ───────────────────────────── */
+    .engine-search-section { background: var(--navy3); }
+    .engine-search-box {
+      background: rgba(2,11,24,.8);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 48px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .engine-search-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      gap: 16px;
+      align-items: end;
+    }
+    .form-group label {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--grey);
+      margin-bottom: 8px;
+    }
+    .form-group select,
+    .form-group input {
+      width: 100%;
+      padding: 13px 16px;
+      background: rgba(4,22,40,.9);
+      border: 1px solid rgba(0,212,255,.2);
+      border-radius: 4px;
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+      outline: none;
+      appearance: none;
+      transition: border-color .2s;
+    }
+    .form-group select:focus,
+    .form-group input:focus { border-color: var(--cyan); }
+    .form-group select option { background: var(--navy2); }
+    .engine-note {
+      font-size: 13px;
+      color: var(--grey);
+      margin-top: 24px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .engine-note strong { color: var(--cyan); }
+
+    /* ── SERVIZI ──────────────────────────────────── */
+    .services-section { background: var(--navy2); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--navy);
+      border: 1px solid rgba(0,212,255,.1);
+      border-radius: 6px;
+      padding: 32px 24px;
+      transition: border-color .25s;
+    }
+    .service-card:hover { border-color: var(--cyan); }
+    .service-icon { font-size: 32px; margin-bottom: 16px; }
+    .service-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.15;
+    }
+    .service-desc { font-size: 13px; color: var(--grey); line-height: 1.65; }
+
+    /* ── REFERENZE ────────────────────────────────── */
+    .social-section { background: var(--navy); }
+    .clients-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .client-badge {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+      min-width: 160px;
+      transition: border-color .2s;
+    }
+    .client-badge:hover { border-color: var(--cyan); }
+    .client-badge img { height: 36px; object-fit: contain; filter: brightness(0) invert(1) opacity(.7); }
+    .client-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+    .client-note { font-size: 11px; color: var(--grey); }
+    .client-text-badge {
+      background: var(--navy2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px 32px;
+      text-align: center;
+      flex: 1;
+      min-width: 160px;
+    }
+    .client-text-badge .client-name { display: block; margin-bottom: 4px; }
+
+    .testimonial {
+      background: var(--navy2);
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 6px 6px 0;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+      max-width: 720px;
+    }
+    .testimonial blockquote {
+      font-size: 17px;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .testimonial cite {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--cyan);
+      font-style: normal;
+      letter-spacing: 0.5px;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: var(--green);
+    }
+    .stat-label { font-size: 13px; color: var(--grey); }
+
+    /* ── CONTATTI ─────────────────────────────────── */
+    .contact-section { background: var(--navy2); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+    .contact-form-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(2,11,24,.9);
+      border: 1px solid rgba(0,212,255,.18);
+      border-radius: 4px;
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color .2s;
+      resize: none;
+      appearance: none;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus { border-color: var(--cyan); }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: #4a6a8a; }
+    .contact-form select option { background: var(--navy2); }
+    .contact-form textarea { min-height: 120px; }
+    .btn-submit {
+      padding: 15px 32px;
+      background: var(--cyan);
+      border: none;
+      border-radius: 3px;
+      color: #000;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: background .2s, transform .15s;
+      align-self: flex-start;
+    }
+    .btn-submit:hover { background: #00b8dd; transform: translateY(-1px); }
+
+    .company-info { padding-top: 8px; }
+    .company-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--cyan);
+      margin-bottom: 24px;
+    }
+    .company-lines { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .company-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--grey);
+      line-height: 1.5;
+    }
+    .company-line .ci { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .company-line strong { color: var(--white); }
+    .company-hours {
+      background: rgba(0,212,255,.05);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .hours-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--cyan);
+      margin-bottom: 10px;
+    }
+    .hours-line { font-size: 13px; color: var(--grey); line-height: 1.8; }
+    .map-placeholder {
+      background: var(--navy3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--grey);
+      font-size: 14px;
+    }
+    .map-placeholder .pin { font-size: 28px; }
+
+    /* ── TOAST ────────────────────────────────────── */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: var(--green);
+      color: #000;
+      padding: 16px 24px;
+      border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      z-index: 9999;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: transform .35s ease, opacity .35s ease;
+      pointer-events: none;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    /* ── FOOTER ───────────────────────────────────── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid var(--cyan);
+      padding: 64px 40px 32px;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .anchor { font-size: 24px; display: block; margin-bottom: 8px; }
+    .footer-brand-rcs {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      color: var(--cyan);
+      letter-spacing: 2px;
+    }
+    .footer-brand-sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      color: var(--grey);
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+    .footer-payoff { font-size: 13px; color: var(--grey); line-height: 1.7; max-width: 280px; }
+    .footer-col-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      color: var(--cyan);
+      margin-bottom: 18px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--grey);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-data { display: flex; flex-direction: column; gap: 8px; }
+    .footer-data span { font-size: 12px; color: var(--grey); }
+    .footer-certs { display: flex; flex-direction: column; gap: 10px; }
+    .cert-badge {
+      background: rgba(0,212,255,.06);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 8px 14px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: var(--grey);
+      text-align: center;
+    }
+    .footer-copy {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 24px;
+      border-top: 1px solid rgba(0,212,255,.1);
+      font-size: 12px;
+      color: var(--grey);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────── */
+    @media (max-width: 1024px) {
+      .engines-grid { grid-template-columns: repeat(2, 1fr); }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .logistics-grid { grid-template-columns: 1fr; gap: 48px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .engine-search-form { grid-template-columns: 1fr 1fr; }
+      .engine-search-form .form-btn { grid-column: span 2; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 64px; left: 0; right: 0;
+        background: rgba(2,11,24,.98);
+        padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-hamburger { display: flex; }
+      section { padding: 72px 20px; }
+      .kpi-strip { grid-template-columns: repeat(2, 1fr); }
+      .kpi-item:nth-child(2) { border-right: none; }
+      .kpi-item:nth-child(3) { border-top: 1px solid var(--border); }
+      .engines-grid { grid-template-columns: 1fr; }
+      .products-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contact-row { grid-template-columns: 1fr; }
+      .engine-search-form { grid-template-columns: 1fr; }
+      .engine-search-form .form-btn { grid-column: span 1; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-copy { flex-direction: column; gap: 8px; text-align: center; }
+      .clients-row { flex-direction: column; }
+      .hero-search { flex-direction: column; border-radius: 4px; }
+      .hero-search input { border-right: 1px solid var(--border); border-bottom: none; border-radius: 4px 4px 0 0; }
+      .hero-search .search-btn { border-radius: 0 0 4px 4px; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- SFONDO ANIMATO -->
-  <div class="bg">
-    <div class="bg-overlay"></div>
-    <canvas id="waves"></canvas>
-    <div class="ship" id="ship"></div>
+  <!-- ═══════════════════════════════════════════════ NAV -->
+  <nav id="mainnav">
+    <a class="nav-brand" href="#top">
+      <span class="anchor">⚓</span>
+      <div>
+        <div class="brand-rcs">RCS  MARINE INTELLIGENCE</div>
+        <div class="brand-sub">RICAMBI CENTRO SUD S.R.L.</div>
+      </div>
+    </a>
+    <ul class="nav-links" id="navlinks">
+      <li><a href="pages/ricerca-codici.html">RICERCA CODICI</a></li>
+      <li><a href="pages/large-engine.html">LARGE ENGINE</a></li>
+      <li><a href="pages/chi-siamo.html">CHI SIAMO</a></li>
+      <li><a href="#contatti">CONTATTI</a></li>
+      <li><a href="pages/login.html" class="nav-cta">PORTALE CLIENTI →</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════ HERO -->
+  <section class="hero" id="top">
+    <div class="hero-video-wrap">
+      <video autoplay muted loop playsinline>
+        <source src="assets/video/hero-bg.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        STOCK AGGIORNATO IN TEMPO REALE
+      </div>
+      <h1>RICAMBI MARINE<br><span class="accent">DI ALTA PRECISIONE</span></h1>
+      <p class="hero-sub">Da Catania a Malta in 24 ore &middot; Bosch &middot; Delphi &middot; Denso &middot; Hifi Filter &middot; 2000+ codici in stock</p>
+
+      <div class="hero-search">
+        <input type="text" id="heroSearchInput" placeholder="Cerca per codice OEM, Bosch, Cummins, CAT, MTU..." autocomplete="off">
+        <button class="search-btn" onclick="heroSearch()">CERCA &rarr;</button>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="pages/ricerca-codici.html" class="btn-primary">CERCA NEL DATABASE &rarr;</a>
+        <a href="#contatti" class="btn-ghost">RICHIEDI PREVENTIVO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ KPI STRIP -->
+  <div class="kpi-strip">
+    <div class="kpi-item">
+      <div class="kpi-num">2.000+</div>
+      <div class="kpi-label">CODICI IN STOCK</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-num">24h</div>
+      <div class="kpi-label">CONSEGNA A MALTA</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-num">35</div>
+      <div class="kpi-label">ANNI DI ESPERIENZA</div>
+    </div>
+    <div class="kpi-item">
+      <div class="kpi-num">90+</div>
+      <div class="kpi-label">BRAND CERTIFICATI</div>
+    </div>
   </div>
 
-  <!-- LOGO -->
-  <header>
-    <div class="logo">
-      <span class="logo-icon">⚓</span>
-      <div>
-        <div class="logo-rcs">RCS</div>
-        <div class="logo-sub">MARINE INTELLIGENCE</div>
+  <!-- ═══════════════════════════════════════════════ SETTORI MOTORI -->
+  <section class="engines-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">SPECIALIZZAZIONE TECNICA</div>
+        <h2 class="section-title">SETTORI MOTORI</h2>
+        <p class="section-sub">Competenza certificata sui principali motori diesel marini e industriali di grande cilindrata.</p>
+      </div>
+      <div class="engines-grid">
+        <div class="engine-card">
+          <div class="engine-icon">🔧</div>
+          <div class="engine-name">MTU 2000 / 4000 / 8000</div>
+          <div class="engine-desc">Sistemi d'iniezione, filtrazione, O-ring, iniettori originali e codici Bosch per tutte le serie MTU. Stock dedicato per i modelli 16V4000 e 20V4000.</div>
+        </div>
+        <div class="engine-card">
+          <div class="engine-icon">⚙️</div>
+          <div class="engine-name">Caterpillar 3500 Series</div>
+          <div class="engine-desc">Iniettori, pompe, filtri e kit revisione per 3508, 3512 e 3516. Compatibilità totale con linea CAT Marine Power e sistemi HEUI.</div>
+        </div>
+        <div class="engine-card">
+          <div class="engine-icon">🛢️</div>
+          <div class="engine-name">Cummins QSK Series</div>
+          <div class="engine-desc">QSK19, QSK38, QSK50: pompanti, iniettori, filtri e kit revisione completi. Ricambi Fleetguard certificati per ogni applicazione marina.</div>
+        </div>
+        <div class="engine-card">
+          <div class="engine-icon">🔩</div>
+          <div class="engine-name">Deutz MWM &middot; Wärtsilä &middot; MaK</div>
+          <div class="engine-desc">Ricambi specializzati per motori storici e industriali. Approvvigionamento su misura per unità fuori produzione e motori di bassa serie.</div>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- LOGIN -->
-  <main>
-    <div class="card" id="card">
-      <div class="card-line"></div>
-      <div class="card-body">
-        <h1>ACCESSO RISERVATO</h1>
-        <p class="card-desc">Ricambi Centro Sud S.r.l. · Catania</p>
+  <!-- ═══════════════════════════════════════════════ PRODOTTI -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">CATALOGO PRODOTTI</div>
+        <h2 class="section-title">COMPONENTI CRITICI PER<br>GRANDI MOTORI MARINI</h2>
+        <p class="section-sub">Componenti OEM e di prima linea, sempre disponibili a Catania per consegna immediata.</p>
+      </div>
+      <div class="products-grid">
 
-        <div class="field">
-          <label>UTENTE</label>
-          <input type="text" id="u" placeholder="nome utente">
-        </div>
-        <div class="field">
-          <label>PASSWORD</label>
-          <input type="password" id="p" placeholder="••••••••">
-        </div>
-
-        <div class="error" id="err">Credenziali non corrette.</div>
-
-        <button id="btn" onclick="login()">
-          <span id="btnTxt">ACCEDI</span>
-          <span class="arrow">→</span>
-        </button>
-
-        <div class="divider"></div>
-
-        <!-- ACCESSO RAPIDO CON PASTE -->
-        <details style="margin-top: 20px;">
-          <summary style="color: #00d4ff; cursor: pointer; font-weight: 600; font-size: 12px; letter-spacing: 1px;">⚡ ACCESSO RAPIDO (INCOLLA CREDENZIALI)</summary>
-          <div style="margin-top: 12px; background: rgba(0,212,255,.08); padding: 12px; border-radius: 4px; border: 1px solid rgba(0,212,255,.2);">
-            <p style="color: var(--grigio); font-size: 12px; margin-bottom: 10px;">Incolla nel formato: <strong style="color: #00d4ff;">utente:password</strong></p>
-            <input type="text" id="quickPaste" placeholder="utente:password" style="width: 100%; padding: 10px; background: rgba(0,0,0,.3); border: 1px solid rgba(0,87,184,.3); border-radius: 4px; color: #fff; font-family: monospace; font-size: 12px; box-sizing: border-box;" onpaste="handleQuickPaste(event)">
-            <button onclick="parseAndLogin()" style="width: 100%; margin-top: 10px; padding: 10px; background: rgba(0,230,118,.2); border: 1px solid rgba(0,230,118,.4); color: #00e676; cursor: pointer; border-radius: 4px; font-weight: 600; font-size: 12px;">ACCEDI RAPIDO</button>
+        <div class="product-card">
+          <div class="product-badges">
+            <span class="badge badge-brand bosch">BOSCH</span>
+            <span class="badge badge-avail">DISPONIBILE</span>
           </div>
-        </details>
+          <div class="product-name">Iniettori Bosch Common Rail</div>
+          <div class="product-desc">Serie 0445120xxx per MTU, Cummins, CAT. F00BL0J005 per MTU Serie 4000. Garanzia OEM, calibrazione certificata, disponibilità immediata dal magazzino Catania.</div>
+        </div>
 
-        <a href="pages/clienti.html" class="client-link">Area Clienti →</a>
+        <div class="product-card">
+          <div class="product-badges">
+            <span class="badge badge-brand bosch">BOSCH</span>
+            <span class="badge badge-order">SU ORDINE</span>
+          </div>
+          <div class="product-name">Pompe Bosch PE Series</div>
+          <div class="product-desc">PE8ZWM per sistemi di iniezione in linea ad alte prestazioni. Compatibili con Cummins NT855, KTA19, KTA38. Revisione e ricondizionamento disponibile.</div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badges">
+            <span class="badge badge-brand mtu">MTU OEM</span>
+            <span class="badge badge-avail">DISPONIBILE</span>
+          </div>
+          <div class="product-name">Iniettori MTU Originali</div>
+          <div class="product-desc">F00BL0J005 e F00BL0J003 per Serie 4000. Calibrazione certificata MTU, tracciabilità completa, documentazione per classificazione inclusa.</div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badges">
+            <span class="badge badge-brand prestolite">PRESTOLITE</span>
+            <span class="badge badge-avail">DISPONIBILE</span>
+          </div>
+          <div class="product-name">Motorini Avviamento Prestolite</div>
+          <div class="product-desc">Kit avviamento pesante per motori diesel da 6V a 24V. Certificazione marina per ambienti aggressivi. Adatti a MTU, CAT, Cummins e Detroit Diesel.</div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badges">
+            <span class="badge badge-brand hifi">HIFI FILTER</span>
+            <span class="badge badge-avail">DISPONIBILE</span>
+          </div>
+          <div class="product-name">Filtri Hifi Filter Marine</div>
+          <div class="product-desc">SN serie per gasolio, SO per olio motore, SH per impianti idraulici. Compatibilità totale con MTU, CAT, Cummins e Volvo. Certificati per applicazioni marine.</div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-badges">
+            <span class="badge badge-brand fleetguard">FLEETGUARD</span>
+            <span class="badge badge-avail">DISPONIBILE</span>
+          </div>
+          <div class="product-name">Kit Fleetguard LF / FS</div>
+          <div class="product-desc">LF3349, FS1006, FS20021 per Cummins QSK Series. Filtrazione certificata DOHC, intervalli di manutenzione estesi, compatibili con olii sintetici.</div>
+        </div>
+
+      </div>
+      <div class="products-cta">
+        <a href="pages/large-engine.html" class="btn-primary">VEDI CATALOGO COMPLETO &rarr;</a>
       </div>
     </div>
-  </main>
+  </section>
 
-  <footer>© 2026 Ricambi Centro Sud S.r.l. · P.IVA IT03176280877 · Catania</footer>
+  <!-- ═══════════════════════════════════════════════ LOGISTICA -->
+  <section class="logistics-section">
+    <div class="container">
+      <div class="logistics-grid">
+        <div>
+          <div class="section-tag">VANTAGGIO COMPETITIVO</div>
+          <h2 class="section-title">IL PONTE<br><span style="color:var(--cyan)">CATANIA — MALTA</span></h2>
+          <p class="section-sub" style="margin-bottom: 48px;">La posizione strategica di RCS è il vostro vantaggio competitivo nel Mediterraneo centrale.</p>
+          <div class="logistics-cols">
+            <div class="logistics-item">
+              <div class="logistics-item-icon">⚡</div>
+              <div>
+                <div class="logistics-item-title">Consegna 12–24 Ore</div>
+                <div class="logistics-item-desc">Collegamento diretto Catania–Valletta tramite servizi marittimi rapidi. Ricambi urgenti a bordo in meno di 24 ore dall'ordine confermato.</div>
+              </div>
+            </div>
+            <div class="logistics-item">
+              <div class="logistics-item-icon">🏭</div>
+              <div>
+                <div class="logistics-item-title">Stock Reale a Catania</div>
+                <div class="logistics-item-desc">Magazzino fisico in Via Alessandro Volta 17, Catania. Nessun intermediario, nessuna attesa da distributori del Nord Europa. Disponibilità verificabile in tempo reale.</div>
+              </div>
+            </div>
+            <div class="logistics-item">
+              <div class="logistics-item-icon">🌊</div>
+              <div>
+                <div class="logistics-item-title">Zero Fermo Nave</div>
+                <div class="logistics-item-desc">Servizio prioritario per navi in sosta tecnica nei cantieri maltesi. SLA contrattuale, tracciabilità spedizione, assistenza tecnica 24/7.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map-container">
+          <div class="map-svg-wrap">
+            <svg viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mappa rotta Catania-Malta">
+              <!-- Sea background -->
+              <rect width="400" height="260" fill="#020f22" rx="4"/>
+              <!-- Grid lines -->
+              <line x1="0" y1="65" x2="400" y2="65" stroke="rgba(0,212,255,.06)" stroke-width="1"/>
+              <line x1="0" y1="130" x2="400" y2="130" stroke="rgba(0,212,255,.06)" stroke-width="1"/>
+              <line x1="0" y1="195" x2="400" y2="195" stroke="rgba(0,212,255,.06)" stroke-width="1"/>
+              <line x1="100" y1="0" x2="100" y2="260" stroke="rgba(0,212,255,.06)" stroke-width="1"/>
+              <line x1="200" y1="0" x2="200" y2="260" stroke="rgba(0,212,255,.06)" stroke-width="1"/>
+              <line x1="300" y1="0" x2="300" y2="260" stroke="rgba(0,212,255,.06)" stroke-width="1"/>
 
-  <script src="js/app.js"></script>
+              <!-- Sicily shape (simplified) -->
+              <polygon points="60,50 160,40 200,55 195,90 170,100 130,110 80,100 50,80" fill="rgba(0,212,255,.12)" stroke="rgba(0,212,255,.4)" stroke-width="1.5"/>
+              <text x="120" y="80" fill="#00d4ff" font-family="Barlow Condensed,sans-serif" font-size="11" font-weight="700" letter-spacing="1" text-anchor="middle">SICILIA</text>
 
-  <script type="module">
-    import { auth, signInWithEmailAndPassword, onAuthStateChanged, toEmail } from './js/firebase-auth.js';
+              <!-- Malta shape (simplified) -->
+              <ellipse cx="280" cy="195" rx="22" ry="14" fill="rgba(0,212,255,.12)" stroke="rgba(0,212,255,.4)" stroke-width="1.5"/>
+              <text x="280" y="199" fill="#00d4ff" font-family="Barlow Condensed,sans-serif" font-size="10" font-weight="700" letter-spacing="0.5" text-anchor="middle">MALTA</text>
 
-    const TEAM = ['nunzio','direttore','admin','commerciale','tecnico','logistica'];
-    const CLIENT_FLEET = {
-      virtu: { fleet:'virtu', company:'Virtù Ferries' },
-      tug:   { fleet:'tug',   company:'Tug Malta'     }
+              <!-- Catania dot -->
+              <circle cx="160" cy="88" r="6" fill="#00d4ff" opacity=".9"/>
+              <circle cx="160" cy="88" r="11" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity=".4">
+                <animate attributeName="r" values="6;16;6" dur="2.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".4;0;.4" dur="2.5s" repeatCount="indefinite"/>
+              </circle>
+              <text x="145" y="106" fill="#f0f4f8" font-family="Barlow Condensed,sans-serif" font-size="11" font-weight="600" text-anchor="middle">CATANIA</text>
+
+              <!-- Valletta dot -->
+              <circle cx="275" cy="192" r="5" fill="#00e676" opacity=".9"/>
+              <circle cx="275" cy="192" r="10" fill="none" stroke="#00e676" stroke-width="1.5" opacity=".4">
+                <animate attributeName="r" values="5;14;5" dur="2.5s" begin="1.25s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".4;0;.4" dur="2.5s" begin="1.25s" repeatCount="indefinite"/>
+              </circle>
+              <text x="295" y="187" fill="#f0f4f8" font-family="Barlow Condensed,sans-serif" font-size="11" font-weight="600">VALLETTA</text>
+
+              <!-- Route dashed line -->
+              <path d="M 160 94 C 185 130 240 160 275 187" stroke="#00d4ff" stroke-width="2" fill="none" stroke-dasharray="6 5" class="route-line" opacity=".7"/>
+
+              <!-- Moving dot along route -->
+              <circle r="4" fill="#fff">
+                <animateMotion dur="3s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#routepath"/>
+                </animateMotion>
+              </circle>
+              <path id="routepath" d="M 160 94 C 185 130 240 160 275 187" fill="none"/>
+
+              <!-- 24h label -->
+              <rect x="188" y="127" width="42" height="18" rx="9" fill="rgba(0,212,255,.15)" stroke="rgba(0,212,255,.4)" stroke-width="1"/>
+              <text x="209" y="140" fill="#00d4ff" font-family="Barlow Condensed,sans-serif" font-size="11" font-weight="800" text-anchor="middle">24h</text>
+
+              <!-- Compass rose (small) -->
+              <text x="360" y="30" fill="rgba(0,212,255,.3)" font-family="Barlow Condensed,sans-serif" font-size="20">✛</text>
+              <text x="356" y="20" fill="rgba(0,212,255,.4)" font-family="Barlow Condensed,sans-serif" font-size="9" font-weight="700">N</text>
+            </svg>
+          </div>
+          <div class="map-label">ROTTA OPERATIVA CATANIA &mdash; VALLETTA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ RICERCA MOTORE -->
+  <section class="engine-search-section">
+    <div class="container">
+      <div class="section-header" style="text-align:center;">
+        <div class="section-tag">STRUMENTO DI RICERCA</div>
+        <h2 class="section-title">TROVA IL RICAMBIO GIUSTO<br>PER IL TUO MOTORE</h2>
+      </div>
+      <div class="engine-search-box">
+        <div class="engine-search-form">
+          <div class="form-group">
+            <label>MARCA MOTORE</label>
+            <select id="brandSelect" onchange="populateSeries()">
+              <option value="">Seleziona marca…</option>
+              <option value="mtu">MTU</option>
+              <option value="cat">Caterpillar</option>
+              <option value="cummins">Cummins</option>
+              <option value="deutz">Deutz</option>
+              <option value="wartsila">Wärtsilä</option>
+              <option value="mak">MaK</option>
+              <option value="volvo">Volvo</option>
+              <option value="altro">Altro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>SERIE MOTORE</label>
+            <select id="seriesSelect">
+              <option value="">Prima seleziona marca…</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>CODICE OEM</label>
+            <input type="text" id="oemCode" placeholder="es. 0445120236">
+          </div>
+          <div class="form-group form-btn">
+            <label>&nbsp;</label>
+            <button class="btn-submit" style="width:100%; padding:13px;" onclick="searchByEngine()">CERCA RICAMBIO &rarr;</button>
+          </div>
+        </div>
+        <p class="engine-note">Inserisci il codice OEM del costruttore — restituiamo il codice <strong>Bosch / Delphi / Denso</strong> corrispondente e la disponibilità in magazzino</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ SERVIZI -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">SERVIZI AGGIUNTIVI</div>
+        <h2 class="section-title">TUTTO CIÒ CHE SERVE<br>A BORDO</h2>
+        <p class="section-sub">Oltre ai ricambi, offriamo strumenti digitali e supporto tecnico che semplificano la vita agli armatori.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <div class="service-name">Schede Tecniche & Certificazioni</div>
+          <div class="service-desc">Download immediato di certificati di conformità, schede MSDS, dichiarazioni CE. Fondamentali per ispezioni di bordo e procedure di classificazione.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚢</div>
+          <div class="service-name">Ricerca per IMO / Nome Nave</div>
+          <div class="service-desc">Inserisci il numero IMO o il nome della nave: ti suggeriamo i ricambi specifici per i motori installati a bordo di quella unità, basandoci sul nostro database tecnico.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💶</div>
+          <div class="service-name">Preventivo Rapido</div>
+          <div class="service-desc">Risposta entro 2 ore lavorative. Prezzi competitivi, quantità industriali disponibili, pagamento B2B con termini concordati e fatturazione italiana/maltese.</div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <div class="service-name">Tracciabilità Spedizione</div>
+          <div class="service-desc">Tracking real-time su tutte le spedizioni. Notifiche automatiche all'armatore, consegna a bordo o direttamente in porto su richiesta.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ REFERENZE -->
+  <section class="social-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">CLIENTI & REFERENZE</div>
+        <h2 class="section-title">FORNITORI UFFICIALI DI<br>PRIMARIE COMPAGNIE</h2>
+      </div>
+
+      <div class="clients-row">
+        <div class="client-badge">
+          <img src="https://logo.clearbit.com/virtu.com" alt="Virtù Ferries" onerror="this.style.display='none'">
+          <span class="client-name">Virtù Ferries</span>
+          <span class="client-note">7 navi High Speed, flotta completa</span>
+        </div>
+        <div class="client-badge">
+          <img src="https://logo.clearbit.com/tugmalta.com" alt="Tug Malta" onerror="this.style.display='none'">
+          <span class="client-name">Tug Malta</span>
+          <span class="client-note">10 rimorchiatori, contratto pluriennale</span>
+        </div>
+        <div class="client-badge">
+          <img src="https://logo.clearbit.com/alilauro.it" alt="Alilauro" onerror="this.style.display='none'">
+          <span class="client-name">Alilauro S.p.A.</span>
+          <span class="client-note">Fornitore certificato ricambi motori</span>
+        </div>
+        <div class="client-text-badge">
+          <span class="client-name">Grand Harbour Malta</span>
+          <span class="client-note" style="font-size:12px; color:var(--grey);">Partner logistico Valletta</span>
+        </div>
+        <div class="client-text-badge">
+          <span class="client-name">Cantiere Navale Pozzallo</span>
+          <span class="client-note" style="font-size:12px; color:var(--grey);">Fornitore tecnico certificato</span>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <blockquote>"RCS è il nostro riferimento tecnico per i ricambi MTU. Risposta immediata, qualità garantita, consegna in 24 ore a Valletta. Non abbiamo mai subito un ritardo imputabile alla fornitura."</blockquote>
+        <cite>— Responsabile Tecnico, Virtù Ferries</cite>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-num">1.200+</div>
+          <div class="stat-label">ordini evasi nel 2025</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">98.7%</div>
+          <div class="stat-label">puntualità consegne</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">&lt; 2h</div>
+          <div class="stat-label">tempo medio risposta preventivi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ CONTATTI -->
+  <section class="contact-section" id="contatti">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">CONTATTI</div>
+        <h2 class="section-title">PARLIAMO DEL<br>VOSTRO FABBISOGNO</h2>
+        <p class="section-sub">Preventivo entro 2 ore. Consegna in 24 ore. Qualità OEM garantita.</p>
+      </div>
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div>
+          <div class="contact-form-title">Invia una richiesta</div>
+          <form class="contact-form" onsubmit="submitContact(event)">
+            <div class="contact-row">
+              <input type="text" placeholder="Nome e Cognome" required>
+              <input type="text" placeholder="Azienda / Nave" required>
+            </div>
+            <div class="contact-row">
+              <input type="email" placeholder="Email aziendale" required>
+              <input type="tel" placeholder="Telefono / WhatsApp">
+            </div>
+            <select>
+              <option value="">Tipo di richiesta…</option>
+              <option>Preventivo ricambi</option>
+              <option>Informazione tecnica</option>
+              <option>Spedizione urgente</option>
+              <option>Contratto di fornitura</option>
+              <option>Altro</option>
+            </select>
+            <textarea placeholder="Descrivete il vostro fabbisogno: codici OEM, quantità, urgenza, porto di consegna…"></textarea>
+            <button type="submit" class="btn-submit">INVIA RICHIESTA &rarr;</button>
+          </form>
+        </div>
+
+        <!-- DATI AZIENDALI -->
+        <div class="company-info">
+          <div class="company-title">⚓ Ricambi Centro Sud S.r.l.</div>
+          <div class="company-lines">
+            <div class="company-line">
+              <span class="ci">📍</span>
+              <span>Via Alessandro Volta 17<br><strong>95121 Catania (CT), Italia</strong></span>
+            </div>
+            <div class="company-line">
+              <span class="ci">📞</span>
+              <span><strong>+39 095 XXX XXXX</strong></span>
+            </div>
+            <div class="company-line">
+              <span class="ci">✉️</span>
+              <span><strong>info@ricambicentrosud.com</strong></span>
+            </div>
+            <div class="company-line">
+              <span class="ci">🏛️</span>
+              <span>P.IVA <strong>IT03176280877</strong></span>
+            </div>
+            <div class="company-line">
+              <span class="ci">⚓</span>
+              <span>REA <strong>CT-XXXXXX</strong></span>
+            </div>
+          </div>
+          <div class="company-hours">
+            <div class="hours-title">ORARI DI APERTURA</div>
+            <div class="hours-line">
+              Lunedì – Venerdì: <strong style="color:var(--white)">08:00 – 18:00</strong><br>
+              Sabato: <strong style="color:var(--white)">08:00 – 13:00</strong><br>
+              <span style="color:var(--cyan); font-size:12px;">Urgenze: assistenza tecnica 24/7</span>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            <span class="pin">📍</span>
+            <span>Via Alessandro Volta 17, Catania</span>
+            <span style="font-size:12px; color:var(--grey);">Google Maps — Ricambi Centro Sud</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="anchor">⚓</span>
+        <div class="footer-brand-rcs">RCS MARINE INTELLIGENCE</div>
+        <div class="footer-brand-sub">RICAMBI CENTRO SUD S.R.L.</div>
+        <p class="footer-payoff">Specialisti in ricambi per grandi motori marini e industriali. Da Catania a Malta in 24 ore. Qualità OEM, stock reale, assistenza tecnica.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">LINK UTILI</div>
+        <ul class="footer-links">
+          <li><a href="pages/ricerca-codici.html">Ricerca Codici</a></li>
+          <li><a href="pages/large-engine.html">Large Engine</a></li>
+          <li><a href="pages/chi-siamo.html">Chi Siamo</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+          <li><a href="pages/login.html">Portale Clienti</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">DATI AZIENDALI</div>
+        <div class="footer-data">
+          <span>Ricambi Centro Sud S.r.l.</span>
+          <span>Via Alessandro Volta 17</span>
+          <span>95121 Catania (CT)</span>
+          <span>P.IVA IT03176280877</span>
+          <span>info@ricambicentrosud.com</span>
+          <span>+39 095 XXX XXXX</span>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">CERTIFICAZIONI</div>
+        <div class="footer-certs">
+          <div class="cert-badge">Lloyd's Register Approved</div>
+          <div class="cert-badge">ISO 9001:2015</div>
+          <div class="cert-badge">ABS Recognized</div>
+          <div class="cert-badge">RINA Certified Supplier</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <span>© 2026 Ricambi Centro Sud S.r.l. &middot; P.IVA IT03176280877 &middot; Catania, Sicilia</span>
+      <span>Tutti i diritti riservati</span>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ═══════════════════════════════════════════════ JS (non-module) -->
+  <script>
+    /* ── NAV ── */
+    function toggleNav() {
+      document.getElementById('navlinks').classList.toggle('open');
+    }
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainnav');
+      nav.style.boxShadow = window.scrollY > 10 ? '0 4px 32px rgba(0,0,0,.5)' : 'none';
+    });
+    // Close mobile nav on link click
+    document.querySelectorAll('#navlinks a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('navlinks').classList.remove('open'));
+    });
+
+    /* ── HERO SEARCH ── */
+    function heroSearch() {
+      const val = document.getElementById('heroSearchInput').value.trim();
+      if (!val) return;
+      window.location.href = 'pages/ricerca-codici.html?q=' + encodeURIComponent(val);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('heroSearchInput');
+      if (input) {
+        input.addEventListener('keydown', e => { if (e.key === 'Enter') heroSearch(); });
+      }
+    });
+
+    /* ── ENGINE SELECT ── */
+    const SERIES_MAP = {
+      mtu:      ['Serie 2000 (12V/16V2000)','Serie 4000 (12V/16V/20V4000)','Serie 8000 (16V/20V8000)','Serie 1600','Serie 396'],
+      cat:      ['3508B / 3512B','3516B / 3516C','3508C','C280','C18 Marine','C32 Marine'],
+      cummins:  ['QSK19','QSK38','QSK50','KTA19','KTA38','KTA50','NT855','VTA28'],
+      deutz:    ['TCD 2012','TCD 2013','BF6M1013','MWM D226','MWM D916'],
+      wartsila: ['Wärtsilä 32','Wärtsilä 46','Wärtsilä 20','Sulzer ZA40','Nohab F20'],
+      mak:      ['MaK M 25','MaK M 32','MaK M 43','MaK 6M32','MaK 9M43'],
+      volvo:    ['D13 Marine','D16 Marine','IPS1050','IPS1200','TAD1641'],
+      altro:    ['Specificare in codice OEM']
     };
 
-    function roleRedirect(uname) {
-      if (CLIENT_FLEET[uname]) {
-        sessionStorage.setItem('rcs_fleet',   CLIENT_FLEET[uname].fleet);
-        sessionStorage.setItem('rcs_company', CLIENT_FLEET[uname].company);
-        window.location.href = 'pages/cliente-dashboard.html';
-      } else {
-        window.location.href = 'pages/dashboard.html';
+    function populateSeries() {
+      const brand = document.getElementById('brandSelect').value;
+      const sel   = document.getElementById('seriesSelect');
+      sel.innerHTML = '<option value="">Seleziona serie…</option>';
+      if (brand && SERIES_MAP[brand]) {
+        SERIES_MAP[brand].forEach(s => {
+          const opt = document.createElement('option');
+          opt.value = s.toLowerCase().replace(/\s+/g,'-');
+          opt.textContent = s;
+          sel.appendChild(opt);
+        });
       }
     }
 
-    onAuthStateChanged(auth, user => {
-      if (user) roleRedirect(user.email.split('@')[0].toLowerCase());
+    function searchByEngine() {
+      const brand  = document.getElementById('brandSelect').value;
+      const series = document.getElementById('seriesSelect').value;
+      const oem    = document.getElementById('oemCode').value.trim();
+      const parts  = [brand, series, oem].filter(Boolean);
+      if (!parts.length) { showToast('Inserisci almeno un parametro di ricerca.', '#ff9800'); return; }
+      window.location.href = 'pages/ricerca-codici.html?q=' + encodeURIComponent(parts.join(' '));
+    }
+
+    /* ── CONTACT FORM ── */
+    function submitContact(e) {
+      e.preventDefault();
+      showToast('Richiesta inviata — risposta entro 2 ore lavorative', '#00e676');
+      e.target.reset();
+    }
+
+    /* ── TOAST ── */
+    function showToast(msg, color) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.style.background = color || '#00e676';
+      t.style.color = (color === '#ff9800') ? '#000' : '#000';
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 4000);
+    }
+
+    /* ── SMOOTH SCROLL ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        if (!id) return;
+        const el = document.getElementById(id);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     });
+  </script>
 
-    window.login = async function() {
-      const u   = document.getElementById("u").value.trim().toLowerCase();
-      const p   = document.getElementById("p").value;
-      const err = document.getElementById("err");
-      const btn = document.getElementById("btn");
-      const txt = document.getElementById("btnTxt");
-
-      txt.textContent = "VERIFICA...";
-      btn.style.opacity = ".7";
-
-      try {
-        await signInWithEmailAndPassword(auth, toEmail(u), p);
-        sessionStorage.setItem("rcs_user", u);
-        roleRedirect(u);
-      } catch {
-        err.classList.add("show");
-        btn.style.opacity = "1";
-        txt.textContent   = "ACCEDI";
-        const card = document.getElementById("card");
-        card.style.webkitTransition = 'none';
-        card.style.transition = 'none';
-        void card.offsetHeight;
-        card.style.webkitAnimation = "shake .4s ease";
-        card.style.animation = "shake .4s ease";
-        card.addEventListener('animationend', () => {
-          card.style.webkitAnimation = '';
-          card.style.animation = '';
-          card.style.webkitTransition = '';
-          card.style.transition = '';
-        }, { once: true });
-        setTimeout(() => err.classList.remove("show"), 4000);
-      }
-    };
-
-    document.addEventListener("keydown", e => { if (e.key === "Enter") window.login(); });
-
-    window.handleQuickPaste = function(event) {
-      event.preventDefault();
-      document.getElementById("quickPaste").value = event.clipboardData.getData('text');
-    };
-
-    window.parseAndLogin = function() {
-      const val = document.getElementById("quickPaste").value.trim();
-      if (!val.includes(":")) { alert("Formato errato! Usa: utente:password"); return; }
-      const [u, p] = val.split(":", 2);
-      document.getElementById("u").value = u;
-      document.getElementById("p").value = p;
-      window.login();
-    };
+  <!-- ═══════════════════════════════════════════════ AUTH REDIRECT (module) -->
+  <script type="module">
+    import { auth, onAuthStateChanged } from './js/firebase-auth.js';
+    const CLIENT_FLEET = { virtu:{}, tug:{} };
+    const TEAM = ['nunzio','direttore','admin','commerciale','tecnico','logistica'];
+    onAuthStateChanged(auth, user => {
+      if (!user) return;
+      const u = user.email.split('@')[0].toLowerCase();
+      if (TEAM.includes(u)) { window.location.href = 'pages/dashboard.html'; return; }
+      if (CLIENT_FLEET[u] !== undefined) { window.location.href = 'pages/cliente-dashboard.html'; return; }
+    });
   </script>
 </body>
 </html>
