@@ -1,0 +1,619 @@
+data,nave,sistema,desc,tecnico,ore_motore,costo_eur
+2026-05-15,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,87200,453
+2026-05-15,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,87200,1054
+2026-05-15,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,87200,2018
+2026-05-15,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,87200,799
+2026-05-15,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS Luigi Russo,110800,1871
+2026-05-15,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,103600,444
+2026-05-15,Balluta Bay,Motore,"Revisione Maggiore — Revisione top end Wärtsilä: valvole, guide, tenute, ispezione iniettori",Cantiere Navale Palermo,194000,14874
+2026-05-14,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Mario Greco,98400,290
+2026-05-14,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,98400,269
+2026-05-14,HSC Gozo Express,Motore,"Overhaul 8000h — Revisione completa: pistoni, segmenti MAHLE, bronzine, tenute testa cilindro",Cantiere Valletta,98400,14965
+2026-05-14,San Pawl,Motore,"Major Overhaul — Overhaul completo MWM V16: pistoni, segmenti, guarnizioni MAHLE MS39012, bronzine",Cantiere Pozzallo,101400,39522
+2026-05-13,HSC Gozo Express,Iniezione,"D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",Tecnico RCS,98400,4125
+2026-05-13,San Pawl,Iniezione,"Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",Cantiere Valletta,101400,7597
+2026-05-13,Balluta Bay,Filtrazione,Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio,Tecnico RCS Mario Greco,194000,891
+2026-05-12,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Mario Greco,101400,366
+2026-05-04,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Mario Greco,110642,396
+2026-05-04,MV Maria Dolores,Iniezione,"D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",Cantiere Navale Palermo,110627,5234
+2026-04-21,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,98077,302
+2026-04-13,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS,101138,801
+2026-04-12,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,34405,549
+2026-04-07,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,97863,271
+2026-04-03,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico RCS,97808,1249
+2026-04-02,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,34130,1047
+2026-03-30,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,34105,1369
+2026-03-29,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,34085,466
+2026-03-28,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,86137,815
+2026-03-26,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,85966,571
+2026-03-25,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Cantiere Specializzato,34061,2339
+2026-03-24,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,33880,828
+2026-03-23,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,33939,805
+2026-03-23,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS Luigi Russo,97583,506
+2026-03-19,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,33866,478
+2026-03-18,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico esterno certificato,97563,543
+2026-03-04,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,109554,438
+2026-03-03,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,85503,567
+2026-03-01,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,85343,469
+2026-02-27,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,85413,518
+2026-02-26,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,109528,770
+2026-02-21,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,33177,485
+2026-02-21,MV Saint John Paul II,Motore,"Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",Cantiere Valletta,33141,37328
+2026-02-19,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,109353,433
+2026-02-18,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,109332,373
+2026-02-15,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS Mario Greco,109323,1978
+2026-02-06,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico esterno certificato,32890,2076
+2026-01-24,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,32601,597
+2026-01-18,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico RCS,108798,552
+2026-01-10,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,84259,1016
+2026-01-09,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Luigi Russo,100389,846
+2026-01-03,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,32036,1035
+2026-01-01,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,31963,456
+2025-12-19,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,83783,1759
+2025-12-19,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Cantiere Specializzato,100214,453
+2025-12-17,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,31677,476
+2025-12-15,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,108299,757
+2025-12-14,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico esterno certificato,83651,825
+2025-12-13,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Mario Greco,83522,2577
+2025-12-13,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Luigi Russo,100177,441
+2025-12-12,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Cantiere Specializzato,31496,786
+2025-12-12,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,83490,1538
+2025-12-05,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Luigi Russo,31264,872
+2025-12-02,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Mario Greco,102286,764
+2025-11-29,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,83191,566
+2025-11-27,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,31099,603
+2025-11-25,Balluta Bay,Filtrazione,Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio,Tecnico RCS,192508,909
+2025-11-15,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,82837,483
+2025-11-15,MV Jean de La Valette,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Pozzallo,82809,6449
+2025-11-14,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,107717,689
+2025-11-13,MV Saint John Paul II,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Palermo,30842,6754
+2025-11-06,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico esterno certificato,30687,505
+2025-11-05,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Cantiere Specializzato,30582,521
+2025-11-04,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,30521,873
+2025-11-02,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico RCS,107565,493
+2025-10-29,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,82554,864
+2025-10-23,Balluta Bay,Motore,"Major Overhaul — Overhaul completo Wärtsilä, pistoni, bronzine, albero a gomiti ispezione",Cantiere Navale Palermo,192204,61466
+2025-10-22,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS Mario Greco,82337,1817
+2025-10-17,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,30109,531
+2025-10-14,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico RCS Mario Greco,95167,1190
+2025-10-13,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Mario Greco,107146,377
+2025-10-06,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,101844,438
+2025-09-29,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,29637,1816
+2025-09-29,Balluta Bay,Filtrazione,Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio,Tecnico RCS,191986,847
+2025-09-28,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,81670,526
+2025-09-25,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,81686,578
+2025-09-24,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,94883,282
+2025-09-22,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS Mario Greco,94826,530
+2025-09-18,San Frangisk,Iniezione,"Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",Tecnico RCS,101721,3882
+2025-09-15,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,29295,569
+2025-09-13,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,29290,866
+2025-09-11,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS,106669,1553
+2025-09-09,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,94680,231
+2025-09-01,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico esterno certificato,29105,818
+2025-08-31,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,29035,796
+2025-08-31,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,94513,265
+2025-08-30,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico esterno certificato,94508,462
+2025-08-27,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico esterno certificato,28958,829
+2025-08-26,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico RCS,94447,1372
+2025-08-25,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,106396,390
+2025-08-20,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,80758,583
+2025-08-20,MV Maria Dolores,Propulsione,"Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",Tecnico RCS,106248,1092
+2025-08-14,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Luigi Russo,99241,390
+2025-08-13,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Luigi Russo,28516,2548
+2025-08-11,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico esterno certificato,80516,935
+2025-08-11,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,94222,225
+2025-08-10,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Mario Greco,94219,229
+2025-08-05,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,80404,999
+2025-07-30,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,80355,962
+2025-07-29,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,80308,2085
+2025-07-27,HSC Gozo Express,Iniezione,"D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",Tecnico RCS,94052,4102
+2025-07-26,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Luigi Russo,105855,360
+2025-07-26,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,105868,438
+2025-07-23,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,28140,548
+2025-07-21,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,28032,522
+2025-07-20,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,93893,437
+2025-07-20,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Luigi Russo,99052,453
+2025-07-19,MV Jean de La Valette,Motore,"Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",Cantiere Pozzallo,80030,31499
+2025-07-12,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,79919,746
+2025-07-09,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,93737,435
+2025-07-09,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,101118,363
+2025-07-06,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Mario Greco,27675,2123
+2025-07-06,MV Jean de La Valette,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Palermo,79705,6476
+2025-07-06,San Pawl,Propulsione,"Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",Tecnico RCS,98910,1409
+2025-07-04,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico esterno certificato,27583,897
+2025-07-04,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico RCS Luigi Russo,105469,552
+2025-07-02,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,93620,457
+2025-06-29,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Mario Greco,105392,434
+2025-06-28,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,79562,1001
+2025-06-26,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,79463,526
+2025-06-26,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,79547,2545
+2025-06-24,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,79452,795
+2025-06-21,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS,105194,2039
+2025-06-20,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,79314,489
+2025-06-18,MV Saint John Paul II,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Catania,27256,6621
+2025-06-18,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,105211,761
+2025-06-14,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,105158,349
+2025-06-14,MV Maria Dolores,Motore,"Overhaul 8000h — Revisione completa motore: pistoni CAT/MAHLE, segmenti, bronzine, guarnizioni testa",Cantiere Pozzallo,105065,21699
+2025-06-10,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,27097,512
+2025-06-10,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,27117,592
+2025-06-10,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Cantiere Specializzato,98710,758
+2025-06-09,San Pawl,Motore,"Top End — Revisione teste cilindro, valvole, guide, ispezione camere combustione MWM",Cantiere Valletta,98713,15051
+2025-06-07,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,78978,454
+2025-06-05,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,26965,792
+2025-06-03,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,78977,876
+2025-05-31,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,78902,1977
+2025-05-29,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,26811,516
+2025-05-29,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS Luigi Russo,104878,683
+2025-05-28,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,104854,339
+2025-05-26,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico RCS,93064,1106
+2025-05-23,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Luigi Russo,26536,805
+2025-05-20,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS Luigi Russo,26533,1516
+2025-05-19,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,26450,461
+2025-05-17,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Luigi Russo,104673,409
+2025-05-16,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,92975,300
+2025-05-09,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Luigi Russo,104546,371
+2025-05-04,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,26074,463
+2025-05-03,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS Mario Greco,104375,1585
+2025-04-26,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,78115,1038
+2025-04-25,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Mario Greco,25884,2352
+2025-04-24,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,77994,501
+2025-04-20,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Cantiere Specializzato,92555,301
+2025-04-19,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Luigi Russo,25791,883
+2025-04-19,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,77797,590
+2025-04-16,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,25768,461
+2025-04-07,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Mario Greco,103958,437
+2025-04-06,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,25436,520
+2025-04-03,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Cantiere Specializzato,77420,470
+2025-04-02,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico esterno certificato,98168,422
+2025-04-02,San Pawl,Iniezione,"Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",Cantiere Navale Palermo,98158,10932
+2025-03-31,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,100366,407
+2025-03-25,San Frangisk,Motore,"Major Overhaul — Overhaul completo MWM V16: pistoni, segmenti, guarnizioni MAHLE MS39012, bronzine",Cantiere Navale Catania,100299,31860
+2025-03-24,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,77210,1405
+2025-03-23,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,25128,519
+2025-03-23,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Luigi Russo,77259,826
+2025-03-17,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,103625,375
+2025-03-14,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,77094,1036
+2025-03-13,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Mario Greco,91944,295
+2025-03-11,MV Jean de La Valette,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Catania,76879,6004
+2025-03-06,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,24732,849
+2025-03-06,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,76784,448
+2025-03-03,MV Maria Dolores,Propulsione,"Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",Tecnico RCS,103399,1343
+2025-03-02,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,100138,509
+2025-03-02,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Mario Greco,100137,658
+2025-02-28,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Mario Greco,100116,478
+2025-02-19,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,24405,531
+2025-02-16,MV Saint John Paul II,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Pozzallo,24304,6873
+2025-02-16,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,76380,460
+2025-02-15,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Luigi Russo,100012,833
+2025-02-14,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,76276,471
+2025-02-11,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Luigi Russo,91522,283
+2025-02-10,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,91454,303
+2025-02-10,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Luigi Russo,97753,767
+2025-02-06,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Luigi Russo,76186,788
+2025-02-02,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,76009,542
+2025-01-28,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico RCS,102781,494
+2025-01-27,MV Saint John Paul II,Motore,"Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",Cantiere Navale Catania,23734,37420
+2025-01-27,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Mario Greco,23828,674
+2025-01-26,HSC Gozo Express,Motore,"Overhaul 8000h — Revisione completa: pistoni, segmenti MAHLE, bronzine, tenute testa cilindro",Cantiere Navale Catania,91315,15032
+2025-01-23,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Mario Greco,75799,2244
+2025-01-22,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,23714,830
+2025-01-20,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,23718,1024
+2025-01-20,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Mario Greco,102606,342
+2025-01-13,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,75603,515
+2025-01-10,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,75465,595
+2025-01-08,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS,102473,1955
+2025-01-05,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,75383,527
+2025-01-02,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Luigi Russo,97432,407
+2024-12-30,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,23125,1447
+2024-12-26,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,102277,793
+2024-12-26,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Cantiere Specializzato,90830,412
+2024-12-22,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,97381,424
+2024-12-21,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Luigi Russo,22910,2376
+2024-12-20,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,74932,488
+2024-12-18,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,74935,538
+2024-12-15,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,102060,410
+2024-12-12,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Mario Greco,99464,755
+2024-12-04,San Frangisk,Motore,"Top End — Revisione teste cilindro, valvole, guide, ispezione camere combustione MWM",Cantiere Valletta,99432,20307
+2024-12-03,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS Luigi Russo,101783,694
+2024-11-30,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,97184,408
+2024-11-29,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,22398,457
+2024-11-29,HSC Gozo Express,Iniezione,"D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",Tecnico RCS,90364,3731
+2024-11-27,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,22380,2511
+2024-11-27,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico RCS,90347,1270
+2024-11-26,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS Luigi Russo,74475,1558
+2024-11-24,MV Maria Dolores,Iniezione,"D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",Cantiere Valletta,101641,5282
+2024-11-16,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,22013,455
+2024-11-14,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,101539,640
+2024-11-12,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,21900,561
+2024-11-12,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,22038,485
+2024-11-12,MV Jean de La Valette,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Palermo,74078,5955
+2024-11-11,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,74045,503
+2024-11-09,MV Jean de La Valette,Motore,"Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",Cantiere Valletta,74001,37525
+2024-10-30,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,21652,793
+2024-10-29,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Luigi Russo,21630,1008
+2024-10-24,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,73561,509
+2024-10-21,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,21422,482
+2024-10-16,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,96854,461
+2024-10-15,San Frangisk,Propulsione,"Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",Tecnico RCS,99030,1373
+2024-10-13,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Luigi Russo,73374,2406
+2024-10-12,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS Mario Greco,21192,1373
+2024-10-10,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,21166,840
+2024-10-08,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,21095,548
+2024-10-05,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS Luigi Russo,73113,1624
+2024-10-04,Balluta Bay,Motore,"Ispezione 4000h — Ispezione valvole, distribuzione, iniettori CR Bosch 0 445 120 266",Cantiere Navale Catania,188820,3999
+2024-09-30,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,73003,819
+2024-09-25,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,100724,661
+2024-09-24,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico RCS,89372,1192
+2024-09-22,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Luigi Russo,89348,262
+2024-09-20,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,72877,892
+2024-09-19,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,100578,689
+2024-09-18,MV Saint John Paul II,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Valletta,20679,7558
+2024-09-18,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,72728,805
+2024-09-13,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico esterno certificato,72746,460
+2024-09-10,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS Luigi Russo,89216,467
+2024-09-08,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico esterno certificato,72489,868
+2024-09-07,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Mario Greco,89088,254
+2024-09-06,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Mario Greco,20394,856
+2024-09-02,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,72338,468
+2024-09-01,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,72358,514
+2024-08-31,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico RCS,100299,604
+2024-08-30,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS Mario Greco,88970,547
+2024-08-29,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Luigi Russo,20238,2519
+2024-08-28,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Mario Greco,72270,2268
+2024-08-26,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico esterno certificato,20018,541
+2024-08-20,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,88862,234
+2024-08-19,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,72048,564
+2024-08-13,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico esterno certificato,99954,644
+2024-08-07,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,88683,273
+2024-08-06,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,19532,899
+2024-08-02,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,71621,1053
+2024-08-02,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,71689,841
+2024-08-02,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,88612,276
+2024-07-28,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,19472,600
+2024-07-24,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,19251,521
+2024-07-23,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,19200,573
+2024-07-22,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico esterno certificato,19309,1026
+2024-07-19,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Mario Greco,98329,781
+2024-07-18,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,99511,790
+2024-07-14,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,99426,447
+2024-07-04,San Pawl,Iniezione,"Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",Tecnico RCS,95989,3326
+2024-07-02,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Cantiere Specializzato,18755,1616
+2024-07-02,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,88122,519
+2024-07-01,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Mario Greco,98176,358
+2024-06-23,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,99050,773
+2024-06-22,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,18507,595
+2024-06-15,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,70471,539
+2024-06-15,HSC Gozo Express,Iniezione,"D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",Tecnico RCS,87896,3415
+2024-06-14,MV Maria Dolores,Motore,"Overhaul 8000h — Revisione completa motore: pistoni CAT/MAHLE, segmenti, bronzine, guarnizioni testa",Cantiere Valletta,98891,23456
+2024-06-14,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,95839,442
+2024-06-12,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,70367,730
+2024-06-11,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Mario Greco,70345,692
+2024-06-09,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Cantiere Specializzato,70445,554
+2024-06-09,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Cantiere Specializzato,98028,441
+2024-06-07,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Cantiere Specializzato,18178,449
+2024-06-06,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,87723,246
+2024-06-05,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,70307,525
+2024-06-05,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS,98749,1829
+2024-06-04,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,70326,908
+2024-06-03,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,70151,915
+2024-06-02,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,87731,248
+2024-05-31,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,87627,276
+2024-05-28,MV Jean de La Valette,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Palermo,70128,6639
+2024-05-27,MV Maria Dolores,Iniezione,"D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",Cantiere Pozzallo,98569,4753
+2024-05-22,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,17744,855
+2024-05-15,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS,98461,2044
+2024-05-15,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Cantiere Specializzato,87386,252
+2024-05-13,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Luigi Russo,98350,396
+2024-05-10,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,69727,1740
+2024-05-03,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Mario Greco,17405,2150
+2024-05-01,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,17236,851
+2024-04-30,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,17236,477
+2024-04-30,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico esterno certificato,98128,605
+2024-04-30,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico RCS,98187,623
+2024-04-28,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,87125,411
+2024-04-22,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico esterno certificato,97985,340
+2024-04-19,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Cantiere Specializzato,16907,591
+2024-04-18,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS Luigi Russo,86983,452
+2024-04-16,MV Maria Dolores,Propulsione,"Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",Tecnico RCS,97958,1378
+2024-04-13,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,16769,1056
+2024-04-13,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,97539,461
+2024-04-10,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,69009,520
+2024-04-10,San Pawl,Iniezione,"Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",Cantiere Navale Catania,95346,8135
+2024-04-07,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,68827,808
+2024-04-06,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS,97707,1738
+2024-04-06,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,97475,407
+2024-04-02,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,16601,599
+2024-04-01,San Pawl,Iniezione,"Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",Tecnico RCS Luigi Russo,95262,3935
+2024-03-30,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico RCS,86674,1309
+2024-03-29,Balluta Bay,Filtrazione,Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio,Tecnico RCS Mario Greco,187202,850
+2024-03-27,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,16512,583
+2024-03-25,MV Saint John Paul II,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Palermo,16389,6895
+2024-03-20,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,68500,586
+2024-03-17,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Cantiere Specializzato,97355,672
+2024-03-16,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,97366,387
+2024-03-14,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Mario Greco,16121,750
+2024-03-13,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,16132,905
+2024-03-13,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Luigi Russo,16017,2576
+2024-03-12,MV Saint John Paul II,Motore,"Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",Cantiere Valletta,16068,31706
+2024-03-07,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Luigi Russo,97228,419
+2024-03-07,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,97196,366
+2024-03-06,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Luigi Russo,68027,789
+2024-02-29,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Mario Greco,95023,745
+2024-02-26,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,67930,834
+2024-02-16,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,67584,478
+2024-02-11,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,67566,484
+2024-02-08,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS Luigi Russo,15268,1707
+2024-02-07,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Luigi Russo,15286,937
+2024-02-05,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,15141,559
+2024-02-04,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,96648,407
+2024-02-02,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico esterno certificato,15179,517
+2024-01-29,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,15055,567
+2024-01-29,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,85754,279
+2024-01-28,San Frangisk,Propulsione,"Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",Tecnico RCS Luigi Russo,96926,1304
+2024-01-25,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Luigi Russo,96574,426
+2024-01-24,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,67161,534
+2024-01-24,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,96930,397
+2024-01-21,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Cantiere Specializzato,66974,2523
+2024-01-20,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico RCS,96427,605
+2024-01-20,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Mario Greco,96879,782
+2024-01-16,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,14694,485
+2024-01-15,San Frangisk,Iniezione,"Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",Cantiere Pozzallo,96838,9438
+2024-01-14,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,85556,267
+2024-01-13,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,66914,532
+2024-01-10,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Cantiere Specializzato,14650,793
+2024-01-10,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,66760,2035
+2024-01-08,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,85528,471
+2024-01-07,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,96761,432
+2024-01-07,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Mario Greco,94581,657
+2024-01-05,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,66654,2035
+2023-12-27,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico esterno certificato,96006,406
+2023-12-26,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Mario Greco,14216,2259
+2023-12-26,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico esterno certificato,94471,836
+2023-12-20,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Cantiere Specializzato,66213,853
+2023-12-11,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,66091,491
+2023-12-10,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Cantiere Specializzato,13898,817
+2023-12-08,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,13743,456
+2023-12-05,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,95686,382
+2023-12-02,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,96511,426
+2023-11-30,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,13623,991
+2023-11-21,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,65573,963
+2023-11-16,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,84720,237
+2023-11-15,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,95285,368
+2023-11-04,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,94046,511
+2023-11-03,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,65120,481
+2023-11-01,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico esterno certificato,95079,536
+2023-11-01,San Frangisk,Iniezione,"Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",Cantiere Valletta,96234,8038
+2023-10-31,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,65033,544
+2023-10-27,San Frangisk,Iniezione,"Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",Cantiere Specializzato,96204,3249
+2023-10-23,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,64846,1614
+2023-10-20,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Luigi Russo,12556,685
+2023-10-20,San Pawl,Iniezione,"Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",Tecnico RCS,93955,3780
+2023-10-19,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Mario Greco,64765,2181
+2023-10-17,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,93908,361
+2023-10-16,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,64698,517
+2023-10-15,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,64678,493
+2023-10-15,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Cantiere Specializzato,84173,1048
+2023-10-14,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,64729,2420
+2023-10-13,MV Saint John Paul II,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Palermo,12396,6886
+2023-10-12,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,96100,469
+2023-10-09,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,12411,470
+2023-10-07,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,12327,526
+2023-10-07,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,64549,933
+2023-09-28,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Mario Greco,64360,836
+2023-09-25,MV Jean de La Valette,Motore,"Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",Cantiere Valletta,64166,31720
+2023-09-23,San Frangisk,Propulsione,"Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",Tecnico RCS,95912,1430
+2023-09-14,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,11715,513
+2023-09-14,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,11727,1373
+2023-09-13,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Mario Greco,11764,2251
+2023-09-13,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,94287,437
+2023-09-11,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,11732,878
+2023-09-10,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS Mario Greco,83659,478
+2023-09-07,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,63766,462
+2023-09-07,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS,95828,701
+2023-09-07,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Cantiere Specializzato,93621,617
+2023-09-06,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,83656,492
+2023-08-30,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,11448,811
+2023-08-25,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,93945,428
+2023-08-25,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,93495,431
+2023-08-22,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,11170,585
+2023-08-16,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,11089,485
+2023-08-13,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,10933,584
+2023-08-13,San Frangisk,Iniezione,"Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",Tecnico esterno certificato,95621,3765
+2023-08-13,Balluta Bay,Motore,"Revisione Maggiore — Revisione top end Wärtsilä: valvole, guide, tenute, ispezione iniettori",Cantiere Pozzallo,185163,18956
+2023-08-11,MV Maria Dolores,Iniezione,"D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",Cantiere Pozzallo,93631,5742
+2023-08-10,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,93650,340
+2023-08-09,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,93654,691
+2023-08-02,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,62971,855
+2023-07-24,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Luigi Russo,82967,235
+2023-07-16,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Mario Greco,10199,744
+2023-07-10,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico esterno certificato,62335,540
+2023-07-10,HSC Gozo Express,Motore,"Overhaul 8000h — Revisione completa: pistoni, segmenti MAHLE, bronzine, tenute testa cilindro",Cantiere Pozzallo,82689,15977
+2023-07-09,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,10134,926
+2023-07-08,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Luigi Russo,10115,2235
+2023-07-07,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,62374,537
+2023-07-07,Balluta Bay,Filtrazione,Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio,Tecnico RCS Mario Greco,184839,926
+2023-07-02,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico esterno certificato,82602,1156
+2023-07-01,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,62234,957
+2023-06-29,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,62124,1063
+2023-06-26,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,92889,682
+2023-06-23,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,61995,482
+2023-06-20,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico esterno certificato,82420,239
+2023-06-15,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,95166,485
+2023-06-14,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,9532,509
+2023-06-13,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Luigi Russo,61679,985
+2023-06-10,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,9333,568
+2023-06-10,San Pawl,Propulsione,"Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",Tecnico RCS Mario Greco,92905,1470
+2023-06-09,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS,92650,1888
+2023-06-05,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,61590,997
+2023-06-04,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Mario Greco,82183,237
+2023-06-03,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Luigi Russo,61494,2358
+2023-05-29,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,61288,534
+2023-05-29,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,82054,227
+2023-05-27,MV Jean de La Valette,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Palermo,61239,7113
+2023-05-26,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,9041,1790
+2023-05-25,Balluta Bay,Motore,"Ispezione 4000h — Ispezione valvole, distribuzione, iniettori CR Bosch 0 445 120 266",Cantiere Navale Catania,184499,3423
+2023-05-22,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,92736,460
+2023-05-21,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,61094,801
+2023-05-21,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,81944,229
+2023-05-18,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,81905,301
+2023-05-17,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,8792,554
+2023-05-17,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Luigi Russo,81914,235
+2023-05-14,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,8803,985
+2023-05-13,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,92147,624
+2023-05-05,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS Mario Greco,81794,461
+2023-04-30,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,60662,515
+2023-04-30,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,60645,1663
+2023-04-28,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Mario Greco,91939,340
+2023-04-28,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico esterno certificato,94778,421
+2023-04-27,MV Saint John Paul II,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Valletta,8360,7236
+2023-04-23,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,8220,484
+2023-04-21,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,8161,548
+2023-04-20,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Cantiere Specializzato,60483,978
+2023-04-20,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS Mario Greco,91714,635
+2023-04-18,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Cantiere Specializzato,8131,2422
+2023-04-16,MV Saint John Paul II,Motore,"Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",Cantiere Pozzallo,8165,35567
+2023-04-16,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,91667,406
+2023-04-14,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,91632,439
+2023-04-10,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,60134,670
+2023-04-08,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,7978,789
+2023-04-07,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,60040,973
+2023-04-01,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,7811,992
+2023-04-01,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Luigi Russo,81207,296
+2023-04-01,HSC Gozo Express,Iniezione,"D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",Tecnico RCS,81223,3625
+2023-03-27,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS,92318,857
+2023-03-23,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,59696,521
+2023-03-18,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Mario Greco,91226,354
+2023-03-18,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Mario Greco,92259,779
+2023-03-17,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,7398,502
+2023-03-16,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,59661,1514
+2023-03-16,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,91198,346
+2023-03-15,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,80932,451
+2023-03-12,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,7256,490
+2023-03-12,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico esterno certificato,94369,800
+2023-02-28,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Mario Greco,80706,257
+2023-02-26,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Luigi Russo,6859,814
+2023-02-25,San Pawl,Iniezione,"Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",Tecnico RCS,92078,3932
+2023-02-23,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,90837,369
+2023-02-17,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Mario Greco,80532,237
+2023-02-15,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,58914,501
+2023-02-13,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico RCS,80483,1279
+2023-02-11,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,58874,793
+2023-02-11,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Cantiere Specializzato,90631,351
+2023-02-09,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Cantiere Specializzato,90634,614
+2023-02-05,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Mario Greco,91909,414
+2023-02-01,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,6323,601
+2023-02-01,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS Mario Greco,6234,1561
+2023-02-01,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS Mario Greco,90385,784
+2023-01-28,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Luigi Russo,6184,788
+2023-01-26,MV Jean de La Valette,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Navale Palermo,58461,7602
+2023-01-23,MV Maria Dolores,Iniezione,"D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",Cantiere Valletta,90303,5525
+2023-01-19,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,58282,556
+2023-01-18,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS,93984,789
+2023-01-16,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,5941,2337
+2023-01-16,MV Maria Dolores,Propulsione,"Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",Tecnico RCS Luigi Russo,90159,1062
+2023-01-15,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Cantiere Specializzato,80120,238
+2023-01-14,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,5916,557
+2023-01-11,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Mario Greco,90135,432
+2023-01-11,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,91703,498
+2023-01-09,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,5819,803
+2023-01-09,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Luigi Russo,58077,807
+2023-01-07,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS Luigi Russo,57936,2207
+2023-01-03,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,5528,545
+2022-12-26,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,91579,462
+2022-12-22,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,57560,466
+2022-12-18,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico esterno certificato,5166,870
+2022-12-10,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico RCS Mario Greco,89513,562
+2022-12-09,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,79561,288
+2022-12-07,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,57180,522
+2022-12-06,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS Luigi Russo,89497,753
+2022-12-05,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,4979,599
+2022-12-05,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,57186,571
+2022-11-26,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,4656,487
+2022-11-20,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,56878,465
+2022-11-16,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,89081,367
+2022-11-15,MV Jean de La Valette,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Pozzallo,56781,6056
+2022-11-11,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,56572,584
+2022-11-06,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS Mario Greco,56439,1411
+2022-11-05,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,4160,2168
+2022-11-02,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Cantiere Specializzato,4182,834
+2022-10-31,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,78952,269
+2022-10-30,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,4105,460
+2022-10-29,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,56274,596
+2022-10-28,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,56253,529
+2022-10-27,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,93324,356
+2022-10-22,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,93274,421
+2022-10-20,MV Saint John Paul II,Iniezione,"D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",Cantiere Pozzallo,3848,7632
+2022-10-19,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,3827,888
+2022-10-18,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Mario Greco,93216,463
+2022-10-16,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,55944,2420
+2022-10-12,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS Luigi Russo,88579,659
+2022-10-10,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,3569,490
+2022-10-03,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS Mario Greco,55660,978
+2022-10-01,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS,88317,1808
+2022-09-29,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Luigi Russo,55500,813
+2022-09-26,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,55436,484
+2022-09-22,San Pawl,Motore,"Major Overhaul — Overhaul completo MWM V16: pistoni, segmenti, guarnizioni MAHLE MS39012, bronzine",Cantiere Navale Catania,90844,33585
+2022-09-20,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,78292,230
+2022-09-17,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,2933,447
+2022-09-13,MV Jean de La Valette,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,55180,2040
+2022-09-12,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,2913,823
+2022-09-11,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,55142,790
+2022-09-10,MV Saint John Paul II,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,2851,1503
+2022-09-08,MV Maria Dolores,Motore,"Overhaul 8000h — Revisione completa motore: pistoni CAT/MAHLE, segmenti, bronzine, guarnizioni testa",Cantiere Pozzallo,87966,23044
+2022-09-07,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,78150,495
+2022-09-06,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,55091,459
+2022-09-05,Balluta Bay,Motore,"Ispezione 4000h — Ispezione valvole, distribuzione, iniettori CR Bosch 0 445 120 266",Cantiere Valletta,182174,4082
+2022-09-04,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,54927,484
+2022-09-02,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,92873,420
+2022-08-30,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,2537,512
+2022-08-30,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS Luigi Russo,87846,629
+2022-08-26,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,77965,276
+2022-08-11,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,54346,593
+2022-08-10,MV Saint John Paul II,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS,2099,710
+2022-08-08,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,2024,1062
+2022-08-07,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS,77640,453
+2022-08-05,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,1946,450
+2022-08-04,MV Saint John Paul II,Motore,"C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",Tecnico RCS,1966,2412
+2022-07-28,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Mario Greco,90398,844
+2022-07-21,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,53932,571
+2022-07-19,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Luigi Russo,87084,429
+2022-07-14,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,1438,451
+2022-07-12,MV Jean de La Valette,Propulsione,"Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",Tecnico RCS,53773,1389
+2022-07-01,MV Maria Dolores,Motore,"C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",Tecnico RCS,86792,1530
+2022-06-29,MV Saint John Paul II,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,995,1045
+2022-06-24,MV Jean de La Valette,Motore,"Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",Cantiere Valletta,53288,31598
+2022-06-22,San Pawl,Iniezione,"Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",Tecnico RCS,90117,3695
+2022-06-21,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Luigi Russo,963,552
+2022-06-14,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico RCS,53092,1028
+2022-06-07,MV Maria Dolores,Raffreddamento,"Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",Tecnico RCS,86426,545
+2022-06-05,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS Mario Greco,52739,519
+2022-06-04,MV Jean de La Valette,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,52852,524
+2022-06-02,MV Saint John Paul II,Filtrazione,"A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",Tecnico RCS,506,563
+2022-05-27,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,86148,418
+2022-05-24,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS Mario Greco,76525,304
+2022-05-03,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Mario Greco,85823,377
+2022-04-21,San Pawl,Propulsione,"Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",Tecnico RCS,89615,1444
+2022-04-17,MV Jean de La Valette,Raffreddamento,"Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",Tecnico RCS Mario Greco,51623,789
+2022-04-12,MV Maria Dolores,Iniezione,"D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",Cantiere Navale Catania,85374,5004
+2022-04-07,San Frangisk,Propulsione,"Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",Tecnico RCS Luigi Russo,91694,1447
+2022-04-03,San Pawl,Propulsione,"Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",Tecnico esterno certificato,89462,1583
+2022-04-02,HSC Gozo Express,Motore,"C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",Tecnico RCS,75716,1196
+2022-03-26,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,85114,400
+2022-03-26,San Pawl,Iniezione,"Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",Tecnico RCS Luigi Russo,89386,3798
+2022-03-25,MV Jean de La Valette,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori),Tecnico esterno certificato,51156,821
+2022-03-22,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,89376,415
+2022-03-17,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico RCS,75527,288
+2022-03-17,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Luigi Russo,89318,474
+2022-03-13,MV Maria Dolores,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori),Tecnico RCS,84938,737
+2022-03-02,San Frangisk,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS,91418,808
+2022-01-21,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS,84039,344
+2022-01-06,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,90949,437
+2021-12-28,MV Maria Dolores,Filtrazione,A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori),Tecnico RCS Luigi Russo,83667,442
+2021-11-02,HSC Gozo Express,Filtrazione,B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori),Tecnico RCS Luigi Russo,73498,510
+2021-10-27,HSC Gozo Express,Filtrazione,"A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",Tecnico esterno certificato,73346,302
+2021-10-23,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,88170,444
+2021-06-26,San Pawl,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS,87210,417
+2021-06-20,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Mario Greco,89397,472
+2021-05-03,San Pawl,Motore,"Top End — Revisione teste cilindro, valvole, guide, ispezione camere combustione MWM",Cantiere Valletta,86813,16542
+2021-04-26,San Frangisk,Filtrazione,Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori),Tecnico RCS Luigi Russo,88956,471
+2021-01-20,San Pawl,Motore,"Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",Tecnico RCS Luigi Russo,86005,759

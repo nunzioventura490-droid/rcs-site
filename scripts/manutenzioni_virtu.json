@@ -1,0 +1,5564 @@
+[
+  {
+    "data": "2026-05-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 87200,
+    "costo": 453
+  },
+  {
+    "data": "2026-05-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 87200,
+    "costo": 1054
+  },
+  {
+    "data": "2026-05-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 87200,
+    "costo": 2018
+  },
+  {
+    "data": "2026-05-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 87200,
+    "costo": 799
+  },
+  {
+    "data": "2026-05-15",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 110800,
+    "costo": 1871
+  },
+  {
+    "data": "2026-05-15",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 103600,
+    "costo": 444
+  },
+  {
+    "data": "2026-05-15",
+    "nave": "Balluta Bay",
+    "sistema": "Motore",
+    "desc": "Revisione Maggiore — Revisione top end Wärtsilä: valvole, guide, tenute, ispezione iniettori",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 194000,
+    "costo": 14874
+  },
+  {
+    "data": "2026-05-14",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 98400,
+    "costo": 290
+  },
+  {
+    "data": "2026-05-14",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 98400,
+    "costo": 269
+  },
+  {
+    "data": "2026-05-14",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa: pistoni, segmenti MAHLE, bronzine, tenute testa cilindro",
+    "tecnico": "Cantiere Valletta",
+    "ore": 98400,
+    "costo": 14965
+  },
+  {
+    "data": "2026-05-14",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo MWM V16: pistoni, segmenti, guarnizioni MAHLE MS39012, bronzine",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 101400,
+    "costo": 39522
+  },
+  {
+    "data": "2026-05-13",
+    "nave": "HSC Gozo Express",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",
+    "tecnico": "Tecnico RCS",
+    "ore": 98400,
+    "costo": 4125
+  },
+  {
+    "data": "2026-05-13",
+    "nave": "San Pawl",
+    "sistema": "Iniezione",
+    "desc": "Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",
+    "tecnico": "Cantiere Valletta",
+    "ore": 101400,
+    "costo": 7597
+  },
+  {
+    "data": "2026-05-13",
+    "nave": "Balluta Bay",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 194000,
+    "costo": 891
+  },
+  {
+    "data": "2026-05-12",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 101400,
+    "costo": 366
+  },
+  {
+    "data": "2026-05-04",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 110642,
+    "costo": 396
+  },
+  {
+    "data": "2026-05-04",
+    "nave": "MV Maria Dolores",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 110627,
+    "costo": 5234
+  },
+  {
+    "data": "2026-04-21",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 98077,
+    "costo": 302
+  },
+  {
+    "data": "2026-04-13",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS",
+    "ore": 101138,
+    "costo": 801
+  },
+  {
+    "data": "2026-04-12",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 34405,
+    "costo": 549
+  },
+  {
+    "data": "2026-04-07",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 97863,
+    "costo": 271
+  },
+  {
+    "data": "2026-04-03",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico RCS",
+    "ore": 97808,
+    "costo": 1249
+  },
+  {
+    "data": "2026-04-02",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 34130,
+    "costo": 1047
+  },
+  {
+    "data": "2026-03-30",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 34105,
+    "costo": 1369
+  },
+  {
+    "data": "2026-03-29",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 34085,
+    "costo": 466
+  },
+  {
+    "data": "2026-03-28",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 86137,
+    "costo": 815
+  },
+  {
+    "data": "2026-03-26",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 85966,
+    "costo": 571
+  },
+  {
+    "data": "2026-03-25",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 34061,
+    "costo": 2339
+  },
+  {
+    "data": "2026-03-24",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 33880,
+    "costo": 828
+  },
+  {
+    "data": "2026-03-23",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 33939,
+    "costo": 805
+  },
+  {
+    "data": "2026-03-23",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 97583,
+    "costo": 506
+  },
+  {
+    "data": "2026-03-19",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 33866,
+    "costo": 478
+  },
+  {
+    "data": "2026-03-18",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 97563,
+    "costo": 543
+  },
+  {
+    "data": "2026-03-04",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 109554,
+    "costo": 438
+  },
+  {
+    "data": "2026-03-03",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 85503,
+    "costo": 567
+  },
+  {
+    "data": "2026-03-01",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 85343,
+    "costo": 469
+  },
+  {
+    "data": "2026-02-27",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 85413,
+    "costo": 518
+  },
+  {
+    "data": "2026-02-26",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 109528,
+    "costo": 770
+  },
+  {
+    "data": "2026-02-21",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 33177,
+    "costo": 485
+  },
+  {
+    "data": "2026-02-21",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",
+    "tecnico": "Cantiere Valletta",
+    "ore": 33141,
+    "costo": 37328
+  },
+  {
+    "data": "2026-02-19",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 109353,
+    "costo": 433
+  },
+  {
+    "data": "2026-02-18",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 109332,
+    "costo": 373
+  },
+  {
+    "data": "2026-02-15",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 109323,
+    "costo": 1978
+  },
+  {
+    "data": "2026-02-06",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 32890,
+    "costo": 2076
+  },
+  {
+    "data": "2026-01-24",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 32601,
+    "costo": 597
+  },
+  {
+    "data": "2026-01-18",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 108798,
+    "costo": 552
+  },
+  {
+    "data": "2026-01-10",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 84259,
+    "costo": 1016
+  },
+  {
+    "data": "2026-01-09",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 100389,
+    "costo": 846
+  },
+  {
+    "data": "2026-01-03",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 32036,
+    "costo": 1035
+  },
+  {
+    "data": "2026-01-01",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 31963,
+    "costo": 456
+  },
+  {
+    "data": "2025-12-19",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 83783,
+    "costo": 1759
+  },
+  {
+    "data": "2025-12-19",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 100214,
+    "costo": 453
+  },
+  {
+    "data": "2025-12-17",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 31677,
+    "costo": 476
+  },
+  {
+    "data": "2025-12-15",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 108299,
+    "costo": 757
+  },
+  {
+    "data": "2025-12-14",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 83651,
+    "costo": 825
+  },
+  {
+    "data": "2025-12-13",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 83522,
+    "costo": 2577
+  },
+  {
+    "data": "2025-12-13",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 100177,
+    "costo": 441
+  },
+  {
+    "data": "2025-12-12",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 31496,
+    "costo": 786
+  },
+  {
+    "data": "2025-12-12",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 83490,
+    "costo": 1538
+  },
+  {
+    "data": "2025-12-05",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 31264,
+    "costo": 872
+  },
+  {
+    "data": "2025-12-02",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 102286,
+    "costo": 764
+  },
+  {
+    "data": "2025-11-29",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 83191,
+    "costo": 566
+  },
+  {
+    "data": "2025-11-27",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 31099,
+    "costo": 603
+  },
+  {
+    "data": "2025-11-25",
+    "nave": "Balluta Bay",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio",
+    "tecnico": "Tecnico RCS",
+    "ore": 192508,
+    "costo": 909
+  },
+  {
+    "data": "2025-11-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 82837,
+    "costo": 483
+  },
+  {
+    "data": "2025-11-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 82809,
+    "costo": 6449
+  },
+  {
+    "data": "2025-11-14",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 107717,
+    "costo": 689
+  },
+  {
+    "data": "2025-11-13",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 30842,
+    "costo": 6754
+  },
+  {
+    "data": "2025-11-06",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 30687,
+    "costo": 505
+  },
+  {
+    "data": "2025-11-05",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 30582,
+    "costo": 521
+  },
+  {
+    "data": "2025-11-04",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 30521,
+    "costo": 873
+  },
+  {
+    "data": "2025-11-02",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 107565,
+    "costo": 493
+  },
+  {
+    "data": "2025-10-29",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 82554,
+    "costo": 864
+  },
+  {
+    "data": "2025-10-23",
+    "nave": "Balluta Bay",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo Wärtsilä, pistoni, bronzine, albero a gomiti ispezione",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 192204,
+    "costo": 61466
+  },
+  {
+    "data": "2025-10-22",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 82337,
+    "costo": 1817
+  },
+  {
+    "data": "2025-10-17",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 30109,
+    "costo": 531
+  },
+  {
+    "data": "2025-10-14",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 95167,
+    "costo": 1190
+  },
+  {
+    "data": "2025-10-13",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 107146,
+    "costo": 377
+  },
+  {
+    "data": "2025-10-06",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 101844,
+    "costo": 438
+  },
+  {
+    "data": "2025-09-29",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 29637,
+    "costo": 1816
+  },
+  {
+    "data": "2025-09-29",
+    "nave": "Balluta Bay",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio",
+    "tecnico": "Tecnico RCS",
+    "ore": 191986,
+    "costo": 847
+  },
+  {
+    "data": "2025-09-28",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 81670,
+    "costo": 526
+  },
+  {
+    "data": "2025-09-25",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 81686,
+    "costo": 578
+  },
+  {
+    "data": "2025-09-24",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 94883,
+    "costo": 282
+  },
+  {
+    "data": "2025-09-22",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 94826,
+    "costo": 530
+  },
+  {
+    "data": "2025-09-18",
+    "nave": "San Frangisk",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",
+    "tecnico": "Tecnico RCS",
+    "ore": 101721,
+    "costo": 3882
+  },
+  {
+    "data": "2025-09-15",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 29295,
+    "costo": 569
+  },
+  {
+    "data": "2025-09-13",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 29290,
+    "costo": 866
+  },
+  {
+    "data": "2025-09-11",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 106669,
+    "costo": 1553
+  },
+  {
+    "data": "2025-09-09",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 94680,
+    "costo": 231
+  },
+  {
+    "data": "2025-09-01",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 29105,
+    "costo": 818
+  },
+  {
+    "data": "2025-08-31",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 29035,
+    "costo": 796
+  },
+  {
+    "data": "2025-08-31",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 94513,
+    "costo": 265
+  },
+  {
+    "data": "2025-08-30",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 94508,
+    "costo": 462
+  },
+  {
+    "data": "2025-08-27",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 28958,
+    "costo": 829
+  },
+  {
+    "data": "2025-08-26",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico RCS",
+    "ore": 94447,
+    "costo": 1372
+  },
+  {
+    "data": "2025-08-25",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 106396,
+    "costo": 390
+  },
+  {
+    "data": "2025-08-20",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 80758,
+    "costo": 583
+  },
+  {
+    "data": "2025-08-20",
+    "nave": "MV Maria Dolores",
+    "sistema": "Propulsione",
+    "desc": "Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",
+    "tecnico": "Tecnico RCS",
+    "ore": 106248,
+    "costo": 1092
+  },
+  {
+    "data": "2025-08-14",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 99241,
+    "costo": 390
+  },
+  {
+    "data": "2025-08-13",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 28516,
+    "costo": 2548
+  },
+  {
+    "data": "2025-08-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 80516,
+    "costo": 935
+  },
+  {
+    "data": "2025-08-11",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 94222,
+    "costo": 225
+  },
+  {
+    "data": "2025-08-10",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 94219,
+    "costo": 229
+  },
+  {
+    "data": "2025-08-05",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 80404,
+    "costo": 999
+  },
+  {
+    "data": "2025-07-30",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 80355,
+    "costo": 962
+  },
+  {
+    "data": "2025-07-29",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 80308,
+    "costo": 2085
+  },
+  {
+    "data": "2025-07-27",
+    "nave": "HSC Gozo Express",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",
+    "tecnico": "Tecnico RCS",
+    "ore": 94052,
+    "costo": 4102
+  },
+  {
+    "data": "2025-07-26",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 105855,
+    "costo": 360
+  },
+  {
+    "data": "2025-07-26",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 105868,
+    "costo": 438
+  },
+  {
+    "data": "2025-07-23",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 28140,
+    "costo": 548
+  },
+  {
+    "data": "2025-07-21",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 28032,
+    "costo": 522
+  },
+  {
+    "data": "2025-07-20",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93893,
+    "costo": 437
+  },
+  {
+    "data": "2025-07-20",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 99052,
+    "costo": 453
+  },
+  {
+    "data": "2025-07-19",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 80030,
+    "costo": 31499
+  },
+  {
+    "data": "2025-07-12",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 79919,
+    "costo": 746
+  },
+  {
+    "data": "2025-07-09",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93737,
+    "costo": 435
+  },
+  {
+    "data": "2025-07-09",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 101118,
+    "costo": 363
+  },
+  {
+    "data": "2025-07-06",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 27675,
+    "costo": 2123
+  },
+  {
+    "data": "2025-07-06",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 79705,
+    "costo": 6476
+  },
+  {
+    "data": "2025-07-06",
+    "nave": "San Pawl",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",
+    "tecnico": "Tecnico RCS",
+    "ore": 98910,
+    "costo": 1409
+  },
+  {
+    "data": "2025-07-04",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 27583,
+    "costo": 897
+  },
+  {
+    "data": "2025-07-04",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 105469,
+    "costo": 552
+  },
+  {
+    "data": "2025-07-02",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93620,
+    "costo": 457
+  },
+  {
+    "data": "2025-06-29",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 105392,
+    "costo": 434
+  },
+  {
+    "data": "2025-06-28",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 79562,
+    "costo": 1001
+  },
+  {
+    "data": "2025-06-26",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 79463,
+    "costo": 526
+  },
+  {
+    "data": "2025-06-26",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 79547,
+    "costo": 2545
+  },
+  {
+    "data": "2025-06-24",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 79452,
+    "costo": 795
+  },
+  {
+    "data": "2025-06-21",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 105194,
+    "costo": 2039
+  },
+  {
+    "data": "2025-06-20",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 79314,
+    "costo": 489
+  },
+  {
+    "data": "2025-06-18",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 27256,
+    "costo": 6621
+  },
+  {
+    "data": "2025-06-18",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 105211,
+    "costo": 761
+  },
+  {
+    "data": "2025-06-14",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 105158,
+    "costo": 349
+  },
+  {
+    "data": "2025-06-14",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa motore: pistoni CAT/MAHLE, segmenti, bronzine, guarnizioni testa",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 105065,
+    "costo": 21699
+  },
+  {
+    "data": "2025-06-10",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 27097,
+    "costo": 512
+  },
+  {
+    "data": "2025-06-10",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 27117,
+    "costo": 592
+  },
+  {
+    "data": "2025-06-10",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 98710,
+    "costo": 758
+  },
+  {
+    "data": "2025-06-09",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Top End — Revisione teste cilindro, valvole, guide, ispezione camere combustione MWM",
+    "tecnico": "Cantiere Valletta",
+    "ore": 98713,
+    "costo": 15051
+  },
+  {
+    "data": "2025-06-07",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78978,
+    "costo": 454
+  },
+  {
+    "data": "2025-06-05",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 26965,
+    "costo": 792
+  },
+  {
+    "data": "2025-06-03",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78977,
+    "costo": 876
+  },
+  {
+    "data": "2025-05-31",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 78902,
+    "costo": 1977
+  },
+  {
+    "data": "2025-05-29",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 26811,
+    "costo": 516
+  },
+  {
+    "data": "2025-05-29",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 104878,
+    "costo": 683
+  },
+  {
+    "data": "2025-05-28",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 104854,
+    "costo": 339
+  },
+  {
+    "data": "2025-05-26",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico RCS",
+    "ore": 93064,
+    "costo": 1106
+  },
+  {
+    "data": "2025-05-23",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 26536,
+    "costo": 805
+  },
+  {
+    "data": "2025-05-20",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 26533,
+    "costo": 1516
+  },
+  {
+    "data": "2025-05-19",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 26450,
+    "costo": 461
+  },
+  {
+    "data": "2025-05-17",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 104673,
+    "costo": 409
+  },
+  {
+    "data": "2025-05-16",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 92975,
+    "costo": 300
+  },
+  {
+    "data": "2025-05-09",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 104546,
+    "costo": 371
+  },
+  {
+    "data": "2025-05-04",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 26074,
+    "costo": 463
+  },
+  {
+    "data": "2025-05-03",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 104375,
+    "costo": 1585
+  },
+  {
+    "data": "2025-04-26",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 78115,
+    "costo": 1038
+  },
+  {
+    "data": "2025-04-25",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 25884,
+    "costo": 2352
+  },
+  {
+    "data": "2025-04-24",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 77994,
+    "costo": 501
+  },
+  {
+    "data": "2025-04-20",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 92555,
+    "costo": 301
+  },
+  {
+    "data": "2025-04-19",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 25791,
+    "costo": 883
+  },
+  {
+    "data": "2025-04-19",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 77797,
+    "costo": 590
+  },
+  {
+    "data": "2025-04-16",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 25768,
+    "costo": 461
+  },
+  {
+    "data": "2025-04-07",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 103958,
+    "costo": 437
+  },
+  {
+    "data": "2025-04-06",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 25436,
+    "costo": 520
+  },
+  {
+    "data": "2025-04-03",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 77420,
+    "costo": 470
+  },
+  {
+    "data": "2025-04-02",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 98168,
+    "costo": 422
+  },
+  {
+    "data": "2025-04-02",
+    "nave": "San Pawl",
+    "sistema": "Iniezione",
+    "desc": "Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 98158,
+    "costo": 10932
+  },
+  {
+    "data": "2025-03-31",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 100366,
+    "costo": 407
+  },
+  {
+    "data": "2025-03-25",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo MWM V16: pistoni, segmenti, guarnizioni MAHLE MS39012, bronzine",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 100299,
+    "costo": 31860
+  },
+  {
+    "data": "2025-03-24",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 77210,
+    "costo": 1405
+  },
+  {
+    "data": "2025-03-23",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 25128,
+    "costo": 519
+  },
+  {
+    "data": "2025-03-23",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 77259,
+    "costo": 826
+  },
+  {
+    "data": "2025-03-17",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 103625,
+    "costo": 375
+  },
+  {
+    "data": "2025-03-14",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 77094,
+    "costo": 1036
+  },
+  {
+    "data": "2025-03-13",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 91944,
+    "costo": 295
+  },
+  {
+    "data": "2025-03-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 76879,
+    "costo": 6004
+  },
+  {
+    "data": "2025-03-06",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 24732,
+    "costo": 849
+  },
+  {
+    "data": "2025-03-06",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 76784,
+    "costo": 448
+  },
+  {
+    "data": "2025-03-03",
+    "nave": "MV Maria Dolores",
+    "sistema": "Propulsione",
+    "desc": "Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",
+    "tecnico": "Tecnico RCS",
+    "ore": 103399,
+    "costo": 1343
+  },
+  {
+    "data": "2025-03-02",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 100138,
+    "costo": 509
+  },
+  {
+    "data": "2025-03-02",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 100137,
+    "costo": 658
+  },
+  {
+    "data": "2025-02-28",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 100116,
+    "costo": 478
+  },
+  {
+    "data": "2025-02-19",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 24405,
+    "costo": 531
+  },
+  {
+    "data": "2025-02-16",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 24304,
+    "costo": 6873
+  },
+  {
+    "data": "2025-02-16",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 76380,
+    "costo": 460
+  },
+  {
+    "data": "2025-02-15",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 100012,
+    "costo": 833
+  },
+  {
+    "data": "2025-02-14",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 76276,
+    "costo": 471
+  },
+  {
+    "data": "2025-02-11",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 91522,
+    "costo": 283
+  },
+  {
+    "data": "2025-02-10",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 91454,
+    "costo": 303
+  },
+  {
+    "data": "2025-02-10",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 97753,
+    "costo": 767
+  },
+  {
+    "data": "2025-02-06",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 76186,
+    "costo": 788
+  },
+  {
+    "data": "2025-02-02",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 76009,
+    "costo": 542
+  },
+  {
+    "data": "2025-01-28",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 102781,
+    "costo": 494
+  },
+  {
+    "data": "2025-01-27",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 23734,
+    "costo": 37420
+  },
+  {
+    "data": "2025-01-27",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 23828,
+    "costo": 674
+  },
+  {
+    "data": "2025-01-26",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa: pistoni, segmenti MAHLE, bronzine, tenute testa cilindro",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 91315,
+    "costo": 15032
+  },
+  {
+    "data": "2025-01-23",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 75799,
+    "costo": 2244
+  },
+  {
+    "data": "2025-01-22",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 23714,
+    "costo": 830
+  },
+  {
+    "data": "2025-01-20",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 23718,
+    "costo": 1024
+  },
+  {
+    "data": "2025-01-20",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 102606,
+    "costo": 342
+  },
+  {
+    "data": "2025-01-13",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 75603,
+    "costo": 515
+  },
+  {
+    "data": "2025-01-10",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 75465,
+    "costo": 595
+  },
+  {
+    "data": "2025-01-08",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 102473,
+    "costo": 1955
+  },
+  {
+    "data": "2025-01-05",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 75383,
+    "costo": 527
+  },
+  {
+    "data": "2025-01-02",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 97432,
+    "costo": 407
+  },
+  {
+    "data": "2024-12-30",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 23125,
+    "costo": 1447
+  },
+  {
+    "data": "2024-12-26",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 102277,
+    "costo": 793
+  },
+  {
+    "data": "2024-12-26",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 90830,
+    "costo": 412
+  },
+  {
+    "data": "2024-12-22",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 97381,
+    "costo": 424
+  },
+  {
+    "data": "2024-12-21",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 22910,
+    "costo": 2376
+  },
+  {
+    "data": "2024-12-20",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 74932,
+    "costo": 488
+  },
+  {
+    "data": "2024-12-18",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 74935,
+    "costo": 538
+  },
+  {
+    "data": "2024-12-15",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 102060,
+    "costo": 410
+  },
+  {
+    "data": "2024-12-12",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 99464,
+    "costo": 755
+  },
+  {
+    "data": "2024-12-04",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Top End — Revisione teste cilindro, valvole, guide, ispezione camere combustione MWM",
+    "tecnico": "Cantiere Valletta",
+    "ore": 99432,
+    "costo": 20307
+  },
+  {
+    "data": "2024-12-03",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 101783,
+    "costo": 694
+  },
+  {
+    "data": "2024-11-30",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 97184,
+    "costo": 408
+  },
+  {
+    "data": "2024-11-29",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 22398,
+    "costo": 457
+  },
+  {
+    "data": "2024-11-29",
+    "nave": "HSC Gozo Express",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",
+    "tecnico": "Tecnico RCS",
+    "ore": 90364,
+    "costo": 3731
+  },
+  {
+    "data": "2024-11-27",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 22380,
+    "costo": 2511
+  },
+  {
+    "data": "2024-11-27",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico RCS",
+    "ore": 90347,
+    "costo": 1270
+  },
+  {
+    "data": "2024-11-26",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 74475,
+    "costo": 1558
+  },
+  {
+    "data": "2024-11-24",
+    "nave": "MV Maria Dolores",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Valletta",
+    "ore": 101641,
+    "costo": 5282
+  },
+  {
+    "data": "2024-11-16",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 22013,
+    "costo": 455
+  },
+  {
+    "data": "2024-11-14",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 101539,
+    "costo": 640
+  },
+  {
+    "data": "2024-11-12",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 21900,
+    "costo": 561
+  },
+  {
+    "data": "2024-11-12",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 22038,
+    "costo": 485
+  },
+  {
+    "data": "2024-11-12",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 74078,
+    "costo": 5955
+  },
+  {
+    "data": "2024-11-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 74045,
+    "costo": 503
+  },
+  {
+    "data": "2024-11-09",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",
+    "tecnico": "Cantiere Valletta",
+    "ore": 74001,
+    "costo": 37525
+  },
+  {
+    "data": "2024-10-30",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 21652,
+    "costo": 793
+  },
+  {
+    "data": "2024-10-29",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 21630,
+    "costo": 1008
+  },
+  {
+    "data": "2024-10-24",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 73561,
+    "costo": 509
+  },
+  {
+    "data": "2024-10-21",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 21422,
+    "costo": 482
+  },
+  {
+    "data": "2024-10-16",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 96854,
+    "costo": 461
+  },
+  {
+    "data": "2024-10-15",
+    "nave": "San Frangisk",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",
+    "tecnico": "Tecnico RCS",
+    "ore": 99030,
+    "costo": 1373
+  },
+  {
+    "data": "2024-10-13",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 73374,
+    "costo": 2406
+  },
+  {
+    "data": "2024-10-12",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 21192,
+    "costo": 1373
+  },
+  {
+    "data": "2024-10-10",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 21166,
+    "costo": 840
+  },
+  {
+    "data": "2024-10-08",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 21095,
+    "costo": 548
+  },
+  {
+    "data": "2024-10-05",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 73113,
+    "costo": 1624
+  },
+  {
+    "data": "2024-10-04",
+    "nave": "Balluta Bay",
+    "sistema": "Motore",
+    "desc": "Ispezione 4000h — Ispezione valvole, distribuzione, iniettori CR Bosch 0 445 120 266",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 188820,
+    "costo": 3999
+  },
+  {
+    "data": "2024-09-30",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 73003,
+    "costo": 819
+  },
+  {
+    "data": "2024-09-25",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 100724,
+    "costo": 661
+  },
+  {
+    "data": "2024-09-24",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico RCS",
+    "ore": 89372,
+    "costo": 1192
+  },
+  {
+    "data": "2024-09-22",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 89348,
+    "costo": 262
+  },
+  {
+    "data": "2024-09-20",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 72877,
+    "costo": 892
+  },
+  {
+    "data": "2024-09-19",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 100578,
+    "costo": 689
+  },
+  {
+    "data": "2024-09-18",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Valletta",
+    "ore": 20679,
+    "costo": 7558
+  },
+  {
+    "data": "2024-09-18",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 72728,
+    "costo": 805
+  },
+  {
+    "data": "2024-09-13",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 72746,
+    "costo": 460
+  },
+  {
+    "data": "2024-09-10",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 89216,
+    "costo": 467
+  },
+  {
+    "data": "2024-09-08",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 72489,
+    "costo": 868
+  },
+  {
+    "data": "2024-09-07",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 89088,
+    "costo": 254
+  },
+  {
+    "data": "2024-09-06",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 20394,
+    "costo": 856
+  },
+  {
+    "data": "2024-09-02",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 72338,
+    "costo": 468
+  },
+  {
+    "data": "2024-09-01",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 72358,
+    "costo": 514
+  },
+  {
+    "data": "2024-08-31",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 100299,
+    "costo": 604
+  },
+  {
+    "data": "2024-08-30",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 88970,
+    "costo": 547
+  },
+  {
+    "data": "2024-08-29",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 20238,
+    "costo": 2519
+  },
+  {
+    "data": "2024-08-28",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 72270,
+    "costo": 2268
+  },
+  {
+    "data": "2024-08-26",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 20018,
+    "costo": 541
+  },
+  {
+    "data": "2024-08-20",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 88862,
+    "costo": 234
+  },
+  {
+    "data": "2024-08-19",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 72048,
+    "costo": 564
+  },
+  {
+    "data": "2024-08-13",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 99954,
+    "costo": 644
+  },
+  {
+    "data": "2024-08-07",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 88683,
+    "costo": 273
+  },
+  {
+    "data": "2024-08-06",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 19532,
+    "costo": 899
+  },
+  {
+    "data": "2024-08-02",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 71621,
+    "costo": 1053
+  },
+  {
+    "data": "2024-08-02",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 71689,
+    "costo": 841
+  },
+  {
+    "data": "2024-08-02",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 88612,
+    "costo": 276
+  },
+  {
+    "data": "2024-07-28",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 19472,
+    "costo": 600
+  },
+  {
+    "data": "2024-07-24",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 19251,
+    "costo": 521
+  },
+  {
+    "data": "2024-07-23",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 19200,
+    "costo": 573
+  },
+  {
+    "data": "2024-07-22",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 19309,
+    "costo": 1026
+  },
+  {
+    "data": "2024-07-19",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 98329,
+    "costo": 781
+  },
+  {
+    "data": "2024-07-18",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 99511,
+    "costo": 790
+  },
+  {
+    "data": "2024-07-14",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 99426,
+    "costo": 447
+  },
+  {
+    "data": "2024-07-04",
+    "nave": "San Pawl",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",
+    "tecnico": "Tecnico RCS",
+    "ore": 95989,
+    "costo": 3326
+  },
+  {
+    "data": "2024-07-02",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 18755,
+    "costo": 1616
+  },
+  {
+    "data": "2024-07-02",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 88122,
+    "costo": 519
+  },
+  {
+    "data": "2024-07-01",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 98176,
+    "costo": 358
+  },
+  {
+    "data": "2024-06-23",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 99050,
+    "costo": 773
+  },
+  {
+    "data": "2024-06-22",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 18507,
+    "costo": 595
+  },
+  {
+    "data": "2024-06-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 70471,
+    "costo": 539
+  },
+  {
+    "data": "2024-06-15",
+    "nave": "HSC Gozo Express",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",
+    "tecnico": "Tecnico RCS",
+    "ore": 87896,
+    "costo": 3415
+  },
+  {
+    "data": "2024-06-14",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa motore: pistoni CAT/MAHLE, segmenti, bronzine, guarnizioni testa",
+    "tecnico": "Cantiere Valletta",
+    "ore": 98891,
+    "costo": 23456
+  },
+  {
+    "data": "2024-06-14",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 95839,
+    "costo": 442
+  },
+  {
+    "data": "2024-06-12",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 70367,
+    "costo": 730
+  },
+  {
+    "data": "2024-06-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 70345,
+    "costo": 692
+  },
+  {
+    "data": "2024-06-09",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 70445,
+    "costo": 554
+  },
+  {
+    "data": "2024-06-09",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 98028,
+    "costo": 441
+  },
+  {
+    "data": "2024-06-07",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 18178,
+    "costo": 449
+  },
+  {
+    "data": "2024-06-06",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 87723,
+    "costo": 246
+  },
+  {
+    "data": "2024-06-05",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 70307,
+    "costo": 525
+  },
+  {
+    "data": "2024-06-05",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 98749,
+    "costo": 1829
+  },
+  {
+    "data": "2024-06-04",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 70326,
+    "costo": 908
+  },
+  {
+    "data": "2024-06-03",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 70151,
+    "costo": 915
+  },
+  {
+    "data": "2024-06-02",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 87731,
+    "costo": 248
+  },
+  {
+    "data": "2024-05-31",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 87627,
+    "costo": 276
+  },
+  {
+    "data": "2024-05-28",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 70128,
+    "costo": 6639
+  },
+  {
+    "data": "2024-05-27",
+    "nave": "MV Maria Dolores",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 98569,
+    "costo": 4753
+  },
+  {
+    "data": "2024-05-22",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17744,
+    "costo": 855
+  },
+  {
+    "data": "2024-05-15",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 98461,
+    "costo": 2044
+  },
+  {
+    "data": "2024-05-15",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 87386,
+    "costo": 252
+  },
+  {
+    "data": "2024-05-13",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 98350,
+    "costo": 396
+  },
+  {
+    "data": "2024-05-10",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 69727,
+    "costo": 1740
+  },
+  {
+    "data": "2024-05-03",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 17405,
+    "costo": 2150
+  },
+  {
+    "data": "2024-05-01",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 17236,
+    "costo": 851
+  },
+  {
+    "data": "2024-04-30",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17236,
+    "costo": 477
+  },
+  {
+    "data": "2024-04-30",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 98128,
+    "costo": 605
+  },
+  {
+    "data": "2024-04-30",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 98187,
+    "costo": 623
+  },
+  {
+    "data": "2024-04-28",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 87125,
+    "costo": 411
+  },
+  {
+    "data": "2024-04-22",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 97985,
+    "costo": 340
+  },
+  {
+    "data": "2024-04-19",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 16907,
+    "costo": 591
+  },
+  {
+    "data": "2024-04-18",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 86983,
+    "costo": 452
+  },
+  {
+    "data": "2024-04-16",
+    "nave": "MV Maria Dolores",
+    "sistema": "Propulsione",
+    "desc": "Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",
+    "tecnico": "Tecnico RCS",
+    "ore": 97958,
+    "costo": 1378
+  },
+  {
+    "data": "2024-04-13",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 16769,
+    "costo": 1056
+  },
+  {
+    "data": "2024-04-13",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 97539,
+    "costo": 461
+  },
+  {
+    "data": "2024-04-10",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 69009,
+    "costo": 520
+  },
+  {
+    "data": "2024-04-10",
+    "nave": "San Pawl",
+    "sistema": "Iniezione",
+    "desc": "Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 95346,
+    "costo": 8135
+  },
+  {
+    "data": "2024-04-07",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 68827,
+    "costo": 808
+  },
+  {
+    "data": "2024-04-06",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 97707,
+    "costo": 1738
+  },
+  {
+    "data": "2024-04-06",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 97475,
+    "costo": 407
+  },
+  {
+    "data": "2024-04-02",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 16601,
+    "costo": 599
+  },
+  {
+    "data": "2024-04-01",
+    "nave": "San Pawl",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 95262,
+    "costo": 3935
+  },
+  {
+    "data": "2024-03-30",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico RCS",
+    "ore": 86674,
+    "costo": 1309
+  },
+  {
+    "data": "2024-03-29",
+    "nave": "Balluta Bay",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 187202,
+    "costo": 850
+  },
+  {
+    "data": "2024-03-27",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 16512,
+    "costo": 583
+  },
+  {
+    "data": "2024-03-25",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 16389,
+    "costo": 6895
+  },
+  {
+    "data": "2024-03-20",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 68500,
+    "costo": 586
+  },
+  {
+    "data": "2024-03-17",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 97355,
+    "costo": 672
+  },
+  {
+    "data": "2024-03-16",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 97366,
+    "costo": 387
+  },
+  {
+    "data": "2024-03-14",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 16121,
+    "costo": 750
+  },
+  {
+    "data": "2024-03-13",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 16132,
+    "costo": 905
+  },
+  {
+    "data": "2024-03-13",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 16017,
+    "costo": 2576
+  },
+  {
+    "data": "2024-03-12",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",
+    "tecnico": "Cantiere Valletta",
+    "ore": 16068,
+    "costo": 31706
+  },
+  {
+    "data": "2024-03-07",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 97228,
+    "costo": 419
+  },
+  {
+    "data": "2024-03-07",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 97196,
+    "costo": 366
+  },
+  {
+    "data": "2024-03-06",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 68027,
+    "costo": 789
+  },
+  {
+    "data": "2024-02-29",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 95023,
+    "costo": 745
+  },
+  {
+    "data": "2024-02-26",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 67930,
+    "costo": 834
+  },
+  {
+    "data": "2024-02-16",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 67584,
+    "costo": 478
+  },
+  {
+    "data": "2024-02-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 67566,
+    "costo": 484
+  },
+  {
+    "data": "2024-02-08",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 15268,
+    "costo": 1707
+  },
+  {
+    "data": "2024-02-07",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 15286,
+    "costo": 937
+  },
+  {
+    "data": "2024-02-05",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 15141,
+    "costo": 559
+  },
+  {
+    "data": "2024-02-04",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 96648,
+    "costo": 407
+  },
+  {
+    "data": "2024-02-02",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 15179,
+    "costo": 517
+  },
+  {
+    "data": "2024-01-29",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 15055,
+    "costo": 567
+  },
+  {
+    "data": "2024-01-29",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 85754,
+    "costo": 279
+  },
+  {
+    "data": "2024-01-28",
+    "nave": "San Frangisk",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 96926,
+    "costo": 1304
+  },
+  {
+    "data": "2024-01-25",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 96574,
+    "costo": 426
+  },
+  {
+    "data": "2024-01-24",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 67161,
+    "costo": 534
+  },
+  {
+    "data": "2024-01-24",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 96930,
+    "costo": 397
+  },
+  {
+    "data": "2024-01-21",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 66974,
+    "costo": 2523
+  },
+  {
+    "data": "2024-01-20",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 96427,
+    "costo": 605
+  },
+  {
+    "data": "2024-01-20",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 96879,
+    "costo": 782
+  },
+  {
+    "data": "2024-01-16",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 14694,
+    "costo": 485
+  },
+  {
+    "data": "2024-01-15",
+    "nave": "San Frangisk",
+    "sistema": "Iniezione",
+    "desc": "Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 96838,
+    "costo": 9438
+  },
+  {
+    "data": "2024-01-14",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 85556,
+    "costo": 267
+  },
+  {
+    "data": "2024-01-13",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 66914,
+    "costo": 532
+  },
+  {
+    "data": "2024-01-10",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 14650,
+    "costo": 793
+  },
+  {
+    "data": "2024-01-10",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 66760,
+    "costo": 2035
+  },
+  {
+    "data": "2024-01-08",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 85528,
+    "costo": 471
+  },
+  {
+    "data": "2024-01-07",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 96761,
+    "costo": 432
+  },
+  {
+    "data": "2024-01-07",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 94581,
+    "costo": 657
+  },
+  {
+    "data": "2024-01-05",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 66654,
+    "costo": 2035
+  },
+  {
+    "data": "2023-12-27",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 96006,
+    "costo": 406
+  },
+  {
+    "data": "2023-12-26",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 14216,
+    "costo": 2259
+  },
+  {
+    "data": "2023-12-26",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 94471,
+    "costo": 836
+  },
+  {
+    "data": "2023-12-20",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 66213,
+    "costo": 853
+  },
+  {
+    "data": "2023-12-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 66091,
+    "costo": 491
+  },
+  {
+    "data": "2023-12-10",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 13898,
+    "costo": 817
+  },
+  {
+    "data": "2023-12-08",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 13743,
+    "costo": 456
+  },
+  {
+    "data": "2023-12-05",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 95686,
+    "costo": 382
+  },
+  {
+    "data": "2023-12-02",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 96511,
+    "costo": 426
+  },
+  {
+    "data": "2023-11-30",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 13623,
+    "costo": 991
+  },
+  {
+    "data": "2023-11-21",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 65573,
+    "costo": 963
+  },
+  {
+    "data": "2023-11-16",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 84720,
+    "costo": 237
+  },
+  {
+    "data": "2023-11-15",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 95285,
+    "costo": 368
+  },
+  {
+    "data": "2023-11-04",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 94046,
+    "costo": 511
+  },
+  {
+    "data": "2023-11-03",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 65120,
+    "costo": 481
+  },
+  {
+    "data": "2023-11-01",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 95079,
+    "costo": 536
+  },
+  {
+    "data": "2023-11-01",
+    "nave": "San Frangisk",
+    "sistema": "Iniezione",
+    "desc": "Revisione Iniettori — Sostituzione iniettori Bosch / Delphi, revisione pompa iniezione 0 460 424 148",
+    "tecnico": "Cantiere Valletta",
+    "ore": 96234,
+    "costo": 8038
+  },
+  {
+    "data": "2023-10-31",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 65033,
+    "costo": 544
+  },
+  {
+    "data": "2023-10-27",
+    "nave": "San Frangisk",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 96204,
+    "costo": 3249
+  },
+  {
+    "data": "2023-10-23",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 64846,
+    "costo": 1614
+  },
+  {
+    "data": "2023-10-20",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 12556,
+    "costo": 685
+  },
+  {
+    "data": "2023-10-20",
+    "nave": "San Pawl",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",
+    "tecnico": "Tecnico RCS",
+    "ore": 93955,
+    "costo": 3780
+  },
+  {
+    "data": "2023-10-19",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 64765,
+    "costo": 2181
+  },
+  {
+    "data": "2023-10-17",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93908,
+    "costo": 361
+  },
+  {
+    "data": "2023-10-16",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 64698,
+    "costo": 517
+  },
+  {
+    "data": "2023-10-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 64678,
+    "costo": 493
+  },
+  {
+    "data": "2023-10-15",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 84173,
+    "costo": 1048
+  },
+  {
+    "data": "2023-10-14",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 64729,
+    "costo": 2420
+  },
+  {
+    "data": "2023-10-13",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 12396,
+    "costo": 6886
+  },
+  {
+    "data": "2023-10-12",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 96100,
+    "costo": 469
+  },
+  {
+    "data": "2023-10-09",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 12411,
+    "costo": 470
+  },
+  {
+    "data": "2023-10-07",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 12327,
+    "costo": 526
+  },
+  {
+    "data": "2023-10-07",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 64549,
+    "costo": 933
+  },
+  {
+    "data": "2023-09-28",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 64360,
+    "costo": 836
+  },
+  {
+    "data": "2023-09-25",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",
+    "tecnico": "Cantiere Valletta",
+    "ore": 64166,
+    "costo": 31720
+  },
+  {
+    "data": "2023-09-23",
+    "nave": "San Frangisk",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",
+    "tecnico": "Tecnico RCS",
+    "ore": 95912,
+    "costo": 1430
+  },
+  {
+    "data": "2023-09-14",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 11715,
+    "costo": 513
+  },
+  {
+    "data": "2023-09-14",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 11727,
+    "costo": 1373
+  },
+  {
+    "data": "2023-09-13",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 11764,
+    "costo": 2251
+  },
+  {
+    "data": "2023-09-13",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 94287,
+    "costo": 437
+  },
+  {
+    "data": "2023-09-11",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 11732,
+    "costo": 878
+  },
+  {
+    "data": "2023-09-10",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 83659,
+    "costo": 478
+  },
+  {
+    "data": "2023-09-07",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 63766,
+    "costo": 462
+  },
+  {
+    "data": "2023-09-07",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS",
+    "ore": 95828,
+    "costo": 701
+  },
+  {
+    "data": "2023-09-07",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 93621,
+    "costo": 617
+  },
+  {
+    "data": "2023-09-06",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 83656,
+    "costo": 492
+  },
+  {
+    "data": "2023-08-30",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 11448,
+    "costo": 811
+  },
+  {
+    "data": "2023-08-25",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93945,
+    "costo": 428
+  },
+  {
+    "data": "2023-08-25",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93495,
+    "costo": 431
+  },
+  {
+    "data": "2023-08-22",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 11170,
+    "costo": 585
+  },
+  {
+    "data": "2023-08-16",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 11089,
+    "costo": 485
+  },
+  {
+    "data": "2023-08-13",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 10933,
+    "costo": 584
+  },
+  {
+    "data": "2023-08-13",
+    "nave": "San Frangisk",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 95621,
+    "costo": 3765
+  },
+  {
+    "data": "2023-08-13",
+    "nave": "Balluta Bay",
+    "sistema": "Motore",
+    "desc": "Revisione Maggiore — Revisione top end Wärtsilä: valvole, guide, tenute, ispezione iniettori",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 185163,
+    "costo": 18956
+  },
+  {
+    "data": "2023-08-11",
+    "nave": "MV Maria Dolores",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 93631,
+    "costo": 5742
+  },
+  {
+    "data": "2023-08-10",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93650,
+    "costo": 340
+  },
+  {
+    "data": "2023-08-09",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93654,
+    "costo": 691
+  },
+  {
+    "data": "2023-08-02",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 62971,
+    "costo": 855
+  },
+  {
+    "data": "2023-07-24",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 82967,
+    "costo": 235
+  },
+  {
+    "data": "2023-07-16",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 10199,
+    "costo": 744
+  },
+  {
+    "data": "2023-07-10",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 62335,
+    "costo": 540
+  },
+  {
+    "data": "2023-07-10",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa: pistoni, segmenti MAHLE, bronzine, tenute testa cilindro",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 82689,
+    "costo": 15977
+  },
+  {
+    "data": "2023-07-09",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 10134,
+    "costo": 926
+  },
+  {
+    "data": "2023-07-08",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 10115,
+    "costo": 2235
+  },
+  {
+    "data": "2023-07-07",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 62374,
+    "costo": 537
+  },
+  {
+    "data": "2023-07-07",
+    "nave": "Balluta Bay",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 2000h — Cambio olio + filtri Wärtsilä — Hifi SO 4562 (OEM 182B2040) + SN gasolio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 184839,
+    "costo": 926
+  },
+  {
+    "data": "2023-07-02",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 82602,
+    "costo": 1156
+  },
+  {
+    "data": "2023-07-01",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 62234,
+    "costo": 957
+  },
+  {
+    "data": "2023-06-29",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 62124,
+    "costo": 1063
+  },
+  {
+    "data": "2023-06-26",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 92889,
+    "costo": 682
+  },
+  {
+    "data": "2023-06-23",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 61995,
+    "costo": 482
+  },
+  {
+    "data": "2023-06-20",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 82420,
+    "costo": 239
+  },
+  {
+    "data": "2023-06-15",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 95166,
+    "costo": 485
+  },
+  {
+    "data": "2023-06-14",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 9532,
+    "costo": 509
+  },
+  {
+    "data": "2023-06-13",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 61679,
+    "costo": 985
+  },
+  {
+    "data": "2023-06-10",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 9333,
+    "costo": 568
+  },
+  {
+    "data": "2023-06-10",
+    "nave": "San Pawl",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 92905,
+    "costo": 1470
+  },
+  {
+    "data": "2023-06-09",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 92650,
+    "costo": 1888
+  },
+  {
+    "data": "2023-06-05",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 61590,
+    "costo": 997
+  },
+  {
+    "data": "2023-06-04",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 82183,
+    "costo": 237
+  },
+  {
+    "data": "2023-06-03",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 61494,
+    "costo": 2358
+  },
+  {
+    "data": "2023-05-29",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 61288,
+    "costo": 534
+  },
+  {
+    "data": "2023-05-29",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 82054,
+    "costo": 227
+  },
+  {
+    "data": "2023-05-27",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 61239,
+    "costo": 7113
+  },
+  {
+    "data": "2023-05-26",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 9041,
+    "costo": 1790
+  },
+  {
+    "data": "2023-05-25",
+    "nave": "Balluta Bay",
+    "sistema": "Motore",
+    "desc": "Ispezione 4000h — Ispezione valvole, distribuzione, iniettori CR Bosch 0 445 120 266",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 184499,
+    "costo": 3423
+  },
+  {
+    "data": "2023-05-22",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 92736,
+    "costo": 460
+  },
+  {
+    "data": "2023-05-21",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 61094,
+    "costo": 801
+  },
+  {
+    "data": "2023-05-21",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 81944,
+    "costo": 229
+  },
+  {
+    "data": "2023-05-18",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 81905,
+    "costo": 301
+  },
+  {
+    "data": "2023-05-17",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 8792,
+    "costo": 554
+  },
+  {
+    "data": "2023-05-17",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 81914,
+    "costo": 235
+  },
+  {
+    "data": "2023-05-14",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 8803,
+    "costo": 985
+  },
+  {
+    "data": "2023-05-13",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 92147,
+    "costo": 624
+  },
+  {
+    "data": "2023-05-05",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 81794,
+    "costo": 461
+  },
+  {
+    "data": "2023-04-30",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 60662,
+    "costo": 515
+  },
+  {
+    "data": "2023-04-30",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 60645,
+    "costo": 1663
+  },
+  {
+    "data": "2023-04-28",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 91939,
+    "costo": 340
+  },
+  {
+    "data": "2023-04-28",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 94778,
+    "costo": 421
+  },
+  {
+    "data": "2023-04-27",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Valletta",
+    "ore": 8360,
+    "costo": 7236
+  },
+  {
+    "data": "2023-04-23",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 8220,
+    "costo": 484
+  },
+  {
+    "data": "2023-04-21",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 8161,
+    "costo": 548
+  },
+  {
+    "data": "2023-04-20",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 60483,
+    "costo": 978
+  },
+  {
+    "data": "2023-04-20",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 91714,
+    "costo": 635
+  },
+  {
+    "data": "2023-04-18",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 8131,
+    "costo": 2422
+  },
+  {
+    "data": "2023-04-16",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 8165,
+    "costo": 35567
+  },
+  {
+    "data": "2023-04-16",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 91667,
+    "costo": 406
+  },
+  {
+    "data": "2023-04-14",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 91632,
+    "costo": 439
+  },
+  {
+    "data": "2023-04-10",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 60134,
+    "costo": 670
+  },
+  {
+    "data": "2023-04-08",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 7978,
+    "costo": 789
+  },
+  {
+    "data": "2023-04-07",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 60040,
+    "costo": 973
+  },
+  {
+    "data": "2023-04-01",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 7811,
+    "costo": 992
+  },
+  {
+    "data": "2023-04-01",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 81207,
+    "costo": 296
+  },
+  {
+    "data": "2023-04-01",
+    "nave": "HSC Gozo Express",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR MTU 12V 2000, revisione pompa HP, test banco",
+    "tecnico": "Tecnico RCS",
+    "ore": 81223,
+    "costo": 3625
+  },
+  {
+    "data": "2023-03-27",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS",
+    "ore": 92318,
+    "costo": 857
+  },
+  {
+    "data": "2023-03-23",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 59696,
+    "costo": 521
+  },
+  {
+    "data": "2023-03-18",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 91226,
+    "costo": 354
+  },
+  {
+    "data": "2023-03-18",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 92259,
+    "costo": 779
+  },
+  {
+    "data": "2023-03-17",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 7398,
+    "costo": 502
+  },
+  {
+    "data": "2023-03-16",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 59661,
+    "costo": 1514
+  },
+  {
+    "data": "2023-03-16",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 91198,
+    "costo": 346
+  },
+  {
+    "data": "2023-03-15",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 80932,
+    "costo": 451
+  },
+  {
+    "data": "2023-03-12",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 7256,
+    "costo": 490
+  },
+  {
+    "data": "2023-03-12",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 94369,
+    "costo": 800
+  },
+  {
+    "data": "2023-02-28",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 80706,
+    "costo": 257
+  },
+  {
+    "data": "2023-02-26",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 6859,
+    "costo": 814
+  },
+  {
+    "data": "2023-02-25",
+    "nave": "San Pawl",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",
+    "tecnico": "Tecnico RCS",
+    "ore": 92078,
+    "costo": 3932
+  },
+  {
+    "data": "2023-02-23",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 90837,
+    "costo": 369
+  },
+  {
+    "data": "2023-02-17",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 80532,
+    "costo": 237
+  },
+  {
+    "data": "2023-02-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 58914,
+    "costo": 501
+  },
+  {
+    "data": "2023-02-13",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico RCS",
+    "ore": 80483,
+    "costo": 1279
+  },
+  {
+    "data": "2023-02-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 58874,
+    "costo": 793
+  },
+  {
+    "data": "2023-02-11",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 90631,
+    "costo": 351
+  },
+  {
+    "data": "2023-02-09",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 90634,
+    "costo": 614
+  },
+  {
+    "data": "2023-02-05",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 91909,
+    "costo": 414
+  },
+  {
+    "data": "2023-02-01",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 6323,
+    "costo": 601
+  },
+  {
+    "data": "2023-02-01",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 6234,
+    "costo": 1561
+  },
+  {
+    "data": "2023-02-01",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 90385,
+    "costo": 784
+  },
+  {
+    "data": "2023-01-28",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 6184,
+    "costo": 788
+  },
+  {
+    "data": "2023-01-26",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 58461,
+    "costo": 7602
+  },
+  {
+    "data": "2023-01-23",
+    "nave": "MV Maria Dolores",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Valletta",
+    "ore": 90303,
+    "costo": 5525
+  },
+  {
+    "data": "2023-01-19",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 58282,
+    "costo": 556
+  },
+  {
+    "data": "2023-01-18",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS",
+    "ore": 93984,
+    "costo": 789
+  },
+  {
+    "data": "2023-01-16",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 5941,
+    "costo": 2337
+  },
+  {
+    "data": "2023-01-16",
+    "nave": "MV Maria Dolores",
+    "sistema": "Propulsione",
+    "desc": "Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 90159,
+    "costo": 1062
+  },
+  {
+    "data": "2023-01-15",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 80120,
+    "costo": 238
+  },
+  {
+    "data": "2023-01-14",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 5916,
+    "costo": 557
+  },
+  {
+    "data": "2023-01-11",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 90135,
+    "costo": 432
+  },
+  {
+    "data": "2023-01-11",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 91703,
+    "costo": 498
+  },
+  {
+    "data": "2023-01-09",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 5819,
+    "costo": 803
+  },
+  {
+    "data": "2023-01-09",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 58077,
+    "costo": 807
+  },
+  {
+    "data": "2023-01-07",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 57936,
+    "costo": 2207
+  },
+  {
+    "data": "2023-01-03",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 5528,
+    "costo": 545
+  },
+  {
+    "data": "2022-12-26",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 91579,
+    "costo": 462
+  },
+  {
+    "data": "2022-12-22",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 57560,
+    "costo": 466
+  },
+  {
+    "data": "2022-12-18",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 5166,
+    "costo": 870
+  },
+  {
+    "data": "2022-12-10",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 89513,
+    "costo": 562
+  },
+  {
+    "data": "2022-12-09",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 79561,
+    "costo": 288
+  },
+  {
+    "data": "2022-12-07",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 57180,
+    "costo": 522
+  },
+  {
+    "data": "2022-12-06",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 89497,
+    "costo": 753
+  },
+  {
+    "data": "2022-12-05",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 4979,
+    "costo": 599
+  },
+  {
+    "data": "2022-12-05",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 57186,
+    "costo": 571
+  },
+  {
+    "data": "2022-11-26",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 4656,
+    "costo": 487
+  },
+  {
+    "data": "2022-11-20",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 56878,
+    "costo": 465
+  },
+  {
+    "data": "2022-11-16",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 89081,
+    "costo": 367
+  },
+  {
+    "data": "2022-11-15",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 56781,
+    "costo": 6056
+  },
+  {
+    "data": "2022-11-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 56572,
+    "costo": 584
+  },
+  {
+    "data": "2022-11-06",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 56439,
+    "costo": 1411
+  },
+  {
+    "data": "2022-11-05",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 4160,
+    "costo": 2168
+  },
+  {
+    "data": "2022-11-02",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 4182,
+    "costo": 834
+  },
+  {
+    "data": "2022-10-31",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78952,
+    "costo": 269
+  },
+  {
+    "data": "2022-10-30",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 4105,
+    "costo": 460
+  },
+  {
+    "data": "2022-10-29",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 56274,
+    "costo": 596
+  },
+  {
+    "data": "2022-10-28",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 56253,
+    "costo": 529
+  },
+  {
+    "data": "2022-10-27",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93324,
+    "costo": 356
+  },
+  {
+    "data": "2022-10-22",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 93274,
+    "costo": 421
+  },
+  {
+    "data": "2022-10-20",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori CR Bosch (serie 0 445 120 141), revisione pompa HP, test bench",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 3848,
+    "costo": 7632
+  },
+  {
+    "data": "2022-10-19",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 3827,
+    "costo": 888
+  },
+  {
+    "data": "2022-10-18",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 93216,
+    "costo": 463
+  },
+  {
+    "data": "2022-10-16",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 55944,
+    "costo": 2420
+  },
+  {
+    "data": "2022-10-12",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 88579,
+    "costo": 659
+  },
+  {
+    "data": "2022-10-10",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 3569,
+    "costo": 490
+  },
+  {
+    "data": "2022-10-03",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 55660,
+    "costo": 978
+  },
+  {
+    "data": "2022-10-01",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 88317,
+    "costo": 1808
+  },
+  {
+    "data": "2022-09-29",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 55500,
+    "costo": 813
+  },
+  {
+    "data": "2022-09-26",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 55436,
+    "costo": 484
+  },
+  {
+    "data": "2022-09-22",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo MWM V16: pistoni, segmenti, guarnizioni MAHLE MS39012, bronzine",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 90844,
+    "costo": 33585
+  },
+  {
+    "data": "2022-09-20",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78292,
+    "costo": 230
+  },
+  {
+    "data": "2022-09-17",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 2933,
+    "costo": 447
+  },
+  {
+    "data": "2022-09-13",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 55180,
+    "costo": 2040
+  },
+  {
+    "data": "2022-09-12",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 2913,
+    "costo": 823
+  },
+  {
+    "data": "2022-09-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 55142,
+    "costo": 790
+  },
+  {
+    "data": "2022-09-10",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 2851,
+    "costo": 1503
+  },
+  {
+    "data": "2022-09-08",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa motore: pistoni CAT/MAHLE, segmenti, bronzine, guarnizioni testa",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 87966,
+    "costo": 23044
+  },
+  {
+    "data": "2022-09-07",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78150,
+    "costo": 495
+  },
+  {
+    "data": "2022-09-06",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 55091,
+    "costo": 459
+  },
+  {
+    "data": "2022-09-05",
+    "nave": "Balluta Bay",
+    "sistema": "Motore",
+    "desc": "Ispezione 4000h — Ispezione valvole, distribuzione, iniettori CR Bosch 0 445 120 266",
+    "tecnico": "Cantiere Valletta",
+    "ore": 182174,
+    "costo": 4082
+  },
+  {
+    "data": "2022-09-04",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 54927,
+    "costo": 484
+  },
+  {
+    "data": "2022-09-02",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 92873,
+    "costo": 420
+  },
+  {
+    "data": "2022-08-30",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 2537,
+    "costo": 512
+  },
+  {
+    "data": "2022-08-30",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 87846,
+    "costo": 629
+  },
+  {
+    "data": "2022-08-26",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 77965,
+    "costo": 276
+  },
+  {
+    "data": "2022-08-11",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 54346,
+    "costo": 593
+  },
+  {
+    "data": "2022-08-10",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS",
+    "ore": 2099,
+    "costo": 710
+  },
+  {
+    "data": "2022-08-08",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 2024,
+    "costo": 1062
+  },
+  {
+    "data": "2022-08-07",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 77640,
+    "costo": 453
+  },
+  {
+    "data": "2022-08-05",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 1946,
+    "costo": 450
+  },
+  {
+    "data": "2022-08-04",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione teste cilindro, controllo gioco valvole, regolazione iniettori CR Bosch 0 445 120 141",
+    "tecnico": "Tecnico RCS",
+    "ore": 1966,
+    "costo": 2412
+  },
+  {
+    "data": "2022-07-28",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 90398,
+    "costo": 844
+  },
+  {
+    "data": "2022-07-21",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 53932,
+    "costo": 571
+  },
+  {
+    "data": "2022-07-19",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 87084,
+    "costo": 429
+  },
+  {
+    "data": "2022-07-14",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 1438,
+    "costo": 451
+  },
+  {
+    "data": "2022-07-12",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Propulsione",
+    "desc": "Ispezione Propulsione — Controllo eliche, shaft seal, allineamento alberi, lubrificazione riduttori",
+    "tecnico": "Tecnico RCS",
+    "ore": 53773,
+    "costo": 1389
+  },
+  {
+    "data": "2022-07-01",
+    "nave": "MV Maria Dolores",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 86792,
+    "costo": 1530
+  },
+  {
+    "data": "2022-06-29",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 995,
+    "costo": 1045
+  },
+  {
+    "data": "2022-06-24",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa top-end: pistoni, segmenti, bronzine, albero a camme, tenute",
+    "tecnico": "Cantiere Valletta",
+    "ore": 53288,
+    "costo": 31598
+  },
+  {
+    "data": "2022-06-22",
+    "nave": "San Pawl",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",
+    "tecnico": "Tecnico RCS",
+    "ore": 90117,
+    "costo": 3695
+  },
+  {
+    "data": "2022-06-21",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 963,
+    "costo": 552
+  },
+  {
+    "data": "2022-06-14",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 53092,
+    "costo": 1028
+  },
+  {
+    "data": "2022-06-07",
+    "nave": "MV Maria Dolores",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 86426,
+    "costo": 545
+  },
+  {
+    "data": "2022-06-05",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 52739,
+    "costo": 519
+  },
+  {
+    "data": "2022-06-04",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 52852,
+    "costo": 524
+  },
+  {
+    "data": "2022-06-02",
+    "nave": "MV Saint John Paul II",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Sostituzione filtri olio motore, filtri gasolio primario e secondario + ispezione visiva (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 506,
+    "costo": 563
+  },
+  {
+    "data": "2022-05-27",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 86148,
+    "costo": 418
+  },
+  {
+    "data": "2022-05-24",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 76525,
+    "costo": 304
+  },
+  {
+    "data": "2022-05-03",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 85823,
+    "costo": 377
+  },
+  {
+    "data": "2022-04-21",
+    "nave": "San Pawl",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",
+    "tecnico": "Tecnico RCS",
+    "ore": 89615,
+    "costo": 1444
+  },
+  {
+    "data": "2022-04-17",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento 2000h — Sostituzione termostato MTU, fluido refrigerante, pulizia heat exchanger",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 51623,
+    "costo": 789
+  },
+  {
+    "data": "2022-04-12",
+    "nave": "MV Maria Dolores",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 85374,
+    "costo": 5004
+  },
+  {
+    "data": "2022-04-07",
+    "nave": "San Frangisk",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 91694,
+    "costo": 1447
+  },
+  {
+    "data": "2022-04-03",
+    "nave": "San Pawl",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche tipo Air Cushion, shaft seal, lubrificazione cuscinetti",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 89462,
+    "costo": 1583
+  },
+  {
+    "data": "2022-04-02",
+    "nave": "HSC Gozo Express",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione iniettori CR Bosch 0 445 120 059, controllo valvole e distribuzione",
+    "tecnico": "Tecnico RCS",
+    "ore": 75716,
+    "costo": 1196
+  },
+  {
+    "data": "2022-03-26",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 85114,
+    "costo": 400
+  },
+  {
+    "data": "2022-03-26",
+    "nave": "San Pawl",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo iniettori meccanici Bosch 0 430 232 056 (OEM 01174463), taratura pressione",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 89386,
+    "costo": 3798
+  },
+  {
+    "data": "2022-03-25",
+    "nave": "MV Jean de La Valette",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubrificante + controllo tenute e manicotti (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 51156,
+    "costo": 821
+  },
+  {
+    "data": "2022-03-22",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 89376,
+    "costo": 415
+  },
+  {
+    "data": "2022-03-17",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 75527,
+    "costo": 288
+  },
+  {
+    "data": "2022-03-17",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 89318,
+    "costo": 474
+  },
+  {
+    "data": "2022-03-13",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 84938,
+    "costo": 737
+  },
+  {
+    "data": "2022-03-02",
+    "nave": "San Frangisk",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS",
+    "ore": 91418,
+    "costo": 808
+  },
+  {
+    "data": "2022-01-21",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 84039,
+    "costo": 344
+  },
+  {
+    "data": "2022-01-06",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 90949,
+    "costo": 437
+  },
+  {
+    "data": "2021-12-28",
+    "nave": "MV Maria Dolores",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×6 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 83667,
+    "costo": 442
+  },
+  {
+    "data": "2021-11-02",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio lubricante + verifica tenute (×4 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 73498,
+    "costo": 510
+  },
+  {
+    "data": "2021-10-27",
+    "nave": "HSC Gozo Express",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU 2000 — Hifi SO 4562 + SN 80016, kit da 4 motori (×4 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 73346,
+    "costo": 302
+  },
+  {
+    "data": "2021-10-23",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 88170,
+    "costo": 444
+  },
+  {
+    "data": "2021-06-26",
+    "nave": "San Pawl",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 87210,
+    "costo": 417
+  },
+  {
+    "data": "2021-06-20",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 89397,
+    "costo": 472
+  },
+  {
+    "data": "2021-05-03",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Top End — Revisione teste cilindro, valvole, guide, ispezione camere combustione MWM",
+    "tecnico": "Cantiere Valletta",
+    "ore": 86813,
+    "costo": 16542
+  },
+  {
+    "data": "2021-04-26",
+    "nave": "San Frangisk",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Deutz MWM — Fleetguard LF4056 (OEM 04294788) + FS1006 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 88956,
+    "costo": 471
+  },
+  {
+    "data": "2021-01-20",
+    "nave": "San Pawl",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: cinghie, manicotti, guarnizioni, valvole, analisi olio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 86005,
+    "costo": 759
+  }
+]

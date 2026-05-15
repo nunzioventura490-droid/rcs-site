@@ -1,0 +1,5609 @@
+[
+  {
+    "data": "2026-05-15",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo: pistoni 7E-8818, segmenti, bronzine, guarnizioni 3L-3894",
+    "tecnico": "Cantiere Valletta",
+    "ore": 61400,
+    "costo": 44872
+  },
+  {
+    "data": "2026-05-15",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 83800,
+    "costo": 317
+  },
+  {
+    "data": "2026-05-15",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 83800,
+    "costo": 719
+  },
+  {
+    "data": "2026-05-14",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 21000,
+    "costo": 306
+  },
+  {
+    "data": "2026-05-14",
+    "nave": "MT Wenzina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 84200,
+    "costo": 463
+  },
+  {
+    "data": "2026-05-14",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 83800,
+    "costo": 661
+  },
+  {
+    "data": "2026-05-13",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 26300,
+    "costo": 1632
+  },
+  {
+    "data": "2026-05-13",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 61400,
+    "costo": 609
+  },
+  {
+    "data": "2026-05-13",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 84200,
+    "costo": 604
+  },
+  {
+    "data": "2026-05-13",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 84200,
+    "costo": 769
+  },
+  {
+    "data": "2026-05-12",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 35000,
+    "costo": 383
+  },
+  {
+    "data": "2026-05-12",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 84200,
+    "costo": 396
+  },
+  {
+    "data": "2026-05-12",
+    "nave": "MT Wenzina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 84200,
+    "costo": 426
+  },
+  {
+    "data": "2026-05-12",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 114400,
+    "costo": 488
+  },
+  {
+    "data": "2026-05-12",
+    "nave": "MT Sea Salvor",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 114383,
+    "costo": 2803
+  },
+  {
+    "data": "2026-05-12",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Valletta",
+    "ore": 114400,
+    "costo": 19806
+  },
+  {
+    "data": "2026-05-10",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 84157,
+    "costo": 344
+  },
+  {
+    "data": "2026-05-06",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 61312,
+    "costo": 306
+  },
+  {
+    "data": "2026-04-25",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 83968,
+    "costo": 15363
+  },
+  {
+    "data": "2026-04-14",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 83848,
+    "costo": 751
+  },
+  {
+    "data": "2026-04-13",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 20723,
+    "costo": 383
+  },
+  {
+    "data": "2026-04-08",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 25854,
+    "costo": 354
+  },
+  {
+    "data": "2026-04-01",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 113932,
+    "costo": 1015
+  },
+  {
+    "data": "2026-03-25",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 5399,
+    "costo": 371
+  },
+  {
+    "data": "2026-03-23",
+    "nave": "MT Sea Salvor",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 113808,
+    "costo": 505
+  },
+  {
+    "data": "2026-03-22",
+    "nave": "MT Senglea",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 20515,
+    "costo": 2697
+  },
+  {
+    "data": "2026-03-20",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 20870,
+    "costo": 439
+  },
+  {
+    "data": "2026-03-19",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 25582,
+    "costo": 617
+  },
+  {
+    "data": "2026-03-17",
+    "nave": "MT Sea Salvor",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 113767,
+    "costo": 474
+  },
+  {
+    "data": "2026-03-12",
+    "nave": "MT Pawlina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Cambio fluido refrigerante, pulizia heat exchanger, termostato",
+    "tecnico": "Tecnico RCS",
+    "ore": 83057,
+    "costo": 491
+  },
+  {
+    "data": "2026-03-09",
+    "nave": "MT Vittoriosa",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 25478,
+    "costo": 506
+  },
+  {
+    "data": "2026-03-07",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 20749,
+    "costo": 186
+  },
+  {
+    "data": "2026-03-05",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 25433,
+    "costo": 615
+  },
+  {
+    "data": "2026-03-03",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 71981,
+    "costo": 324
+  },
+  {
+    "data": "2026-03-01",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 25420,
+    "costo": 445
+  },
+  {
+    "data": "2026-02-28",
+    "nave": "MT Senglea",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 20250,
+    "costo": 415
+  },
+  {
+    "data": "2026-02-26",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 34037,
+    "costo": 392
+  },
+  {
+    "data": "2026-02-24",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 5185,
+    "costo": 610
+  },
+  {
+    "data": "2026-02-24",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 82864,
+    "costo": 361
+  },
+  {
+    "data": "2026-02-23",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 20211,
+    "costo": 658
+  },
+  {
+    "data": "2026-02-23",
+    "nave": "MT Senglea",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 20196,
+    "costo": 851
+  },
+  {
+    "data": "2026-02-23",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 83222,
+    "costo": 386
+  },
+  {
+    "data": "2026-02-22",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 34018,
+    "costo": 343
+  },
+  {
+    "data": "2026-02-22",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 20190,
+    "costo": 714
+  },
+  {
+    "data": "2026-02-22",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 20622,
+    "costo": 204
+  },
+  {
+    "data": "2026-02-08",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 25120,
+    "costo": 439
+  },
+  {
+    "data": "2026-02-05",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 5035,
+    "costo": 387
+  },
+  {
+    "data": "2026-02-05",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 60274,
+    "costo": 396
+  },
+  {
+    "data": "2026-02-03",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo MaK 8M25: pistoni, segmenti, bronzine, pompe Bosch",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 71638,
+    "costo": 24515
+  },
+  {
+    "data": "2026-02-01",
+    "nave": "MT St. Elmo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 60250,
+    "costo": 456
+  },
+  {
+    "data": "2026-01-28",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 82949,
+    "costo": 330
+  },
+  {
+    "data": "2026-01-26",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 60148,
+    "costo": 309
+  },
+  {
+    "data": "2026-01-25",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 25019,
+    "costo": 433
+  },
+  {
+    "data": "2026-01-22",
+    "nave": "MT Spinola",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Verifica e calibrazione iniettori UPS Bosch 0 414 702 006 (OEM MaK 3460598)",
+    "tecnico": "Cantiere Valletta",
+    "ore": 71513,
+    "costo": 3590
+  },
+  {
+    "data": "2026-01-21",
+    "nave": "MT Wenzina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 82798,
+    "costo": 2160
+  },
+  {
+    "data": "2026-01-13",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 60023,
+    "costo": 13808
+  },
+  {
+    "data": "2026-01-10",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 33467,
+    "costo": 683
+  },
+  {
+    "data": "2026-01-05",
+    "nave": "MT Vittoriosa",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 24737,
+    "costo": 490
+  },
+  {
+    "data": "2026-01-04",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 82635,
+    "costo": 322
+  },
+  {
+    "data": "2025-12-31",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 82594,
+    "costo": 395
+  },
+  {
+    "data": "2025-12-29",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 4694,
+    "costo": 317
+  },
+  {
+    "data": "2025-12-26",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 33360,
+    "costo": 327
+  },
+  {
+    "data": "2025-12-24",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 19626,
+    "costo": 369
+  },
+  {
+    "data": "2025-12-19",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 19620,
+    "costo": 607
+  },
+  {
+    "data": "2025-12-18",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 81991,
+    "costo": 345
+  },
+  {
+    "data": "2025-12-15",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 24471,
+    "costo": 2067
+  },
+  {
+    "data": "2025-12-11",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 81899,
+    "costo": 291
+  },
+  {
+    "data": "2025-12-06",
+    "nave": "MT St. Elmo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 59602,
+    "costo": 901
+  },
+  {
+    "data": "2025-12-06",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Major Service — Revisione parziale Volvo: iniettori, guarnizioni, verifica turbocompressore",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 19846,
+    "costo": 3924
+  },
+  {
+    "data": "2025-11-30",
+    "nave": "MT Vittoriosa",
+    "sistema": "Propulsione",
+    "desc": "Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",
+    "tecnico": "Tecnico RCS",
+    "ore": 24322,
+    "costo": 1201
+  },
+  {
+    "data": "2025-11-29",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 112530,
+    "costo": 857
+  },
+  {
+    "data": "2025-11-28",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa motore: pistoni CAT/MAHLE, segmenti, bronzine, guarnizioni testa",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 24286,
+    "costo": 25133
+  },
+  {
+    "data": "2025-11-28",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 82143,
+    "costo": 336
+  },
+  {
+    "data": "2025-11-25",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 19383,
+    "costo": 398
+  },
+  {
+    "data": "2025-11-23",
+    "nave": "MT St. Elmo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 59495,
+    "costo": 453
+  },
+  {
+    "data": "2025-11-23",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 19689,
+    "costo": 189
+  },
+  {
+    "data": "2025-11-22",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 112474,
+    "costo": 16784
+  },
+  {
+    "data": "2025-11-17",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 32875,
+    "costo": 340
+  },
+  {
+    "data": "2025-11-14",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 59366,
+    "costo": 399
+  },
+  {
+    "data": "2025-11-12",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 81580,
+    "costo": 336
+  },
+  {
+    "data": "2025-11-11",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 112335,
+    "costo": 743
+  },
+  {
+    "data": "2025-11-10",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 19583,
+    "costo": 216
+  },
+  {
+    "data": "2025-11-08",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 24017,
+    "costo": 415
+  },
+  {
+    "data": "2025-11-06",
+    "nave": "MT St. Angelo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 32689,
+    "costo": 431
+  },
+  {
+    "data": "2025-10-31",
+    "nave": "MT St. Angelo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 32633,
+    "costo": 2634
+  },
+  {
+    "data": "2025-10-30",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 59213,
+    "costo": 765
+  },
+  {
+    "data": "2025-10-26",
+    "nave": "MT St. Elmo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 59121,
+    "costo": 1075
+  },
+  {
+    "data": "2025-10-26",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 81367,
+    "costo": 347
+  },
+  {
+    "data": "2025-10-25",
+    "nave": "MT St. Angelo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 32572,
+    "costo": 992
+  },
+  {
+    "data": "2025-10-25",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 4181,
+    "costo": 511
+  },
+  {
+    "data": "2025-10-22",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 81360,
+    "costo": 356
+  },
+  {
+    "data": "2025-10-21",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 112129,
+    "costo": 383
+  },
+  {
+    "data": "2025-10-20",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 32527,
+    "costo": 368
+  },
+  {
+    "data": "2025-10-19",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 32518,
+    "costo": 664
+  },
+  {
+    "data": "2025-10-12",
+    "nave": "MT Wenzina",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 81602,
+    "costo": 888
+  },
+  {
+    "data": "2025-10-09",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 23707,
+    "costo": 614
+  },
+  {
+    "data": "2025-10-07",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Valletta",
+    "ore": 18894,
+    "costo": 16646
+  },
+  {
+    "data": "2025-10-06",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 23650,
+    "costo": 693
+  },
+  {
+    "data": "2025-10-04",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 23616,
+    "costo": 360
+  },
+  {
+    "data": "2025-10-04",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 32352,
+    "costo": 342
+  },
+  {
+    "data": "2025-10-03",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 81091,
+    "costo": 601
+  },
+  {
+    "data": "2025-10-01",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 4010,
+    "costo": 598
+  },
+  {
+    "data": "2025-10-01",
+    "nave": "MT Wenzina",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 81499,
+    "costo": 1028
+  },
+  {
+    "data": "2025-09-30",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 23586,
+    "costo": 421
+  },
+  {
+    "data": "2025-09-30",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 19175,
+    "costo": 361
+  },
+  {
+    "data": "2025-09-28",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 70231,
+    "costo": 362
+  },
+  {
+    "data": "2025-09-28",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 81049,
+    "costo": 330
+  },
+  {
+    "data": "2025-09-27",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 32240,
+    "costo": 329
+  },
+  {
+    "data": "2025-09-27",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 81067,
+    "costo": 679
+  },
+  {
+    "data": "2025-09-24",
+    "nave": "MT Wenzina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 81380,
+    "costo": 2423
+  },
+  {
+    "data": "2025-09-23",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 3938,
+    "costo": 377
+  },
+  {
+    "data": "2025-09-22",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 23504,
+    "costo": 384
+  },
+  {
+    "data": "2025-09-19",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione top end: valvole, guide, ispezione iniettori e camere combustione",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 80925,
+    "costo": 12444
+  },
+  {
+    "data": "2025-09-18",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 19053,
+    "costo": 395
+  },
+  {
+    "data": "2025-09-09",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS",
+    "ore": 70001,
+    "costo": 737
+  },
+  {
+    "data": "2025-09-03",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 58586,
+    "costo": 345
+  },
+  {
+    "data": "2025-08-30",
+    "nave": "MT Pawlina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Cambio fluido refrigerante, pulizia heat exchanger, termostato",
+    "tecnico": "Tecnico RCS",
+    "ore": 80732,
+    "costo": 488
+  },
+  {
+    "data": "2025-08-26",
+    "nave": "MT Sea Salvor",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 111507,
+    "costo": 628
+  },
+  {
+    "data": "2025-08-24",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 31847,
+    "costo": 740
+  },
+  {
+    "data": "2025-08-22",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 111433,
+    "costo": 356
+  },
+  {
+    "data": "2025-08-21",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 18825,
+    "costo": 175
+  },
+  {
+    "data": "2025-08-18",
+    "nave": "MT Sea Salvor",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 111404,
+    "costo": 1157
+  },
+  {
+    "data": "2025-08-15",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 80487,
+    "costo": 635
+  },
+  {
+    "data": "2025-08-11",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 111310,
+    "costo": 355
+  },
+  {
+    "data": "2025-08-09",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 80410,
+    "costo": 710
+  },
+  {
+    "data": "2025-08-08",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 3555,
+    "costo": 313
+  },
+  {
+    "data": "2025-08-07",
+    "nave": "MT Vittoriosa",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 22964,
+    "costo": 5789
+  },
+  {
+    "data": "2025-08-03",
+    "nave": "MT St. Angelo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 31580,
+    "costo": 495
+  },
+  {
+    "data": "2025-08-01",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 22841,
+    "costo": 694
+  },
+  {
+    "data": "2025-08-01",
+    "nave": "MT Wenzina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 80784,
+    "costo": 2689
+  },
+  {
+    "data": "2025-07-28",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 18244,
+    "costo": 357
+  },
+  {
+    "data": "2025-07-24",
+    "nave": "MT Vittoriosa",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 22734,
+    "costo": 540
+  },
+  {
+    "data": "2025-07-22",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 18514,
+    "costo": 353
+  },
+  {
+    "data": "2025-07-17",
+    "nave": "MT Senglea",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 18135,
+    "costo": 2874
+  },
+  {
+    "data": "2025-07-16",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 18115,
+    "costo": 364
+  },
+  {
+    "data": "2025-07-13",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 80117,
+    "costo": 367
+  },
+  {
+    "data": "2025-07-11",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 18061,
+    "costo": 302
+  },
+  {
+    "data": "2025-07-08",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 80068,
+    "costo": 356
+  },
+  {
+    "data": "2025-07-07",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 80033,
+    "costo": 336
+  },
+  {
+    "data": "2025-07-06",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 31269,
+    "costo": 782
+  },
+  {
+    "data": "2025-06-30",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 31192,
+    "costo": 355
+  },
+  {
+    "data": "2025-06-25",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 22397,
+    "costo": 338
+  },
+  {
+    "data": "2025-06-17",
+    "nave": "MT Sea Salvor",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 110666,
+    "costo": 2883
+  },
+  {
+    "data": "2025-06-09",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Revisione Parziale — Revisione parziale MaK 8M25: valvole, guide, ispezione pompe e turbo",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 68952,
+    "costo": 12575
+  },
+  {
+    "data": "2025-06-07",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 3111,
+    "costo": 983
+  },
+  {
+    "data": "2025-06-05",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 80059,
+    "costo": 345
+  },
+  {
+    "data": "2025-06-04",
+    "nave": "MT St. Elmo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 57506,
+    "costo": 532
+  },
+  {
+    "data": "2025-06-02",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 57478,
+    "costo": 671
+  },
+  {
+    "data": "2025-06-02",
+    "nave": "MT Sea Salvor",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 110544,
+    "costo": 1259
+  },
+  {
+    "data": "2025-06-01",
+    "nave": "MT Spinola",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Verifica e calibrazione iniettori UPS Bosch 0 414 702 006 (OEM MaK 3460598)",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 68891,
+    "costo": 3949
+  },
+  {
+    "data": "2025-05-23",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 79897,
+    "costo": 15227
+  },
+  {
+    "data": "2025-05-19",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 2929,
+    "costo": 2644
+  },
+  {
+    "data": "2025-05-18",
+    "nave": "MT Senglea",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 17504,
+    "costo": 1067
+  },
+  {
+    "data": "2025-05-18",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 2934,
+    "costo": 385
+  },
+  {
+    "data": "2025-05-18",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 2949,
+    "costo": 778
+  },
+  {
+    "data": "2025-05-10",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 68665,
+    "costo": 337
+  },
+  {
+    "data": "2025-05-05",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 17736,
+    "costo": 196
+  },
+  {
+    "data": "2025-05-02",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 57175,
+    "costo": 384
+  },
+  {
+    "data": "2025-04-30",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 30412,
+    "costo": 758
+  },
+  {
+    "data": "2025-04-29",
+    "nave": "MT Sea Salvor",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 110127,
+    "costo": 670
+  },
+  {
+    "data": "2025-04-26",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 110116,
+    "costo": 457
+  },
+  {
+    "data": "2025-04-25",
+    "nave": "MT St. Elmo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 57094,
+    "costo": 2164
+  },
+  {
+    "data": "2025-04-25",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17654,
+    "costo": 215
+  },
+  {
+    "data": "2025-04-22",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 17306,
+    "costo": 731
+  },
+  {
+    "data": "2025-04-16",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 17212,
+    "costo": 763
+  },
+  {
+    "data": "2025-04-16",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 68342,
+    "costo": 739
+  },
+  {
+    "data": "2025-04-14",
+    "nave": "MT Senglea",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 17197,
+    "costo": 460
+  },
+  {
+    "data": "2025-04-12",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 21483,
+    "costo": 1953
+  },
+  {
+    "data": "2025-04-11",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 68334,
+    "costo": 352
+  },
+  {
+    "data": "2025-04-08",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 30191,
+    "costo": 611
+  },
+  {
+    "data": "2025-04-06",
+    "nave": "MT St. Angelo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 30197,
+    "costo": 906
+  },
+  {
+    "data": "2025-04-06",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17143,
+    "costo": 316
+  },
+  {
+    "data": "2025-04-06",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 109855,
+    "costo": 446
+  },
+  {
+    "data": "2025-03-27",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 21354,
+    "costo": 708
+  },
+  {
+    "data": "2025-03-27",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 30048,
+    "costo": 649
+  },
+  {
+    "data": "2025-03-27",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 17041,
+    "costo": 400
+  },
+  {
+    "data": "2025-03-23",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 2459,
+    "costo": 350
+  },
+  {
+    "data": "2025-03-22",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78727,
+    "costo": 320
+  },
+  {
+    "data": "2025-03-21",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 29982,
+    "costo": 367
+  },
+  {
+    "data": "2025-03-21",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17306,
+    "costo": 176
+  },
+  {
+    "data": "2025-03-19",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 79087,
+    "costo": 392
+  },
+  {
+    "data": "2025-03-15",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 79054,
+    "costo": 341
+  },
+  {
+    "data": "2025-03-14",
+    "nave": "MT Wenzina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 79072,
+    "costo": 481
+  },
+  {
+    "data": "2025-03-11",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 16893,
+    "costo": 373
+  },
+  {
+    "data": "2025-03-06",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 78592,
+    "costo": 701
+  },
+  {
+    "data": "2025-03-02",
+    "nave": "MT Senglea",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 16780,
+    "costo": 533
+  },
+  {
+    "data": "2025-03-01",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 17128,
+    "costo": 379
+  },
+  {
+    "data": "2025-02-28",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78498,
+    "costo": 285
+  },
+  {
+    "data": "2025-02-24",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 67800,
+    "costo": 311
+  },
+  {
+    "data": "2025-02-23",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 78414,
+    "costo": 720
+  },
+  {
+    "data": "2025-02-21",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 29613,
+    "costo": 396
+  },
+  {
+    "data": "2025-02-21",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 56398,
+    "costo": 387
+  },
+  {
+    "data": "2025-02-21",
+    "nave": "MT Sea Salvor",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 109389,
+    "costo": 974
+  },
+  {
+    "data": "2025-02-20",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 78755,
+    "costo": 317
+  },
+  {
+    "data": "2025-02-16",
+    "nave": "MT Spinola",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Verifica e calibrazione iniettori UPS Bosch 0 414 702 006 (OEM MaK 3460598)",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 67679,
+    "costo": 3890
+  },
+  {
+    "data": "2025-02-14",
+    "nave": "MT Pawlina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori meccanici CAT 9Y-4522 / Bosch 0 432 217 271",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 78301,
+    "costo": 1922
+  },
+  {
+    "data": "2025-02-10",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione top end: valvole, guide, ispezione iniettori e camere combustione",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 78247,
+    "costo": 12575
+  },
+  {
+    "data": "2025-02-09",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 20804,
+    "costo": 1734
+  },
+  {
+    "data": "2025-02-06",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 56176,
+    "costo": 665
+  },
+  {
+    "data": "2025-02-06",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78248,
+    "costo": 324
+  },
+  {
+    "data": "2025-02-02",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 2070,
+    "costo": 505
+  },
+  {
+    "data": "2025-02-01",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 20710,
+    "costo": 391
+  },
+  {
+    "data": "2025-01-29",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 2072,
+    "costo": 378
+  },
+  {
+    "data": "2025-01-29",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78137,
+    "costo": 325
+  },
+  {
+    "data": "2025-01-25",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 109104,
+    "costo": 418
+  },
+  {
+    "data": "2025-01-19",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 67403,
+    "costo": 350
+  },
+  {
+    "data": "2025-01-16",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 20526,
+    "costo": 349
+  },
+  {
+    "data": "2025-01-11",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 78295,
+    "costo": 799
+  },
+  {
+    "data": "2025-01-10",
+    "nave": "MT St. Angelo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 29161,
+    "costo": 2329
+  },
+  {
+    "data": "2025-01-09",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 1930,
+    "costo": 621
+  },
+  {
+    "data": "2025-01-07",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 29091,
+    "costo": 304
+  },
+  {
+    "data": "2025-01-03",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 78203,
+    "costo": 760
+  },
+  {
+    "data": "2024-12-25",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 28925,
+    "costo": 688
+  },
+  {
+    "data": "2024-12-24",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 78082,
+    "costo": 312
+  },
+  {
+    "data": "2024-12-22",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 16412,
+    "costo": 217
+  },
+  {
+    "data": "2024-12-18",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 16057,
+    "costo": 369
+  },
+  {
+    "data": "2024-12-15",
+    "nave": "MT St. Angelo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 28843,
+    "costo": 474
+  },
+  {
+    "data": "2024-12-15",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 55630,
+    "costo": 364
+  },
+  {
+    "data": "2024-12-15",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 55631,
+    "costo": 729
+  },
+  {
+    "data": "2024-12-12",
+    "nave": "MT St. Elmo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 55611,
+    "costo": 2620
+  },
+  {
+    "data": "2024-12-10",
+    "nave": "MT St. Elmo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 55582,
+    "costo": 530
+  },
+  {
+    "data": "2024-12-09",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Valletta",
+    "ore": 28751,
+    "costo": 14251
+  },
+  {
+    "data": "2024-12-09",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 16287,
+    "costo": 192
+  },
+  {
+    "data": "2024-12-08",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 20013,
+    "costo": 381
+  },
+  {
+    "data": "2024-12-06",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Valletta",
+    "ore": 55501,
+    "costo": 16449
+  },
+  {
+    "data": "2024-12-04",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 55468,
+    "costo": 378
+  },
+  {
+    "data": "2024-11-28",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 77390,
+    "costo": 363
+  },
+  {
+    "data": "2024-11-28",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 77357,
+    "costo": 565
+  },
+  {
+    "data": "2024-11-23",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 16162,
+    "costo": 212
+  },
+  {
+    "data": "2024-11-21",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 28532,
+    "costo": 391
+  },
+  {
+    "data": "2024-11-20",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 19803,
+    "costo": 435
+  },
+  {
+    "data": "2024-11-19",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 19784,
+    "costo": 434
+  },
+  {
+    "data": "2024-11-19",
+    "nave": "MT St. Elmo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 55289,
+    "costo": 844
+  },
+  {
+    "data": "2024-11-19",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS",
+    "ore": 66710,
+    "costo": 805
+  },
+  {
+    "data": "2024-11-17",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 77267,
+    "costo": 297
+  },
+  {
+    "data": "2024-11-16",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 55257,
+    "costo": 670
+  },
+  {
+    "data": "2024-11-15",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 55280,
+    "costo": 378
+  },
+  {
+    "data": "2024-11-15",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 77238,
+    "costo": 344
+  },
+  {
+    "data": "2024-11-14",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 1453,
+    "costo": 350
+  },
+  {
+    "data": "2024-11-13",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 77232,
+    "costo": 288
+  },
+  {
+    "data": "2024-11-11",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 66641,
+    "costo": 679
+  },
+  {
+    "data": "2024-11-09",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 66635,
+    "costo": 322
+  },
+  {
+    "data": "2024-11-09",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 77564,
+    "costo": 376
+  },
+  {
+    "data": "2024-11-08",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 55231,
+    "costo": 794
+  },
+  {
+    "data": "2024-11-05",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 77103,
+    "costo": 330
+  },
+  {
+    "data": "2024-11-02",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 77497,
+    "costo": 748
+  },
+  {
+    "data": "2024-10-14",
+    "nave": "MT Wenzina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 77279,
+    "costo": 428
+  },
+  {
+    "data": "2024-10-12",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 77243,
+    "costo": 314
+  },
+  {
+    "data": "2024-10-11",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 15710,
+    "costo": 423
+  },
+  {
+    "data": "2024-10-08",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 54809,
+    "costo": 354
+  },
+  {
+    "data": "2024-10-06",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 19285,
+    "costo": 360
+  },
+  {
+    "data": "2024-10-04",
+    "nave": "MT St. Angelo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 27945,
+    "costo": 1037
+  },
+  {
+    "data": "2024-10-02",
+    "nave": "MT Wenzina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 77059,
+    "costo": 544
+  },
+  {
+    "data": "2024-09-26",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 15313,
+    "costo": 789
+  },
+  {
+    "data": "2024-09-26",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 107728,
+    "costo": 382
+  },
+  {
+    "data": "2024-09-25",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 76998,
+    "costo": 707
+  },
+  {
+    "data": "2024-09-24",
+    "nave": "MT Vittoriosa",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 19113,
+    "costo": 4807
+  },
+  {
+    "data": "2024-09-23",
+    "nave": "MT Vittoriosa",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 19137,
+    "costo": 552
+  },
+  {
+    "data": "2024-09-22",
+    "nave": "MT Sea Salvor",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 107720,
+    "costo": 3285
+  },
+  {
+    "data": "2024-09-21",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 1048,
+    "costo": 345
+  },
+  {
+    "data": "2024-09-21",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 107653,
+    "costo": 820
+  },
+  {
+    "data": "2024-09-18",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 19062,
+    "costo": 609
+  },
+  {
+    "data": "2024-09-18",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 988,
+    "costo": 761
+  },
+  {
+    "data": "2024-09-13",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 76454,
+    "costo": 587
+  },
+  {
+    "data": "2024-09-13",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 107582,
+    "costo": 368
+  },
+  {
+    "data": "2024-09-13",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 107606,
+    "costo": 442
+  },
+  {
+    "data": "2024-09-12",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 76872,
+    "costo": 714
+  },
+  {
+    "data": "2024-09-11",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 27678,
+    "costo": 297
+  },
+  {
+    "data": "2024-09-09",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 65937,
+    "costo": 845
+  },
+  {
+    "data": "2024-09-09",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo motore CAT 3516B, kit pistone, bronzine, guarnizioni",
+    "tecnico": "Cantiere Valletta",
+    "ore": 76419,
+    "costo": 33218
+  },
+  {
+    "data": "2024-09-06",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 15082,
+    "costo": 317
+  },
+  {
+    "data": "2024-09-06",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 107509,
+    "costo": 392
+  },
+  {
+    "data": "2024-09-05",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 76346,
+    "costo": 375
+  },
+  {
+    "data": "2024-09-04",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 27567,
+    "costo": 330
+  },
+  {
+    "data": "2024-09-02",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 54475,
+    "costo": 393
+  },
+  {
+    "data": "2024-09-02",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 54439,
+    "costo": 301
+  },
+  {
+    "data": "2024-09-02",
+    "nave": "MT Pawlina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori meccanici CAT 9Y-4522 / Bosch 0 432 217 271",
+    "tecnico": "Tecnico RCS",
+    "ore": 76299,
+    "costo": 2401
+  },
+  {
+    "data": "2024-09-01",
+    "nave": "MT Wenzina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 76738,
+    "costo": 496
+  },
+  {
+    "data": "2024-09-01",
+    "nave": "MT Pawlina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori meccanici CAT 9Y-4522 / Bosch 0 432 217 271",
+    "tecnico": "Tecnico RCS",
+    "ore": 76324,
+    "costo": 2461
+  },
+  {
+    "data": "2024-08-25",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 76197,
+    "costo": 314
+  },
+  {
+    "data": "2024-08-22",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Revisione Parziale — Revisione parziale MaK 8M25: valvole, guide, ispezione pompe e turbo",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 65747,
+    "costo": 9537
+  },
+  {
+    "data": "2024-08-18",
+    "nave": "MT St. Elmo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 54234,
+    "costo": 2716
+  },
+  {
+    "data": "2024-08-16",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 76154,
+    "costo": 623
+  },
+  {
+    "data": "2024-08-16",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Major Service — Revisione parziale Volvo: iniettori, guarnizioni, verifica turbocompressore",
+    "tecnico": "Tecnico RCS",
+    "ore": 15200,
+    "costo": 4166
+  },
+  {
+    "data": "2024-08-13",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 76531,
+    "costo": 365
+  },
+  {
+    "data": "2024-08-08",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 27268,
+    "costo": 661
+  },
+  {
+    "data": "2024-08-07",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 15078,
+    "costo": 226
+  },
+  {
+    "data": "2024-08-04",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 76411,
+    "costo": 329
+  },
+  {
+    "data": "2024-08-02",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 14746,
+    "costo": 345
+  },
+  {
+    "data": "2024-07-27",
+    "nave": "MT St. Angelo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 27103,
+    "costo": 2534
+  },
+  {
+    "data": "2024-07-25",
+    "nave": "MT Sea Salvor",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 107067,
+    "costo": 529
+  },
+  {
+    "data": "2024-07-21",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 27097,
+    "costo": 309
+  },
+  {
+    "data": "2024-07-18",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 14597,
+    "costo": 654
+  },
+  {
+    "data": "2024-07-18",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 53935,
+    "costo": 331
+  },
+  {
+    "data": "2024-07-18",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 14890,
+    "costo": 193
+  },
+  {
+    "data": "2024-07-17",
+    "nave": "MT Med Aldebaran",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 489,
+    "costo": 326
+  },
+  {
+    "data": "2024-07-16",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 106963,
+    "costo": 506
+  },
+  {
+    "data": "2024-07-13",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 14577,
+    "costo": 342
+  },
+  {
+    "data": "2024-07-10",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 18184,
+    "costo": 607
+  },
+  {
+    "data": "2024-07-09",
+    "nave": "MT Pawlina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori meccanici CAT 9Y-4522 / Bosch 0 432 217 271",
+    "tecnico": "Tecnico RCS",
+    "ore": 75650,
+    "costo": 2050
+  },
+  {
+    "data": "2024-07-07",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 106819,
+    "costo": 440
+  },
+  {
+    "data": "2024-07-06",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 26844,
+    "costo": 746
+  },
+  {
+    "data": "2024-07-05",
+    "nave": "MT Senglea",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 14487,
+    "costo": 811
+  },
+  {
+    "data": "2024-07-03",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 106800,
+    "costo": 378
+  },
+  {
+    "data": "2024-06-27",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 106716,
+    "costo": 795
+  },
+  {
+    "data": "2024-06-17",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 106601,
+    "costo": 1034
+  },
+  {
+    "data": "2024-06-15",
+    "nave": "MT St. Angelo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 26657,
+    "costo": 442
+  },
+  {
+    "data": "2024-06-13",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 26616,
+    "costo": 301
+  },
+  {
+    "data": "2024-06-12",
+    "nave": "MT Senglea",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 14288,
+    "costo": 2846
+  },
+  {
+    "data": "2024-06-12",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 14551,
+    "costo": 361
+  },
+  {
+    "data": "2024-06-10",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 14268,
+    "costo": 367
+  },
+  {
+    "data": "2024-06-05",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 75258,
+    "costo": 366
+  },
+  {
+    "data": "2024-05-30",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17683,
+    "costo": 422
+  },
+  {
+    "data": "2024-05-30",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 75562,
+    "costo": 625
+  },
+  {
+    "data": "2024-05-29",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 26446,
+    "costo": 299
+  },
+  {
+    "data": "2024-05-29",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 75558,
+    "costo": 385
+  },
+  {
+    "data": "2024-05-25",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 53330,
+    "costo": 298
+  },
+  {
+    "data": "2024-05-23",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 64696,
+    "costo": 351
+  },
+  {
+    "data": "2024-05-22",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17634,
+    "costo": 378
+  },
+  {
+    "data": "2024-05-20",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 75052,
+    "costo": 664
+  },
+  {
+    "data": "2024-05-19",
+    "nave": "MT Vittoriosa",
+    "sistema": "Propulsione",
+    "desc": "Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",
+    "tecnico": "Tecnico RCS",
+    "ore": 17607,
+    "costo": 1278
+  },
+  {
+    "data": "2024-05-16",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 14294,
+    "costo": 217
+  },
+  {
+    "data": "2024-05-14",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 74969,
+    "costo": 283
+  },
+  {
+    "data": "2024-05-13",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 106221,
+    "costo": 716
+  },
+  {
+    "data": "2024-05-10",
+    "nave": "MT Vittoriosa",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 17483,
+    "costo": 511
+  },
+  {
+    "data": "2024-05-08",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 74915,
+    "costo": 294
+  },
+  {
+    "data": "2024-05-04",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 17399,
+    "costo": 1789
+  },
+  {
+    "data": "2024-05-03",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 26105,
+    "costo": 339
+  },
+  {
+    "data": "2024-05-03",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 13871,
+    "costo": 719
+  },
+  {
+    "data": "2024-05-02",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 75210,
+    "costo": 693
+  },
+  {
+    "data": "2024-04-30",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 14132,
+    "costo": 378
+  },
+  {
+    "data": "2024-04-29",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 64402,
+    "costo": 341
+  },
+  {
+    "data": "2024-04-24",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 53002,
+    "costo": 392
+  },
+  {
+    "data": "2024-04-22",
+    "nave": "MT Senglea",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 13752,
+    "costo": 466
+  },
+  {
+    "data": "2024-04-22",
+    "nave": "MT Pawlina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Cambio fluido refrigerante, pulizia heat exchanger, termostato",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 74724,
+    "costo": 454
+  },
+  {
+    "data": "2024-04-19",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS",
+    "ore": 64305,
+    "costo": 751
+  },
+  {
+    "data": "2024-04-13",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17137,
+    "costo": 643
+  },
+  {
+    "data": "2024-04-12",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 52810,
+    "costo": 672
+  },
+  {
+    "data": "2024-04-11",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17097,
+    "costo": 412
+  },
+  {
+    "data": "2024-04-09",
+    "nave": "MT St. Elmo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 52827,
+    "costo": 2865
+  },
+  {
+    "data": "2024-04-06",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 25791,
+    "costo": 334
+  },
+  {
+    "data": "2024-04-02",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo: pistoni 7E-8818, segmenti, bronzine, guarnizioni 3L-3894",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 105788,
+    "costo": 48192
+  },
+  {
+    "data": "2024-03-31",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 17029,
+    "costo": 647
+  },
+  {
+    "data": "2024-03-29",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 13802,
+    "costo": 214
+  },
+  {
+    "data": "2024-03-26",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 74442,
+    "costo": 330
+  },
+  {
+    "data": "2024-03-20",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 16833,
+    "costo": 407
+  },
+  {
+    "data": "2024-03-20",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 25553,
+    "costo": 304
+  },
+  {
+    "data": "2024-03-18",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 74313,
+    "costo": 729
+  },
+  {
+    "data": "2024-03-13",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 13430,
+    "costo": 307
+  },
+  {
+    "data": "2024-03-11",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 52454,
+    "costo": 627
+  },
+  {
+    "data": "2024-03-09",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 74188,
+    "costo": 307
+  },
+  {
+    "data": "2024-03-08",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 13335,
+    "costo": 347
+  },
+  {
+    "data": "2024-02-27",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 74479,
+    "costo": 399
+  },
+  {
+    "data": "2024-02-25",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 63744,
+    "costo": 335
+  },
+  {
+    "data": "2024-02-18",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 13436,
+    "costo": 220
+  },
+  {
+    "data": "2024-02-16",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 16440,
+    "costo": 360
+  },
+  {
+    "data": "2024-02-13",
+    "nave": "MT Sea Salvor",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 105194,
+    "costo": 1241
+  },
+  {
+    "data": "2024-02-12",
+    "nave": "MT St. Elmo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 52158,
+    "costo": 480
+  },
+  {
+    "data": "2024-02-11",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 74241,
+    "costo": 396
+  },
+  {
+    "data": "2024-02-11",
+    "nave": "MT Wenzina",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 74302,
+    "costo": 949
+  },
+  {
+    "data": "2024-02-10",
+    "nave": "MT Wenzina",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 74235,
+    "costo": 886
+  },
+  {
+    "data": "2024-02-07",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 63511,
+    "costo": 405
+  },
+  {
+    "data": "2024-02-04",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo: pistoni 7E-8818, segmenti, bronzine, guarnizioni 3L-3894",
+    "tecnico": "Cantiere Valletta",
+    "ore": 74168,
+    "costo": 41537
+  },
+  {
+    "data": "2024-01-31",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 74125,
+    "costo": 705
+  },
+  {
+    "data": "2024-01-30",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 24976,
+    "costo": 16309
+  },
+  {
+    "data": "2024-01-25",
+    "nave": "MT Vittoriosa",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 16193,
+    "costo": 660
+  },
+  {
+    "data": "2024-01-22",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 74014,
+    "costo": 690
+  },
+  {
+    "data": "2024-01-19",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 51869,
+    "costo": 741
+  },
+  {
+    "data": "2024-01-15",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 73963,
+    "costo": 368
+  },
+  {
+    "data": "2024-01-14",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 16068,
+    "costo": 364
+  },
+  {
+    "data": "2024-01-12",
+    "nave": "MT St. Angelo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 24804,
+    "costo": 544
+  },
+  {
+    "data": "2024-01-12",
+    "nave": "MT St. Angelo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 24793,
+    "costo": 836
+  },
+  {
+    "data": "2024-01-10",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 104805,
+    "costo": 868
+  },
+  {
+    "data": "2024-01-09",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 24745,
+    "costo": 314
+  },
+  {
+    "data": "2024-01-09",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 104824,
+    "costo": 371
+  },
+  {
+    "data": "2024-01-02",
+    "nave": "MT St. Angelo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 24608,
+    "costo": 2793
+  },
+  {
+    "data": "2023-12-29",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 12918,
+    "costo": 210
+  },
+  {
+    "data": "2023-12-28",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "Overhaul 8000h — Revisione completa motore: pistoni CAT/MAHLE, segmenti, bronzine, guarnizioni testa",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 15846,
+    "costo": 22172
+  },
+  {
+    "data": "2023-12-27",
+    "nave": "MT Pawlina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Cambio fluido refrigerante, pulizia heat exchanger, termostato",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 73345,
+    "costo": 422
+  },
+  {
+    "data": "2023-12-24",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 12849,
+    "costo": 178
+  },
+  {
+    "data": "2023-12-20",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 15783,
+    "costo": 373
+  },
+  {
+    "data": "2023-12-20",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 73650,
+    "costo": 306
+  },
+  {
+    "data": "2023-12-18",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 12785,
+    "costo": 438
+  },
+  {
+    "data": "2023-12-17",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo: pistoni 7E-8818, segmenti, bronzine, guarnizioni 3L-3894",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 12562,
+    "costo": 40561
+  },
+  {
+    "data": "2023-12-16",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 15698,
+    "costo": 731
+  },
+  {
+    "data": "2023-12-14",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 12554,
+    "costo": 710
+  },
+  {
+    "data": "2023-12-13",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 15643,
+    "costo": 748
+  },
+  {
+    "data": "2023-12-05",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 51413,
+    "costo": 337
+  },
+  {
+    "data": "2023-12-05",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS",
+    "ore": 62788,
+    "costo": 726
+  },
+  {
+    "data": "2023-11-27",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 73320,
+    "costo": 348
+  },
+  {
+    "data": "2023-11-24",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 72937,
+    "costo": 364
+  },
+  {
+    "data": "2023-11-23",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 24212,
+    "costo": 387
+  },
+  {
+    "data": "2023-11-23",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 12315,
+    "costo": 639
+  },
+  {
+    "data": "2023-11-22",
+    "nave": "MT Pawlina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Cambio fluido refrigerante, pulizia heat exchanger, termostato",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 72879,
+    "costo": 400
+  },
+  {
+    "data": "2023-11-17",
+    "nave": "MT Senglea",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 12312,
+    "costo": 473
+  },
+  {
+    "data": "2023-11-16",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 12514,
+    "costo": 179
+  },
+  {
+    "data": "2023-11-12",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 12241,
+    "costo": 355
+  },
+  {
+    "data": "2023-11-11",
+    "nave": "MT Vittoriosa",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 15291,
+    "costo": 5461
+  },
+  {
+    "data": "2023-11-11",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 24053,
+    "costo": 763
+  },
+  {
+    "data": "2023-11-09",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 24043,
+    "costo": 712
+  },
+  {
+    "data": "2023-11-09",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 62470,
+    "costo": 334
+  },
+  {
+    "data": "2023-11-06",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 12409,
+    "costo": 436
+  },
+  {
+    "data": "2023-11-02",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 15223,
+    "costo": 2030
+  },
+  {
+    "data": "2023-10-31",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 104026,
+    "costo": 481
+  },
+  {
+    "data": "2023-10-29",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 12113,
+    "costo": 373
+  },
+  {
+    "data": "2023-10-28",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 50942,
+    "costo": 398
+  },
+  {
+    "data": "2023-10-28",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 50938,
+    "costo": 328
+  },
+  {
+    "data": "2023-10-26",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 72977,
+    "costo": 329
+  },
+  {
+    "data": "2023-10-24",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 72927,
+    "costo": 380
+  },
+  {
+    "data": "2023-10-22",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 103936,
+    "costo": 422
+  },
+  {
+    "data": "2023-10-21",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 12022,
+    "costo": 17997
+  },
+  {
+    "data": "2023-10-20",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 50874,
+    "costo": 724
+  },
+  {
+    "data": "2023-10-16",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 23714,
+    "costo": 300
+  },
+  {
+    "data": "2023-10-13",
+    "nave": "MT Pawlina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Cambio fluido refrigerante, pulizia heat exchanger, termostato",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 72425,
+    "costo": 454
+  },
+  {
+    "data": "2023-10-12",
+    "nave": "MT St. Angelo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 23639,
+    "costo": 417
+  },
+  {
+    "data": "2023-10-12",
+    "nave": "MT Wenzina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 72761,
+    "costo": 2274
+  },
+  {
+    "data": "2023-10-11",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 50779,
+    "costo": 318
+  },
+  {
+    "data": "2023-10-10",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 103837,
+    "costo": 720
+  },
+  {
+    "data": "2023-10-08",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 23640,
+    "costo": 631
+  },
+  {
+    "data": "2023-10-06",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 72294,
+    "costo": 337
+  },
+  {
+    "data": "2023-10-01",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 103726,
+    "costo": 487
+  },
+  {
+    "data": "2023-09-21",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 103582,
+    "costo": 383
+  },
+  {
+    "data": "2023-09-15",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 72486,
+    "costo": 389
+  },
+  {
+    "data": "2023-09-13",
+    "nave": "MT St. Elmo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 50426,
+    "costo": 454
+  },
+  {
+    "data": "2023-09-13",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 103510,
+    "costo": 424
+  },
+  {
+    "data": "2023-09-12",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 14591,
+    "costo": 446
+  },
+  {
+    "data": "2023-09-07",
+    "nave": "MT Sea Salvor",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 103402,
+    "costo": 650
+  },
+  {
+    "data": "2023-09-05",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo: pistoni 7E-8818, segmenti, bronzine, guarnizioni 3L-3894",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 23236,
+    "costo": 40958
+  },
+  {
+    "data": "2023-09-05",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 50325,
+    "costo": 346
+  },
+  {
+    "data": "2023-09-03",
+    "nave": "MT Senglea",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 11545,
+    "costo": 981
+  },
+  {
+    "data": "2023-09-02",
+    "nave": "MT Wenzina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 72317,
+    "costo": 2598
+  },
+  {
+    "data": "2023-08-31",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 103323,
+    "costo": 466
+  },
+  {
+    "data": "2023-08-27",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 72281,
+    "costo": 328
+  },
+  {
+    "data": "2023-08-26",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 23105,
+    "costo": 381
+  },
+  {
+    "data": "2023-08-22",
+    "nave": "MT Senglea",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 11447,
+    "costo": 2675
+  },
+  {
+    "data": "2023-08-21",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 50232,
+    "costo": 343
+  },
+  {
+    "data": "2023-08-19",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 11600,
+    "costo": 219
+  },
+  {
+    "data": "2023-08-18",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 14299,
+    "costo": 413
+  },
+  {
+    "data": "2023-08-18",
+    "nave": "MT Sea Salvor",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 103246,
+    "costo": 2619
+  },
+  {
+    "data": "2023-08-11",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 61466,
+    "costo": 410
+  },
+  {
+    "data": "2023-08-09",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 11333,
+    "costo": 333
+  },
+  {
+    "data": "2023-08-09",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 61439,
+    "costo": 366
+  },
+  {
+    "data": "2023-08-04",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 14072,
+    "costo": 405
+  },
+  {
+    "data": "2023-07-29",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 14070,
+    "costo": 1882
+  },
+  {
+    "data": "2023-07-23",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 71399,
+    "costo": 711
+  },
+  {
+    "data": "2023-07-23",
+    "nave": "MT Pawlina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori meccanici CAT 9Y-4522 / Bosch 0 432 217 271",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 71434,
+    "costo": 2186
+  },
+  {
+    "data": "2023-07-22",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 11133,
+    "costo": 796
+  },
+  {
+    "data": "2023-07-22",
+    "nave": "MT Sea Salvor",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 102893,
+    "costo": 3103
+  },
+  {
+    "data": "2023-07-21",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 102908,
+    "costo": 471
+  },
+  {
+    "data": "2023-07-19",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 22616,
+    "costo": 340
+  },
+  {
+    "data": "2023-07-16",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 102822,
+    "costo": 371
+  },
+  {
+    "data": "2023-07-07",
+    "nave": "MT Vittoriosa",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 13742,
+    "costo": 650
+  },
+  {
+    "data": "2023-07-04",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo motore CAT 3516B, kit pistone, bronzine, guarnizioni",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 71188,
+    "costo": 32119
+  },
+  {
+    "data": "2023-07-02",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 13671,
+    "costo": 722
+  },
+  {
+    "data": "2023-07-01",
+    "nave": "MT Wenzina",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 71596,
+    "costo": 971
+  },
+  {
+    "data": "2023-06-29",
+    "nave": "MT Spinola",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Verifica e calibrazione iniettori UPS Bosch 0 414 702 006 (OEM MaK 3460598)",
+    "tecnico": "Cantiere Valletta",
+    "ore": 60966,
+    "costo": 3945
+  },
+  {
+    "data": "2023-06-29",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 71127,
+    "costo": 601
+  },
+  {
+    "data": "2023-06-27",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 49554,
+    "costo": 658
+  },
+  {
+    "data": "2023-06-26",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 60992,
+    "costo": 367
+  },
+  {
+    "data": "2023-06-24",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 71052,
+    "costo": 565
+  },
+  {
+    "data": "2023-06-13",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 10763,
+    "costo": 361
+  },
+  {
+    "data": "2023-06-11",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 13451,
+    "costo": 362
+  },
+  {
+    "data": "2023-06-10",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 49404,
+    "costo": 315
+  },
+  {
+    "data": "2023-06-07",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 13445,
+    "costo": 445
+  },
+  {
+    "data": "2023-06-07",
+    "nave": "MT St. Elmo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 49316,
+    "costo": 2800
+  },
+  {
+    "data": "2023-06-04",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 71222,
+    "costo": 371
+  },
+  {
+    "data": "2023-06-02",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo MaK 8M25: pistoni, segmenti, bronzine, pompe Bosch",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 60690,
+    "costo": 23168
+  },
+  {
+    "data": "2023-05-31",
+    "nave": "MT Pawlina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori meccanici CAT 9Y-4522 / Bosch 0 432 217 271",
+    "tecnico": "Tecnico RCS",
+    "ore": 70755,
+    "costo": 2060
+  },
+  {
+    "data": "2023-05-25",
+    "nave": "MT Wenzina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 71126,
+    "costo": 472
+  },
+  {
+    "data": "2023-05-23",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS",
+    "ore": 60616,
+    "costo": 760
+  },
+  {
+    "data": "2023-05-22",
+    "nave": "MT St. Angelo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 21934,
+    "costo": 485
+  },
+  {
+    "data": "2023-05-19",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Revisione Parziale — Revisione parziale MaK 8M25: valvole, guide, ispezione pompe e turbo",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 60548,
+    "costo": 11024
+  },
+  {
+    "data": "2023-05-17",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 10481,
+    "costo": 331
+  },
+  {
+    "data": "2023-05-01",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 21722,
+    "costo": 388
+  },
+  {
+    "data": "2023-05-01",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 10567,
+    "costo": 340
+  },
+  {
+    "data": "2023-04-30",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 70389,
+    "costo": 350
+  },
+  {
+    "data": "2023-04-28",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 70786,
+    "costo": 689
+  },
+  {
+    "data": "2023-04-27",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 10486,
+    "costo": 188
+  },
+  {
+    "data": "2023-04-26",
+    "nave": "MT St. Elmo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 48915,
+    "costo": 834
+  },
+  {
+    "data": "2023-04-25",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 10330,
+    "costo": 326
+  },
+  {
+    "data": "2023-04-23",
+    "nave": "MT Sea Salvor",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 101883,
+    "costo": 611
+  },
+  {
+    "data": "2023-04-21",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 70743,
+    "costo": 380
+  },
+  {
+    "data": "2023-04-16",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 12829,
+    "costo": 342
+  },
+  {
+    "data": "2023-04-12",
+    "nave": "MT Senglea",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 10193,
+    "costo": 503
+  },
+  {
+    "data": "2023-04-12",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Major Service — Revisione parziale Volvo: iniettori, guarnizioni, verifica turbocompressore",
+    "tecnico": "Tecnico RCS",
+    "ore": 10347,
+    "costo": 4377
+  },
+  {
+    "data": "2023-04-06",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 70092,
+    "costo": 357
+  },
+  {
+    "data": "2023-04-03",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 101653,
+    "costo": 22290
+  },
+  {
+    "data": "2023-04-01",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 70474,
+    "costo": 620
+  },
+  {
+    "data": "2023-03-27",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Valletta",
+    "ore": 70367,
+    "costo": 15366
+  },
+  {
+    "data": "2023-03-27",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 10220,
+    "costo": 411
+  },
+  {
+    "data": "2023-03-26",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 12513,
+    "costo": 694
+  },
+  {
+    "data": "2023-03-26",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 101628,
+    "costo": 920
+  },
+  {
+    "data": "2023-03-26",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 10192,
+    "costo": 198
+  },
+  {
+    "data": "2023-03-25",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 69952,
+    "costo": 302
+  },
+  {
+    "data": "2023-03-24",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 69959,
+    "costo": 368
+  },
+  {
+    "data": "2023-03-22",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 21194,
+    "costo": 323
+  },
+  {
+    "data": "2023-03-22",
+    "nave": "MT St. Elmo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 48519,
+    "costo": 426
+  },
+  {
+    "data": "2023-03-17",
+    "nave": "MT St. Angelo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 21158,
+    "costo": 2129
+  },
+  {
+    "data": "2023-03-13",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione top end: valvole, guide, ispezione iniettori e camere combustione",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 69853,
+    "costo": 14828
+  },
+  {
+    "data": "2023-03-09",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 10053,
+    "costo": 223
+  },
+  {
+    "data": "2023-03-07",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 101358,
+    "costo": 478
+  },
+  {
+    "data": "2023-03-05",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 9809,
+    "costo": 325
+  },
+  {
+    "data": "2023-03-04",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 9797,
+    "costo": 802
+  },
+  {
+    "data": "2023-02-28",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 12237,
+    "costo": 364
+  },
+  {
+    "data": "2023-02-27",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 20912,
+    "costo": 775
+  },
+  {
+    "data": "2023-02-25",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 101254,
+    "costo": 847
+  },
+  {
+    "data": "2023-02-23",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 59574,
+    "costo": 411
+  },
+  {
+    "data": "2023-02-20",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Valletta",
+    "ore": 48125,
+    "costo": 13905
+  },
+  {
+    "data": "2023-02-17",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 69531,
+    "costo": 570
+  },
+  {
+    "data": "2023-02-17",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 9875,
+    "costo": 183
+  },
+  {
+    "data": "2023-02-15",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 69922,
+    "costo": 352
+  },
+  {
+    "data": "2023-02-12",
+    "nave": "MT St. Angelo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 20738,
+    "costo": 864
+  },
+  {
+    "data": "2023-02-12",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 69452,
+    "costo": 634
+  },
+  {
+    "data": "2023-02-11",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 20715,
+    "costo": 399
+  },
+  {
+    "data": "2023-02-11",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 20756,
+    "costo": 646
+  },
+  {
+    "data": "2023-02-11",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 69504,
+    "costo": 325
+  },
+  {
+    "data": "2023-02-06",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 47985,
+    "costo": 623
+  },
+  {
+    "data": "2023-02-05",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 11983,
+    "costo": 800
+  },
+  {
+    "data": "2023-02-02",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 20669,
+    "costo": 342
+  },
+  {
+    "data": "2023-02-02",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 47930,
+    "costo": 322
+  },
+  {
+    "data": "2023-02-01",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 59370,
+    "costo": 410
+  },
+  {
+    "data": "2023-02-01",
+    "nave": "MT Wenzina",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 69725,
+    "costo": 935
+  },
+  {
+    "data": "2023-01-30",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 100960,
+    "costo": 416
+  },
+  {
+    "data": "2023-01-30",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 101003,
+    "costo": 912
+  },
+  {
+    "data": "2023-01-29",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 69287,
+    "costo": 351
+  },
+  {
+    "data": "2023-01-27",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 69322,
+    "costo": 323
+  },
+  {
+    "data": "2023-01-24",
+    "nave": "MT St. Angelo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 20504,
+    "costo": 468
+  },
+  {
+    "data": "2023-01-19",
+    "nave": "MT Wenzina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 69599,
+    "costo": 458
+  },
+  {
+    "data": "2023-01-17",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Major Overhaul — Overhaul completo: pistoni 7E-8818, segmenti, bronzine, guarnizioni 3L-3894",
+    "tecnico": "Cantiere Valletta",
+    "ore": 47798,
+    "costo": 36900
+  },
+  {
+    "data": "2023-01-15",
+    "nave": "MT Vittoriosa",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 11718,
+    "costo": 604
+  },
+  {
+    "data": "2023-01-14",
+    "nave": "MT Vittoriosa",
+    "sistema": "Propulsione",
+    "desc": "Propulsione 6000h — Ispezione shaft seal, lubrificazione riduttori, allineamento eliche",
+    "tecnico": "Tecnico RCS",
+    "ore": 11717,
+    "costo": 1287
+  },
+  {
+    "data": "2023-01-13",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 100770,
+    "costo": 363
+  },
+  {
+    "data": "2023-01-12",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 11699,
+    "costo": 1769
+  },
+  {
+    "data": "2023-01-09",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 20382,
+    "costo": 354
+  },
+  {
+    "data": "2023-01-09",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 9277,
+    "costo": 378
+  },
+  {
+    "data": "2023-01-09",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 69457,
+    "costo": 365
+  },
+  {
+    "data": "2023-01-08",
+    "nave": "MT Sea Salvor",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 100719,
+    "costo": 2408
+  },
+  {
+    "data": "2023-01-05",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 69016,
+    "costo": 334
+  },
+  {
+    "data": "2023-01-01",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 68986,
+    "costo": 641
+  },
+  {
+    "data": "2022-12-29",
+    "nave": "MT Vittoriosa",
+    "sistema": "Iniezione",
+    "desc": "D-Check 4000h — Sostituzione iniettori unitari UIS MTU, revisione pompa CP3, calibrazione",
+    "tecnico": "Cantiere Pozzallo",
+    "ore": 11470,
+    "costo": 5569
+  },
+  {
+    "data": "2022-12-20",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 9255,
+    "costo": 228
+  },
+  {
+    "data": "2022-12-16",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 100459,
+    "costo": 825
+  },
+  {
+    "data": "2022-12-14",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 68798,
+    "costo": 331
+  },
+  {
+    "data": "2022-12-12",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 11244,
+    "costo": 332
+  },
+  {
+    "data": "2022-12-05",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 19910,
+    "costo": 715
+  },
+  {
+    "data": "2022-12-03",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 11164,
+    "costo": 380
+  },
+  {
+    "data": "2022-12-02",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 47251,
+    "costo": 364
+  },
+  {
+    "data": "2022-12-01",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 19911,
+    "costo": 375
+  },
+  {
+    "data": "2022-11-27",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 47234,
+    "costo": 658
+  },
+  {
+    "data": "2022-11-23",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 47170,
+    "costo": 353
+  },
+  {
+    "data": "2022-11-21",
+    "nave": "MT Wenzina",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 68854,
+    "costo": 2832
+  },
+  {
+    "data": "2022-11-20",
+    "nave": "MT Senglea",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS",
+    "ore": 8795,
+    "costo": 2495
+  },
+  {
+    "data": "2022-11-19",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 68422,
+    "costo": 378
+  },
+  {
+    "data": "2022-11-18",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 58465,
+    "costo": 336
+  },
+  {
+    "data": "2022-11-18",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 8985,
+    "costo": 383
+  },
+  {
+    "data": "2022-11-15",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 8753,
+    "costo": 674
+  },
+  {
+    "data": "2022-11-13",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 68751,
+    "costo": 366
+  },
+  {
+    "data": "2022-11-12",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 58395,
+    "costo": 317
+  },
+  {
+    "data": "2022-11-09",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 68336,
+    "costo": 734
+  },
+  {
+    "data": "2022-11-08",
+    "nave": "MT St. Elmo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 46977,
+    "costo": 418
+  },
+  {
+    "data": "2022-11-05",
+    "nave": "MT Sea Salvor",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 99993,
+    "costo": 643
+  },
+  {
+    "data": "2022-11-04",
+    "nave": "MT Senglea",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 8667,
+    "costo": 932
+  },
+  {
+    "data": "2022-11-01",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 68237,
+    "costo": 317
+  },
+  {
+    "data": "2022-10-26",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 10714,
+    "costo": 793
+  },
+  {
+    "data": "2022-10-23",
+    "nave": "MT St. Elmo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 46823,
+    "costo": 1003
+  },
+  {
+    "data": "2022-10-17",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 8672,
+    "costo": 199
+  },
+  {
+    "data": "2022-10-15",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 19358,
+    "costo": 309
+  },
+  {
+    "data": "2022-10-14",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 68438,
+    "costo": 761
+  },
+  {
+    "data": "2022-10-07",
+    "nave": "MT Spinola",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Verifica e calibrazione iniettori UPS Bosch 0 414 702 006 (OEM MaK 3460598)",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 58040,
+    "costo": 4096
+  },
+  {
+    "data": "2022-09-30",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 10378,
+    "costo": 764
+  },
+  {
+    "data": "2022-09-30",
+    "nave": "MT Vittoriosa",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Termostato MTU 11658815, fluido WF2071 Fleetguard, pulizia circuito",
+    "tecnico": "Tecnico RCS",
+    "ore": 10434,
+    "costo": 604
+  },
+  {
+    "data": "2022-09-21",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 8224,
+    "costo": 398
+  },
+  {
+    "data": "2022-09-15",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 10219,
+    "costo": 334
+  },
+  {
+    "data": "2022-09-13",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 68060,
+    "costo": 338
+  },
+  {
+    "data": "2022-09-11",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 8108,
+    "costo": 345
+  },
+  {
+    "data": "2022-09-11",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 46339,
+    "costo": 402
+  },
+  {
+    "data": "2022-09-02",
+    "nave": "MT Senglea",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 8046,
+    "costo": 722
+  },
+  {
+    "data": "2022-08-31",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 46191,
+    "costo": 641
+  },
+  {
+    "data": "2022-08-31",
+    "nave": "MT Sea Salvor",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 99293,
+    "costo": 855
+  },
+  {
+    "data": "2022-08-28",
+    "nave": "MT Vittoriosa",
+    "sistema": "Motore",
+    "desc": "C-Check 2000h — Ispezione valvole, controllo iniettori UIS Bosch 0 414 701 076, regolazione giochi",
+    "tecnico": "Tecnico RCS",
+    "ore": 10036,
+    "costo": 1757
+  },
+  {
+    "data": "2022-08-23",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 18734,
+    "costo": 307
+  },
+  {
+    "data": "2022-08-17",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 57467,
+    "costo": 792
+  },
+  {
+    "data": "2022-08-13",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 67261,
+    "costo": 551
+  },
+  {
+    "data": "2022-08-12",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 99045,
+    "costo": 433
+  },
+  {
+    "data": "2022-08-10",
+    "nave": "MT Senglea",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 7856,
+    "costo": 531
+  },
+  {
+    "data": "2022-08-09",
+    "nave": "MT Spinola",
+    "sistema": "Motore",
+    "desc": "Ispezione 1500h — Ispezione valvole, distribuzione, cinghia CAT 04505685, manicotti",
+    "tecnico": "Tecnico RCS",
+    "ore": 57334,
+    "costo": 846
+  },
+  {
+    "data": "2022-08-03",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 7903,
+    "costo": 198
+  },
+  {
+    "data": "2022-08-01",
+    "nave": "MT Gozzo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri Volvo Diesel — kit filtri certificato marine (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 7868,
+    "costo": 215
+  },
+  {
+    "data": "2022-07-24",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 9586,
+    "costo": 335
+  },
+  {
+    "data": "2022-07-20",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 18311,
+    "costo": 764
+  },
+  {
+    "data": "2022-07-13",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Mario Greco",
+    "ore": 45696,
+    "costo": 377
+  },
+  {
+    "data": "2022-07-12",
+    "nave": "MT Gozzo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa sistema Volvo: valvole, distribuzione, tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 7716,
+    "costo": 392
+  },
+  {
+    "data": "2022-07-11",
+    "nave": "MT St. Angelo",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Controllo e calibrazione iniettori EUI CAT 7W-0470 / CR Bosch 0 445 120 304",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 18151,
+    "costo": 2139
+  },
+  {
+    "data": "2022-07-08",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 18137,
+    "costo": 723
+  },
+  {
+    "data": "2022-07-07",
+    "nave": "MT St. Angelo",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 18141,
+    "costo": 971
+  },
+  {
+    "data": "2022-07-04",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 67166,
+    "costo": 391
+  },
+  {
+    "data": "2022-07-02",
+    "nave": "MT Pawlina",
+    "sistema": "Motore",
+    "desc": "Ispezione 800h — Ispezione completa sistemi, analisi olio lubrificante, verifica tenute",
+    "tecnico": "Tecnico RCS",
+    "ore": 66784,
+    "costo": 688
+  },
+  {
+    "data": "2022-06-30",
+    "nave": "MT St. Angelo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 18086,
+    "costo": 332
+  },
+  {
+    "data": "2022-06-30",
+    "nave": "MT Senglea",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 7440,
+    "costo": 308
+  },
+  {
+    "data": "2022-06-29",
+    "nave": "MT Spinola",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 750h — Cambio olio + filtri MaK 8M25 — Hifi SN 80008 + SO 4562, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 56893,
+    "costo": 360
+  },
+  {
+    "data": "2022-06-27",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 66742,
+    "costo": 303
+  },
+  {
+    "data": "2022-06-21",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS",
+    "ore": 67054,
+    "costo": 640
+  },
+  {
+    "data": "2022-06-20",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 98454,
+    "costo": 529
+  },
+  {
+    "data": "2022-06-18",
+    "nave": "MT St. Angelo",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 17918,
+    "costo": 517
+  },
+  {
+    "data": "2022-06-15",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 9157,
+    "costo": 410
+  },
+  {
+    "data": "2022-06-12",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "A-Check 500h — Filtri olio e gasolio MTU Serie 4000 — kit Hifi SN 80097 + SO 4562 (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 9125,
+    "costo": 418
+  },
+  {
+    "data": "2022-06-12",
+    "nave": "MT Vittoriosa",
+    "sistema": "Filtrazione",
+    "desc": "B-Check 1000h — Kit filtri completo + analisi olio + controllo manicotti e guarnizioni (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 9089,
+    "costo": 599
+  },
+  {
+    "data": "2022-06-11",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 66961,
+    "costo": 356
+  },
+  {
+    "data": "2022-05-24",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 66341,
+    "costo": 293
+  },
+  {
+    "data": "2022-05-14",
+    "nave": "MT Wenzina",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Tecnico RCS Luigi Russo",
+    "ore": 66550,
+    "costo": 694
+  },
+  {
+    "data": "2022-05-12",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 66170,
+    "costo": 330
+  },
+  {
+    "data": "2022-05-07",
+    "nave": "MT St. Angelo",
+    "sistema": "Motore",
+    "desc": "Top End Overhaul — Revisione teste cilindro, sostituzione valvole, ispezione iniettori, guide",
+    "tecnico": "Cantiere Navale Catania",
+    "ore": 17397,
+    "costo": 18013
+  },
+  {
+    "data": "2022-05-07",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 44866,
+    "costo": 303
+  },
+  {
+    "data": "2022-04-22",
+    "nave": "MT St. Elmo",
+    "sistema": "Motore",
+    "desc": "Ispezione 1000h — Ispezione completa: valvole, cinghie, manicotti, livelli, analisi olio laboratorio",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 44775,
+    "costo": 725
+  },
+  {
+    "data": "2022-04-12",
+    "nave": "MT St. Elmo",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Cantiere Specializzato",
+    "ore": 44642,
+    "costo": 370
+  },
+  {
+    "data": "2022-03-20",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 97445,
+    "costo": 414
+  },
+  {
+    "data": "2022-03-11",
+    "nave": "MT Wenzina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Fluido refrigerante WF2071, termostato, pulizia heat exchanger CAT",
+    "tecnico": "Tecnico RCS",
+    "ore": 65827,
+    "costo": 454
+  },
+  {
+    "data": "2022-03-10",
+    "nave": "MT Wenzina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 65804,
+    "costo": 350
+  },
+  {
+    "data": "2022-03-03",
+    "nave": "MT Pawlina",
+    "sistema": "Raffreddamento",
+    "desc": "Raffreddamento — Cambio fluido refrigerante, pulizia heat exchanger, termostato",
+    "tecnico": "Tecnico esterno certificato",
+    "ore": 65283,
+    "costo": 387
+  },
+  {
+    "data": "2022-01-07",
+    "nave": "MT Spinola",
+    "sistema": "Iniezione",
+    "desc": "Ispezione Iniettori — Verifica e calibrazione iniettori UPS Bosch 0 414 702 006 (OEM MaK 3460598)",
+    "tecnico": "Cantiere Navale Palermo",
+    "ore": 54991,
+    "costo": 3396
+  },
+  {
+    "data": "2022-01-06",
+    "nave": "MT Pawlina",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 400h — Cambio olio + filtri CAT 3516B — Hifi SO 4562 + SN 70099, per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 64613,
+    "costo": 324
+  },
+  {
+    "data": "2021-06-06",
+    "nave": "MT Sea Salvor",
+    "sistema": "Propulsione",
+    "desc": "Propulsione — Ispezione eliche, shaft seal, allineamento, lubrificazione riduttori ZF",
+    "tecnico": "Tecnico RCS",
+    "ore": 94215,
+    "costo": 1189
+  },
+  {
+    "data": "2021-05-29",
+    "nave": "MT Sea Salvor",
+    "sistema": "Filtrazione",
+    "desc": "Cambio Olio 500h — Cambio olio + filtri CAT — Hifi SO 4562 (CAT 1R-0716) + SN 70099 (1R-0749), per motore (×2 motori)",
+    "tecnico": "Tecnico RCS",
+    "ore": 94141,
+    "costo": 479
+  }
+]
