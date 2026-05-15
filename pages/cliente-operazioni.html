@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestione Operativa — RCS Marine Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <style>
+    body { overflow: auto; }
+
+    /* ── NAV CLIENT ── */
+    .c-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 36px;background:rgba(2,11,24,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,87,184,.2)}
+    .c-nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+    .c-nav-logo span{font-family:var(--F);font-size:20px;font-weight:900;letter-spacing:4px}
+    .c-nav-logo small{font-family:var(--F);font-size:9px;letter-spacing:3px;color:var(--cyan);display:block}
+    .c-nav-links{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+    .c-nav-links a{font-family:var(--F);font-size:12px;letter-spacing:2px;padding:5px 11px;border-radius:3px;color:var(--grigio);transition:color .2s,background .2s;text-decoration:none}
+    .c-nav-links a:hover,.c-nav-links a.active{color:var(--cyan);background:rgba(0,212,255,.08)}
+    .c-nav-user{display:flex;align-items:center;gap:10px}
+    .c-nav-user span{font-family:var(--F);font-size:12px;letter-spacing:1px;color:var(--cyan)}
+    .c-btn-logout{font-family:var(--F);font-size:11px;letter-spacing:2px;padding:5px 12px;border:1px solid rgba(255,68,68,.4);border-radius:3px;color:#ff6b6b;background:transparent;cursor:pointer;transition:all .2s}
+    .c-btn-logout:hover{background:rgba(255,68,68,.1)}
+
+    /* ── HERO ── */
+    .ops-hero{
+      padding:100px 40px 40px;
+      background:linear-gradient(135deg, rgba(0,87,184,.12) 0%, rgba(0,212,255,.06) 100%);
+      text-align:center;border-bottom:1px solid rgba(0,87,184,.2);
+      position:relative;overflow:hidden;
+    }
+    .ops-hero::before{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse at 50% 0%, rgba(0,212,255,.1) 0%, transparent 70%);
+    }
+    .ops-hero-label{font-family:var(--F);font-size:11px;letter-spacing:4px;color:var(--cyan);margin-bottom:12px;text-transform:uppercase;position:relative;}
+    .ops-hero-title{font-family:var(--F);font-size:52px;font-weight:900;letter-spacing:3px;color:#fff;margin-bottom:12px;line-height:1;position:relative;}
+    .ops-hero-title span{color:var(--cyan);}
+    .ops-hero-sub{font-size:16px;color:rgba(255,255,255,.65);font-weight:300;letter-spacing:1px;max-width:700px;margin:0 auto;position:relative;}
+
+    /* ── TAB NAV ── */
+    .ops-tabs{
+      position:sticky;top:57px;z-index:150;
+      background:rgba(2,11,24,.97);
+      border-bottom:1px solid rgba(0,87,184,.2);
+      overflow-x:auto;white-space:nowrap;
+      display:flex;gap:0;
+      scrollbar-width:none;
+    }
+    .ops-tabs::-webkit-scrollbar{display:none;}
+    .ops-tab{
+      font-family:var(--F);font-size:11px;letter-spacing:2px;
+      padding:12px 20px;color:var(--grigio);cursor:pointer;
+      border-bottom:2px solid transparent;
+      transition:color .2s,border-color .2s;
+      white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;
+    }
+    .ops-tab:hover{color:#fff;}
+    .ops-tab.active{color:var(--cyan);border-bottom-color:var(--cyan);}
+
+    /* ── SECTIONS ── */
+    .ops-section{padding:48px 40px;border-bottom:1px solid rgba(0,87,184,.12);display:none;}
+    .ops-section.visible{display:block;}
+    .ops-sh{margin-bottom:32px;}
+    .ops-sh-label{font-family:var(--F);font-size:11px;letter-spacing:3px;color:var(--cyan);margin-bottom:8px;text-transform:uppercase;}
+    .ops-sh-title{font-family:var(--F);font-size:32px;font-weight:800;letter-spacing:2px;color:#fff;}
+    .ops-sh-desc{font-size:13px;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.6;}
+
+    /* ── CARD ── */
+    .ops-card{background:rgba(4,17,31,.8);border:1px solid rgba(0,87,184,.2);border-radius:8px;padding:24px;}
+
+    /* ── TABLE ── */
+    .ops-table{width:100%;border-collapse:collapse;font-size:13px;}
+    .ops-table th{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--grigio);padding:10px 12px;text-align:left;border-bottom:1px solid rgba(0,87,184,.2);}
+    .ops-table td{padding:10px 12px;border-bottom:1px solid rgba(0,87,184,.1);color:rgba(255,255,255,.82);vertical-align:middle;}
+    .ops-table tr:hover td{background:rgba(0,87,184,.06);}
+    .ops-table tr:last-child td{border-bottom:none;}
+
+    /* ── BADGE STATUS ── */
+    .badge{display:inline-block;font-family:var(--F);font-size:10px;letter-spacing:1px;padding:3px 9px;border-radius:3px;font-weight:700;}
+    .badge-red{background:rgba(255,68,68,.15);color:#ff4444;border:1px solid rgba(255,68,68,.3);}
+    .badge-orange{background:rgba(255,152,0,.15);color:#ff9800;border:1px solid rgba(255,152,0,.3);}
+    .badge-yellow{background:rgba(255,215,0,.15);color:#ffd700;border:1px solid rgba(255,215,0,.3);}
+    .badge-green{background:rgba(0,230,118,.15);color:#00e676;border:1px solid rgba(0,230,118,.3);}
+    .badge-cyan{background:rgba(0,212,255,.15);color:#00d4ff;border:1px solid rgba(0,212,255,.3);}
+    .badge-blue{background:rgba(0,87,184,.2);color:#4da6ff;border:1px solid rgba(0,87,184,.4);}
+
+    /* ── BUTTONS ── */
+    .ops-btn{font-family:var(--F);font-size:11px;letter-spacing:2px;padding:7px 16px;border-radius:3px;cursor:pointer;transition:all .2s;border:none;}
+    .ops-btn-cyan{background:rgba(0,212,255,.15);color:#00d4ff;border:1px solid rgba(0,212,255,.3);}
+    .ops-btn-cyan:hover{background:rgba(0,212,255,.25);}
+    .ops-btn-green{background:rgba(0,230,118,.15);color:#00e676;border:1px solid rgba(0,230,118,.3);}
+    .ops-btn-green:hover{background:rgba(0,230,118,.25);}
+    .ops-btn-orange{background:rgba(255,152,0,.15);color:#ff9800;border:1px solid rgba(255,152,0,.3);}
+    .ops-btn-orange:hover{background:rgba(255,152,0,.25);}
+    .ops-btn-ghost{background:transparent;color:var(--grigio);border:1px solid rgba(255,255,255,.15);}
+    .ops-btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,.35);}
+    .ops-btn-red{background:rgba(255,68,68,.15);color:#ff4444;border:1px solid rgba(255,68,68,.3);}
+    .ops-btn-red:hover{background:rgba(255,68,68,.25);}
+
+    /* ── FORM CONTROLS ── */
+    .ops-input, .ops-select, .ops-textarea{
+      background:rgba(4,17,31,.9);border:1px solid rgba(0,87,184,.25);border-radius:4px;
+      color:#fff;font-family:var(--f);font-size:13px;padding:8px 12px;
+      transition:border-color .2s;outline:none;width:100%;box-sizing:border-box;
+    }
+    .ops-input:focus,.ops-select:focus,.ops-textarea:focus{border-color:rgba(0,212,255,.5);}
+    .ops-select option{background:#020b18;}
+    .ops-textarea{min-height:80px;resize:vertical;}
+    .ops-label{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--grigio);display:block;margin-bottom:5px;}
+    .ops-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px;}
+    .ops-form-col{display:flex;flex-direction:column;}
+
+    /* ── COUNTERS ── */
+    .cert-counters{display:flex;gap:16px;margin-bottom:24px;flex-wrap:wrap;}
+    .cert-counter{background:rgba(4,17,31,.8);border:1px solid rgba(0,87,184,.2);border-radius:6px;padding:14px 20px;display:flex;align-items:center;gap:12px;}
+    .cert-counter-num{font-family:var(--F);font-size:28px;font-weight:900;line-height:1;}
+    .cert-counter-lbl{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--grigio);}
+
+    /* ── CERT TABLE WRAPPER ── */
+    .cert-table-wrap{overflow-x:auto;}
+
+    /* ── MAINT TWO COL ── */
+    .maint-grid{display:grid;grid-template-columns:60% 40%;gap:24px;align-items:start;}
+    @media(max-width:900px){.maint-grid{grid-template-columns:1fr;}}
+
+    /* ── FILTERS BAR ── */
+    .filters-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;align-items:center;}
+    .filters-bar .ops-select,.filters-bar .ops-input{width:auto;min-width:160px;}
+
+    /* ── PREVENTIVO STEPS ── */
+    .step-indicator{display:flex;gap:0;margin-bottom:32px;}
+    .step-dot{display:flex;align-items:center;gap:0;}
+    .step-dot-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--F);font-size:12px;font-weight:700;border:2px solid rgba(0,87,184,.3);color:var(--grigio);background:transparent;transition:all .3s;}
+    .step-dot-num.done{border-color:#00e676;color:#00e676;background:rgba(0,230,118,.1);}
+    .step-dot-num.active{border-color:#00d4ff;color:#00d4ff;background:rgba(0,212,255,.1);}
+    .step-dot-label{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--grigio);margin:0 12px;transition:color .3s;}
+    .step-dot-label.active{color:#00d4ff;}
+    .step-dot-sep{width:40px;height:1px;background:rgba(0,87,184,.3);align-self:center;}
+    .step-panel{display:none;}
+    .step-panel.active{display:block;}
+
+    /* ── CATALOG GRID ── */
+    .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:16px;}
+    .cat-item{background:rgba(4,17,31,.8);border:1px solid rgba(0,87,184,.2);border-radius:6px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+    .cat-item-info{}
+    .cat-item-code{font-family:var(--F);font-size:11px;letter-spacing:2px;color:var(--cyan);margin-bottom:2px;}
+    .cat-item-name{font-size:12px;color:rgba(255,255,255,.8);}
+    .cat-item-price{font-family:var(--F);font-size:14px;font-weight:700;color:#00e676;white-space:nowrap;}
+    .cat-item-add{display:flex;align-items:center;gap:6px;}
+    .qty-btn{width:24px;height:24px;border-radius:3px;border:1px solid rgba(0,87,184,.3);background:rgba(0,87,184,.15);color:#fff;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;font-family:var(--F);}
+    .qty-val{font-family:var(--F);font-size:13px;color:#fff;min-width:20px;text-align:center;}
+
+    /* ── CART TABLE ── */
+    .cart-row td:last-child{text-align:right;}
+
+    /* ── QUOTE BOX ── */
+    .quote-box{background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.2);border-radius:8px;padding:24px;}
+    .quote-line{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,87,184,.1);font-size:13px;color:rgba(255,255,255,.8);}
+    .quote-line:last-child{border-bottom:none;}
+    .quote-total{font-family:var(--F);font-size:20px;font-weight:800;color:#00d4ff;}
+
+    /* ── CALENDAR ── */
+    .cal-header{display:flex;align-items:center;gap:24px;margin-bottom:20px;}
+    .cal-month{font-family:var(--F);font-size:22px;font-weight:800;letter-spacing:3px;color:#fff;}
+    .cal-nav-btn{font-family:var(--F);font-size:11px;letter-spacing:2px;padding:6px 14px;border-radius:3px;cursor:pointer;background:rgba(0,87,184,.15);border:1px solid rgba(0,87,184,.3);color:var(--grigio);transition:all .2s;}
+    .cal-nav-btn:hover{color:#fff;}
+    .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;}
+    .cal-day-header{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--grigio);padding:8px 4px;text-align:center;}
+    .cal-cell{background:rgba(4,17,31,.6);border:1px solid rgba(0,87,184,.1);border-radius:4px;padding:8px;min-height:80px;}
+    .cal-cell.empty{background:rgba(2,11,24,.4);}
+    .cal-cell.today{border-color:rgba(0,212,255,.4);background:rgba(0,212,255,.06);}
+    .cal-day-num{font-family:var(--F);font-size:13px;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:4px;}
+    .cal-cell.today .cal-day-num{color:#00d4ff;}
+    .cal-event{font-size:10px;padding:2px 5px;border-radius:2px;margin-bottom:2px;line-height:1.4;cursor:pointer;}
+    .cal-event-orange{background:rgba(255,152,0,.2);color:#ff9800;border-left:2px solid #ff9800;}
+    .cal-event-green{background:rgba(0,230,118,.15);color:#00e676;border-left:2px solid #00e676;}
+    .cal-event-red{background:rgba(255,68,68,.15);color:#ff4444;border-left:2px solid #ff4444;}
+    .cal-event-yellow{background:rgba(255,215,0,.15);color:#ffd700;border-left:2px solid #ffd700;}
+    .cal-event-cyan{background:rgba(0,212,255,.15);color:#00d4ff;border-left:2px solid #00d4ff;}
+
+    /* ── UPCOMING LIST ── */
+    .upcoming-item{display:flex;gap:16px;align-items:center;padding:12px 16px;background:rgba(4,17,31,.7);border:1px solid rgba(0,87,184,.15);border-radius:6px;margin-bottom:8px;}
+    .upcoming-date{font-family:var(--F);font-size:14px;font-weight:700;color:#00d4ff;min-width:60px;}
+    .upcoming-info{flex:1;}
+    .upcoming-ship{font-family:var(--F);font-size:12px;letter-spacing:1px;color:#fff;margin-bottom:2px;}
+    .upcoming-desc{font-size:12px;color:rgba(255,255,255,.55);}
+
+    /* ── MESSAGES ── */
+    .msg-grid{display:grid;grid-template-columns:40% 60%;gap:0;min-height:600px;border:1px solid rgba(0,87,184,.2);border-radius:8px;overflow:hidden;}
+    .msg-list{border-right:1px solid rgba(0,87,184,.2);background:rgba(2,11,24,.6);}
+    .msg-list-header{padding:16px 20px;border-bottom:1px solid rgba(0,87,184,.2);display:flex;justify-content:space-between;align-items:center;}
+    .msg-list-title{font-family:var(--F);font-size:13px;letter-spacing:2px;color:#fff;}
+    .ticket-item{padding:14px 20px;border-bottom:1px solid rgba(0,87,184,.1);cursor:pointer;transition:background .2s;}
+    .ticket-item:hover{background:rgba(0,87,184,.1);}
+    .ticket-item.selected{background:rgba(0,212,255,.08);border-left:3px solid #00d4ff;}
+    .ticket-id{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--cyan);margin-bottom:3px;}
+    .ticket-subject{font-size:12px;color:#fff;margin-bottom:5px;line-height:1.4;}
+    .ticket-meta{display:flex;justify-content:space-between;align-items:center;}
+    .ticket-date{font-size:10px;color:var(--grigio);}
+    .msg-thread{background:rgba(4,17,31,.5);display:flex;flex-direction:column;}
+    .msg-thread-header{padding:16px 20px;border-bottom:1px solid rgba(0,87,184,.2);}
+    .msg-thread-id{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--cyan);margin-bottom:4px;}
+    .msg-thread-subject{font-family:var(--F);font-size:14px;font-weight:700;color:#fff;}
+    .msg-thread-body{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px;max-height:400px;}
+    .msg-bubble{max-width:80%;padding:12px 16px;border-radius:6px;font-size:13px;line-height:1.5;}
+    .msg-rcs{background:rgba(0,87,184,.12);border:1px solid rgba(0,87,184,.2);align-self:flex-start;color:rgba(255,255,255,.85);}
+    .msg-client{background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);align-self:flex-end;color:rgba(255,255,255,.85);}
+    .msg-sender{font-family:var(--F);font-size:10px;letter-spacing:1px;margin-bottom:4px;}
+    .msg-sender-rcs{color:var(--cyan);}
+    .msg-sender-client{color:#00e676;text-align:right;}
+    .msg-time{font-size:10px;color:var(--grigio);margin-top:4px;}
+    .msg-input-area{padding:16px 20px;border-top:1px solid rgba(0,87,184,.2);display:flex;gap:10px;}
+    .msg-input-area .ops-textarea{min-height:56px;}
+    .msg-empty{display:flex;align-items:center;justify-content:center;flex:1;color:var(--grigio);font-family:var(--F);font-size:12px;letter-spacing:2px;}
+
+    /* ── MODAL / INLINE FORM ── */
+    .inline-form{background:rgba(0,87,184,.06);border:1px solid rgba(0,87,184,.2);border-radius:8px;padding:20px;margin-bottom:20px;display:none;}
+    .inline-form.open{display:block;}
+
+    /* ── TOAST ── */
+    #toast{position:fixed;bottom:30px;right:30px;z-index:9999;pointer-events:none;}
+    .toast-msg{font-family:var(--F);font-size:11px;letter-spacing:2px;padding:12px 20px;border-radius:4px;margin-top:8px;opacity:0;transform:translateY(8px);transition:all .3s;background:rgba(0,230,118,.15);border:1px solid rgba(0,230,118,.3);color:#00e676;}
+    .toast-msg.show{opacity:1;transform:translateY(0);}
+    .toast-msg.error{background:rgba(255,68,68,.15);border-color:rgba(255,68,68,.3);color:#ff4444;}
+    .toast-msg.warn{background:rgba(255,152,0,.15);border-color:rgba(255,152,0,.3);color:#ff9800;}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:768px){
+      .ops-hero{padding:80px 20px 30px;}
+      .ops-hero-title{font-size:32px;}
+      .ops-section{padding:32px 20px;}
+      .ops-form-row{grid-template-columns:1fr;}
+      .cat-grid{grid-template-columns:1fr;}
+      .msg-grid{grid-template-columns:1fr;grid-template-rows:auto 1fr;}
+      .msg-list{border-right:none;border-bottom:1px solid rgba(0,87,184,.2);}
+      .maint-grid{grid-template-columns:1fr;}
+    }
+
+    /* ── PRINT ── */
+    @media print{
+      .c-nav,.ops-tabs,.ops-btn,.filters-bar,.ops-btn-cyan,.ops-btn-green,.ops-btn-orange,.ops-btn-ghost,.ops-btn-red,#toast,footer{display:none!important;}
+      body{visibility:visible!important;background:#fff;color:#000;}
+      .ops-section{display:block!important;padding:16px!important;}
+      .ops-card{background:#f8f8f8!important;border:1px solid #ccc!important;}
+    }
+
+    /* ── USURA BAR ── */
+    .usura-bar{width:100%;height:6px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden;}
+    .usura-fill{height:100%;border-radius:3px;transition:width .5s;}
+
+    /* ── TIMELINE ── */
+    .timeline-item{display:flex;gap:16px;padding:12px 16px;background:rgba(4,17,31,.7);border:1px solid rgba(0,87,184,.12);border-radius:6px;margin-bottom:8px;}
+    .timeline-dot{width:10px;height:10px;border-radius:50%;background:#00d4ff;flex-shrink:0;margin-top:5px;}
+    .timeline-info{flex:1;}
+    .timeline-date{font-family:var(--F);font-size:10px;letter-spacing:2px;color:var(--cyan);}
+    .timeline-ship{font-family:var(--F);font-size:12px;color:#fff;margin:2px 0;}
+    .timeline-desc{font-size:12px;color:rgba(255,255,255,.65);}
+    .timeline-cost{font-family:var(--F);font-size:11px;color:#00e676;margin-top:2px;}
+  </style>
+</head>
+<body style="visibility:hidden">
+
+<!-- CLIENT NAV -->
+<nav class="c-nav">
+  <a class="c-nav-logo" href="../index.html">
+    <span>⚓ RCS</span>
+    <small>MARINE INTELLIGENCE</small>
+  </a>
+  <div class="c-nav-links">
+    <a href="cliente-dashboard.html">FLOTTA</a>
+    <a href="cliente-dashboard.html#catalogo">CATALOGO</a>
+    <a href="cliente-dashboard.html#mappa">AIS LIVE</a>
+    <a href="cliente-dashboard.html#consegna">CONSEGNA</a>
+    <a href="cliente-dashboard.html#rotte">ROTTE</a>
+    <a href="cliente-dashboard.html#ordini">ORDINI</a>
+    <a href="cliente-chi-siamo.html">CHI SIAMO</a>
+    <a href="cliente-usura.html">USURA</a>
+    <a href="cliente-intelligenza.html">INTEL</a>
+    <a href="cliente-operazioni.html" class="active">OPS</a>
+  </div>
+  <div class="c-nav-user">
+    <span id="navCompany">—</span>
+    <button class="c-btn-logout" onclick="logout()">ESCI</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="ops-hero">
+  <p class="ops-hero-label">PORTALE OPERATIVO</p>
+  <h1 class="ops-hero-title">GESTIONE <span>OPERATIVA</span></h1>
+  <p class="ops-hero-sub">Certificati, manutenzioni, preventivi, calendario e comunicazioni per la tua flotta</p>
+</section>
+
+<!-- TAB BAR -->
+<div class="ops-tabs" id="opsTabs">
+  <button class="ops-tab active" onclick="switchTab(0)">CERTIFICATI</button>
+  <button class="ops-tab" onclick="switchTab(1)">MANUTENZIONI</button>
+  <button class="ops-tab" onclick="switchTab(2)">PREVENTIVO</button>
+  <button class="ops-tab" onclick="switchTab(3)">CALENDARIO</button>
+  <button class="ops-tab" onclick="switchTab(4)">MESSAGGI</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SEZIONE 1: ARCHIVIO CERTIFICATI
+══════════════════════════════════════════════════════════ -->
+<div class="ops-section visible" id="s0">
+  <div class="ops-sh">
+    <p class="ops-sh-label">CONFORMITÀ NORMATIVA</p>
+    <h2 class="ops-sh-title">Archivio Certificati</h2>
+    <p class="ops-sh-desc">Stato aggiornato di tutti i certificati di bordo. Scadenze calcolate su base IMO e anno di costruzione.</p>
+  </div>
+
+  <div class="cert-counters" id="certCounters">
+    <div class="cert-counter"><div class="cert-counter-num" style="color:#ff4444" id="cntExpired">0</div><div class="cert-counter-lbl">SCADUTI</div></div>
+    <div class="cert-counter"><div class="cert-counter-num" style="color:#ff9800" id="cntUrgent">0</div><div class="cert-counter-lbl">URGENTI (&lt;60gg)</div></div>
+    <div class="cert-counter"><div class="cert-counter-num" style="color:#ffd700" id="cntSoon">0</div><div class="cert-counter-lbl">IN SCADENZA (&lt;180gg)</div></div>
+    <div class="cert-counter"><div class="cert-counter-num" style="color:#00e676" id="cntValid">0</div><div class="cert-counter-lbl">VALIDI</div></div>
+  </div>
+
+  <div class="filters-bar">
+    <select class="ops-select" id="certFilterShip" onchange="renderCerts()" style="min-width:200px;">
+      <option value="">Tutte le navi</option>
+    </select>
+    <select class="ops-select" id="certFilterStatus" onchange="renderCerts()">
+      <option value="">Tutti gli stati</option>
+      <option value="SCADUTO">Scaduti</option>
+      <option value="URGENTE">Urgenti</option>
+      <option value="IN SCADENZA">In scadenza</option>
+      <option value="VALIDO">Validi</option>
+    </select>
+  </div>
+
+  <div class="ops-card cert-table-wrap">
+    <table class="ops-table" id="certTable">
+      <thead>
+        <tr>
+          <th>NAVE</th>
+          <th>CERTIFICATO</th>
+          <th>ENTE EMITTENTE</th>
+          <th>SCADENZA</th>
+          <th>GIORNI</th>
+          <th>STATUS</th>
+          <th>AZIONE</th>
+        </tr>
+      </thead>
+      <tbody id="certTbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SEZIONE 2: STORICO MANUTENZIONI
+══════════════════════════════════════════════════════════ -->
+<div class="ops-section" id="s1">
+  <div class="ops-sh">
+    <p class="ops-sh-label">STORICO TECNICO</p>
+    <h2 class="ops-sh-title">Storico Manutenzioni</h2>
+    <p class="ops-sh-desc">Registro completo degli interventi tecnici eseguiti sulla flotta. Registra nuovi interventi direttamente dal portale.</p>
+  </div>
+
+  <div class="maint-grid">
+    <!-- SINISTRA: tabella interventi -->
+    <div>
+      <div class="filters-bar">
+        <select class="ops-select" id="maintFilterShip" onchange="renderMaint()" style="min-width:180px;">
+          <option value="">Tutte le navi</option>
+        </select>
+        <select class="ops-select" id="maintFilterSys" onchange="renderMaint()">
+          <option value="">Tutti i sistemi</option>
+          <option>Motore</option>
+          <option>Filtrazione</option>
+          <option>Iniezione</option>
+          <option>Propulsione</option>
+          <option>Raffreddamento</option>
+          <option>Idraulica</option>
+          <option>Elettrico</option>
+        </select>
+        <input class="ops-input" id="maintSearch" placeholder="Cerca..." oninput="renderMaint()" style="min-width:140px;">
+      </div>
+      <div id="maintTimeline"></div>
+    </div>
+
+    <!-- DESTRA: form -->
+    <div class="ops-card">
+      <h3 style="font-family:var(--F);font-size:13px;letter-spacing:2px;color:var(--cyan);margin-bottom:20px;">REGISTRA INTERVENTO</h3>
+      <div class="ops-form-col" style="margin-bottom:12px;">
+        <label class="ops-label">NAVE</label>
+        <select class="ops-select" id="mf-ship"></select>
+      </div>
+      <div class="ops-form-row">
+        <div class="ops-form-col">
+          <label class="ops-label">SISTEMA</label>
+          <select class="ops-select" id="mf-sys">
+            <option>Motore</option><option>Filtrazione</option><option>Iniezione</option>
+            <option>Propulsione</option><option>Raffreddamento</option><option>Idraulica</option><option>Elettrico</option>
+          </select>
+        </div>
+        <div class="ops-form-col">
+          <label class="ops-label">DATA</label>
+          <input type="date" class="ops-input" id="mf-date" value="2026-05-15">
+        </div>
+      </div>
+      <div class="ops-form-col" style="margin-bottom:12px;">
+        <label class="ops-label">TIPO INTERVENTO</label>
+        <textarea class="ops-textarea" id="mf-desc" placeholder="Descrizione intervento..." style="min-height:64px;"></textarea>
+      </div>
+      <div class="ops-form-row">
+        <div class="ops-form-col">
+          <label class="ops-label">TECNICO</label>
+          <input class="ops-input" id="mf-tech" placeholder="Nome tecnico">
+        </div>
+        <div class="ops-form-col">
+          <label class="ops-label">ORE MOTORE</label>
+          <input class="ops-input" type="number" id="mf-hours" placeholder="es. 34200">
+        </div>
+      </div>
+      <div class="ops-form-col" style="margin-bottom:20px;">
+        <label class="ops-label">COSTO (€)</label>
+        <input class="ops-input" type="number" id="mf-cost" placeholder="es. 1200">
+      </div>
+      <button class="ops-btn ops-btn-cyan" style="width:100%" onclick="registerMaint()">REGISTRA INTERVENTO</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SEZIONE 3: PREVENTIVO RAPIDO
+══════════════════════════════════════════════════════════ -->
+<div class="ops-section" id="s2">
+  <div class="ops-sh">
+    <p class="ops-sh-label">RICHIESTA COMMERCIALE</p>
+    <h2 class="ops-sh-title">Preventivo Rapido</h2>
+    <p class="ops-sh-desc">Seleziona i ricambi, configura la spedizione e invia la richiesta formale a RCS in pochi secondi.</p>
+  </div>
+
+  <!-- Step indicator -->
+  <div class="step-indicator">
+    <div class="step-dot">
+      <div class="step-dot-num active" id="sd1">1</div>
+      <span class="step-dot-label active">RICAMBI</span>
+    </div>
+    <div class="step-dot-sep"></div>
+    <div class="step-dot">
+      <div class="step-dot-num" id="sd2">2</div>
+      <span class="step-dot-label" id="sl2">CONFIGURA</span>
+    </div>
+    <div class="step-dot-sep"></div>
+    <div class="step-dot">
+      <div class="step-dot-num" id="sd3">3</div>
+      <span class="step-dot-label" id="sl3">PREVENTIVO</span>
+    </div>
+  </div>
+
+  <!-- STEP 1 -->
+  <div class="step-panel active" id="sp1">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
+      <input class="ops-input" id="catSearch" placeholder="Cerca codice o descrizione..." oninput="filterCatalog()" style="max-width:320px;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-family:var(--F);font-size:11px;letter-spacing:2px;color:var(--grigio);">CARRELLO: <span id="cartCount" style="color:#00d4ff;">0</span> art.</span>
+        <button class="ops-btn ops-btn-cyan" onclick="goStep(2)">AVANTI →</button>
+      </div>
+    </div>
+    <div class="cat-grid" id="catalogGrid"></div>
+
+    <!-- Mini cart -->
+    <div style="margin-top:24px;" id="cartArea">
+      <h3 style="font-family:var(--F);font-size:12px;letter-spacing:2px;color:var(--cyan);margin-bottom:12px;">ARTICOLI SELEZIONATI</h3>
+      <div class="ops-card cert-table-wrap">
+        <table class="ops-table">
+          <thead><tr><th>CODICE</th><th>DESCRIZIONE</th><th>QTÀ</th><th>PREZZO/PZ</th><th>TOTALE</th><th></th></tr></thead>
+          <tbody id="cartTbody"></tbody>
+          <tfoot><tr><td colspan="4" style="text-align:right;font-family:var(--F);font-size:11px;letter-spacing:2px;color:var(--grigio);padding:10px 12px;">SUBTOTALE ARTICOLI</td><td style="font-family:var(--F);font-weight:700;color:#00e676;padding:10px 12px;" id="cartSubtotal">€0</td><td></td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step-panel" id="sp2">
+    <div class="ops-card" style="max-width:560px;">
+      <h3 style="font-family:var(--F);font-size:13px;letter-spacing:2px;color:var(--cyan);margin-bottom:20px;">CONFIGURA SPEDIZIONE</h3>
+      <div class="ops-form-col" style="margin-bottom:14px;">
+        <label class="ops-label">NAVE DI DESTINAZIONE</label>
+        <select class="ops-select" id="qf-ship"></select>
+      </div>
+      <div class="ops-form-col" style="margin-bottom:14px;">
+        <label class="ops-label">PORTO DI CONSEGNA</label>
+        <select class="ops-select" id="qf-port">
+          <option>Valletta</option>
+          <option>Marsaxlokk</option>
+          <option>Pozzallo</option>
+          <option>Catania</option>
+          <option>Napoli</option>
+          <option>Tarifa</option>
+        </select>
+      </div>
+      <div class="ops-form-col" style="margin-bottom:20px;">
+        <label class="ops-label">MODALITÀ DI CONSEGNA</label>
+        <select class="ops-select" id="qf-mode">
+          <option value="standard">Standard — 5-8 giorni lavorativi (spedizione gratuita)</option>
+          <option value="express">Express DHL — 2-3 giorni lavorativi (+ €85)</option>
+          <option value="air">Aereo + Corriere — 24-48 ore (+ €180)</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:12px;">
+        <button class="ops-btn ops-btn-ghost" onclick="goStep(1)">← INDIETRO</button>
+        <button class="ops-btn ops-btn-cyan" onclick="goStep(3)">CALCOLA PREVENTIVO</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step-panel" id="sp3">
+    <div style="display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start;" class="quote-layout">
+      <div>
+        <div class="ops-card" style="margin-bottom:20px;">
+          <h3 style="font-family:var(--F);font-size:12px;letter-spacing:2px;color:var(--cyan);margin-bottom:16px;">RIEPILOGO ORDINE</h3>
+          <table class="ops-table" id="quoteSummaryTable">
+            <thead><tr><th>CODICE</th><th>DESCRIZIONE</th><th>QTÀ</th><th>PREZZO/PZ</th><th>TOTALE</th></tr></thead>
+            <tbody id="quoteSummaryBody"></tbody>
+          </table>
+        </div>
+        <div class="ops-card" id="deliveryInfo">
+          <h3 style="font-family:var(--F);font-size:12px;letter-spacing:2px;color:var(--cyan);margin-bottom:14px;">INFO CONSEGNA</h3>
+          <div id="deliveryDetails" style="font-size:13px;color:rgba(255,255,255,.75);line-height:2;"></div>
+        </div>
+      </div>
+      <div>
+        <div class="quote-box">
+          <h3 style="font-family:var(--F);font-size:12px;letter-spacing:2px;color:var(--cyan);margin-bottom:16px;">TOTALE PREVENTIVO</h3>
+          <div class="quote-line"><span>Subtotale articoli</span><span id="qt-sub">€0</span></div>
+          <div class="quote-line"><span>Spedizione</span><span id="qt-ship">€0</span></div>
+          <div class="quote-line" id="qt-disc-row" style="display:none;"><span style="color:#00e676;">Sconto 5% (ordine >€500)</span><span id="qt-disc" style="color:#00e676;"></span></div>
+          <div class="quote-line" style="border-top:1px solid rgba(0,212,255,.2);padding-top:12px;margin-top:4px;">
+            <span style="font-family:var(--F);font-size:14px;font-weight:700;color:#fff;letter-spacing:1px;">TOTALE</span>
+            <span class="quote-total" id="qt-total">€0</span>
+          </div>
+          <div style="margin-top:8px;font-size:11px;color:var(--grigio);" id="qt-delivery-note"></div>
+        </div>
+        <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
+          <button class="ops-btn ops-btn-green" style="width:100%;padding:11px;" onclick="sendQuote()">INVIA RICHIESTA FORMALE →</button>
+          <button class="ops-btn ops-btn-orange" style="width:100%;padding:11px;" onclick="window.print()">SCARICA PDF PREVENTIVO</button>
+          <button class="ops-btn ops-btn-ghost" style="width:100%;" onclick="goStep(1)">← MODIFICA ORDINE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SEZIONE 4: CALENDARIO MANUTENZIONI
+══════════════════════════════════════════════════════════ -->
+<div class="ops-section" id="s3">
+  <div class="ops-sh">
+    <p class="ops-sh-label">PIANIFICAZIONE</p>
+    <h2 class="ops-sh-title">Calendario Manutenzioni</h2>
+    <p class="ops-sh-desc">Pianifica e visualizza gli interventi programmati per la tua flotta nel mese corrente.</p>
+  </div>
+
+  <!-- Add event form -->
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
+    <div></div>
+    <button class="ops-btn ops-btn-cyan" onclick="toggleCalForm()">+ AGGIUNGI EVENTO</button>
+  </div>
+
+  <div class="inline-form" id="calForm">
+    <h3 style="font-family:var(--F);font-size:12px;letter-spacing:2px;color:var(--cyan);margin-bottom:16px;">NUOVO EVENTO CALENDARIO</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px;" class="cal-form-grid">
+      <div class="ops-form-col">
+        <label class="ops-label">DATA</label>
+        <input type="date" class="ops-input" id="cf-date" value="2026-05-15">
+      </div>
+      <div class="ops-form-col">
+        <label class="ops-label">NAVE</label>
+        <select class="ops-select" id="cf-ship"></select>
+      </div>
+      <div class="ops-form-col">
+        <label class="ops-label">TIPO</label>
+        <select class="ops-select" id="cf-type">
+          <option value="orange">Revisione Motore</option>
+          <option value="green">Cambio Filtri</option>
+          <option value="red">Ispezione Classificazione</option>
+          <option value="yellow">Controllo Iniettori</option>
+          <option value="cyan">Dry Dock / Cantiere</option>
+        </select>
+      </div>
+    </div>
+    <div class="ops-form-col" style="margin-bottom:14px;">
+      <label class="ops-label">DESCRIZIONE</label>
+      <input class="ops-input" id="cf-desc" placeholder="Descrizione evento...">
+    </div>
+    <div style="display:flex;gap:10px;">
+      <button class="ops-btn ops-btn-green" onclick="addCalEvent()">AGGIUNGI</button>
+      <button class="ops-btn ops-btn-ghost" onclick="toggleCalForm()">ANNULLA</button>
+    </div>
+  </div>
+
+  <!-- Calendar nav -->
+  <div class="cal-header">
+    <button class="cal-nav-btn">← APRILE</button>
+    <span class="cal-month">MAGGIO 2026</span>
+    <button class="cal-nav-btn">GIUGNO →</button>
+  </div>
+
+  <!-- Calendar grid -->
+  <div class="cal-grid" id="calGrid" style="margin-bottom:32px;">
+    <div class="cal-day-header">LUN</div>
+    <div class="cal-day-header">MAR</div>
+    <div class="cal-day-header">MER</div>
+    <div class="cal-day-header">GIO</div>
+    <div class="cal-day-header">VEN</div>
+    <div class="cal-day-header">SAB</div>
+    <div class="cal-day-header">DOM</div>
+  </div>
+
+  <!-- Upcoming -->
+  <div class="ops-card">
+    <h3 style="font-family:var(--F);font-size:13px;letter-spacing:2px;color:var(--cyan);margin-bottom:16px;">PROSSIMI INTERVENTI</h3>
+    <div id="upcomingList"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SEZIONE 5: MESSAGGI / TICKET
+══════════════════════════════════════════════════════════ -->
+<div class="ops-section" id="s4">
+  <div class="ops-sh">
+    <p class="ops-sh-label">COMUNICAZIONI</p>
+    <h2 class="ops-sh-title">Messaggi e Ticket</h2>
+    <p class="ops-sh-desc">Gestisci le richieste di supporto tecnico e le comunicazioni con il team RCS.</p>
+  </div>
+
+  <div style="display:flex;justify-content:flex-end;margin-bottom:16px;">
+    <button class="ops-btn ops-btn-cyan" onclick="toggleNewTicket()">+ NUOVO TICKET</button>
+  </div>
+
+  <!-- New ticket form -->
+  <div class="inline-form" id="newTicketForm">
+    <h3 style="font-family:var(--F);font-size:12px;letter-spacing:2px;color:var(--cyan);margin-bottom:16px;">APRI NUOVO TICKET</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:14px;">
+      <div class="ops-form-col" style="grid-column:1/-1;">
+        <label class="ops-label">OGGETTO</label>
+        <input class="ops-input" id="nt-subject" placeholder="Oggetto del ticket...">
+      </div>
+      <div class="ops-form-col">
+        <label class="ops-label">NAVE</label>
+        <select class="ops-select" id="nt-ship"></select>
+      </div>
+      <div class="ops-form-col">
+        <label class="ops-label">PRIORITÀ</label>
+        <select class="ops-select" id="nt-priority">
+          <option>Normale</option><option>Alta</option><option>Urgente</option>
+        </select>
+      </div>
+    </div>
+    <div class="ops-form-col" style="margin-bottom:14px;">
+      <label class="ops-label">MESSAGGIO INIZIALE</label>
+      <textarea class="ops-textarea" id="nt-message" placeholder="Descrivi la tua richiesta..." style="min-height:90px;"></textarea>
+    </div>
+    <div style="display:flex;gap:10px;">
+      <button class="ops-btn ops-btn-green" onclick="createTicket()">INVIA TICKET</button>
+      <button class="ops-btn ops-btn-ghost" onclick="toggleNewTicket()">ANNULLA</button>
+    </div>
+  </div>
+
+  <div class="msg-grid" id="msgGrid">
+    <!-- ticket list -->
+    <div class="msg-list">
+      <div class="msg-list-header">
+        <span class="msg-list-title">TICKET</span>
+        <span style="font-family:var(--F);font-size:10px;letter-spacing:1px;color:var(--grigio);" id="ticketCount">0 ticket</span>
+      </div>
+      <div id="ticketList"></div>
+    </div>
+    <!-- thread -->
+    <div class="msg-thread" id="msgThread">
+      <div class="msg-empty">Seleziona un ticket per visualizzare la conversazione</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:rgba(0,0,0,.4);border-top:1px solid rgba(0,87,184,.15);padding:20px 40px;text-align:center;font-size:11px;color:var(--grigio);letter-spacing:1px;">
+  © 2026 Ricambi Centro Sud S.r.l. · P.IVA IT03176280877 · Catania · <span style="color:#00d4ff">Marine Intelligence Pro</span>
+</footer>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     JAVASCRIPT — DATI E LOGICA
+══════════════════════════════════════════════════════════ -->
+<script>
+// ─── COSTANTI GLOBALI ──────────────────────────────────────────────────────────
+const TODAY = new Date('2026-05-15');
+
+// ─── DATI NAVI ─────────────────────────────────────────────────────────────────
+const SHIPS = {
+  virtu: [
+    { nome:'MV Saint John Paul II', imo:'9762337', anno:2019, usura:25, motori:'4× MTU 20V 8000', rotta:'Valletta–Pozzallo–Catania' },
+    { nome:'MV Jean de La Valette',  imo:'9468946', anno:2010, usura:56, motori:'4× MTU 20V 8000', rotta:'Valletta–Pozzallo–Napoli' },
+    { nome:'MV Maria Dolores',       imo:'9333333', anno:2006, usura:70, motori:'6× MTU 16V 4000', rotta:'Tarifa–Tangeri' },
+    { nome:'HSC Gozo Express',       imo:'9396753', anno:2008, usura:54, motori:'4× MTU 12V 2000', rotta:'Valletta–Gozo' },
+    { nome:'San Frangisk',           imo:'8903899', anno:1990, usura:90, motori:'2× Deutz MWM 620B', rotta:'Valletta–Gozo' },
+    { nome:'San Pawl',               imo:'8903904', anno:1991, usura:88, motori:'2× Deutz MWM 604B', rotta:'—' },
+    { nome:'Balluta Bay',            imo:'7900001', anno:1981, usura:100, motori:'Wärtsilä', rotta:'Supporto logistico' }
+  ],
+  tug: [
+    { nome:'MT Vittoriosa',    imo:'9780001', anno:2019, usura:25, motori:'2× MTU 16V 4000',             rotta:'Porto Valletta' },
+    { nome:'MT St. Angelo',    imo:'9780002', anno:2017, usura:29, motori:'2× Caterpillar 3516C',         rotta:'Porto Valletta' },
+    { nome:'MT Senglea',       imo:'9780003', anno:2020, usura:19, motori:'2× Caterpillar 3516C',         rotta:'Porto Valletta' },
+    { nome:'MT Med Aldebaran', imo:'9780004', anno:2024, usura:6,  motori:'2× Caterpillar 3516C Tier III',rotta:'Porto Valletta' },
+    { nome:'MT St. Elmo',      imo:'9780005', anno:2011, usura:48, motori:'2× Caterpillar 3516C',         rotta:'Porto Valletta' },
+    { nome:'MT Spinola',       imo:'9780006', anno:2009, usura:34, motori:'2× MaK 8M25',                  rotta:'Porto Valletta' },
+    { nome:'MT Wenzina',       imo:'9780007', anno:2006, usura:64, motori:'2× Caterpillar 3516C',         rotta:'Porto Valletta' },
+    { nome:'MT Pawlina',       imo:'9780008', anno:2006, usura:64, motori:'2× Caterpillar 3516B',         rotta:'Porto Valletta' },
+    { nome:'MT Sea Salvor',    imo:'9780009', anno:1998, usura:90, motori:'2× Caterpillar 3516C',         rotta:'Porto Valletta' },
+    { nome:'MT Gozzo',         imo:'9780010', anno:2019, usura:21, motori:'2× Volvo Diesel',              rotta:'Porto Valletta' }
+  ]
+};
+
+// ─── DATI CERTIFICATI ─────────────────────────────────────────────────────────
+// date(yyyy, m-1, d) helper
+function d(y,m,dd){ return new Date(y, m-1, dd); }
+
+const CERT_TYPES = [
+  { nome:"Certificato di Classe Lloyd's", ente:"Lloyd's Register", durata:5 },
+  { nome:"ISM Safety Management Certificate (SMC)", ente:"Bureau Veritas", durata:5 },
+  { nome:"MARPOL Annex I — Prevenzione Inquinamento", ente:"MEPA / Flag State", durata:1 },
+  { nome:"MARPOL Annex VI — Emissioni Aria", ente:"MEPA / Flag State", durata:1 },
+  { nome:"SOLAS Safety Construction Certificate", ente:"Transport Malta", durata:5 },
+  { nome:"MLC 2006 Maritime Labour Certificate", ente:"Transport Malta", durata:5 },
+  { nome:"Certificato Bordo Libero", ente:"Lloyd's Register", durata:5 },
+  { nome:"Certificato Radio GMDSS", ente:"MFSA / Transport Malta", durata:1 }
+];
+
+// Per ogni nave definiamo le scadenze certificate
+// Navi buone: scad lontane; navi medie: 1-2 urgenti/in scadenza; navi critiche: 2-3 scadute/urgenti
+const CERT_DATA = {
+  virtu: [
+    // MV Saint John Paul II — anno 2019, usura 25% — BUONA
+    [ d(2027,8,14), d(2028,3,20), d(2027,2,10), d(2027,2,10), d(2028,8,14), d(2028,3,20), d(2028,8,14), d(2027,8,14) ],
+    // MV Jean de La Valette — anno 2010, usura 56% — MEDIA
+    [ d(2026,9,10), d(2027,6,15), d(2026,6,22), d(2026,7,18), d(2027,6,15), d(2027,6,15), d(2026,9,10), d(2026,6,22) ],
+    // MV Maria Dolores — anno 2006, usura 70% — MEDIA/CRITICA
+    [ d(2026,7,5), d(2026,8,12), d(2026,3,15), d(2026,5,30), d(2027,2,8), d(2027,2,8), d(2026,7,5), d(2026,4,20) ],
+    // HSC Gozo Express — anno 2008, usura 54% — MEDIA
+    [ d(2026,10,18), d(2027,4,22), d(2026,6,10), d(2026,7,5), d(2027,4,22), d(2027,4,22), d(2026,10,18), d(2026,6,10) ],
+    // San Frangisk — anno 1990, usura 90% — CRITICA
+    [ d(2025,11,20), d(2026,3,8), d(2025,9,5), d(2025,10,12), d(2026,3,8), d(2026,5,25), d(2025,11,20), d(2025,9,5) ],
+    // San Pawl — anno 1991, usura 88% — CRITICA
+    [ d(2026,1,15), d(2026,4,10), d(2025,8,20), d(2025,11,30), d(2026,4,10), d(2026,5,30), d(2026,1,15), d(2025,8,20) ],
+    // Balluta Bay — anno 1981, usura 100% — CRITICA
+    [ d(2025,6,1), d(2025,8,10), d(2025,4,5), d(2025,5,12), d(2025,8,10), d(2026,1,5), d(2025,6,1), d(2025,4,5) ]
+  ],
+  tug: [
+    // MT Vittoriosa — anno 2019, usura 25% — BUONA
+    [ d(2027,9,20), d(2028,4,15), d(2027,3,5), d(2027,3,5), d(2028,9,20), d(2028,4,15), d(2028,9,20), d(2027,9,20) ],
+    // MT St. Angelo — anno 2017, usura 29% — BUONA
+    [ d(2027,6,12), d(2028,1,20), d(2027,1,8), d(2027,1,8), d(2028,6,12), d(2028,1,20), d(2027,6,12), d(2027,6,12) ],
+    // MT Senglea — anno 2020, usura 19% — BUONA
+    [ d(2028,2,18), d(2028,8,5), d(2027,4,14), d(2027,4,14), d(2028,8,5), d(2028,8,5), d(2028,2,18), d(2027,12,14) ],
+    // MT Med Aldebaran — anno 2024, usura 6% — OTTIMA
+    [ d(2029,3,10), d(2029,3,10), d(2027,3,10), d(2027,3,10), d(2029,3,10), d(2029,3,10), d(2029,3,10), d(2027,3,10) ],
+    // MT St. Elmo — anno 2011, usura 48% — MEDIA
+    [ d(2026,11,8), d(2027,3,25), d(2026,6,15), d(2026,7,22), d(2027,3,25), d(2027,3,25), d(2026,11,8), d(2026,6,15) ],
+    // MT Spinola — anno 2009, usura 34% — MEDIA
+    [ d(2026,8,20), d(2027,2,10), d(2026,6,5), d(2026,8,5), d(2027,2,10), d(2027,2,10), d(2026,8,20), d(2026,6,5) ],
+    // MT Wenzina — anno 2006, usura 64% — MEDIA/CRITICA
+    [ d(2026,6,25), d(2026,9,14), d(2026,4,10), d(2026,6,10), d(2027,1,5), d(2027,1,5), d(2026,6,25), d(2026,4,10) ],
+    // MT Pawlina — anno 2006, usura 64% — MEDIA/CRITICA
+    [ d(2026,7,15), d(2026,10,5), d(2026,3,20), d(2026,5,20), d(2027,1,18), d(2027,1,18), d(2026,7,15), d(2026,3,20) ],
+    // MT Sea Salvor — anno 1998, usura 90% — CRITICA
+    [ d(2025,12,5), d(2026,2,18), d(2025,7,10), d(2025,9,5), d(2026,2,18), d(2026,5,20), d(2025,12,5), d(2025,7,10) ],
+    // MT Gozzo — anno 2019, usura 21% — BUONA
+    [ d(2027,10,8), d(2028,5,20), d(2027,4,2), d(2027,4,2), d(2028,10,8), d(2028,5,20), d(2028,10,8), d(2027,10,8) ]
+  ]
+};
+
+// ─── DATI MANUTENZIONI ────────────────────────────────────────────────────────
+const MAINT_DATA = {
+  virtu: [
+    { data:'2026-04-10', nave:'MV Jean de La Valette', sistema:'Filtrazione', desc:'Sostituzione filtri olio + gasolio', tecnico:'Tecnico RCS Mario Greco', ore:87200, costo:320 },
+    { data:'2026-03-22', nave:'San Frangisk',           sistema:'Motore',      desc:'Revisione iniettori Deutz MWM 620B', tecnico:'Tecnico RCS Luigi Russo', ore:103600, costo:4200 },
+    { data:'2026-02-15', nave:'MV Maria Dolores',       sistema:'Propulsione', desc:'Ispezione eliche + shaft seal', tecnico:'Cantiere Pozzallo', ore:110800, costo:1800 },
+    { data:'2026-01-08', nave:'MV Saint John Paul II',  sistema:'Raffreddamento', desc:'Sostituzione termostato MTU + fluido', tecnico:'Tecnico RCS', ore:35200, costo:480 },
+    { data:'2025-11-20', nave:'Balluta Bay',            sistema:'Motore',      desc:'Revisione generale Wärtsilä', tecnico:'Cantiere Catania', ore:194000, costo:18500 },
+    { data:'2025-10-05', nave:'HSC Gozo Express',       sistema:'Filtrazione', desc:'Kit filtri completo MTU 12V 2000', tecnico:'Tecnico RCS', ore:98400, costo:890 },
+    { data:'2025-09-14', nave:'MV Jean de La Valette',  sistema:'Iniezione',   desc:'Sostituzione 8 iniettori Bosch CR', tecnico:'Tecnico RCS', ore:87000, costo:6400 },
+    { data:'2025-08-03', nave:'San Pawl',               sistema:'Motore',      desc:'Diagnosi + sostituzione testa cilindro Deutz', tecnico:'Tecnico esterno', ore:101400, costo:9200 }
+  ],
+  tug: [
+    { data:'2026-05-02', nave:'MT Sea Salvor',    sistema:'Motore',      desc:'Revisione completa CAT 3516C', tecnico:'Tecnico RCS Mario Greco', ore:114400, costo:22000 },
+    { data:'2026-04-18', nave:'MT Wenzina',       sistema:'Iniezione',   desc:'Sostituzione pompa injection CAT', tecnico:'Tecnico RCS', ore:84200, costo:5600 },
+    { data:'2026-03-30', nave:'MT Spinola',       sistema:'Propulsione', desc:'Ispezione VSP Voith', tecnico:'Cantiere Valletta', ore:72800, costo:3200 },
+    { data:'2026-02-20', nave:'MT St. Elmo',      sistema:'Filtrazione', desc:'Kit filtri Fleetguard + olio Castrol', tecnico:'Tecnico RCS', ore:61400, costo:720 },
+    { data:'2026-01-15', nave:'MT Pawlina',       sistema:'Motore',      desc:'Sostituzione segmenti + pistone CAT 3516B', tecnico:'Tecnico RCS Luigi Russo', ore:83800, costo:8900 },
+    { data:'2025-12-10', nave:'MT Vittoriosa',    sistema:'Raffreddamento', desc:'Heat exchanger MTU + termostato', tecnico:'Tecnico RCS', ore:26300, costo:1240 },
+    { data:'2025-11-05', nave:'MT St. Angelo',    sistema:'Iniezione',   desc:'Revisione iniettori CAT + calibrazione', tecnico:'Tecnico RCS', ore:35000, costo:4100 },
+    { data:'2025-10-22', nave:'MT Senglea',       sistema:'Filtrazione', desc:'Filtri aria + olio + gasolio CAT 3516C', tecnico:'Tecnico RCS', ore:21000, costo:580 }
+  ]
+};
+
+// ─── CATALOGO RICAMBI ─────────────────────────────────────────────────────────
+const CATALOG = [
+  { code:'F00VC01338', desc:'Valvola controllo pressione Bosch CR', price:89 },
+  { code:'0445120217', desc:'Iniettore Bosch CR per MTU', price:340 },
+  { code:'04294788',   desc:'Filtro olio Fleetguard LF9009', price:28 },
+  { code:'04294790',   desc:'Filtro gasolio Fleetguard FS1006', price:34 },
+  { code:'04294792',   desc:'Filtro aria CAT 1R-0749', price:45 },
+  { code:'11658815',   desc:'Termostato MTU 20V 8000', price:124 },
+  { code:'3803223',    desc:'Iniettore Cummins QSK19', price:285 },
+  { code:'MS39012',    desc:'Guarnizione testa MAHLE per Deutz MWM', price:156 },
+  { code:'7E8818',     desc:'Kit pistone CAT 3516C', price:890 },
+  { code:'01181584',   desc:'Pompa iniezione CAT 3516C', price:1240 },
+  { code:'LF3349',     desc:'Filtro olio Fleetguard pesante', price:42 },
+  { code:'FS1003',     desc:'Filtro separatore acqua Fleetguard', price:38 },
+  { code:'04505685',   desc:'Cinghia distribuzione MaK 8M25', price:220 },
+  { code:'23530345',   desc:'Turbocompressore Holset per CAT', price:1850 },
+  { code:'3803347',    desc:'Filtro aria Fleetguard per CAT 3516', price:67 },
+  { code:'11658900',   desc:'Guarnizione collettore MTU', price:78 },
+  { code:'7W0470',     desc:'Iniettore unitario CAT 3516', price:490 },
+  { code:'MS38010',    desc:'Anello tenuta albero MAHLE', price:34 },
+  { code:'04291791',   desc:'Kit revisione pompa acqua CAT', price:310 },
+  { code:'BF1362',     desc:'Filtro gasolio Baldwin pesante', price:29 }
+];
+
+// ─── EVENTI CALENDARIO ────────────────────────────────────────────────────────
+const CAL_EVENTS_BASE = {
+  virtu: [
+    { day:18, label:'Jean de La Valette — Sostituzione filtri',   cls:'cal-event-green' },
+    { day:20, label:'San Frangisk — Ispezione Lloyd\'s',           cls:'cal-event-red' },
+    { day:26, label:'MV Maria Dolores — Dry dock Pozzallo',       cls:'cal-event-cyan' },
+    { day:30, label:'Balluta Bay — Survey annuale',                cls:'cal-event-red' }
+  ],
+  tug: [
+    { day:16, label:'MT Sea Salvor — Revisione motore 500h',      cls:'cal-event-orange' },
+    { day:23, label:'MT Wenzina — Controllo iniettori',           cls:'cal-event-yellow' },
+    { day:28, label:'MT St. Elmo — Kit filtri Fleetguard',        cls:'cal-event-green' }
+  ]
+};
+
+// ─── TICKET ────────────────────────────────────────────────────────────────────
+const TICKETS_BASE = {
+  virtu: [
+    {
+      id:'#TK-2026-041', subject:'Iniettori MTU Jean de La Valette — Ordine urgente',
+      status:'APERTO', date:'2026-05-12', lastMsg:'2h fa',
+      messages:[
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'12 Mag, 09:15', text:'Buongiorno, abbiamo ricevuto la vostra richiesta per gli iniettori Bosch 0445120217 per la MV Jean de La Valette (IMO 9468946). Confermiamo disponibilità di 8 unità in magazzino Catania. Possiamo procedere con spedizione Express DHL entro domani mattina.' },
+        { from:'client', sender:'Virtù Ferries — Ops Manager', time:'12 Mag, 10:42', text:'Ottimo, confermiamo l\'ordine per 8 iniettori. Consegnare a Valletta Grand Harbour, banchina 7. Urgente per partenza del 14 Maggio.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'12 Mag, 11:05', text:'Ordine confermato. Tracking DHL: 1234567890MT. Consegna prevista 13 Maggio entro le 14:00 a Valletta.' },
+        { from:'client', sender:'Virtù Ferries — Ops Manager', time:'13 Mag, 14:30', text:'Merce ricevuta. Tecnico ha iniziato installazione. Grazie per la rapidità.' }
+      ]
+    },
+    {
+      id:'#TK-2026-038', subject:'Richiesta certificato Lloyd\'s San Frangisk',
+      status:'IN LAVORAZIONE', date:'2026-05-08', lastMsg:'2gg fa',
+      messages:[
+        { from:'client', sender:'Virtù Ferries — Capt. M. Borg', time:'08 Mag, 08:00', text:'Buongiorno, il certificato di classe Lloyd\'s del San Frangisk (IMO 8903899) è scaduto il 20/11/2025. Abbiamo necessità di procedere con la survey e il rinnovo urgente per rientrare in servizio.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'08 Mag, 11:30', text:'Confermato. Abbiamo contattato Lloyd\'s Register Malta. Survey programmata per il 20 Maggio 2026 a Valletta. Invieremo la documentazione pre-survey entro venerdì.' }
+      ]
+    },
+    {
+      id:'#TK-2026-031', subject:'Preventivo revisione Balluta Bay',
+      status:'CHIUSO', date:'2026-04-22', lastMsg:'—',
+      messages:[
+        { from:'client', sender:'Virtù Ferries — M. Spiteri', time:'22 Apr, 09:00', text:'Richiediamo preventivo per revisione generale motore Wärtsilä Balluta Bay. Barca ferma in cantiere Catania.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'22 Apr, 14:00', text:'Preventivo allegato. Totale stimato €18.500 per revisione completa, inclusi kit guarnizioni Wärtsilä e manodopera specializzata. Tempi: 5 giorni lavorativi.' },
+        { from:'client', sender:'Virtù Ferries — M. Spiteri', time:'23 Apr, 10:15', text:'Preventivo approvato. Procedere.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'24 Apr, 08:00', text:'Lavori avviati. Completamento previsto 29 Aprile. TICKET CHIUSO.' }
+      ]
+    },
+    {
+      id:'#TK-2026-029', subject:'Consegna filtri MTU Saint John Paul II',
+      status:'CHIUSO', date:'2026-04-15', lastMsg:'—',
+      messages:[
+        { from:'client', sender:'Virtù Ferries — Eng. P. Vella', time:'15 Apr, 07:30', text:'Ordine n. 2026-0312: Kit filtri MTU 20V 8000 (codici 04294788 × 8, 04294790 × 8, 04294792 × 4). Consegna urgente Pozzallo.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'15 Apr, 09:00', text:'Ordine ricevuto. Spedizione GLS partita oggi. Consegna Pozzallo domani entro le 12:00.' },
+        { from:'client', sender:'Virtù Ferries — Eng. P. Vella', time:'16 Apr, 13:00', text:'Ricevuto. Tutto ok. Grazie.' }
+      ]
+    }
+  ],
+  tug: [
+    {
+      id:'#TK-2026-040', subject:'Revisione CAT 3516C Sea Salvor — urgente',
+      status:'APERTO', date:'2026-05-13', lastMsg:'1h fa',
+      messages:[
+        { from:'client', sender:'Tug Malta — Capt. C. Farrugia', time:'13 Mag, 07:00', text:'Il MT Sea Salvor (IMO 9780009) necessita revisione urgente CAT 3516C. Pressione olio motore #1 sotto soglia minima. Nave ferma a Valletta.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'13 Mag, 08:15', text:'Analisi diagnostica in corso. Probabile usura segmenti / anelli pistone. Tecnico RCS Mario Greco sarà a Valletta oggi pomeriggio 16:00. Kit revisione 7E8818 disponibile in magazzino.' },
+        { from:'client', sender:'Tug Malta — Capt. C. Farrugia', time:'13 Mag, 16:30', text:'Tecnico arrivato. Conferma diagnosi: pistone n.4 da sostituire. Procedevamo con intervento immediato.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'13 Mag, 16:45', text:'Confermato. Procediamo con sostituzione pistone + segmenti CAT 3516C. Stima completamento: domani mattina 10:00.' }
+      ]
+    },
+    {
+      id:'#TK-2026-036', subject:'Kit filtri Fleetguard × 3 rimorchiatori',
+      status:'IN LAVORAZIONE', date:'2026-05-05', lastMsg:'3gg fa',
+      messages:[
+        { from:'client', sender:'Tug Malta — Eng. J. Bonello', time:'05 Mag, 08:30', text:'Ordine mensile filtri: kit completo per MT Vittoriosa, MT St. Angelo, MT Senglea (3× LF9009, 3× FS1006, 3× 1R-0749 per nave). Tot 9+9+9=27 pz. Consegna Valletta Marsa.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'05 Mag, 11:00', text:'Ordine ricevuto. Stock verificato. Spedizione prevista 08 Maggio, consegna 09-10 Maggio. Fattura n. 2026-0892 allegata.' },
+        { from:'client', sender:'Tug Malta — Eng. J. Bonello', time:'08 Mag, 14:00', text:'Nessuna consegna ancora. Aggiornamento?' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'08 Mag, 15:30', text:'Siamo spiacenti per il ritardo. Problema doganale a Malta. Stimiamo consegna lunedì 12 Maggio. Vi aggiorniamo.' }
+      ]
+    },
+    {
+      id:'#TK-2026-028', subject:'Turbocompressore Holset Wenzina',
+      status:'CHIUSO', date:'2026-04-10', lastMsg:'—',
+      messages:[
+        { from:'client', sender:'Tug Malta — Eng. J. Bonello', time:'10 Apr, 09:00', text:'Richiesta urgente turbocompressore Holset (cod. 23530345) per MT Wenzina. Turbo danneggiato dopo porto.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'10 Apr, 10:00', text:'Disponibile in 48h da Catania. Prezzo €1.850 + spedizione Express €85. Confermate?' },
+        { from:'client', sender:'Tug Malta — Eng. J. Bonello', time:'10 Apr, 10:30', text:'Confermato. Procedere.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'12 Apr, 14:00', text:'Turbo consegnato. Installazione completata da Tecnico RCS. Nave operativa. TICKET CHIUSO.' }
+      ]
+    },
+    {
+      id:'#TK-2026-022', subject:'Ispezione VSP Spinola',
+      status:'CHIUSO', date:'2026-03-28', lastMsg:'—',
+      messages:[
+        { from:'client', sender:'Tug Malta — Capt. C. Farrugia', time:'28 Mar, 08:00', text:'Ispezione programmata VSP Voith MT Spinola. Data proposta: 30 Marzo cantiere Valletta.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'28 Mar, 09:30', text:'Confermato. Tecnico specializzato Voith disponibile 30 Marzo 09:00.' },
+        { from:'rcs', sender:'RCS Marine Intelligence', time:'30 Mar, 17:00', text:'Ispezione completata. Nessuna anomalia critica. Lubrificazione VSP eseguita. Rapporto allegato. TICKET CHIUSO.' }
+      ]
+    }
+  ]
+};
+
+// ─── STATO APPLICAZIONE ───────────────────────────────────────────────────────
+let currentFleet = '';
+let currentCompany = '';
+let fleetShips = [];
+let fleetMaint = [];
+let fleetTickets = [];
+let fleetCalEvents = [];
+let cart = {}; // code -> qty
+let activeTicketId = null;
+
+// Maint aggiuntive registrate in sessione
+let extraMaint = [];
+// Cal events aggiuntivi
+let extraCalEvents = [];
+
+// ─── INIT ALL ─────────────────────────────────────────────────────────────────
+function initAll(fleet, company) {
+  currentFleet = fleet;
+  currentCompany = company;
+  fleetShips = SHIPS[fleet] || [];
+  fleetMaint = [...(MAINT_DATA[fleet] || [])];
+  fleetTickets = JSON.parse(JSON.stringify(TICKETS_BASE[fleet] || []));
+  fleetCalEvents = [...(CAL_EVENTS_BASE[fleet] || [])];
+
+  // Popola select navi ovunque
+  const shipNames = fleetShips.map(s => s.nome);
+  populateSelect('certFilterShip', [''].concat(shipNames), ['Tutte le navi'].concat(shipNames));
+  populateSelect('maintFilterShip', [''].concat(shipNames), ['Tutte le navi'].concat(shipNames));
+  populateSelect('mf-ship', shipNames, shipNames);
+  populateSelect('qf-ship', shipNames, shipNames);
+  populateSelect('cf-ship', shipNames, shipNames);
+  populateSelect('nt-ship', shipNames, shipNames);
+
+  // Render sezioni
+  renderCerts();
+  renderMaint();
+  renderCatalog();
+  renderCart();
+  renderCalendar();
+  renderTickets();
+}
+
+function populateSelect(id, values, labels) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.innerHTML = '';
+  values.forEach((v, i) => {
+    const opt = document.createElement('option');
+    opt.value = v;
+    opt.textContent = labels[i] || v;
+    el.appendChild(opt);
+  });
+}
+
+// ─── TAB SWITCH ───────────────────────────────────────────────────────────────
+function switchTab(i) {
+  document.querySelectorAll('.ops-tab').forEach((t, idx) => t.classList.toggle('active', idx === i));
+  document.querySelectorAll('.ops-section').forEach((s, idx) => s.classList.toggle('visible', idx === i));
+}
+
+// ─── SEZIONE 1: CERTIFICATI ───────────────────────────────────────────────────
+function certStatus(date) {
+  const diff = Math.ceil((date - TODAY) / 86400000);
+  if (diff < 0)   return { label:'SCADUTO',    cls:'badge-red',    days: diff };
+  if (diff < 60)  return { label:'URGENTE',    cls:'badge-orange', days: diff };
+  if (diff < 180) return { label:'IN SCADENZA',cls:'badge-yellow', days: diff };
+  return              { label:'VALIDO',     cls:'badge-green',  days: diff };
+}
+
+function fmt(date) {
+  return date.toLocaleDateString('it-IT', {day:'2-digit', month:'2-digit', year:'numeric'});
+}
+
+function renderCerts() {
+  const filterShip   = document.getElementById('certFilterShip').value;
+  const filterStatus = document.getElementById('certFilterStatus').value;
+  const certDates = CERT_DATA[currentFleet] || [];
+  const tbody = document.getElementById('certTbody');
+  const rows = [];
+  let nExp=0, nUrg=0, nSoon=0, nVal=0;
+
+  fleetShips.forEach((ship, si) => {
+    if (filterShip && filterShip !== ship.nome) return;
+    const dates = certDates[si] || [];
+    CERT_TYPES.forEach((cert, ci) => {
+      const date = dates[ci];
+      if (!date) return;
+      const st = certStatus(date);
+      if (filterStatus && st.label !== filterStatus) return;
+      if (st.label === 'SCADUTO')      nExp++;
+      else if (st.label === 'URGENTE') nUrg++;
+      else if (st.label === 'IN SCADENZA') nSoon++;
+      else nVal++;
+      rows.push(`
+        <tr>
+          <td><span style="font-family:var(--F);font-size:11px;letter-spacing:1px;color:#fff;">${ship.nome}</span></td>
+          <td style="max-width:240px;">${cert.nome}</td>
+          <td style="color:var(--grigio);font-size:12px;">${cert.ente}</td>
+          <td style="font-family:var(--F);font-size:12px;">${fmt(date)}</td>
+          <td style="font-family:var(--F);font-size:13px;font-weight:700;color:${st.days<0?'#ff4444':'rgba(255,255,255,.7)'};">${st.days < 0 ? Math.abs(st.days)+' fa' : st.days+'gg'}</td>
+          <td><span class="badge ${st.cls}">${st.label}</span></td>
+          <td><button class="ops-btn ops-btn-ghost" style="font-size:10px;padding:4px 10px;" onclick="toast('Documento richiesto a RCS — Elaborazione entro 24h','warn')">SCARICA PDF</button></td>
+        </tr>
+      `);
+    });
+  });
+
+  tbody.innerHTML = rows.join('') || '<tr><td colspan="7" style="text-align:center;color:var(--grigio);padding:24px;">Nessun certificato trovato</td></tr>';
+
+  // Non duplicare contatori — calcola sempre su tutti
+  let tExp=0, tUrg=0, tSoon=0, tVal=0;
+  fleetShips.forEach((ship, si) => {
+    const dates = certDates[si] || [];
+    CERT_TYPES.forEach((cert, ci) => {
+      const date = dates[ci];
+      if (!date) return;
+      const st = certStatus(date);
+      if (st.label === 'SCADUTO') tExp++;
+      else if (st.label === 'URGENTE') tUrg++;
+      else if (st.label === 'IN SCADENZA') tSoon++;
+      else tVal++;
+    });
+  });
+  document.getElementById('cntExpired').textContent = tExp;
+  document.getElementById('cntUrgent').textContent  = tUrg;
+  document.getElementById('cntSoon').textContent    = tSoon;
+  document.getElementById('cntValid').textContent   = tVal;
+}
+
+// ─── SEZIONE 2: MANUTENZIONI ──────────────────────────────────────────────────
+function renderMaint() {
+  const filterShip = document.getElementById('maintFilterShip').value;
+  const filterSys  = document.getElementById('maintFilterSys').value;
+  const search     = document.getElementById('maintSearch').value.toLowerCase();
+  const all = [...extraMaint, ...fleetMaint];
+
+  const filtered = all.filter(m => {
+    if (filterShip && m.nave !== filterShip) return false;
+    if (filterSys  && m.sistema !== filterSys) return false;
+    if (search && !`${m.nave} ${m.sistema} ${m.desc} ${m.tecnico}`.toLowerCase().includes(search)) return false;
+    return true;
+  });
+
+  const sysColors = {
+    'Motore':'#ff9800', 'Filtrazione':'#00d4ff', 'Iniezione':'#00e676',
+    'Propulsione':'#ffd700', 'Raffreddamento':'#4da6ff', 'Idraulica':'#c084fc', 'Elettrico':'#f87171'
+  };
+
+  const container = document.getElementById('maintTimeline');
+  if (!filtered.length) {
+    container.innerHTML = '<p style="color:var(--grigio);font-family:var(--F);font-size:12px;letter-spacing:2px;padding:24px;">Nessun intervento trovato</p>';
+    return;
+  }
+
+  container.innerHTML = filtered.map(m => `
+    <div class="timeline-item">
+      <div class="timeline-dot" style="background:${sysColors[m.sistema]||'#00d4ff'};"></div>
+      <div class="timeline-info">
+        <div class="timeline-date">${m.data}</div>
+        <div class="timeline-ship">${m.nave} — <span style="color:${sysColors[m.sistema]||'#00d4ff'};font-size:11px;">${m.sistema}</span></div>
+        <div class="timeline-desc">${m.desc} · Tecnico: ${m.tecnico} · ${m.ore.toLocaleString('it-IT')}h motore</div>
+        <div class="timeline-cost">€${m.costo.toLocaleString('it-IT')}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function registerMaint() {
+  const ship  = document.getElementById('mf-ship').value;
+  const sys   = document.getElementById('mf-sys').value;
+  const date  = document.getElementById('mf-date').value;
+  const desc  = document.getElementById('mf-desc').value.trim();
+  const tech  = document.getElementById('mf-tech').value.trim();
+  const hrs   = parseInt(document.getElementById('mf-hours').value) || 0;
+  const cost  = parseFloat(document.getElementById('mf-cost').value) || 0;
+  if (!ship || !date || !desc) { toast('Compila tutti i campi obbligatori','error'); return; }
+  extraMaint.unshift({ data:date, nave:ship, sistema:sys, desc, tecnico:tech||'N/D', ore:hrs, costo:cost });
+  renderMaint();
+  document.getElementById('mf-desc').value = '';
+  document.getElementById('mf-tech').value = '';
+  document.getElementById('mf-hours').value = '';
+  document.getElementById('mf-cost').value = '';
+  toast('Intervento registrato con successo');
+}
+
+// ─── SEZIONE 3: PREVENTIVO ────────────────────────────────────────────────────
+function renderCatalog() {
+  const q = document.getElementById('catSearch') ? document.getElementById('catSearch').value.toLowerCase() : '';
+  const items = CATALOG.filter(c => !q || c.code.toLowerCase().includes(q) || c.desc.toLowerCase().includes(q));
+  const grid = document.getElementById('catalogGrid');
+  grid.innerHTML = items.map(item => {
+    const qty = cart[item.code] || 0;
+    return `
+      <div class="cat-item">
+        <div class="cat-item-info">
+          <div class="cat-item-code">${item.code}</div>
+          <div class="cat-item-name">${item.desc}</div>
+          <div class="cat-item-price">€${item.price.toLocaleString('it-IT')}/pz</div>
+        </div>
+        <div class="cat-item-add">
+          <button class="qty-btn" onclick="changeQty('${item.code}',-1)">−</button>
+          <span class="qty-val" id="qty-${item.code}">${qty}</span>
+          <button class="qty-btn ops-btn-cyan" onclick="changeQty('${item.code}',1)">+</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function filterCatalog() { renderCatalog(); }
+
+function changeQty(code, delta) {
+  cart[code] = Math.max(0, (cart[code] || 0) + delta);
+  const el = document.getElementById('qty-' + code);
+  if (el) el.textContent = cart[code];
+  renderCart();
+}
+
+function renderCart() {
+  const tbody = document.getElementById('cartTbody');
+  const qbody = document.getElementById('quoteSummaryBody');
+  const entries = CATALOG.filter(c => cart[c.code] > 0);
+  let subtotal = 0;
+
+  const rows = entries.map(c => {
+    const tot = c.price * cart[c.code];
+    subtotal += tot;
+    return `
+      <tr>
+        <td style="font-family:var(--F);font-size:11px;color:var(--cyan);">${c.code}</td>
+        <td>${c.desc}</td>
+        <td style="font-family:var(--F);">${cart[c.code]}</td>
+        <td>€${c.price.toLocaleString('it-IT')}</td>
+        <td style="color:#00e676;font-family:var(--F);font-weight:700;">€${tot.toLocaleString('it-IT')}</td>
+        <td><button class="qty-btn" onclick="changeQty('${c.code}',-${cart[c.code]})" title="Rimuovi">×</button></td>
+      </tr>
+    `;
+  });
+
+  tbody.innerHTML = rows.join('') || '<tr><td colspan="6" style="color:var(--grigio);padding:16px;">Nessun articolo selezionato</td></tr>';
+  if (qbody) qbody.innerHTML = rows.map(r => r.replace(/<td>[^<]*<\/td>$/, '')).join('') || '<tr><td colspan="5" style="color:var(--grigio);padding:16px;">Nessun articolo</td></tr>';
+
+  document.getElementById('cartSubtotal').textContent = '€' + subtotal.toLocaleString('it-IT');
+  document.getElementById('cartCount').textContent = entries.length;
+}
+
+function goStep(n) {
+  [1,2,3].forEach(i => {
+    document.getElementById('sp'+i).classList.toggle('active', i===n);
+    const dot = document.getElementById('sd'+i);
+    dot.classList.remove('active','done');
+    if (i < n) dot.classList.add('done');
+    else if (i === n) dot.classList.add('active');
+    const lbl = document.getElementById('sl'+i);
+    if (lbl) { lbl.classList.toggle('active', i===n); }
+  });
+  if (n === 3) buildQuote();
+}
+
+function buildQuote() {
+  const entries = CATALOG.filter(c => cart[c.code] > 0);
+  let subtotal = entries.reduce((s, c) => s + c.price * cart[c.code], 0);
+  const mode = document.getElementById('qf-mode').value;
+  const port = document.getElementById('qf-port').value;
+  const ship = document.getElementById('qf-ship').value;
+  const shipCost = mode === 'air' ? 180 : mode === 'express' ? 85 : 0;
+  const deliverDays = mode === 'air' ? '24-48 ore' : mode === 'express' ? '2-3 giorni lavorativi' : '5-8 giorni lavorativi';
+  const discount = subtotal > 500 ? subtotal * 0.05 : 0;
+  const total = subtotal + shipCost - discount;
+
+  // Summary table
+  const qbody = document.getElementById('quoteSummaryBody');
+  qbody.innerHTML = entries.map(c => `
+    <tr>
+      <td style="font-family:var(--F);font-size:11px;color:var(--cyan);">${c.code}</td>
+      <td>${c.desc}</td>
+      <td style="font-family:var(--F);">${cart[c.code]}</td>
+      <td>€${c.price.toLocaleString('it-IT')}</td>
+      <td style="color:#00e676;font-family:var(--F);font-weight:700;">€${(c.price * cart[c.code]).toLocaleString('it-IT')}</td>
+    </tr>
+  `).join('') || '<tr><td colspan="5" style="color:var(--grigio);padding:16px;">Nessun articolo</td></tr>';
+
+  document.getElementById('qt-sub').textContent = '€' + subtotal.toLocaleString('it-IT');
+  document.getElementById('qt-ship').textContent = shipCost ? '€'+shipCost : 'GRATUITA';
+  const discRow = document.getElementById('qt-disc-row');
+  discRow.style.display = discount > 0 ? 'flex' : 'none';
+  document.getElementById('qt-disc').textContent = '−€' + discount.toFixed(2);
+  document.getElementById('qt-total').textContent = '€' + total.toFixed(2).replace(/\.00$/,'').replace(/(\d)(?=(\d{3})+(?!\d))/g,'$1.');
+  document.getElementById('qt-delivery-note').textContent = `Consegna stimata: ${deliverDays} · Porto: ${port}`;
+  document.getElementById('deliveryDetails').innerHTML = `
+    <div>Nave: <strong style="color:#fff;">${ship}</strong></div>
+    <div>Porto: <strong style="color:#fff;">${port}</strong></div>
+    <div>Modalità: <strong style="color:#fff;">${mode === 'air' ? 'Aereo + Corriere — 24-48h' : mode === 'express' ? 'Express DHL — 2-3gg' : 'Standard — 5-8gg'}</strong></div>
+    <div>Tempo consegna: <strong style="color:#00d4ff;">${deliverDays}</strong></div>
+  `;
+}
+
+function sendQuote() {
+  toast('Richiesta formale inviata a RCS — Conferma via email entro 1 ora lavorativa');
+}
+
+// ─── SEZIONE 4: CALENDARIO ────────────────────────────────────────────────────
+function renderCalendar() {
+  const grid = document.getElementById('calGrid');
+  // Maggio 2026: 1 maggio = venerdì (day index 4 in lun-based grid, offset = 4)
+  const daysInMonth = 31;
+  const firstDayOffset = 4; // 0=Lun, 4=Ven
+
+  // Rimuovi celle precedenti (mantieni header)
+  const headers = grid.querySelectorAll('.cal-day-header');
+  grid.innerHTML = '';
+  headers.forEach(h => grid.appendChild(h.cloneNode(true)));
+
+  const allEvents = [...fleetCalEvents, ...extraCalEvents];
+
+  // Empty cells
+  for (let i = 0; i < firstDayOffset; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'cal-cell empty';
+    grid.appendChild(cell);
+  }
+
+  for (let day = 1; day <= daysInMonth; day++) {
+    const cell = document.createElement('div');
+    cell.className = 'cal-cell' + (day === 15 ? ' today' : '');
+    cell.innerHTML = `<div class="cal-day-num">${day}</div>`;
+    const dayEvents = allEvents.filter(e => e.day === day);
+    dayEvents.forEach(ev => {
+      const el = document.createElement('div');
+      el.className = `cal-event ${ev.cls}`;
+      el.textContent = ev.label;
+      cell.appendChild(el);
+    });
+    grid.appendChild(cell);
+  }
+
+  // Upcoming list
+  const upcoming = allEvents.filter(e => e.day >= 15).sort((a,b) => a.day - b.day);
+  const ul = document.getElementById('upcomingList');
+  if (!upcoming.length) {
+    ul.innerHTML = '<p style="color:var(--grigio);font-size:13px;">Nessun intervento programmato</p>';
+    return;
+  }
+  ul.innerHTML = upcoming.map(ev => `
+    <div class="upcoming-item">
+      <div class="upcoming-date">MAG ${ev.day}</div>
+      <div class="upcoming-info">
+        <div class="upcoming-ship">${ev.label.split('—')[0].trim()}</div>
+        <div class="upcoming-desc">${ev.label.split('—')[1] ? ev.label.split('—').slice(1).join('—').trim() : ''}</div>
+      </div>
+      <div class="upcoming-dot ${ev.cls}" style="width:8px;height:8px;border-radius:50%;background:currentColor;"></div>
+      <button class="ops-btn ops-btn-ghost" style="font-size:10px;padding:4px 10px;" onclick="toast('Intervento pianificato e confermato')">PIANIFICA</button>
+    </div>
+  `).join('');
+}
+
+function toggleCalForm() {
+  document.getElementById('calForm').classList.toggle('open');
+}
+
+function addCalEvent() {
+  const dateVal = document.getElementById('cf-date').value;
+  const ship    = document.getElementById('cf-ship').value;
+  const typeVal = document.getElementById('cf-type').value;
+  const desc    = document.getElementById('cf-desc').value.trim();
+  if (!dateVal || !desc) { toast('Compila data e descrizione','error'); return; }
+  const day = parseInt(dateVal.split('-')[2]);
+  extraCalEvents.push({ day, label:`${ship} — ${desc}`, cls:`cal-event-${typeVal}` });
+  renderCalendar();
+  document.getElementById('cf-desc').value = '';
+  toggleCalForm();
+  toast('Evento aggiunto al calendario');
+}
+
+// ─── SEZIONE 5: MESSAGGI ──────────────────────────────────────────────────────
+function renderTickets() {
+  const list = document.getElementById('ticketList');
+  document.getElementById('ticketCount').textContent = fleetTickets.length + ' ticket';
+  list.innerHTML = fleetTickets.map((t, i) => {
+    const statusCls = t.status === 'APERTO' ? 'badge-red' : t.status === 'IN LAVORAZIONE' ? 'badge-orange' : 'badge-green';
+    const sel = activeTicketId === t.id ? ' selected' : '';
+    return `
+      <div class="ticket-item${sel}" onclick="selectTicket('${t.id}')">
+        <div class="ticket-id">${t.id}</div>
+        <div class="ticket-subject">${t.subject}</div>
+        <div class="ticket-meta">
+          <span class="badge ${statusCls}" style="font-size:9px;">${t.status}</span>
+          <span class="ticket-date">${t.date}${t.lastMsg ? ' · ' + t.lastMsg : ''}</span>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function selectTicket(id) {
+  activeTicketId = id;
+  renderTickets();
+  const ticket = fleetTickets.find(t => t.id === id);
+  if (!ticket) return;
+
+  const statusCls = ticket.status === 'APERTO' ? 'badge-red' : ticket.status === 'IN LAVORAZIONE' ? 'badge-orange' : 'badge-green';
+  const thread = document.getElementById('msgThread');
+  thread.innerHTML = `
+    <div class="msg-thread-header">
+      <div class="msg-thread-id">${ticket.id} · <span class="badge ${statusCls}" style="font-size:9px;">${ticket.status}</span></div>
+      <div class="msg-thread-subject">${ticket.subject}</div>
+    </div>
+    <div class="msg-thread-body" id="threadBody">
+      ${ticket.messages.map(m => `
+        <div style="display:flex;flex-direction:column;align-items:${m.from==='client'?'flex-end':'flex-start'};">
+          <div class="msg-sender ${m.from==='rcs'?'msg-sender-rcs':'msg-sender-client'}">${m.sender}</div>
+          <div class="msg-bubble ${m.from==='rcs'?'msg-rcs':'msg-client'}">${m.text}</div>
+          <div class="msg-time">${m.time}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="msg-input-area">
+      <textarea class="ops-textarea" id="msgReply" placeholder="Scrivi un messaggio a RCS..." style="flex:1;min-height:56px;"></textarea>
+      <button class="ops-btn ops-btn-cyan" style="align-self:flex-end;" onclick="sendReply('${id}')">INVIA</button>
+    </div>
+  `;
+  const body = document.getElementById('threadBody');
+  if (body) body.scrollTop = body.scrollHeight;
+}
+
+function sendReply(id) {
+  const ta = document.getElementById('msgReply');
+  const text = ta.value.trim();
+  if (!text) return;
+  const ticket = fleetTickets.find(t => t.id === id);
+  if (!ticket) return;
+  ticket.messages.push({
+    from: 'client',
+    sender: currentCompany + ' — Portale Cliente',
+    time: 'Adesso',
+    text
+  });
+  ticket.lastMsg = 'Adesso';
+  ta.value = '';
+  selectTicket(id);
+  renderTickets();
+  toast('Messaggio inviato');
+}
+
+function toggleNewTicket() {
+  document.getElementById('newTicketForm').classList.toggle('open');
+}
+
+function createTicket() {
+  const subject  = document.getElementById('nt-subject').value.trim();
+  const ship     = document.getElementById('nt-ship').value;
+  const priority = document.getElementById('nt-priority').value;
+  const message  = document.getElementById('nt-message').value.trim();
+  if (!subject || !message) { toast('Compila oggetto e messaggio','error'); return; }
+  const now = '2026-05-15';
+  const newId = '#TK-2026-' + String(Math.floor(Math.random()*900)+100);
+  fleetTickets.unshift({
+    id: newId,
+    subject: subject + (ship ? ` — ${ship}` : ''),
+    status: 'APERTO',
+    date: now,
+    lastMsg: 'Adesso',
+    messages: [
+      { from:'client', sender: currentCompany + ' — Portale Cliente', time:'Adesso', text: message }
+    ]
+  });
+  renderTickets();
+  toggleNewTicket();
+  document.getElementById('nt-subject').value = '';
+  document.getElementById('nt-message').value = '';
+  toast('Ticket inviato a RCS — Risposta entro 2 ore lavorative');
+}
+
+// ─── TOAST ────────────────────────────────────────────────────────────────────
+function toast(msg, type) {
+  const container = document.getElementById('toast');
+  const el = document.createElement('div');
+  el.className = 'toast-msg' + (type === 'error' ? ' error' : type === 'warn' ? ' warn' : '');
+  el.textContent = msg;
+  container.appendChild(el);
+  requestAnimationFrame(() => { requestAnimationFrame(() => { el.classList.add('show'); }); });
+  setTimeout(() => {
+    el.classList.remove('show');
+    setTimeout(() => el.remove(), 350);
+  }, 3500);
+}
+</script>
+
+<!-- ══════════════════════════════════════════════════════════
+     FIREBASE AUTH MODULE
+══════════════════════════════════════════════════════════ -->
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js';
+import { getAuth, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAQG5BPuNLtNSv6kn6-0D22RhLX9BUonO8",
+  authDomain: "rcs-tesi.firebaseapp.com",
+  projectId: "rcs-tesi",
+  storageBucket: "rcs-tesi.firebasestorage.app",
+  messagingSenderId: "634306333804",
+  appId: "1:634306333804:web:462baf0285d05e57da9c49"
+};
+
+const CLIENT_FLEET = {
+  virtu: { fleet:'virtu', company:'Virtù Ferries' },
+  tug:   { fleet:'tug',   company:'Tug Malta' }
+};
+const TEAM_USERS = ['nunzio','direttore','admin','rcs'];
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, user => {
+  if (!user) { window.location.href = '../index.html'; return; }
+  const u = user.email.replace('@rcs-tesi.app','');
+  if (TEAM_USERS.includes(u)) { window.location.href = 'dashboard.html'; return; }
+  const info = CLIENT_FLEET[u];
+  if (!info) { window.location.href = '../index.html'; return; }
+  document.getElementById('navCompany').textContent = info.company;
+  document.body.style.visibility = 'visible';
+  initAll(info.fleet, info.company);
+});
+
+window.logout = async function() {
+  await signOut(auth);
+  sessionStorage.clear();
+  window.location.href = '../index.html';
+};
+</script>
+
+</body>
+</html>
