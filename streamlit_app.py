@@ -29,7 +29,9 @@ def check_password():
     col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
         st.subheader("Accesso riservato")
-        pwd = st.text_input("Password", type="password", placeholder="Inserisci la password")
+        show_pwd = st.checkbox("Mostra password", key="show_pwd_login")
+        pwd_type = "default" if show_pwd else "password"
+        pwd = st.text_input("Password", type=pwd_type, placeholder="Inserisci la password")
         if st.button("Accedi", use_container_width=True):
             if pwd == st.secrets["PASSWORD"]:
                 st.session_state.autenticato = True
