@@ -47,7 +47,7 @@ CARRELLO = [
 
 IVA_RATE   = 0.22   # aliquota IVA standard IT
 IRES_RATE  = 0.24   # aliquota IRES SRL
-RATA       = 50.00  # rimborso mensile dell'impiegato
+RATA       = 100.00  # rimborso mensile dell'impiegato
 
 CAT_COLORS = {
     "PC Hardware":  "#4e79a7",
