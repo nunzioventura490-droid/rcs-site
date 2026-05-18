@@ -130,11 +130,12 @@ st.markdown("---")
 # ---------------------------------------------------------------------------
 # TAB
 # ---------------------------------------------------------------------------
-tab1, tab2, tab3, tab4 = st.tabs([
+tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📦 Carrello & Spesa",
     "💰 Analisi Fiscale",
     "📅 Piano Rimborso",
     "📊 Tutti i Grafici",
+    "📋 Ammortamento",
 ])
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -553,3 +554,157 @@ with tab4:
         ))
         fig_g2.update_layout(height=300, margin=dict(t=60,b=20,l=30,r=30))
         st.plotly_chart(fig_g2, use_container_width=True)
+
+# ════════════════════════════════════════════════════════════════════════════
+# TAB 5 — Ammortamento
+# ════════════════════════════════════════════════════════════════════════════
+with tab5:
+    st.subheader("📋 Ammortamento fiscale dei beni strumentali")
+
+    # Tabella riepilogativa ammortamenti
+    ammort_data = {
+        "PC (Bene Strumentale)": {"iva": 22, "detrab": 100, "amm_annuo": 20},
+        "Scrivania": {"iva": 22, "detrab": 100, "amm_annuo": 12},
+        "Sedia Ergonomica": {"iva": 22, "detrab": 100, "amm_annuo": 12},
+        "Lampada da tavolo": {"iva": 22, "detrab": 100, "amm_annuo": 12},  # <516€ = 100%
+        "Periferiche (Mouse/KB/Cavi)": {"iva": 22, "detrab": 100, "amm_annuo": 40},
+        "Monitor": {"iva": 22, "detrab": 100, "amm_annuo": 20},
+    }
+
+    st.markdown("**Tabella riepilogativa per la SRL**")
+    tab_amm = pd.DataFrame([{
+        "Categoria": cat,
+        "Aliquota IVA": f"{data['iva']}%",
+        "Detraibilità IVA": f"{data['detrab']}%",
+        "Ammortamento annuo": f"{data['amm_annuo']}%",
+        "Durata": f"{round(100/data['amm_annuo'], 1)} anni",
+    } for cat, data in ammort_data.items()])
+    st.dataframe(tab_amm, use_container_width=True, hide_index=True)
+
+    st.info("""
+**Note ammortamento:**
+- **Beni strumentali** (PC, Monitor): ammortabili al 20% annuo (5 anni)
+- **Arredamenti ufficio** (Scrivania, Sedia, Lampada): ammortabili al 12% annuo (~8-9 anni)
+- **Periferiche** (Mouse, Tastiera, Cavi): ammortabili al 40% annuo (2-3 anni) o interamente al 1° anno se < 516,46€ cad.
+- **IVA**: detraibile 100% se uso esclusivamente aziendale
+- **IRES**: ulteriore detrazione sull'imponibile tramite ammortamento
+    """)
+
+    st.markdown("---")
+
+    # Grafico ammortamento nel tempo
+    st.markdown("**Andamento del valore contabile nel tempo**")
+
+    # Calcolo per categoria
+    anni = list(range(0, 6))
+    fig_amm = go.Figure()
+
+    # PC + Hardware
+    pc_val = (356.25 + 1345.47 + 269.83 + 437.14 + 269.99 + 119.00 + 137.66 + 60.70 + 52.50 + 12.90) / 1.22
+    pc_vals = [pc_val * (1 - 0.20*a) for a in anni]
+    fig_amm.add_trace(go.Scatter(
+        x=anni, y=pc_vals, mode="lines+markers", name="PC Hardware (20% annuo)",
+        line=dict(color="#4e79a7", width=2), marker=dict(size=7),
+        hovertemplate="Anno %{x}<br>Valore: € %{y:,.2f}<extra></extra>",
+    ))
+
+    # Arredamento (Scrivania + Sedia + Lampada)
+    arr_val = (139.99 + 82.99 + 23.74) / 1.22
+    arr_vals = [arr_val * (1 - 0.12*a) for a in anni]
+    fig_amm.add_trace(go.Scatter(
+        x=anni, y=arr_vals, mode="lines+markers", name="Arredamento (12% annuo)",
+        line=dict(color="#59a14f", width=2), marker=dict(size=7),
+        hovertemplate="Anno %{x}<br>Valore: € %{y:,.2f}<extra></extra>",
+    ))
+
+    # Monitor
+    mon_val = 289.00 / 1.22
+    mon_vals = [mon_val * (1 - 0.20*a) for a in anni]
+    fig_amm.add_trace(go.Scatter(
+        x=anni, y=mon_vals, mode="lines+markers", name="Monitor (20% annuo)",
+        line=dict(color="#e15759", width=2), marker=dict(size=7),
+        hovertemplate="Anno %{x}<br>Valore: € %{y:,.2f}<extra></extra>",
+    ))
+
+    # Periferiche
+    per_val = (35.99 + 43.49 + 69.99 + 11.89 + 15.30 + 14.99) / 1.22
+    per_vals = [per_val * (1 - 0.40*a) if (1 - 0.40*a) > 0 else 0 for a in anni]
+    fig_amm.add_trace(go.Scatter(
+        x=anni, y=per_vals, mode="lines+markers", name="Periferiche (40% annuo)",
+        line=dict(color="#f28e2b", width=2), marker=dict(size=7),
+        hovertemplate="Anno %{x}<br>Valore: € %{y:,.2f}<extra></extra>",
+    ))
+
+    fig_amm.update_layout(
+        title="Valore residuo contabile per categoria (depreciation curve)",
+        xaxis_title="Anno",
+        yaxis_title="Valore residuo (€)",
+        height=420,
+        legend=dict(orientation="h", y=-0.2),
+        hovermode="x unified",
+        margin=dict(t=60,b=80),
+    )
+    st.plotly_chart(fig_amm, use_container_width=True)
+
+    st.markdown("---")
+
+    # Calcolo benefit cumulativo ammortamento
+    st.markdown("**Beneficio fiscale cumulativo dall'ammortamento (5 anni)**")
+
+    col1, col2, col3 = st.columns(3)
+
+    # Ammortamento totale 5 anni
+    amm_pc = pc_val * min(5 * 0.20, 1.0)
+    amm_arr = arr_val * min(5 * 0.12, 1.0)
+    amm_mon = mon_val * min(5 * 0.20, 1.0)
+    amm_per = per_val * min(5 * 0.40, 1.0)
+    amm_tot_5 = amm_pc + amm_arr + amm_mon + amm_per
+
+    ires_save_5 = round(amm_tot_5 * IRES_RATE, 2)
+    irap_save_5 = round(amm_tot_5 * 0.039, 2)  # IRAP 3.9% (facoltativo)
+
+    with col1:
+        st.metric("Ammortamento 5 anni",
+                  f"€ {amm_tot_5:,.2f}",
+                  f"su € {imponibile:,.2f}")
+
+    with col2:
+        st.metric("Risparmio IRES\n(24% su ammortamento)",
+                  f"€ {ires_save_5:,.2f}",
+                  f"+ {ires_save_5/netto*100:.1f}% rispetto costo netto")
+
+    with col3:
+        st.metric("Risparmio IRAP\n(3.9% opzionale)",
+                  f"€ {irap_save_5:,.2f}",
+                  "(se applicabile)")
+
+    st.success(f"""
+**Beneficio fiscale totale su 5 anni dall'ammortamento:**
+- IRES: **€ {ires_save_5:,.2f}**
+- IRAP: **€ {irap_save_5:,.2f}** (opzionale, regione-dipendente)
+- **TOTALE: € {ires_save_5 + irap_save_5:,.2f}**
+
+Questo si aggiunge al vantaggio già calcolato di **€ {benef_tot:,.2f}** dal recupero IVA e deduzione anno 1.
+    """)
+
+    # Tabella anno per anno
+    st.markdown("**Detrazioni ammortamento anno per anno**")
+    amm_per_year = []
+    for anno in range(1, 6):
+        detr_pc = min(pc_val * 0.20, pc_val)
+        detr_arr = min(arr_val * 0.12, arr_val)
+        detr_mon = min(mon_val * 0.20, mon_val)
+        detr_per = min(per_val * 0.40, per_val)
+        detr_tot = detr_pc + detr_arr + detr_mon + detr_per
+        ires_ann = round(detr_tot * IRES_RATE, 2)
+        amm_per_year.append({
+            "Anno": anno,
+            "Ammortamento PC": f"€ {detr_pc:,.2f}",
+            "Ammortamento Arredamento": f"€ {detr_arr:,.2f}",
+            "Ammortamento Monitor": f"€ {detr_mon:,.2f}",
+            "Ammortamento Periferiche": f"€ {detr_per:,.2f}",
+            "Totale": f"€ {detr_tot:,.2f}",
+            "Risparmio IRES (24%)": f"€ {ires_ann:,.2f}",
+        })
+
+    st.dataframe(pd.DataFrame(amm_per_year), use_container_width=True, hide_index=True)
