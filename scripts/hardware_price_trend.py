@@ -1,280 +1,263 @@
 """
-Hardware Price Trend Analyzer
-==============================
-Analizza il trend del sovrapprezzo su RAM, GPU, SSD e CPU
-usando dati storici simulati + regressione per previsione recovery.
+Hardware Price Trend Analyzer — Dati Reali Amazon.it
+======================================================
+Traccia il sovrapprezzo reale su GPU, RAM, Monitor rispetto al prezzo MSRP.
+Aggiungi nuove rilevazioni in PRICE_LOG per aggiornare i grafici nel tempo.
 
 Dipendenze: pip install pandas numpy matplotlib scikit-learn scipy
 Esecuzione:  python scripts/hardware_price_trend.py
+Output:      scripts/grafici/*.png  (salvati automaticamente)
 """
 
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
-from scipy.signal import savgol_filter
-from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings("ignore")
 
 # ---------------------------------------------------------------------------
-# Dati storici del sovrapprezzo (% rispetto al prezzo MSRP / listino base)
-# Periodo: Gen 2021 – Mag 2026
-# Fonte: aggregato da report DRAMeXchange, GPU price tracker, SSD market data
+# MSRP — prezzi di riferimento ufficiali / listino NVIDIA-Corsair-LG (€)
 # ---------------------------------------------------------------------------
-
-MONTHS = pd.date_range(start="2021-01", periods=65, freq="MS")  # 65 mesi
-
-# Sovrapprezzo % rispetto al prezzo base (0 = prezzo normale, 100 = doppio)
-RAW_DATA = {
-    "RAM DDR4": [
-        30, 35, 40, 45, 55, 65, 70, 68, 60, 50, 40, 30,   # 2021
-        20, 15, 10,  5,  0, -5,-10,-12,-15,-18,-20,-22,   # 2022
-       -20,-18,-15,-12,-10, -8, -6, -5, -4, -3, -2, -1,   # 2023
-         0,  2,  5,  8, 10, 12, 14, 15, 16, 16, 15, 14,   # 2024
-        13, 12, 11, 10,  9,  8,                            # 2025 gen-giu
-        7,  6,  5,  5,  4,  4,  3,  2,  2,                # 2025 lug - 2026 mar
-         1,  1                                             # 2026 apr-mag
-    ],
-    "RAM DDR5": [
-        80, 85, 90, 95,100,110,120,115,105, 95, 85, 75,   # 2021
-        65, 55, 45, 35, 25, 18, 12,  8,  5,  3,  0, -2,   # 2022
-        -5, -8,-10,-12,-14,-15,-15,-14,-12,-10, -8, -6,   # 2023
-        -4, -2,  0,  3,  6,  9, 12, 14, 15, 15, 14, 13,   # 2024
-        12, 11, 10,  9,  8,  7,                            # 2025 gen-giu
-         6,  5,  4,  3,  3,  2,  2,  1,  1,               # 2025 lug - 2026 mar
-         0,  0                                             # 2026 apr-mag
-    ],
-    "GPU (fascia alta)": [
-        150,170,200,220,250,280,300,310,290,260,230,200,  # 2021
-        170,140,110, 85, 60, 40, 25, 15,  8,  5,  2,  0,  # 2022
-         -2, -3, -5, -5, -3,  0,  5, 10, 15, 20, 25, 30,  # 2023
-         35, 40, 38, 35, 32, 30, 28, 26, 24, 22, 20, 18,  # 2024
-         16, 14, 12, 10,  9,  8,                           # 2025 gen-giu
-          7,  6,  5,  5,  4,  3,  3,  2,  2,              # 2025 lug - 2026 mar
-          1,  1                                            # 2026 apr-mag
-    ],
-    "GPU (fascia media)": [
-        80, 95,110,120,130,140,145,140,130,120,105, 90,   # 2021
-        75, 60, 45, 30, 18, 10,  5,  2,  0, -2, -4, -5,  # 2022
-        -6, -7, -8, -8, -7, -5, -3,  0,  3,  6, 10, 14,  # 2023
-        18, 20, 19, 18, 16, 15, 14, 13, 12, 11, 10,  9,  # 2024
-         8,  7,  6,  5,  5,  4,                           # 2025 gen-giu
-         4,  3,  3,  2,  2,  2,  1,  1,  1,              # 2025 lug - 2026 mar
-         1,  0                                            # 2026 apr-mag
-    ],
-    "SSD NVMe": [
-        20, 22, 25, 28, 32, 38, 42, 40, 36, 30, 24, 18,  # 2021
-        12,  8,  4,  0, -3, -6, -9,-12,-15,-17,-19,-20,  # 2022
-       -20,-19,-18,-16,-14,-12,-10, -8, -6, -4, -2,  0,  # 2023
-         2,  4,  6,  7,  8,  9,  9,  8,  7,  6,  5,  4,  # 2024
-         3,  3,  2,  2,  1,  1,                           # 2025 gen-giu
-         1,  0,  0,  0,  0, -1, -1, -1, -1,              # 2025 lug - 2026 mar
-        -1, -1                                            # 2026 apr-mag
-    ],
-    "SSD SATA": [
-        10, 12, 14, 16, 18, 20, 22, 20, 18, 15, 12,  9,  # 2021
-         6,  3,  0, -3, -5, -7, -9,-11,-12,-13,-14,-14,  # 2022
-       -14,-13,-12,-11,-10, -8, -7, -5, -4, -3, -2, -1,  # 2023
-         0,  1,  2,  3,  3,  4,  4,  3,  3,  2,  2,  1,  # 2024
-         1,  1,  0,  0,  0,  0,                           # 2025 gen-giu
-         0,  0,  0,  0,  0,  0,  0,  0,  0,              # 2025 lug - 2026 mar
-         0,  0                                            # 2026 apr-mag
-    ],
+MSRP = {
+    "RTX 5070 Ti":        899,
+    "RTX 5080":          1199,
+    "DDR5 32GB 6000 CL30": 250,
+    "Monitor 34\" QD-OLED": 599,
 }
+
+# ---------------------------------------------------------------------------
+# PRICE_LOG — rilevazioni reali da Amazon.it
+# Formato: ("YYYY-MM-DD", "componente", prezzo_minimo, prezzo_medio, prezzo_massimo)
+#
+# AGGIUNGI QUI le prossime rilevazioni per vedere il trend nel tempo.
+# ---------------------------------------------------------------------------
+PRICE_LOG = [
+    # ── Maggio 2026 (rilevazione iniziale da Amazon.it) ──────────────────
+    # RTX 5070 Ti: Gigabyte 720€ · MSI 981€ · ASUS TUF 1133€ · ROG 1270€
+    ("2026-05-18", "RTX 5070 Ti",          719,  1026,  1270),
+
+    # RTX 5080: Gigabyte 1336€ · MSI Inspire 1400€ · ASUS TUF 1491€ · ROG 1685€
+    ("2026-05-18", "RTX 5080",            1336,  1483,  1685),
+
+    # DDR5 32GB 6000 CL30: Patriot 438€ · Lexar 400-426€ · Corsair 517€
+    ("2026-05-18", "DDR5 32GB 6000 CL30",  399,   445,   517),
+
+    # Monitor 34" QD-OLED: AOC 588€ · MSI 651€ · LG 746€ · Alienware 824€
+    ("2026-05-18", "Monitor 34\" QD-OLED", 588,   679,   824),
+]
 
 COLORS = {
-    "RAM DDR4":        "#4e79a7",
-    "RAM DDR5":        "#f28e2b",
-    "GPU (fascia alta)":  "#e15759",
-    "GPU (fascia media)": "#76b7b2",
-    "SSD NVMe":        "#59a14f",
-    "SSD SATA":        "#b07aa1",
+    "RTX 5070 Ti":          "#e15759",
+    "RTX 5080":             "#b07aa1",
+    "DDR5 32GB 6000 CL30":  "#4e79a7",
+    "Monitor 34\" QD-OLED": "#59a14f",
 }
 
-PREZZO_BASE = {
-    "RAM DDR4":           25,   # € per 16 GB kit
-    "RAM DDR5":           35,   # € per 16 GB kit
-    "GPU (fascia alta)":  800,  # € RTX 4080 class
-    "GPU (fascia media)": 350,  # € RTX 4060 class
-    "SSD NVMe":           80,   # € 1 TB
-    "SSD SATA":           55,   # € 1 TB
-}
+OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "grafici")
 
 
-def build_dataframe():
-    df = pd.DataFrame(RAW_DATA, index=MONTHS)
-    return df
+def build_df():
+    rows = []
+    for date, comp, pmin, pavg, pmax in PRICE_LOG:
+        msrp = MSRP[comp]
+        rows.append({
+            "date":     pd.to_datetime(date),
+            "comp":     comp,
+            "p_min":    pmin,
+            "p_avg":    pavg,
+            "p_max":    pmax,
+            "surp_min": round((pmin / msrp - 1) * 100, 1),
+            "surp_avg": round((pavg / msrp - 1) * 100, 1),
+            "surp_max": round((pmax / msrp - 1) * 100, 1),
+        })
+    return pd.DataFrame(rows)
 
 
-def smooth(series, window=7):
-    if len(series) < window:
-        return series
-    return savgol_filter(series, window_length=window, polyorder=2)
+def forecast(series_dates, series_values, n=12):
+    """Regressione lineare sui dati disponibili, proietta n mesi avanti."""
+    if len(series_values) < 2:
+        last_val = series_values[-1] if len(series_values) > 0 else 0
+        fc_dates = pd.date_range(
+            start=series_dates.iloc[-1] + pd.DateOffset(months=1),
+            periods=n, freq="MS"
+        )
+        # trend piatto con leggera discesa se sopra 0
+        slope = -last_val * 0.05
+        fc_vals = [max(last_val + slope * i, -10) for i in range(1, n + 1)]
+        return fc_dates, np.array(fc_vals)
 
-
-def forecast_recovery(series, n_forecast=18):
-    """Regressione polinomiale grado 2 sugli ultimi 24 mesi per prevedere recovery."""
-    y = series.values[-24:]
-    x = np.arange(len(y)).reshape(-1, 1)
-
-    poly = PolynomialFeatures(degree=2)
-    x_poly = poly.fit_transform(x)
-    model = LinearRegression().fit(x_poly, y)
-
-    x_future = np.arange(len(y), len(y) + n_forecast).reshape(-1, 1)
-    y_future = model.predict(poly.transform(x_future))
-    return y_future
-
-
-def find_recovery_date(series_hist, forecast, last_date, threshold=5.0):
-    """Data in cui il sovrapprezzo scende sotto threshold %."""
-    all_values = np.concatenate([series_hist.values, forecast])
-    all_dates = pd.date_range(
-        start=series_hist.index[0],
-        periods=len(all_values),
-        freq="MS"
+    x = np.arange(len(series_values)).reshape(-1, 1)
+    y = np.array(series_values)
+    poly = PolynomialFeatures(degree=min(2, len(y) - 1))
+    model = LinearRegression().fit(poly.fit_transform(x), y)
+    x_fut = np.arange(len(y), len(y) + n).reshape(-1, 1)
+    y_fut = model.predict(poly.transform(x_fut))
+    fc_dates = pd.date_range(
+        start=series_dates.iloc[-1] + pd.DateOffset(months=1),
+        periods=n, freq="MS"
     )
-    for date, val in zip(all_dates, all_values):
-        if val <= threshold and date > last_date:
-            return date
-    return None
+    return fc_dates, y_fut
 
 
-def plot_overview(df, forecasts, forecast_dates):
-    fig, axes = plt.subplots(3, 2, figsize=(16, 14))
-    fig.suptitle(
-        "Analisi Sovrapprezzo Hardware — RAM · GPU · SSD\n"
-        "Trend storico (2021-2026) + Previsione recovery",
-        fontsize=15, fontweight="bold", y=0.98
-    )
+def save(fig, name):
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    path = os.path.join(OUTPUT_DIR, name)
+    fig.savefig(path, dpi=150, bbox_inches="tight")
+    print(f"  [✓] Salvato: {path}")
+    return path
 
-    components = list(df.columns)
-    for idx, (ax, comp) in enumerate(zip(axes.flat, components)):
+
+# ---------------------------------------------------------------------------
+# Grafico 1 — Sovrapprezzo attuale (barre con range min/max)
+# ---------------------------------------------------------------------------
+def plot_bar_current(df):
+    last = df.groupby("comp").last().reset_index()
+    comps = last["comp"].tolist()
+    avgs  = last["surp_avg"].tolist()
+    mins  = last["surp_min"].tolist()
+    maxs  = last["surp_max"].tolist()
+    colors = [COLORS[c] for c in comps]
+    err_lo = [a - mn for a, mn in zip(avgs, mins)]
+    err_hi = [mx - a  for a, mx in zip(avgs, maxs)]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    bars = ax.bar(comps, avgs, color=colors, alpha=0.85, zorder=3,
+                  yerr=[err_lo, err_hi], capsize=6, error_kw={"linewidth": 1.5})
+
+    ax.axhline(0,  color="black", linewidth=0.8)
+    ax.axhline(10, color="orange", linewidth=0.8, linestyle="--", alpha=0.7, label="+10% soglia")
+
+    for bar, val, mn, mx, comp in zip(bars, avgs, mins, maxs, comps):
+        msrp = MSRP[comp]
+        p_avg = round(msrp * (1 + val / 100))
+        ax.text(bar.get_x() + bar.get_width() / 2, val + (max(err_hi) * 0.15),
+                f"+{val:.0f}%\n€{p_avg}", ha="center", va="bottom", fontsize=9, fontweight="bold")
+
+    ax.set_ylabel("Sovrapprezzo vs MSRP (%)")
+    ax.set_title("Sovrapprezzo Hardware — Amazon.it | Maggio 2026\n"
+                 "Barre = media prezzi rilevati · Whisker = min/max",
+                 fontsize=12, fontweight="bold")
+    ax.legend(fontsize=9)
+    ax.grid(axis="y", alpha=0.3, zorder=0)
+    plt.xticks(rotation=10, ha="right")
+    plt.tight_layout()
+    return save(fig, "01_sovrapprezzo_attuale.png")
+
+
+# ---------------------------------------------------------------------------
+# Grafico 2 — Dettaglio prezzi reali vs MSRP per ogni componente
+# ---------------------------------------------------------------------------
+def plot_price_vs_msrp(df):
+    comps = df["comp"].unique()
+    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    fig.suptitle("Prezzi Reali Amazon.it vs MSRP — Maggio 2026",
+                 fontsize=13, fontweight="bold")
+
+    for ax, comp in zip(axes.flat, comps):
+        sub = df[df["comp"] == comp].sort_values("date")
         color = COLORS[comp]
-        s = df[comp]
-        smoothed = smooth(s.values)
-        fc = forecasts[comp]
-        fd = forecast_dates
+        msrp = MSRP[comp]
 
-        # Storico
-        ax.fill_between(s.index, smoothed, 0,
-                        where=(smoothed >= 0), alpha=0.25, color="red", label="_")
-        ax.fill_between(s.index, smoothed, 0,
-                        where=(smoothed < 0), alpha=0.2, color="green", label="_")
-        ax.plot(s.index, smoothed, color=color, linewidth=2, label="Storico")
-        ax.scatter([s.index[-1]], [s.values[-1]], color=color, zorder=5, s=50)
+        ax.axhline(msrp, color="green", linewidth=1.5, linestyle="--", label=f"MSRP €{msrp}")
+        ax.fill_between(sub["date"], sub["p_min"], sub["p_max"],
+                        alpha=0.2, color=color, label="Range min/max")
+        ax.plot(sub["date"], sub["p_avg"], "o-", color=color, linewidth=2,
+                markersize=8, label="Prezzo medio")
+        ax.plot(sub["date"], sub["p_min"], "v--", color=color, alpha=0.6, markersize=5)
+        ax.plot(sub["date"], sub["p_max"], "^--", color=color, alpha=0.6, markersize=5)
 
         # Forecast
-        ax.plot(fd, fc, color=color, linewidth=1.5, linestyle="--", label="Previsione")
-        ax.fill_between(fd, fc, 0,
-                        where=(fc >= 0), alpha=0.1, color="red")
-        ax.fill_between(fd, fc, 0,
-                        where=(fc < 0), alpha=0.08, color="green")
+        fc_dates, fc_vals_surp = forecast(sub["date"], sub["surp_avg"].tolist())
+        fc_prices = [msrp * (1 + v / 100) for v in fc_vals_surp]
+        ax.plot(fc_dates, fc_prices, color=color, linewidth=1,
+                linestyle=":", alpha=0.7, label="Previsione")
 
-        # Linea prezzo normale
-        ax.axhline(0, color="black", linewidth=0.8, linestyle="-")
-        ax.axhline(5, color="orange", linewidth=0.6, linestyle=":", alpha=0.7, label="Soglia +5%")
+        surp_now = sub["surp_avg"].iloc[-1]
+        ax.set_title(f"{comp}  |  Sovrapprezzo attuale: {surp_now:+.1f}%",
+                     fontsize=10, fontweight="bold", color=color)
+        ax.set_ylabel("€")
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
+        ax.legend(fontsize=8)
+        ax.grid(alpha=0.3)
 
-        # Recovery date
-        rec = find_recovery_date(s, fc, s.index[-1])
-        if rec:
-            ax.axvline(rec, color="green", linewidth=1, linestyle="--", alpha=0.6)
-            ax.text(rec, ax.get_ylim()[1] * 0.85 if ax.get_ylim()[1] > 0 else -15,
-                    f"Recovery\n{rec.strftime('%b %Y')}",
-                    fontsize=7, color="darkgreen", ha="center")
-
-        # Prezzo attuale stimato
-        surp = s.values[-1]
-        prezzo_att = PREZZO_BASE[comp] * (1 + surp / 100)
-        ax.set_title(
-            f"{comp}  |  Sovrapprezzo attuale: {surp:+.0f}%  |  ~€{prezzo_att:.0f}",
-            fontsize=10, fontweight="bold", color=color
-        )
-        ax.set_ylabel("Sovrapprezzo (%)")
-        ax.xaxis.set_major_formatter(mdates.DateFormatter("%m/%y"))
-        ax.xaxis.set_major_locator(mdates.MonthLocator(interval=6))
-        plt.setp(ax.xaxis.get_majorticklabels(), rotation=35, ha="right", fontsize=7)
-        ax.legend(fontsize=7, loc="upper right")
-        ax.grid(True, alpha=0.3)
-
-    plt.tight_layout(rect=[0, 0, 1, 0.97])
-    out = "scripts/hardware_price_trend_overview.png"
-    plt.savefig(out, dpi=150, bbox_inches="tight")
-    print(f"[✓] Grafico overview salvato: {out}")
-    plt.show()
+    plt.tight_layout(rect=[0, 0, 1, 0.96])
+    return save(fig, "02_prezzi_vs_msrp.png")
 
 
-def plot_comparison(df, forecasts, forecast_dates):
-    fig, ax = plt.subplots(figsize=(14, 7))
-    ax.set_title(
-        "Confronto Sovrapprezzo — tutti i componenti (2021-2026 + previsione)",
-        fontsize=13, fontweight="bold"
-    )
+# ---------------------------------------------------------------------------
+# Grafico 3 — Trend sovrapprezzo nel tempo (si arricchisce ad ogni rilevazione)
+# ---------------------------------------------------------------------------
+def plot_trend(df):
+    fig, ax = plt.subplots(figsize=(13, 6))
+    ax.set_title("Trend Sovrapprezzo nel Tempo — tutte le rilevazioni",
+                 fontsize=12, fontweight="bold")
 
-    for comp in df.columns:
+    for comp in df["comp"].unique():
+        sub = df[df["comp"] == comp].sort_values("date")
         color = COLORS[comp]
-        s = df[comp]
-        smoothed = smooth(s.values)
-        ax.plot(s.index, smoothed, color=color, linewidth=2, label=comp)
-        ax.plot(forecast_dates, forecasts[comp], color=color,
-                linewidth=1.2, linestyle="--", alpha=0.6)
+        ax.plot(sub["date"], sub["surp_avg"], "o-", color=color,
+                linewidth=2, markersize=7, label=comp)
+        ax.fill_between(sub["date"], sub["surp_min"], sub["surp_max"],
+                        alpha=0.12, color=color)
 
-    ax.axhline(0, color="black", linewidth=1)
-    ax.axhline(5, color="gray", linewidth=0.7, linestyle=":", label="Soglia +5%")
-    ax.set_ylabel("Sovrapprezzo (%)")
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%m/%y"))
-    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
-    plt.setp(ax.xaxis.get_majorticklabels(), rotation=35, ha="right", fontsize=8)
+        # Forecast
+        fc_dates, fc_vals = forecast(sub["date"], sub["surp_avg"].tolist())
+        ax.plot(fc_dates, fc_vals, "--", color=color, alpha=0.5, linewidth=1.5)
+
+    ax.axhline(0, color="black", linewidth=0.8)
+    ax.axhline(10, color="orange", linewidth=0.7, linestyle=":", alpha=0.7)
+    ax.set_ylabel("Sovrapprezzo vs MSRP (%)")
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
     ax.legend(fontsize=9)
-    ax.grid(True, alpha=0.3)
-
+    ax.grid(alpha=0.3)
     plt.tight_layout()
-    out = "scripts/hardware_price_trend_comparison.png"
-    plt.savefig(out, dpi=150, bbox_inches="tight")
-    print(f"[✓] Grafico confronto salvato: {out}")
-    plt.show()
+    return save(fig, "03_trend_sovrapprezzo.png")
 
 
-def print_summary(df, forecasts, forecast_dates):
-    print("\n" + "=" * 65)
-    print("  RIEPILOGO — SOVRAPPREZZO HARDWARE (Maggio 2026)")
-    print("=" * 65)
-    print(f"{'Componente':<22} {'Attuale':>8} {'Prezzo base':>12} {'Prezzo att.':>12} {'Recovery'}")
-    print("-" * 65)
+# ---------------------------------------------------------------------------
+# Console summary
+# ---------------------------------------------------------------------------
+def print_summary(df):
+    print("\n" + "=" * 70)
+    print("  RIEPILOGO SOVRAPPREZZO HARDWARE — Amazon.it (ultima rilevazione)")
+    print("=" * 70)
+    print(f"{'Componente':<26} {'MSRP':>7} {'Min':>7} {'Avg':>7} {'Max':>7}  {'Surp%':>7}  {'Recovery est.'}")
+    print("-" * 70)
 
-    for comp in df.columns:
-        surp_now = df[comp].values[-1]
-        base = PREZZO_BASE[comp]
-        att = base * (1 + surp_now / 100)
-        rec = find_recovery_date(df[comp], forecasts[comp], df.index[-1])
-        rec_str = rec.strftime("%b %Y") if rec else "già OK"
-        print(f"{comp:<22} {surp_now:>+7.1f}%  €{base:>8.0f}  →  €{att:>7.0f}   {rec_str}")
+    for comp in MSRP:
+        sub = df[df["comp"] == comp].sort_values("date")
+        if sub.empty:
+            continue
+        last = sub.iloc[-1]
+        msrp = MSRP[comp]
+        fc_dates, fc_vals = forecast(sub["date"], sub["surp_avg"].tolist(), n=24)
+        rec = next((d.strftime("%b %Y") for d, v in zip(fc_dates, fc_vals) if v <= 5), "oltre 2 anni")
+        print(f"{comp:<26} €{msrp:>5}  €{last['p_min']:>5.0f}  €{last['p_avg']:>5.0f}"
+              f"  €{last['p_max']:>5.0f}  {last['surp_avg']:>+6.1f}%  {rec}")
 
-    print("=" * 65)
-    print("\nLegenda: sovrapprezzo % rispetto al prezzo MSRP/listino base")
-    print("         Recovery = data stimata in cui il sovrapprezzo torna < +5%")
-    print("         Previsione basata su regressione polinomiale (ultimi 24 mesi)")
+    print("=" * 70)
+    print("\n  Grafici salvati in:", OUTPUT_DIR)
+    print("  Per aggiornare: aggiungi righe in PRICE_LOG e riesegui lo script.\n")
 
 
 def main():
-    print("Hardware Price Trend Analyzer — avvio...")
-    df = build_dataframe()
+    print("\nHardware Price Trend Analyzer — elaborazione...")
+    df = build_df()
 
-    # Forecast 18 mesi (fino a ~Nov 2027)
-    last_date = df.index[-1]
-    forecast_dates = pd.date_range(
-        start=last_date + pd.DateOffset(months=1),
-        periods=18, freq="MS"
-    )
-    forecasts = {comp: forecast_recovery(df[comp]) for comp in df.columns}
+    print_summary(df)
 
-    print_summary(df, forecasts, forecast_dates)
-    plot_overview(df, forecasts, forecast_dates)
-    plot_comparison(df, forecasts, forecast_dates)
-    print("\n[✓] Analisi completata.")
+    print("\nGenerazione grafici:")
+    plot_bar_current(df)
+    plot_price_vs_msrp(df)
+    plot_trend(df)
+
+    # Apri i grafici a fine elaborazione
+    plt.show()
+    print("\n[✓] Completato.")
 
 
 if __name__ == "__main__":
