@@ -418,7 +418,7 @@ with tab3:
             x=mesi, y=versato, mode="lines", name=nome,
             line=dict(color=color, width=2, dash="dot"),
             hovertemplate="Mese %{x}<br>Versato: € %{y:,.2f}<extra></extra>",
-            fill="tozeroy", fillcolor=color.replace("#", "rgba(") + ",0.07)",
+            fill="tozeroy",
         ))
     fig_cum.update_layout(
         title="Importo cumulato versato nel tempo",
